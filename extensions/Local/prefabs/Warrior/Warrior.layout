@@ -10,7 +10,7 @@
     grid-color=#9EB4FF
     grid-alpha=0.8
     snap=false
-    zoom=1.5457443525129018
+    zoom=2.542046743985348
     window-mask=false
     selected-layer=""
     mode=instances-editor
@@ -18,6 +18,6 @@
 
   <layer name="">
     <camera size=default viewport=default />
-    <NewSprite id="44b6762a-08c1-4171-93c5-c5007c67ff55" at=0,0 z-order=1 />
+    <NewSprite id="4f16cc99-7a81-441d-aa9f-38bde827ead8" at=0,0 z-order=1 />
   </layer>
 </layout>

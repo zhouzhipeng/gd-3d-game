@@ -48,3 +48,67 @@ metadata = ""
 name = "assets/Archer_Idle/05.png"
 smoothed = true
 userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/00.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/00.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/01.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/01.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/02.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/02.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/03.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/03.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/04.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/04.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/05.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/05.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/06.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/06.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Idle/07.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Idle/07.png"
+smoothed = true
+userAdded = false
