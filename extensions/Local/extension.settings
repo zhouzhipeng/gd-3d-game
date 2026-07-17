@@ -1,0 +1,23 @@
+kind = "extension"
+settingsFormatVersion = 1
+order = 0
+author = ""
+category = ""
+dimension = ""
+extensionNamespace = ""
+fullName = ""
+gdevelopVersion = ""
+helpPath = ""
+iconUrl = ""
+name = "Local"
+previewIconUrl = ""
+shortDescription = ""
+version = ""
+description = ""
+tags = [ ]
+authorIds = [ ]
+dependencies = [ ]
+
+[globalVariables]
+
+[sceneVariables]

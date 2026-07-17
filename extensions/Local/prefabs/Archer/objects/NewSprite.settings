@@ -1,0 +1,70 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 0
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "NewSprite"
+persistentUuid = "9ad003d4-f708-4df9-adbf-550a0e68fbc9"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "Idle"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = true
+timeBetweenFrames = 0.1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/00.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/01.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/02.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/03.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/04.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Archer_Idle/05.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 58, y = 48 }, { x = 128, y = 48 }, { x = 128, y = 136 }, { x = 58, y = 136 } ] ]
+
+[variables]

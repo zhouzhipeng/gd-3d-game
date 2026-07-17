@@ -1,0 +1,18 @@
+kind = "prefab"
+settingsFormatVersion = 1
+order = 0
+defaultName = ""
+description = ""
+fullName = "Archer"
+helpPath = ""
+iconUrl = ""
+isUsingLegacyInstancesRenderer = false
+name = "Archer"
+previewIconUrl = ""
+behaviors = [ ]
+propertyDescriptors = [ ]
+layout = "game://extensions/Local/prefabs/Archer/Archer.layout"
+variants = [ ]
+objectGroups = { }
+
+[variables]

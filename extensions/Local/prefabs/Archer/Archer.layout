@@ -1,0 +1,23 @@
+<layout version=1>
+
+  <bounds min=0,0,0 max=192,192,64 />
+
+  <editor
+    grid=false
+    grid-type=rectangular
+    grid-size=32,32,32
+    grid-offset=0,0,0
+    grid-color=#9EB4FF
+    grid-alpha=0.8
+    snap=false
+    zoom=1.3537093797072186
+    window-mask=false
+    selected-layer=""
+    mode=instances-editor
+  />
+
+  <layer name="">
+    <camera size=default viewport=default />
+    <NewSprite id="44b6762a-08c1-4171-93c5-c5007c67ff55" at=0,0 z-order=1 />
+  </layer>
+</layout>

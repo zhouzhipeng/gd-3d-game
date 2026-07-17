@@ -1,5 +1,19 @@
 <layout version=1 background=#DFE0E2>
 
+  <editor
+    grid=false
+    grid-type=rectangular
+    grid-size=32,32,32
+    grid-offset=0,0,0
+    grid-color=#9EB4FF
+    grid-alpha=0.8
+    snap=false
+    zoom=0.6455105703311477
+    window-mask=false
+    selected-layer=""
+    mode=instances-editor
+  />
+
   <layer name="">
     <camera size=default viewport=default />
     <effect
