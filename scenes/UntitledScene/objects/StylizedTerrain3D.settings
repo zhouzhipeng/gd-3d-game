@@ -10,20 +10,20 @@ behaviors = [ ]
 folder = [ ]
 
 [content]
-width = 600
-height = 512
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
 depth = 135
+height = 512
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/stylized_fantasy_terrain.glb"
+originLocation = "ObjectCenter"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-modelResourceName = "assets/models/stylized_fantasy_terrain.glb"
-materialType = "KeepOriginal"
-originLocation = "ObjectCenter"
-centerLocation = "ObjectCenter"
-keepAspectRatio = true
-crossfadeDuration = 0.1
-isCastingShadow = true
-isReceivingShadow = true
+width = 600
 animations = [ ]
 
 [variables]

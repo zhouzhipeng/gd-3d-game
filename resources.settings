@@ -423,3 +423,18 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/stylized_fantasy_terrain.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/models/LowPoly_Soldier.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/LowPoly_Soldier.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/LowPoly_Soldier_preview.png"
+kind = "image"
+metadata = ""
+name = "assets/models/LowPoly_Soldier_preview.png"
+smoothed = true
+userAdded = true

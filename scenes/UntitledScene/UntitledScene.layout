@@ -8,7 +8,7 @@
     grid-color=#D7FFFF
     grid-alpha=0.35
     snap=true
-    zoom=0.41113634668190346
+    zoom=0.518569865013073
     window-mask=false
     selected-layer="3D Terrain"
     mode=instances-editor
@@ -16,7 +16,6 @@
 
   <layer name="">
     <camera size=default viewport=default />
-    <Warrior id="f6a977fe-aed1-4fce-95d0-4421db6beb23" at=640,576 z-order=1 />
   </layer>
 
   <layer
@@ -26,8 +25,6 @@
     camera-behavior=do-nothing
     ambient=#FFFFFF
     near=1
-    far=10000
-    fov=45
     max-2d-distance=10000
   >
     <camera size=default viewport=default />
@@ -46,7 +43,7 @@
     />
     <StylizedTerrain3D
       id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
-      at=640,360,0
+      at=640,360
       size=600x512
       depth=135
       locked
