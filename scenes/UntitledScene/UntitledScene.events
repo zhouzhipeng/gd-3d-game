@@ -2,7 +2,7 @@
 
 @event aiGeneratedEventId="front-camera-on-knight"
 if SceneJustBegins
-do SetCameraCenterX modification_sign="=" value="640" layer="\"3D Terrain\""
-do SetCameraCenterY modification_sign="=" value="700" layer="\"3D Terrain\""
-do Scene3D::SetCameraZ modification_sign="=" value="128" layer="\"3D Terrain\""
-do Scene3D::TurnCameraTowardPosition x_position="640" y_position="360" z_position="128" layer="\"3D Terrain\""
+do SetCameraCenterX modification_sign="=" value="640" layer="\"3D Terrain\"" camera_number_default_0="0"
+do SetCameraCenterY modification_sign="=" value="700" layer="\"3D Terrain\"" camera_number_default_0="0"
+do Scene3D::SetCameraZ modification_sign="=" value="128" layer="\"3D Terrain\"" camera_number_default_0="0"
+do Scene3D::TurnCameraTowardPosition x_position="640" y_position="360" z_position="128" layer="\"3D Terrain\"" camera_number_default_0="0" stand_on_y_instead_of_z="false"

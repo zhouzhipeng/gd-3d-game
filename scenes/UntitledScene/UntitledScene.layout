@@ -8,10 +8,10 @@
     grid-color=#D7FFFF
     grid-alpha=0.35
     snap=true
-    zoom=0.518569865013073
+    zoom=1.4497798546454532
     window-mask=false
     selected-layer="3D Terrain"
-    mode=instances-editor
+    mode=embedded-game
   />
 
   <layer name="">
@@ -48,11 +48,6 @@
       depth=135
       locked
     />
-    <Knight3D
-      id="b0843978-025c-440d-801a-c130baa8477d"
-      at=640,360,68
-      size=64x64
-      depth=120
-    />
+    <Knight3D id="b0843978-025c-440d-801a-c130baa8477d" at=640,360,68 size=64x64 depth=120 />
   </layer>
 </layout>
