@@ -48,5 +48,11 @@
       depth=135
       locked
     />
+    <Knight3D
+      id="b0843978-025c-440d-801a-c130baa8477d"
+      at=640,360,68
+      size=64x64
+      depth=120
+    />
   </layer>
 </layout>

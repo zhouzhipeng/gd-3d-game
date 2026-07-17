@@ -438,3 +438,10 @@ metadata = ""
 name = "assets/models/LowPoly_Soldier_preview.png"
 smoothed = true
 userAdded = true
+
+[[resources]]
+file = "assets/models/Knight_Animated.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Knight_Animated.glb"
+userAdded = true
