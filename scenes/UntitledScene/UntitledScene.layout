@@ -47,8 +47,8 @@
     <StylizedTerrain3D
       id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
       at=640,360,0
-      size=800x473
-      depth=800
+      size=600x600
+      depth=355
       locked
     />
   </layer>

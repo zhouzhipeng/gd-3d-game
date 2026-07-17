@@ -10,9 +10,9 @@ behaviors = [ ]
 folder = [ ]
 
 [content]
-width = 800
-height = 473
-depth = 800
+width = 600
+height = 600
+depth = 355
 rotationX = 90
 rotationY = 0
 rotationZ = 0
