@@ -11,8 +11,8 @@ folder = [ ]
 
 [content]
 width = 600
-height = 600
-depth = 355
+height = 512
+depth = 135
 rotationX = 90
 rotationY = 0
 rotationZ = 0
