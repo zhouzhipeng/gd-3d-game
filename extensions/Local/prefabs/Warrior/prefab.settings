@@ -9,10 +9,26 @@ iconUrl = ""
 isUsingLegacyInstancesRenderer = false
 name = "Warrior"
 previewIconUrl = ""
-behaviors = [ ]
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Warrior/Warrior.layout"
 variants = [ ]
 objectGroups = { }
 
+[[behaviors]]
+name = "TopDownMovement"
+type = "TopDownMovementBehavior::TopDownMovementBehavior"
+acceleration = 400
+allowDiagonals = false
+angleOffset = 0
+angularMaxSpeed = 180
+customIsometryAngle = 30
+deceleration = 800
+ignoreDefaultControls = false
+maxSpeed = 200
+movementAngleOffset = 0
+rotateObject = false
+useLegacyTurnBack = false
+viewpoint = "TopDown"
+
 [variables]
+Variable = [ { type = "number", value = 0 } ]
