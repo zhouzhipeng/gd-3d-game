@@ -22,9 +22,6 @@ customIsometryAngle = 30
 deceleration = 800
 ignoreDefaultControls = false
 maxSpeed = 200
-movementAngleOffset = 0
-rotateObject = true
-useLegacyTurnBack = false
-viewpoint = "TopDown"
+rotateObject = false
 
 [variables]
