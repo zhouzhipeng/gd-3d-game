@@ -1,0 +1,151 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 1
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "WaterFoam"
+persistentUuid = "a8e7ac1a-1897-4dbe-a344-a44794e2c776"
+type = "Sprite"
+updateIfNotVisible = true
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "Foam"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = true
+timeBetweenFrames = 0.12
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_00.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_01.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_02.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_03.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_04.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_05.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_06.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_07.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_08.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_09.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_10.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_11.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_12.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_13.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_14.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\WaterFoam_15.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[variables]
+

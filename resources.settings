@@ -112,3 +112,170 @@ metadata = ""
 name = "assets/Warrior_Idle/07.png"
 smoothed = true
 userAdded = false
+
+[[resources]]
+file = "assets/terrain/Tilemap_color1.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\Tilemap_color1.png"
+smoothed = false
+userAdded = true
+[[resources]]
+file = "assets/terrain/Tilemap_color3.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\Tilemap_color3.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/Tilemap_color5.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\Tilemap_color5.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/Shadow.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\Shadow.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterBackground.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterBackground.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_00.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_00.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_01.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_01.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_02.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_02.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_03.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_03.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_04.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_04.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_05.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_05.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_06.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_06.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_07.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_07.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_08.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_08.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_09.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_09.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_10.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_10.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_11.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_11.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_12.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_12.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_13.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_13.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_14.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_14.png"
+smoothed = false
+userAdded = true
+
+[[resources]]
+file = "assets/terrain/WaterFoam_15.png"
+kind = "image"
+metadata = ""
+name = "assets\\terrain\\WaterFoam_15.png"
+smoothed = false
+userAdded = true

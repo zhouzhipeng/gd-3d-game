@@ -1,0 +1,20 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 5
+assetStoreId = ""
+name = "ElevatedGround2"
+persistentUuid = "67b2e84f-3547-4cce-83d8-270a07d03490"
+type = "TileMap::SimpleTileMap"
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[variables]
+
+[content]
+atlasImage = "assets\\terrain\\Tilemap_color5.png"
+rowCount = 6
+columnCount = 9
+tileSize = 64
+tilesWithHitBox = ""
+

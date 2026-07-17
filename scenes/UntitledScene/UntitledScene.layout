@@ -1,33 +1,134 @@
-<layout version=1 background=#DFE0E2>
-
+<layout version=1 background=#4BADB0>
   <editor
-    grid=false
+    grid=true
     grid-type=rectangular
-    grid-size=32,32,32
+    grid-size=64,64,32
     grid-offset=0,0,0
-    grid-color=#9EB4FF
-    grid-alpha=0.8
-    snap=false
-    zoom=0.6455105703311477
-    window-mask=false
-    selected-layer=""
+    grid-color=#D7FFFF
+    grid-alpha=0.35
+    snap=true
+    zoom=0.75
+    window-mask=true
+    selected-layer="Elevated Ground 2"
     mode=instances-editor
   />
 
   <layer name="">
     <camera size=default viewport=default />
-    <effect
-      name="3D Ambient Hemisphere Light"
-      type="Scene3D::HemisphereLight"
-      numbers={"elevation":40,"intensity":0.33,"rotation":300}
-      strings={"groundColor":"127;127;127","skyColor":"255;255;255","top":"Z+"}
-    />
-    <effect
-      name="3D Sun Light"
-      type="Scene3D::DirectionalLight"
-      numbers={"distanceFromCamera":1500,"elevation":40,"frustumSize":4000,"intensity":0.75,"minimumShadowBias":0,"rotation":300}
-      strings={"color":"255;255;255","shadowQuality":"medium","top":"Z+"}
-      booleans={"isCastingShadow":true}
-    />
+    <WaterBackground id="1f9dc1b4-0494-4984-ba13-000000000001" at=0,0 size=1280x768 locked />
+  </layer>
+
+  <layer name="Water Foam">
+    <camera size=default viewport=default />
+    <WaterFoam id="c02293de-1db8-4b62-9bd1-000000000002" at=64,128 />
+    <WaterFoam id="2854403c-f1f9-4573-a875-000000000003" at=128,128 />
+    <WaterFoam id="1af212ca-ae2a-4071-91ec-000000000004" at=192,128 />
+    <WaterFoam id="53777ad6-b474-41d5-b756-000000000005" at=960,128 />
+    <WaterFoam id="f877050b-bfe4-462e-9772-000000000006" at=1024,128 />
+    <WaterFoam id="c2e4247a-aced-4276-951f-000000000007" at=64,192 />
+    <WaterFoam id="056563dc-8846-46b7-8cc4-000000000008" at=1024,384 />
+    <WaterFoam id="53a1f7b7-61c3-4598-adcc-000000000009" at=64,448 />
+    <WaterFoam id="95baeff6-0843-4d9e-9ce1-00000000000a" at=1024,448 />
+    <WaterFoam id="2ade2876-2211-4fbc-b44c-00000000000b" at=64,512 />
+    <WaterFoam id="c7a73cb4-78a5-4684-b33d-00000000000c" at=128,512 />
+    <WaterFoam id="5225d731-d0b2-4ff5-b8b4-00000000000d" at=192,512 />
+    <WaterFoam id="31cc15d2-019d-41a1-86c3-00000000000e" at=960,512 />
+    <WaterFoam id="18289c25-97a8-460d-84a3-00000000000f" at=1024,512 />
+    <WaterFoam id="0827718b-3d9e-4f00-8f16-000000000010" at=256,64 />
+    <WaterFoam id="23a86e21-5869-4f88-abfe-000000000011" at=320,64 />
+    <WaterFoam id="46013c2a-c874-4e06-bba2-000000000012" at=384,64 />
+    <WaterFoam id="7a0b3cef-af77-4596-8a66-000000000013" at=448,64 />
+    <WaterFoam id="5a3d60e6-8a57-478a-a91d-000000000014" at=512,64 />
+    <WaterFoam id="94669640-4315-4d89-a0e2-000000000015" at=576,64 />
+    <WaterFoam id="c5f7919e-53eb-4529-a183-000000000016" at=640,64 />
+    <WaterFoam id="fcdcb61e-fc52-4acf-b1db-000000000017" at=704,64 />
+    <WaterFoam id="35b1f820-4e0b-423e-81ed-000000000018" at=768,64 />
+    <WaterFoam id="06c44faa-cf55-4ac7-b193-000000000019" at=832,64 />
+    <WaterFoam id="48f23949-28a3-4bbe-a0fa-00000000001a" at=896,64 />
+    <WaterFoam id="f41e8377-c348-47bb-bb14-00000000001b" at=256,576 />
+    <WaterFoam id="bb7b3997-48a2-43f0-8f91-00000000001c" at=320,576 />
+    <WaterFoam id="38322890-9e89-40a4-8a16-00000000001d" at=384,576 />
+    <WaterFoam id="a12d5c7d-4424-466e-92b7-00000000001e" at=448,576 />
+    <WaterFoam id="1a71cbfe-b1f9-4ce2-89e4-00000000001f" at=512,576 />
+    <WaterFoam id="e2cb8c47-3d5d-443d-b06f-000000000020" at=576,576 />
+    <WaterFoam id="23d31a46-d9f9-4edb-8fce-000000000021" at=640,576 />
+    <WaterFoam id="bede481f-d89b-4642-850d-000000000022" at=704,576 />
+    <WaterFoam id="b32916c5-0634-44ae-8eef-000000000023" at=768,576 />
+    <WaterFoam id="a39c88ea-d970-4a6e-8337-000000000024" at=832,576 />
+    <WaterFoam id="baabd03a-f071-429e-a0ba-000000000025" at=896,576 />
+    <WaterFoam id="ab4a12a7-0e33-4117-957d-000000000026" at=0,256 />
+    <WaterFoam id="19d98ccb-8c32-4c2d-99d3-000000000027" at=0,320 />
+    <WaterFoam id="4cf41d20-7e83-431f-a8e6-000000000028" at=0,384 />
+    <WaterFoam id="6510b3aa-cce0-4ed2-bedd-000000000029" at=1088,192 />
+    <WaterFoam id="34b25485-e59d-4e04-838d-00000000002a" at=1088,256 />
+    <WaterFoam id="0e230608-1024-4688-b3db-00000000002b" at=1088,320 />
+    <WaterFoam id="c105220f-3f63-43ca-962d-00000000002c" at=64,0 />
+    <WaterFoam id="cf23ae4d-3477-43ec-8c27-00000000002d" at=128,0 />
+    <WaterFoam id="75d3672e-232e-48c8-abc1-00000000002e" at=192,0 />
+    <WaterFoam id="e1ae35d4-4d35-4a3d-976a-00000000002f" at=1088,512 />
+    <WaterFoam id="e446cd42-7925-421a-8b2c-000000000030" at=1088,576 />
+    <WaterFoam id="39396046-c776-4080-8553-000000000031" at=0,576 />
+  </layer>
+
+  <layer name="Flat Ground">
+    <camera size=default viewport=default />
+    <FlatGround id="4e9867a7-ad82-41e8-a426-000000000032" at=0,0 locked>
+      <properties strings={"tilemap":"{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":20,\"dimY\":12,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,27,28,29,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,0,1,1,1,1,1,1,1,1,1,2,4,4,4,4],[4,4,0,1,1,10,10,10,10,10,10,10,10,10,10,10,1,2,4,4],[4,4,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,4],[4,0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,4],[4,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,20,4],[4,18,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,4,4],[4,4,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,4,4],[4,4,18,19,19,10,10,10,10,10,10,10,10,10,10,10,19,19,2,4],[4,30,4,4,4,18,19,19,19,19,19,19,19,19,19,20,4,4,21,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]}]}"} />
+    </FlatGround>
+  </layer>
+
+  <layer name="Shadow 1">
+    <camera size=default viewport=default />
+    <TerrainShadow id="3e8056e0-d028-49d1-9fc1-000000000033" at=256,128 />
+    <TerrainShadow id="6b1f8b99-52f8-4121-b7a2-000000000034" at=320,128 />
+    <TerrainShadow id="b765a906-39d9-45b8-919b-000000000035" at=384,128 />
+    <TerrainShadow id="68c602e8-4338-4128-a0e2-000000000036" at=448,128 />
+    <TerrainShadow id="44f4034b-2686-4da6-b479-000000000037" at=512,128 />
+    <TerrainShadow id="9748d75d-ce72-45ec-b063-000000000038" at=576,128 />
+    <TerrainShadow id="f5466fcf-8387-4363-a4e4-000000000039" at=640,128 />
+    <TerrainShadow id="5a022668-5a83-4541-bcb5-00000000003a" at=704,128 />
+    <TerrainShadow id="8590c7a7-e27e-412b-8ff4-00000000003b" at=256,192 />
+    <TerrainShadow id="ef68163a-b529-471f-898b-00000000003c" at=320,192 />
+    <TerrainShadow id="f86b1a55-0b1c-41af-8fd1-00000000003d" at=384,192 />
+    <TerrainShadow id="23de2c8f-d62d-45b2-bcc7-00000000003e" at=448,192 />
+    <TerrainShadow id="545f39d7-b323-45b0-88dd-00000000003f" at=512,192 />
+    <TerrainShadow id="dea42755-6490-4d8e-93f5-000000000040" at=576,192 />
+    <TerrainShadow id="22df5d1d-d177-4637-b3ba-000000000041" at=640,192 />
+    <TerrainShadow id="9f6d1c75-ccd2-4b68-9a2d-000000000042" at=704,192 />
+    <TerrainShadow id="9112f884-eb50-4ba4-9363-000000000043" at=256,256 />
+    <TerrainShadow id="25c52791-6a78-40fc-bace-000000000044" at=320,256 />
+    <TerrainShadow id="6e563d6f-1b2d-47a3-9ae8-000000000045" at=384,256 />
+    <TerrainShadow id="b2b9cc57-98cd-43bd-87ee-000000000046" at=576,256 />
+    <TerrainShadow id="760c255b-3db5-49dd-bafb-000000000047" at=640,256 />
+    <TerrainShadow id="59885130-df56-4a08-9bbd-000000000048" at=704,256 />
+    <TerrainShadow id="4b627c4a-1834-43ef-9869-000000000049" at=896,256 />
+  </layer>
+
+  <layer name="Elevated Ground 1">
+    <camera size=default viewport=default />
+    <ElevatedGround1 id="f4f6edcb-f752-465a-90e2-00000000004a" at=0,0 locked>
+      <properties strings={"tilemap":"{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":20,\"dimY\":12,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,5,6,6,6,6,6,6,7,4,4,4,4,4,4,4],[4,4,4,4,4,14,15,15,15,15,15,15,16,4,4,4,4,4,4,4],[4,4,4,4,4,23,24,36,4,4,39,24,25,4,4,35,4,4,4,4],[4,4,4,4,4,41,43,45,4,4,48,41,43,4,4,44,4,4,4,4],[4,4,4,4,4,50,52,4,4,4,4,50,52,4,4,53,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]}]}"} />
+    </ElevatedGround1>
+  </layer>
+
+  <layer name="Shadow 2">
+    <camera size=default viewport=default />
+    <TerrainShadow id="82f24f47-229f-4f97-97ec-00000000004b" at=384,64 />
+    <TerrainShadow id="c2225564-324f-4ed1-82af-00000000004c" at=448,64 />
+    <TerrainShadow id="f249af9e-9372-4839-8df5-00000000004d" at=512,64 />
+    <TerrainShadow id="29589275-6009-433b-a1a2-00000000004e" at=576,64 />
+    <TerrainShadow id="5bba4460-549d-45c9-a90e-00000000004f" at=640,64 />
+    <TerrainShadow id="4c008926-17ce-4330-9716-000000000050" at=384,128 />
+    <TerrainShadow id="8d9e1314-ec07-42ec-b9fa-000000000051" at=448,128 />
+    <TerrainShadow id="9d930294-6de7-442f-89ff-000000000052" at=512,128 />
+    <TerrainShadow id="be4cccb4-5c5e-459a-8c28-000000000053" at=576,128 />
+    <TerrainShadow id="c6be9639-c3c7-4c4d-a0f3-000000000054" at=640,128 />
+  </layer>
+
+  <layer name="Elevated Ground 2">
+    <camera size=default viewport=default />
+    <ElevatedGround2 id="881ed89c-5400-415d-9409-000000000055" at=0,0 locked>
+      <properties strings={"tilemap":"{\"tileWidth\":64,\"tileHeight\":64,\"dimX\":20,\"dimY\":12,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,5,6,6,6,7,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,23,24,24,24,25,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,41,42,42,42,43,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,50,51,51,51,52,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]]}]}"} />
+    </ElevatedGround2>
   </layer>
 </layout>

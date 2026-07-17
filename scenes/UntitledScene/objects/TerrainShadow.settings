@@ -1,0 +1,31 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 3
+adaptCollisionMaskAutomatically = false
+assetStoreId = ""
+name = "TerrainShadow"
+persistentUuid = "26cc1092-8a7c-4ef9-bc8a-663a399425e0"
+type = "Sprite"
+updateIfNotVisible = false
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "Shadow"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "assets\\terrain\\Shadow.png"
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+points = [ ]
+customCollisionMask = [ ]
+
+[variables]
+

@@ -1,1 +1,4 @@
-
+@event aiGeneratedEventId="randomize-water-foam"
+if SceneJustBegins
+> for each WaterFoam
+>> do ChangeSprite object="WaterFoam" modification_sign="=" value="RandomInRange(0,15)"
