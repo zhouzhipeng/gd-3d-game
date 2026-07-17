@@ -1,0 +1,15 @@
+kind = "scene"
+settingsFormatVersion = 1
+order = 0
+layout = "game://scenes/UntitledScene/UntitledScene.layout"
+events = "game://scenes/UntitledScene/UntitledScene.events"
+disableInputWhenNotFocused = true
+mangledName = "UntitledScene"
+name = "UntitledScene"
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = ""
+behaviorsSharedData = [ ]
+objectGroups = { }
+
+[variables]

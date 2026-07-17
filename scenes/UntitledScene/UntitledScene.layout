@@ -1,0 +1,19 @@
+<layout version=1 background=#DFE0E2>
+
+  <layer name="">
+    <camera size=default viewport=default />
+    <effect
+      name="3D Ambient Hemisphere Light"
+      type="Scene3D::HemisphereLight"
+      numbers={"elevation":40,"intensity":0.33,"rotation":300}
+      strings={"groundColor":"127;127;127","skyColor":"255;255;255","top":"Z+"}
+    />
+    <effect
+      name="3D Sun Light"
+      type="Scene3D::DirectionalLight"
+      numbers={"distanceFromCamera":1500,"elevation":40,"frustumSize":4000,"intensity":0.75,"minimumShadowBias":0,"rotation":300}
+      strings={"color":"255;255;255","shadowQuality":"medium","top":"Z+"}
+      booleans={"isCastingShadow":true}
+    />
+  </layer>
+</layout>
