@@ -1,0 +1,34 @@
+@comment "Move with the arrow keys, play Run while moving, and keep the last horizontal facing direction."
+
+@event
+if KeyFromTextPressed key_to_check="\"Left\""
+do SetX object="Object" modification_sign="-" value="200 * TimeDelta()"
+do FlippableCapability::FlippableBehavior::FlipX object="NewSprite" behavior="Flippable" activate_flipping="yes"
+do AnimatableCapability::AnimatableBehavior::SetName object="NewSprite" behavior="Animation" modification_sign="=" animation_name="\"Run\""
+
+@event
+if KeyFromTextPressed key_to_check="\"Right\""
+do SetX object="Object" modification_sign="+" value="200 * TimeDelta()"
+do FlippableCapability::FlippableBehavior::FlipX object="NewSprite" behavior="Flippable" activate_flipping="no"
+do AnimatableCapability::AnimatableBehavior::SetName object="NewSprite" behavior="Animation" modification_sign="=" animation_name="\"Run\""
+
+@event
+if KeyFromTextPressed key_to_check="\"Up\""
+do SetY object="Object" modification_sign="-" value="200 * TimeDelta()"
+do AnimatableCapability::AnimatableBehavior::SetName object="NewSprite" behavior="Animation" modification_sign="=" animation_name="\"Run\""
+
+@event
+if KeyFromTextPressed key_to_check="\"Down\""
+do SetY object="Object" modification_sign="+" value="200 * TimeDelta()"
+do AnimatableCapability::AnimatableBehavior::SetName object="NewSprite" behavior="Animation" modification_sign="=" animation_name="\"Run\""
+
+@event
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"Left\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"Right\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"Up\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"Down\""
+do AnimatableCapability::AnimatableBehavior::SetName object="NewSprite" behavior="Animation" modification_sign="=" animation_name="\"Idle\""
