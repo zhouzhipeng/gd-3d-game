@@ -10,7 +10,7 @@
     snap=true
     zoom=0.41113634668190346
     window-mask=false
-    selected-layer="Elevated Ground 2"
+    selected-layer="3D Terrain"
     mode=instances-editor
   />
 
@@ -309,5 +309,39 @@
       />
     </ElevatedGround2>
     <Warrior id="f6a977fe-aed1-4fce-95d0-4421db6beb23" at=640,576 z-order=1 />
+  </layer>
+
+  <layer
+    name="3D Terrain"
+    rendering=3d
+    camera-type=perspective
+    camera-behavior=do-nothing
+    ambient=#FFFFFF
+    near=1
+    far=10000
+    fov=45
+    max-2d-distance=10000
+  >
+    <camera size=default viewport=default />
+    <effect
+      name="Terrain Ambient Light"
+      type="Scene3D::AmbientLight"
+      numbers={"intensity":0.9}
+      strings={"color":"255;255;255"}
+    />
+    <effect
+      name="Terrain Sun"
+      type="Scene3D::DirectionalLight"
+      numbers={"distanceFromCamera":1500,"elevation":55,"frustumSize":4000,"intensity":0.65,"minimumShadowBias":0.001,"rotation":315}
+      strings={"color":"255;244;220","shadowQuality":"medium","top":"Z+"}
+      booleans={"isCastingShadow":true}
+    />
+    <StylizedTerrain3D
+      id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
+      at=640,360,0
+      size=1200x900
+      depth=600
+      locked
+    />
   </layer>
 </layout>

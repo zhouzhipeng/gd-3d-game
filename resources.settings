@@ -440,3 +440,10 @@ metadata = ""
 name = "assets/Warrior_Attack2/004.png"
 smoothed = true
 userAdded = false
+
+[[resources]]
+file = "assets/models/stylized_fantasy_terrain.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/stylized_fantasy_terrain.glb"
+userAdded = true

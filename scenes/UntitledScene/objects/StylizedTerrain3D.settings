@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 6
+assetStoreId = ""
+name = "StylizedTerrain3D"
+persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+width = 1_200
+height = 900
+depth = 600
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+modelResourceName = "assets/models/stylized_fantasy_terrain.glb"
+materialType = "KeepOriginal"
+originLocation = "ObjectCenter"
+centerLocation = "ObjectCenter"
+keepAspectRatio = true
+crossfadeDuration = 0.1
+isCastingShadow = true
+isReceivingShadow = true
+animations = [ ]
+
+[variables]
