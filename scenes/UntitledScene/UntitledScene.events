@@ -1,1 +1,8 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
+
+@event aiGeneratedEventId="front-camera-on-knight"
+if SceneJustBegins
+do SetCameraCenterX modification_sign="=" value="640" layer="\"3D Terrain\""
+do SetCameraCenterY modification_sign="=" value="80" layer="\"3D Terrain\""
+do Scene3D::SetCameraZ modification_sign="=" value="128" layer="\"3D Terrain\""
+do Scene3D::TurnCameraTowardPosition x_position="640" y_position="360" z_position="128" layer="\"3D Terrain\""
