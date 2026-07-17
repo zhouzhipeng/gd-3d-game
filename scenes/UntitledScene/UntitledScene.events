@@ -1,13 +1,13 @@
-@comment "Keep the Warrior on land and separate it from rocky cliff tiles."
+@comment "Keep the Warrior on land and separate it from rocky cliff tiles." background=[255,230,109] text=[0,0,0]
 
 @event
-if CollisionNP first_object="Warrior" second_object="FlatGround"
-do SeparateFromObjects object="Warrior" objects_won_t_move="FlatGround"
+if CollisionNP first_object="Warrior" second_object="FlatGround" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"
+do SeparateFromObjects object="Warrior" objects_won_t_move="FlatGround" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"
 
 @event
-if CollisionNP first_object="Warrior" second_object="ElevatedGround1"
-do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround1"
+if CollisionNP first_object="Warrior" second_object="ElevatedGround1" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"
+do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround1" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"
 
 @event
-if CollisionNP first_object="Warrior" second_object="ElevatedGround2"
-do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround2"
+if CollisionNP first_object="Warrior" second_object="ElevatedGround2" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"
+do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround2" ignore_objects_that_are_touching_each_other_on_their_edges_but_are_not_overlapping_default_no="no"

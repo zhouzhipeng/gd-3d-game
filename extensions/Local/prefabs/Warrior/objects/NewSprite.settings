@@ -139,4 +139,140 @@ originPoint = { name = "origine", x = 0, y = 0 }
 centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
 customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
 
+[[animations]]
+name = "Guard"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/001.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/002.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/003.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/004.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/005.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Guard/006.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations]]
+name = "Attack1"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack1/001.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack1/002.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack1/003.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack1/004.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations]]
+name = "Attack2"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.1
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack2/001.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack2/002.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack2/003.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = true
+image = "assets/Warrior_Attack2/004.png"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ [ { x = 62, y = 48 }, { x = 141, y = 48 }, { x = 141, y = 137 }, { x = 62, y = 137 } ] ]
+
 [variables]
