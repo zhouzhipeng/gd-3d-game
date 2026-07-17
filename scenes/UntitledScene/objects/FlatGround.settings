@@ -14,6 +14,6 @@ atlasImage = "assets\\terrain\\Tilemap_color1.png"
 rowCount = 6
 columnCount = 9
 tileSize = 64
-tilesWithHitBox = ""
+tilesWithHitBox = "4"
 
 [variables]

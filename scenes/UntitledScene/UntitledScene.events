@@ -1,1 +1,13 @@
+@comment "Keep the Warrior on land and separate it from rocky cliff tiles."
 
+@event
+if CollisionNP first_object="Warrior" second_object="FlatGround"
+do SeparateFromObjects object="Warrior" objects_won_t_move="FlatGround"
+
+@event
+if CollisionNP first_object="Warrior" second_object="ElevatedGround1"
+do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround1"
+
+@event
+if CollisionNP first_object="Warrior" second_object="ElevatedGround2"
+do SeparateFromObjects object="Warrior" objects_won_t_move="ElevatedGround2"
