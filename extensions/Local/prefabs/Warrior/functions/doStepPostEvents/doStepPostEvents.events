@@ -1,4 +1,4 @@
-@comment "Move with the arrow keys or WASD, play Run while moving, and keep the last horizontal facing direction."
+@comment "Move with the arrow keys or WASD, play Run while moving, and keep the last horizontal facing direction." background=[255,230,109] text=[0,0,0]
 
 @event
 if KeyFromTextPressed key_to_check="\"Left\""

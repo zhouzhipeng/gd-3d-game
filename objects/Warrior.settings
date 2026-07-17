@@ -7,6 +7,7 @@ persistentUuid = "9d63146d-3ad5-4beb-b6c8-05e814b05cae"
 type = "Local::Warrior"
 variant = ""
 effects = [ ]
+behaviors = [ ]
 content = { }
 folder = [ ]
 

@@ -5,9 +5,9 @@ fullName = ""
 functionType = "Action"
 name = "doStepPostEvents"
 sentence = ""
-objectGroups = { }
 folder = [ ]
 events = "game://extensions/Local/prefabs/Warrior/functions/doStepPostEvents/doStepPostEvents.events"
+objectGroups = { }
 
 [[parameters]]
 description = "Object"

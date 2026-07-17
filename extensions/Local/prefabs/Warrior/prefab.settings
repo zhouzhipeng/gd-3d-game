@@ -9,6 +9,7 @@ iconUrl = ""
 isUsingLegacyInstancesRenderer = false
 name = "Warrior"
 previewIconUrl = ""
+behaviors = [ ]
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Warrior/Warrior.layout"
 variants = [ ]

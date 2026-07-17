@@ -280,3 +280,51 @@ metadata = ""
 name = "assets\\terrain\\WaterFoam_15.png"
 smoothed = false
 userAdded = true
+
+[[resources]]
+file = "assets/Warrior_Run/001.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/001.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Run/002.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/002.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Run/003.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/003.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Run/004.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/004.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Run/005.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/005.png"
+smoothed = true
+userAdded = false
+
+[[resources]]
+file = "assets/Warrior_Run/006.png"
+kind = "image"
+metadata = ""
+name = "assets/Warrior_Run/006.png"
+smoothed = true
+userAdded = false
