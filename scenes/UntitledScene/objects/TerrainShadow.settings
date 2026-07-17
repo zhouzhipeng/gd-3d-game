@@ -22,10 +22,9 @@ timeBetweenFrames = 0.08
 [[animations.directions.sprites]]
 hasCustomCollisionMask = false
 image = "assets\\terrain\\Shadow.png"
+points = [ ]
 originPoint = { name = "origine", x = 0, y = 0 }
 centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
-points = [ ]
 customCollisionMask = [ ]
 
 [variables]
-

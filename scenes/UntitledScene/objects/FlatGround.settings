@@ -9,8 +9,6 @@ effects = [ ]
 behaviors = [ ]
 folder = [ ]
 
-[variables]
-
 [content]
 atlasImage = "assets\\terrain\\Tilemap_color1.png"
 rowCount = 6
@@ -18,3 +16,4 @@ columnCount = 9
 tileSize = 64
 tilesWithHitBox = ""
 
+[variables]

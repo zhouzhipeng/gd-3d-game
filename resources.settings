@@ -120,6 +120,7 @@ metadata = ""
 name = "assets\\terrain\\Tilemap_color1.png"
 smoothed = false
 userAdded = true
+
 [[resources]]
 file = "assets/terrain/Tilemap_color3.png"
 kind = "image"
