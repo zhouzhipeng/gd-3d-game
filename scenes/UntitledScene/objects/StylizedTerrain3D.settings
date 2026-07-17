@@ -1,6 +1,6 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 6
+order = 0
 assetStoreId = ""
 name = "StylizedTerrain3D"
 persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
@@ -11,11 +11,11 @@ folder = [ ]
 
 [content]
 width = 800
-height = 600
-depth = 400
-rotationX = 55
+height = 473
+depth = 800
+rotationX = 0
 rotationY = 0
-rotationZ = 45
+rotationZ = 0
 modelResourceName = "assets/models/stylized_fantasy_terrain.glb"
 materialType = "KeepOriginal"
 originLocation = "ObjectCenter"

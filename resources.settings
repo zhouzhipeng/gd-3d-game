@@ -114,30 +114,6 @@ smoothed = true
 userAdded = false
 
 [[resources]]
-file = "assets/terrain/Tilemap_color1.png"
-kind = "image"
-metadata = ""
-name = "assets\\terrain\\Tilemap_color1.png"
-smoothed = false
-userAdded = true
-
-[[resources]]
-file = "assets/terrain/Tilemap_color3.png"
-kind = "image"
-metadata = ""
-name = "assets\\terrain\\Tilemap_color3.png"
-smoothed = false
-userAdded = true
-
-[[resources]]
-file = "assets/terrain/Tilemap_color5.png"
-kind = "image"
-metadata = ""
-name = "assets\\terrain\\Tilemap_color5.png"
-smoothed = false
-userAdded = true
-
-[[resources]]
 file = "assets/terrain/Shadow.png"
 kind = "image"
 metadata = ""
