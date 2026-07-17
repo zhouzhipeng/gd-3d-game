@@ -22,7 +22,7 @@
   <layer
     name="3D Terrain"
     rendering=3d
-    camera-type=perspective
+    camera-type=orthographic
     camera-behavior=do-nothing
     ambient=#FFFFFF
     near=1
