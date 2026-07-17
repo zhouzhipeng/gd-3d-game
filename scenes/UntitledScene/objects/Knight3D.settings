@@ -100,4 +100,54 @@ loop = false
 name = "T-Pose"
 source = "T-Pose"
 
+[[content.animations]]
+loop = false
+name = "Jump_Full_Long"
+source = "Jump_Full_Long"
+
+[[content.animations]]
+loop = false
+name = "Jump_Full_Short"
+source = "Jump_Full_Short"
+
+[[content.animations]]
+loop = false
+name = "Jump_Idle"
+source = "Jump_Idle"
+
+[[content.animations]]
+loop = false
+name = "Jump_Land"
+source = "Jump_Land"
+
+[[content.animations]]
+loop = false
+name = "Jump_Start"
+source = "Jump_Start"
+
+[[content.animations]]
+loop = false
+name = "Running_A"
+source = "Running_A"
+
+[[content.animations]]
+loop = false
+name = "Running_B"
+source = "Running_B"
+
+[[content.animations]]
+loop = true
+name = "Walking_A"
+source = "Walking_A"
+
+[[content.animations]]
+loop = true
+name = "Walking_B"
+source = "Walking_B"
+
+[[content.animations]]
+loop = true
+name = "Walking_C"
+source = "Walking_C"
+
 [variables]
