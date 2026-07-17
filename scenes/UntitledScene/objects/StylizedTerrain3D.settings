@@ -10,12 +10,12 @@ behaviors = [ ]
 folder = [ ]
 
 [content]
-width = 1_200
-height = 900
-depth = 600
-rotationX = 90
+width = 800
+height = 600
+depth = 400
+rotationX = 55
 rotationY = 0
-rotationZ = 90
+rotationZ = 45
 modelResourceName = "assets/models/stylized_fantasy_terrain.glb"
 materialType = "KeepOriginal"
 originLocation = "ObjectCenter"
