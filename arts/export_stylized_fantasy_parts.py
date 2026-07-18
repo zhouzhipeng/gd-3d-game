@@ -389,7 +389,7 @@ def make_specs(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
             "key": "terrain",
             "kind": "terrain",
             "filename": "terrain.glb",
-            "gdevelopName": "StylizedTerrain3D",
+            "gdevelopName": "Terrain",
             "sources": terrain,
             "pivot": Vector((0.0, 0.0, 0.0)),
             "pivotEulerDegrees": [0.0, 0.0, 0.0],

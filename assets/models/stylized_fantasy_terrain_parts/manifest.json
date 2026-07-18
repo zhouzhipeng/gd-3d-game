@@ -97,7 +97,7 @@
       "kind": "terrain",
       "filename": "terrain.glb",
       "resourcePath": "assets/models/stylized_fantasy_terrain_parts/terrain.glb",
-      "gdevelopObjectName": "StylizedTerrain3D",
+      "gdevelopObjectName": "Terrain",
       "sourceMeshCount": 450,
       "sourceTriangleCount": 15788,
       "sourceObjects": [

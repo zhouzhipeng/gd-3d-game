@@ -41,7 +41,7 @@
       strings={"color":"255;244;220","shadowQuality":"medium","top":"Z+"}
       booleans={"isCastingShadow":true}
     />
-    <StylizedTerrain3D
+    <Terrain
       id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
       at=640,360,-487.958801213
       locked
