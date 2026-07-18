@@ -1,0 +1,64 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="LockedCameraAngle" check_if_the_value_is="True"
+do SetNumberVariable variable="CameraAngle" modification_sign="=" value="CameraAngle(Object.Layer())"
+
+@event
+do SetBooleanVariable variable="LockedCameraAngle" modification_sign="False"
+
+@event
+local TargetAngle = var(type="number",value=0,persistentUuid="",folded=false,hasMixedValues=false)
+if KeyFromTextPressed key_to_check="Up"
+or KeyFromTextPressed key_to_check="Down"
+or KeyFromTextPressed key_to_check="Left"
+or KeyFromTextPressed key_to_check="Right"
+> @event
+> if KeyFromTextPressed key_to_check="Up"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="-90"
+
+> @event
+> if KeyFromTextPressed key_to_check="Down"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="90"
+
+> @event
+> if KeyFromTextPressed key_to_check="Left"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="180"
+
+> @event
+> if KeyFromTextPressed key_to_check="Right"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="0"
+
+> @event
+> if KeyFromTextPressed key_to_check="Up"
+> if KeyFromTextPressed key_to_check="Left"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="-135"
+
+> @event
+> if KeyFromTextPressed key_to_check="Up"
+> if KeyFromTextPressed key_to_check="Right"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="-45"
+
+> @event
+> if KeyFromTextPressed key_to_check="Down"
+> if KeyFromTextPressed key_to_check="Right"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="45"
+
+> @event
+> if KeyFromTextPressed key_to_check="Down"
+> if KeyFromTextPressed key_to_check="Left"
+> do SetNumberVariable variable="TargetAngle" modification_sign="=" value="135"
+
+> @event
+> do SetNumberVariable variable="TargetAngle" modification_sign="+" value="CameraAngle"
+
+> @event
+> if Physics3D::PhysicsCharacter3D::IsForwardAngleAround object="Object" behavior="PhysicsCharacter3D" angle_in_degrees="TargetAngle + 180" tolerance_in_degrees="67.5"
+> do Physics3D::PhysicsCharacter3D::SetCurrentForwardSpeed object="Object" behavior="PhysicsCharacter3D" modification_sign="=" speed_in_pixels_per_second="-Object.PhysicsCharacter3D::CurrentForwardSpeed()"
+
+> @event
+> do Physics3D::PhysicsCharacter3D::SetForwardAngle object="Object" behavior="PhysicsCharacter3D" modification_sign="=" angle_in_degrees="TargetAngle"
+> do Physics3D::PhysicsCharacter3D::SimulateForwardKey object="Object" behavior="PhysicsCharacter3D"
+
+@event
+if KeyFromTextPressed key_to_check="Jump"
+do Physics3D::PhysicsCharacter3D::SimulateJumpKey object="Object" behavior="PhysicsCharacter3D"

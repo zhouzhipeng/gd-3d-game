@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 0
+fullName = ""
+functionType = "Action"
+name = "doStepPreEvents"
+sentence = ""
+folder = [ ]
+events = "game://extensions/PhysicsCharacter3DKeyMapper/behaviors/Shooter3DKeyboardMapper/functions/doStepPreEvents/doStepPreEvents.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "PhysicsCharacter3DKeyMapper::Shooter3DKeyboardMapper"
+type = "behavior"

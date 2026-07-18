@@ -1,0 +1,3 @@
+@event
+if BooleanVariable variable="LockedCameraAngle" check_if_the_value_is="True"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

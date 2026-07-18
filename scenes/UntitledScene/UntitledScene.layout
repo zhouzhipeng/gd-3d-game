@@ -49,6 +49,7 @@
       depth=1053
       locked
     />
+    <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,-96 z-order=1 />
   </layer>
 
   <layer name="Game">
@@ -65,6 +66,5 @@
       strings={"color":"255;255;255","shadowQuality":"medium","top":"Z+"}
       booleans={"isCastingShadow":true}
     />
-    <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,-96 z-order=1 />
   </layer>
 </layout>

@@ -1,0 +1,63 @@
+kind = "behavior"
+settingsFormatVersion = 1
+order = 0
+description = "Control a 3D physics character with a keyboard for a platformer or a top-down game."
+fullName = "3D platformer keyboard mapper"
+helpPath = ""
+iconUrl = ""
+name = "Platformer3DKeyboardMapper"
+objectType = ""
+previewIconUrl = ""
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D physics character"
+extraInformation = [ "Physics3D::PhysicsCharacter3D" ]
+choices = [ ]
+name = "PhysicsCharacter3D"
+
+[[propertyDescriptors]]
+value = "Space"
+type = "KeyboardKey"
+label = "Jump key"
+name = "Jump"
+
+[[propertyDescriptors]]
+value = "w"
+type = "KeyboardKey"
+label = "Up key"
+name = "Up"
+
+[[propertyDescriptors]]
+value = "a"
+type = "KeyboardKey"
+label = "Left key"
+name = "Left"
+
+[[propertyDescriptors]]
+value = "s"
+type = "KeyboardKey"
+label = "Down key"
+name = "Down"
+
+[[propertyDescriptors]]
+value = "d"
+type = "KeyboardKey"
+label = "Right key"
+name = "Right"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "DegreeAngle"
+label = ""
+hidden = true
+name = "CameraAngle"
+
+[[propertyDescriptors]]
+value = ""
+type = "Boolean"
+label = "Camera is locked for the frame"
+hidden = true
+name = "LockedCameraAngle"

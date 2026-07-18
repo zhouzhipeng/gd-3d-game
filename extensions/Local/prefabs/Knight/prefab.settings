@@ -19,18 +19,64 @@ objectGroups = { }
 name = "ThirdPersonCamera"
 type = "ThirdPersonCamera::ThirdPersonCamera"
 Object3D = "Object3D"
-RotationHalfwayDuration = 0.15
-ElevationHalfwayDuration = 0.15
-TranslationZHalfwayDuration = 0.15
-Distance = 360
-OffsetX = 28
+RotationHalfwayDuration = 0.1
+ElevationHalfwayDuration = 0.1
+TranslationZHalfwayDuration = 0.1
+Distance = 520
+OffsetX = 0
 OffsetY = 0
-OffsetZ = 70
+OffsetZ = 75
 RotationAngleOffset = 0
-ElevationAngleOffset = 22
+ElevationAngleOffset = 18
 FollowFreeAreaZMax = 0
 FollowFreeAreaZMin = 0
 IsRotatingWithObject = true
 RotationMode = "Z"
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0
+bodyType = "Kinematic"
+bullet = false
+density = 1
+fixedRotation = true
+friction = 1
+gravityScale = 1
+linearDamping = 0
+massOverride = 0
+object3D = "Object3D"
+restitution = 0
+shape = "Capsule"
+shapeOrientation = "Z"
+
+[[behaviors]]
+name = "PhysicsCharacter3D"
+type = "Physics3D::PhysicsCharacter3D"
+canBePushed = true
+fallingSpeedMax = 900
+forwardAcceleration = 1_200
+forwardDeceleration = 1_200
+forwardSpeedMax = 600
+gravity = 1_000
+jumpHeight = 200
+jumpSustainTime = 0.2
+physics3D = "Physics3D"
+shouldBindObjectAndForwardAngle = true
+sidewaysAcceleration = 800
+sidewaysDeceleration = 800
+sidewaysSpeedMax = 400
+slopeMaxAngle = 50
+stairHeightMax = 20
+
+[[behaviors]]
+name = "Platformer3DKeyboardMapper"
+type = "PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper"
+PhysicsCharacter3D = "PhysicsCharacter3D"
+Jump = "Space"
+Up = "w"
+Left = "a"
+Down = "s"
+Right = "d"
 
 [variables]

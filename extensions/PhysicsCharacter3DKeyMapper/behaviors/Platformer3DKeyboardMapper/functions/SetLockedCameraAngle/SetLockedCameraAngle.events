@@ -1,0 +1,8 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="Value" check_if_the_value_is="True"
+do SetBooleanVariable variable="LockedCameraAngle" modification_sign="False"
+
+@event
+if BooleanVariable variable="Value" check_if_the_value_is="True"
+do SetBooleanVariable variable="LockedCameraAngle" modification_sign="True"

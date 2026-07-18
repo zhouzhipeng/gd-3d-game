@@ -1,0 +1,19 @@
+@event
+if KeyFromTextPressed key_to_check="Up"
+do Physics3D::PhysicsCharacter3D::SimulateForwardKey object="Object" behavior="PhysicsCharacter3D"
+
+@event
+if KeyFromTextPressed key_to_check="Down"
+do Physics3D::PhysicsCharacter3D::SimulateBackwardKey object="Object" behavior="PhysicsCharacter3D"
+
+@event
+if KeyFromTextPressed key_to_check="Left"
+do Physics3D::PhysicsCharacter3D::SimulateLeftKey object="Object" behavior="PhysicsCharacter3D"
+
+@event
+if KeyFromTextPressed key_to_check="Right"
+do Physics3D::PhysicsCharacter3D::SimulateRightKey object="Object" behavior="PhysicsCharacter3D"
+
+@event
+if KeyFromTextPressed key_to_check="Jump"
+do Physics3D::PhysicsCharacter3D::SimulateJumpKey object="Object" behavior="PhysicsCharacter3D"

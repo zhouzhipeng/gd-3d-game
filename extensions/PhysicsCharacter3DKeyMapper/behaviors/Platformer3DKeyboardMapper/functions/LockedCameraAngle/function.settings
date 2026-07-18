@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+description = "Check if camera is locked for the frame."
+fullName = "Camera is locked"
+functionType = "Condition"
+name = "LockedCameraAngle"
+private = true
+sentence = "_PARAM0_ camera is locked for the frame"
+folder = [ ]
+events = "game://extensions/PhysicsCharacter3DKeyMapper/behaviors/Platformer3DKeyboardMapper/functions/LockedCameraAngle/LockedCameraAngle.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper"
+type = "behavior"

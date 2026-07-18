@@ -6,8 +6,24 @@ name = "StylizedTerrain3D"
 persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0
+bodyType = "Static"
+bullet = false
+density = 1
+fixedRotation = true
+friction = 1
+gravityScale = 1
+linearDamping = 0
+massOverride = 0
+object3D = "Object3D"
+restitution = 0
+shape = "Mesh"
+shapeOrientation = "Z"
 
 [content]
 centerLocation = "ObjectCenter"
