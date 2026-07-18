@@ -10,10 +10,27 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "Knight"
 previewIconUrl = ""
-behaviors = [ ]
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Knight/Knight.layout"
 variants = [ ]
 objectGroups = { }
+
+[[behaviors]]
+name = "ThirdPersonCamera"
+type = "ThirdPersonCamera::ThirdPersonCamera"
+Object3D = "Object3D"
+RotationHalfwayDuration = 0.15
+ElevationHalfwayDuration = 0.15
+TranslationZHalfwayDuration = 0.15
+Distance = 360
+OffsetX = 28
+OffsetY = 0
+OffsetZ = 70
+RotationAngleOffset = 0
+ElevationAngleOffset = 22
+FollowFreeAreaZMax = 0
+FollowFreeAreaZMin = 0
+IsRotatingWithObject = true
+RotationMode = "Z"
 
 [variables]
