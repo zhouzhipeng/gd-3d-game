@@ -1,12 +1,12 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 8
+order = 7
 assetStoreId = ""
 name = "Sheep"
 persistentUuid = "09457a74-34f5-4dde-a226-2c431f6d77a8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-folder = ["Stylized Terrain", "Sheep"]
+folder = [ "Stylized Terrain", "Sheep" ]
 
 [[behaviors]]
 name = "Physics3D"
@@ -24,6 +24,13 @@ object3D = "Object3D"
 restitution = 0
 shape = "Mesh"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"

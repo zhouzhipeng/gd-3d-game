@@ -1,12 +1,12 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 4
+order = 3
 assetStoreId = ""
 name = "BuildingCastle"
 persistentUuid = "ea815a1d-ea97-49fd-9fb5-e81696f46162"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-folder = ["Stylized Terrain", "Buildings"]
+folder = [ "Stylized Terrain", "Buildings" ]
 
 [[behaviors]]
 name = "Physics3D"
@@ -24,6 +24,13 @@ object3D = "Object3D"
 restitution = 0
 shape = "Mesh"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"

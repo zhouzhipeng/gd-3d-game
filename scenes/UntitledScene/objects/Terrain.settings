@@ -24,12 +24,19 @@ object3D = "Object3D"
 restitution = 0
 shape = "Mesh"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
 depth = 648.31765231
-height = 3991.764705882
+height = 3_991.764705882
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
@@ -39,7 +46,7 @@ originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 4680
+width = 4_680
 animations = [ ]
 
 [variables]

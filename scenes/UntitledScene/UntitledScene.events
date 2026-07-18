@@ -1,16 +1,5 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
 
-@event aiGeneratedEventId="initialize-3d-collision-filtering"
-if SceneJustBegins
-do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="1" enable="yes"
-do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="5" enable="yes"
-do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="1" enable="yes"
-do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="5" enable="yes"
-do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="Physics3D" layer_1_8="1" enable="yes"
-do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="Physics3D" layer_1_8="5" enable="yes"
-do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="1" enable="yes"
-do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="5" enable="yes"
-
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
 @instruction inverted=true
@@ -30,6 +19,7 @@ do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="=" value="clamp(Knight.ThirdPersonCamera::ElevationAngleOffset(), -10, 55)"
 
 @event aiGeneratedEventId="smooth-knight-turn-toward-movement"
-for each Knight
+for each "Knight"
+> @event
 > if BuiltinCommonInstructions::CompareNumbers first_expression="abs(AngleDifference(Knight.Angle(), Knight.PhysicsCharacter3D::ForwardAngle()))" comparison_sign=">" second_expression="0.5"
 > do SetAngle object="Knight" modification_sign="=" angle_in_degrees="lerpAngle(Knight.Angle(), Knight.PhysicsCharacter3D::ForwardAngle(), 1 - exp(-10 * TimeDelta()))"

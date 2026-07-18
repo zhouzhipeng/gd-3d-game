@@ -1,12 +1,12 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 7
+order = 6
 assetStoreId = ""
 name = "TreeBroad"
 persistentUuid = "a146e85e-cff7-4aa9-b3d5-927df99aa5d6"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-folder = ["Stylized Terrain", "Trees"]
+folder = [ "Stylized Terrain", "Trees" ]
 
 [[behaviors]]
 name = "Physics3D"
@@ -24,6 +24,13 @@ object3D = "Object3D"
 restitution = 0
 shape = "Mesh"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"

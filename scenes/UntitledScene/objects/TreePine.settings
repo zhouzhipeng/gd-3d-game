@@ -1,12 +1,12 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 6
+order = 5
 assetStoreId = ""
 name = "TreePine"
 persistentUuid = "cf71cbac-6160-4c3a-8e24-5901d0813a29"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-folder = ["Stylized Terrain", "Trees"]
+folder = [ "Stylized Terrain", "Trees" ]
 
 [[behaviors]]
 name = "Physics3D"
@@ -24,6 +24,13 @@ object3D = "Object3D"
 restitution = 0
 shape = "Mesh"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"

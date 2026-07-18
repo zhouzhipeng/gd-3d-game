@@ -1,5 +1,4 @@
 @group "Knight melee combo" source="" creationTime=0 color=[190,92,255] parameters=[]
-
 @event aiGeneratedEventId="buffer-knight-melee-follow-up"
 if MouseButtonFromTextReleased button_to_check="\"Left\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
@@ -53,7 +52,6 @@ if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
-
 @end group
 
 @event aiGeneratedEventId="play-knight-jump-start"
