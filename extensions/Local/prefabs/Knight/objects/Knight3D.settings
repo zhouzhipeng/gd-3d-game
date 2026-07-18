@@ -47,6 +47,21 @@ source = "Hit_B"
 
 [[content.animations]]
 loop = false
+name = "Melee_1H_Attack_Slice_Horizontal"
+source = "Melee_1H_Attack_Slice_Horizontal"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Slice_Diagonal"
+source = "Melee_1H_Attack_Slice_Diagonal"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Stab"
+source = "Melee_1H_Attack_Stab"
+
+[[content.animations]]
+loop = false
 name = "Interact"
 source = "Interact"
 
