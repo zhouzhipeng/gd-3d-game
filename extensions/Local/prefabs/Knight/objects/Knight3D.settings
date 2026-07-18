@@ -126,7 +126,7 @@ name = "Jump_Start"
 source = "Jump_Start"
 
 [[content.animations]]
-loop = false
+loop = true
 name = "Running_A"
 source = "Running_A"
 
