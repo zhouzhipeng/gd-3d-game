@@ -1,0 +1,3 @@
+@event aiGeneratedEventId="initialize-knight-idle-animation"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""

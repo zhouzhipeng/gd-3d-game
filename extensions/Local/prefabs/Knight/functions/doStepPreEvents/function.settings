@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+fullName = "doStepPreEvents"
+functionType = "Action"
+name = "doStepPreEvents"
+sentence = ""
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/doStepPreEvents/doStepPreEvents.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"

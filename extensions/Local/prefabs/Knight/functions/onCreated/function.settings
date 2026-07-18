@@ -1,0 +1,16 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 0
+fullName = "onCreated"
+functionType = "Action"
+name = "onCreated"
+sentence = ""
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/onCreated/onCreated.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"
