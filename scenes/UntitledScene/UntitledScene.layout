@@ -8,7 +8,7 @@
     grid-color=#D7FFFF
     grid-alpha=0.35
     snap=true
-    zoom=0.1679203449169753
+    zoom=0.04034333917317813
     window-mask=false
     selected-layer="3D Terrain"
     mode=embedded-game
@@ -23,7 +23,6 @@
     rendering=3d
     camera-type=perspective
     camera-behavior=do-nothing
-    locked=true
     ambient=#FFFFFF
     near=1
     max-2d-distance=10000
@@ -49,11 +48,7 @@
       depth=1053
       locked
     />
-    <GroundPlatform
-      id="671abe76-5599-49f8-a3f5-971305e379cb"
-      at=640,360,-195.5
-      locked
-    />
+    <GroundPlatform id="671abe76-5599-49f8-a3f5-971305e379cb" at=-1711,-1575,-195.5 locked />
     <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,100 z-order=1 />
   </layer>
 

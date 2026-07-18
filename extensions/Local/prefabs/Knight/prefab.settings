@@ -16,24 +16,7 @@ variants = [ ]
 objectGroups = { }
 
 [[behaviors]]
-name = "ThirdPersonCamera"
-type = "ThirdPersonCamera::ThirdPersonCamera"
-Object3D = "Object3D"
-RotationHalfwayDuration = 0.35
-ElevationHalfwayDuration = 0.1
-TranslationZHalfwayDuration = 0.1
-Distance = 520
-OffsetX = 0
-OffsetY = 0
-OffsetZ = 75
-RotationAngleOffset = 0
-ElevationAngleOffset = 18
-FollowFreeAreaZMax = 0
-FollowFreeAreaZMin = 0
-IsRotatingWithObject = true
-RotationMode = "Z"
-
-[[behaviors]]
+isFolded = true
 name = "Physics3D"
 type = "Physics3D::Physics3DBehavior"
 angularDamping = 0
@@ -49,8 +32,16 @@ object3D = "Object3D"
 restitution = 0
 shape = "Capsule"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [[behaviors]]
+isFolded = true
 name = "PhysicsCharacter3D"
 type = "Physics3D::PhysicsCharacter3D"
 canBePushed = true
@@ -70,6 +61,7 @@ slopeMaxAngle = 50
 stairHeightMax = 20
 
 [[behaviors]]
+isFolded = true
 name = "Platformer3DKeyboardMapper"
 type = "PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper"
 PhysicsCharacter3D = "PhysicsCharacter3D"
@@ -78,5 +70,24 @@ Up = "w"
 Left = "a"
 Down = "s"
 Right = "d"
+
+[[behaviors]]
+isFolded = true
+name = "ThirdPersonCamera"
+type = "ThirdPersonCamera::ThirdPersonCamera"
+Object3D = "Object3D"
+RotationHalfwayDuration = 0.35
+ElevationHalfwayDuration = 0.1
+TranslationZHalfwayDuration = 0.1
+Distance = 520
+OffsetX = 0
+OffsetY = 0
+OffsetZ = 75
+RotationAngleOffset = 0
+ElevationAngleOffset = 18
+FollowFreeAreaZMax = 0
+FollowFreeAreaZMin = 0
+IsRotatingWithObject = true
+RotationMode = "Z"
 
 [variables]

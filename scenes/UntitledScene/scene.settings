@@ -19,12 +19,4 @@ gravityY = 0
 gravityZ = -9.8
 worldScale = 100
 
-[[behaviorsSharedData]]
-name = "PhysicsCharacter3D"
-type = "Physics3D::PhysicsCharacter3D"
-
-[[behaviorsSharedData]]
-name = "Platformer3DKeyboardMapper"
-type = "PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper"
-
 [variables]
