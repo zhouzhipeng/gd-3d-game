@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 0
+order = 3
 assetStoreId = ""
-name = "StylizedTerrain3D"
-persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
+name = "BuildingCottageA"
+persistentUuid = "b2ceb42a-c684-489c-b69f-57eed4e581f8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = [ ]
+folder = ["Stylized Terrain", "Buildings"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 648.31765231
-height = 3991.764705882
+depth = 297.175821136
+height = 260.634225958
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/terrain.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/building_cottage_a.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 4680
+width = 289.058810402
 animations = [ ]
 
 [variables]

@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 0
+order = 12
 assetStoreId = ""
-name = "StylizedTerrain3D"
-persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
+name = "TreePine01"
+persistentUuid = "2840d4d7-8f64-47dd-a9ec-aa083a0cb246"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = [ ]
+folder = ["Stylized Terrain", "Trees"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 648.31765231
-height = 3991.764705882
+depth = 408.811768644
+height = 245.633556142
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/terrain.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/tree_pine_01.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 4680
+width = 249.422842194
 animations = [ ]
 
 [variables]

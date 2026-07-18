@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 0
+order = 29
 assetStoreId = ""
-name = "StylizedTerrain3D"
-persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
+name = "Sheep04"
+persistentUuid = "4bac327f-0126-40f2-bf10-493d2dfca541"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = [ ]
+folder = ["Stylized Terrain", "Sheep"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 648.31765231
-height = 3991.764705882
+depth = 104.611779802
+height = 170.763840395
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/terrain.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/sheep_04.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 4680
+width = 133.300455809
 animations = [ ]
 
 [variables]
