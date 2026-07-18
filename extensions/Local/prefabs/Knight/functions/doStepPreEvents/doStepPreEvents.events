@@ -1,19 +1,91 @@
+@event aiGeneratedEventId="play-knight-jump-start"
+if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Start\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Full_Short\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Full_Long\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Idle\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Start\""
+
+@event aiGeneratedEventId="play-knight-long-jump-while-held"
+if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Start\""
+if AnimatableCapability::AnimatableBehavior::ElapsedTime object="Knight3D" behavior="Animation" comparison_sign=">=" elapsed_time_in_seconds="0.2"
+if KeyFromTextPressed key_to_check="\"Space\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Full_Long\""
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0.2"
+
+@event aiGeneratedEventId="play-knight-short-jump-when-released"
+if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Start\""
+if AnimatableCapability::AnimatableBehavior::ElapsedTime object="Knight3D" behavior="Animation" comparison_sign=">=" elapsed_time_in_seconds="0.2"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"Space\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Full_Short\""
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0.2"
+
+@event aiGeneratedEventId="finish-knight-short-jump-takeoff"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Full_Short\""
+if AnimatableCapability::AnimatableBehavior::ElapsedTime object="Knight3D" behavior="Animation" comparison_sign=">=" elapsed_time_in_seconds="0.5"
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Idle\""
+
+@event aiGeneratedEventId="finish-knight-long-jump-airtime"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Full_Long\""
+if AnimatableCapability::AnimatableBehavior::ElapsedTime object="Knight3D" behavior="Animation" comparison_sign=">=" elapsed_time_in_seconds="1.625"
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Idle\""
+
+@event aiGeneratedEventId="play-knight-airborne-animation"
+if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Idle\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Idle\""
+
+@event aiGeneratedEventId="play-knight-landing-animation"
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Land\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Jump_Land\""
+
+@event aiGeneratedEventId="finish-knight-landing-while-moving"
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Land\""
+if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Running_A\""
+
+@event aiGeneratedEventId="finish-knight-landing-while-stopped"
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Land\""
+if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+
 @event aiGeneratedEventId="play-knight-run-while-moving"
-if KeyFromTextPressed key_to_check="\"w\""
-or KeyFromTextPressed key_to_check="\"a\""
-or KeyFromTextPressed key_to_check="\"s\""
-or KeyFromTextPressed key_to_check="\"d\""
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Running_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Running_A\""
 
 @event aiGeneratedEventId="play-knight-idle-while-stopped"
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if KeyFromTextPressed key_to_check="\"w\""
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if KeyFromTextPressed key_to_check="\"a\""
-@instruction inverted=true
-if KeyFromTextPressed key_to_check="\"s\""
-@instruction inverted=true
-if KeyFromTextPressed key_to_check="\"d\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""

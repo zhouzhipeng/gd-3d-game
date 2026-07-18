@@ -111,7 +111,7 @@ name = "Jump_Full_Short"
 source = "Jump_Full_Short"
 
 [[content.animations]]
-loop = false
+loop = true
 name = "Jump_Idle"
 source = "Jump_Idle"
 
