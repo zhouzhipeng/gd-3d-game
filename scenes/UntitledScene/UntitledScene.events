@@ -3,3 +3,14 @@
 @event aiGeneratedEventId="front-camera-on-knight"
 if SceneJustBegins
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Walking_C\""
+
+@event aiGeneratedEventId="initialize-3d-collision-filtering"
+if SceneJustBegins
+do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="1" enable="yes"
+do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="5" enable="yes"
+do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="1" enable="yes"
+do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="5" enable="yes"
+do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="Physics3D" layer_1_8="1" enable="yes"
+do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="Physics3D" layer_1_8="5" enable="yes"
+do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="1" enable="yes"
+do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="5" enable="yes"
