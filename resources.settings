@@ -727,38 +727,10 @@ name = "assets/props/wand.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_cottage_a.glb"
+file = "assets/models/stylized_fantasy_terrain_parts/building_cottage.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_cottage_a.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_cottage_b.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_cottage_b.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_cottage_c.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_cottage_c.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_cottage_d.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_cottage_d.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_cottage_e.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_cottage_e.glb"
+name = "assets/models/stylized_fantasy_terrain_parts/building_cottage.glb"
 userAdded = true
 
 [[resources]]
@@ -769,148 +741,29 @@ name = "assets/models/stylized_fantasy_terrain_parts/building_castle.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_western_watchtower.glb"
+file = "assets/models/stylized_fantasy_terrain_parts/building_watchtower.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_western_watchtower.glb"
+name = "assets/models/stylized_fantasy_terrain_parts/building_watchtower.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/building_southern_watchtower.glb"
+file = "assets/models/stylized_fantasy_terrain_parts/tree_pine.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/building_southern_watchtower.glb"
+name = "assets/models/stylized_fantasy_terrain_parts/tree_pine.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_00.glb"
+file = "assets/models/stylized_fantasy_terrain_parts/tree_broad.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_00.glb"
+name = "assets/models/stylized_fantasy_terrain_parts/tree_broad.glb"
 userAdded = true
 
 [[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_01.glb"
+file = "assets/models/stylized_fantasy_terrain_parts/sheep.glb"
 kind = "model3D"
 metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_01.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_02.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_02.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_03.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_03.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_04.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_04.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_05.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_05.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_pine_06.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_pine_06.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_00.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_00.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_01.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_01.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_02.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_02.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_03.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_03.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_04.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_04.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_05.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_05.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_06.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_06.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/tree_broad_07.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/tree_broad_07.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/sheep_01.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/sheep_01.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/sheep_02.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/sheep_02.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/sheep_03.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/sheep_03.glb"
-userAdded = true
-
-[[resources]]
-file = "assets/models/stylized_fantasy_terrain_parts/sheep_04.glb"
-kind = "model3D"
-metadata = ""
-name = "assets/models/stylized_fantasy_terrain_parts/sheep_04.glb"
+name = "assets/models/stylized_fantasy_terrain_parts/sheep.glb"
 userAdded = true

@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 4
+order = 8
 assetStoreId = ""
-name = "BuildingCottageB"
-persistentUuid = "40379c81-ba91-4d0b-abc6-c70e53e971f7"
+name = "Sheep"
+persistentUuid = "09457a74-34f5-4dde-a226-2c431f6d77a8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = ["Stylized Terrain", "Buildings"]
+folder = ["Stylized Terrain", "Sheep"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 282.17226337
-height = 247.213625908
+depth = 104.611779802
+height = 79.619901601
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/building_cottage_b.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/sheep.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 274.605883009
+width = 159.63796293
 animations = [ ]
 
 [variables]

@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 11
+order = 5
 assetStoreId = ""
-name = "TreePine00"
-persistentUuid = "cf71cbac-6160-4c3a-8e24-5901d0813a29"
+name = "BuildingWatchtower"
+persistentUuid = "d8c76ac1-2230-4057-958b-1072aed07b6e"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = ["Stylized Terrain", "Trees"]
+folder = ["Stylized Terrain", "Buildings"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 470.133519173
-height = 282.478550182
+depth = 418.44708639
+height = 233.760503601
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/tree_pine_00.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/building_watchtower.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 286.836237346
+width = 233.760569236
 animations = [ ]
 
 [variables]

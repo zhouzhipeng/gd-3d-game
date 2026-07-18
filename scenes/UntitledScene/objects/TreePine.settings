@@ -1,29 +1,29 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 27
+order = 6
 assetStoreId = ""
-name = "Sheep02"
-persistentUuid = "906b31e6-634b-43e9-8ac0-699a3346d369"
+name = "TreePine"
+persistentUuid = "cf71cbac-6160-4c3a-8e24-5901d0813a29"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
-folder = ["Stylized Terrain", "Sheep"]
+folder = ["Stylized Terrain", "Trees"]
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 104.611779802
-height = 158.209986406
+depth = 408.811768644
+height = 245.633556142
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/sheep_02.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/tree_pine.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 160.146192943
+width = 249.422842194
 animations = [ ]
 
 [variables]

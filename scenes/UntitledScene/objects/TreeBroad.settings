@@ -1,9 +1,9 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 25
+order = 7
 assetStoreId = ""
-name = "TreeBroad07"
-persistentUuid = "009f9604-e91e-448c-b85d-ae80ac371212"
+name = "TreeBroad"
+persistentUuid = "a146e85e-cff7-4aa9-b3d5-927df99aa5d6"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
@@ -12,18 +12,18 @@ folder = ["Stylized Terrain", "Trees"]
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 266.347083765
-height = 151.746163088
+depth = 295.941189598
+height = 168.606869754
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/tree_broad_07.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/tree_broad.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 230.507982478
+width = 256.119965946
 animations = [ ]
 
 [variables]

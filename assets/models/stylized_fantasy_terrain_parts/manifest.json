@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "source": {
     "file": "arts/stylized_fantasy_terrain.blend",
     "sha256": "ca55f448ef334d9a420ee11e7d26cb68bb461354801d667ca9cf24da3ce03f6f",
@@ -45,7 +45,7 @@
     }
   },
   "partition": {
-    "assetCount": 28,
+    "instanceCount": 28,
     "meshCount": 654,
     "triangleCount": 29476,
     "countsByKind": {
@@ -62,6 +62,45 @@
     },
     "exhaustive": true,
     "pairwiseDisjoint": true
+  },
+  "outputs": {
+    "prototypeCount": 7,
+    "meshCount": 540,
+    "triangleCount": 23492,
+    "removedPriorManifestOutputs": [
+      "building_cottage_a.glb",
+      "building_cottage_b.glb",
+      "building_cottage_c.glb",
+      "building_cottage_d.glb",
+      "building_cottage_e.glb",
+      "building_southern_watchtower.glb",
+      "building_western_watchtower.glb",
+      "sheep_01.glb",
+      "sheep_02.glb",
+      "sheep_03.glb",
+      "sheep_04.glb",
+      "tree_broad_00.glb",
+      "tree_broad_01.glb",
+      "tree_broad_02.glb",
+      "tree_broad_03.glb",
+      "tree_broad_04.glb",
+      "tree_broad_05.glb",
+      "tree_broad_06.glb",
+      "tree_broad_07.glb",
+      "tree_pine_00.glb",
+      "tree_pine_01.glb",
+      "tree_pine_02.glb",
+      "tree_pine_03.glb",
+      "tree_pine_04.glb",
+      "tree_pine_05.glb",
+      "tree_pine_06.glb"
+    ],
+    "countsByKind": {
+      "terrain": 1,
+      "building": 3,
+      "tree": 2,
+      "sheep": 1
+    }
   },
   "gdevelopIntegration": {
     "anchor": [
@@ -80,6 +119,7 @@
       "y = anchorY - scale * blenderY",
       "z = anchorZ + scale * (blenderZ - fullSceneCenterZ)"
     ],
+    "rotationFormula": "gdevelopZ = -blenderZ",
     "content": {
       "originLocation": "ModelOrigin",
       "centerLocation": "ModelOrigin",
@@ -90,13 +130,1261 @@
       "materialType": "KeepOriginal"
     }
   },
-  "assets": [
+  "consolidation": {
+    "policy": "one shared prototype per semantic model family",
+    "geometrySubstitutionInstances": [
+      "broad_tree_00",
+      "broad_tree_01",
+      "broad_tree_02",
+      "broad_tree_03",
+      "broad_tree_05",
+      "broad_tree_06",
+      "broad_tree_07",
+      "cottage_b",
+      "cottage_d",
+      "cottage_e",
+      "southern_watchtower"
+    ],
+    "materialSubstitutionInstances": [
+      "broad_tree_01",
+      "broad_tree_03",
+      "broad_tree_05"
+    ]
+  },
+  "prototypes": [
     {
       "index": 0,
       "key": "terrain",
       "kind": "terrain",
       "filename": "terrain.glb",
       "resourcePath": "assets/models/stylized_fantasy_terrain_parts/terrain.glb",
+      "gdevelopObjectName": "Terrain",
+      "representativeKey": "terrain",
+      "sourceMeshCount": 450,
+      "sourceTriangleCount": 15788,
+      "sourceObjects": [
+        "Castle_Terrace_CliffStone_000",
+        "Castle_Terrace_CliffStone_001",
+        "Castle_Terrace_CliffStone_002",
+        "Castle_Terrace_CliffStone_003",
+        "Castle_Terrace_CliffStone_004",
+        "Castle_Terrace_CliffStone_005",
+        "Castle_Terrace_CliffStone_006",
+        "Castle_Terrace_CliffStone_007",
+        "Castle_Terrace_CliffStone_008",
+        "Castle_Terrace_CliffStone_009",
+        "Castle_Terrace_CliffStone_010",
+        "Castle_Terrace_CliffStone_011",
+        "Castle_Terrace_CliffStone_012",
+        "Castle_Terrace_CliffStone_013",
+        "Castle_Terrace_CliffStone_014",
+        "Castle_Terrace_CliffStone_015",
+        "Castle_Terrace_CliffStone_016",
+        "Castle_Terrace_CliffStone_017",
+        "Castle_Terrace_CliffStone_018",
+        "Castle_Terrace_CliffStone_019",
+        "Castle_Terrace_CliffStone_020",
+        "Castle_Terrace_CliffStone_021",
+        "Castle_Terrace_CliffStone_022",
+        "Castle_Terrace_CliffStone_023",
+        "Castle_Terrace_CliffStone_024",
+        "Castle_Terrace_CliffStone_025",
+        "Castle_Terrace_CliffStone_026",
+        "Castle_Terrace_CliffStone_027",
+        "Castle_Terrace_CliffStone_028",
+        "Castle_Terrace_CliffStone_029",
+        "Castle_Terrace_CliffStone_030",
+        "Castle_Terrace_CliffStone_031",
+        "Castle_Terrace_CliffStone_032",
+        "Castle_Terrace_CliffStone_033",
+        "Castle_Terrace_CliffStone_034",
+        "Castle_Terrace_CliffStone_035",
+        "Castle_Terrace_CliffStone_036",
+        "Castle_Terrace_CliffStone_037",
+        "Castle_Terrace_CliffStone_038",
+        "Castle_Terrace_CliffStone_039",
+        "Castle_Terrace_CliffStone_040",
+        "Castle_Terrace_CliffStone_041",
+        "Castle_Terrace_CliffStone_042",
+        "Castle_Terrace_CliffStone_043",
+        "Castle_Terrace_CliffStone_044",
+        "Castle_Terrace_CliffStone_045",
+        "Castle_Terrace_CliffStone_046",
+        "Castle_Terrace_CliffStone_047",
+        "Castle_Terrace_CliffStone_048",
+        "Castle_Terrace_CliffStone_049",
+        "Castle_Terrace_CliffStone_050",
+        "Castle_Terrace_CliffStone_051",
+        "Castle_Terrace_CliffStone_052",
+        "Castle_Terrace_CliffStone_053",
+        "Castle_Terrace_CliffStone_054",
+        "Castle_Terrace_CliffStone_055",
+        "Castle_Terrace_CliffStone_056",
+        "Castle_Terrace_CliffStone_057",
+        "Castle_Terrace_CliffStone_058",
+        "Castle_Terrace_CliffStone_059",
+        "Castle_Terrace_CliffStone_060",
+        "Castle_Terrace_CliffStone_061",
+        "Castle_Terrace_CliffStone_062",
+        "Castle_Terrace_CliffStone_063",
+        "Castle_Terrace_CliffStone_064",
+        "Castle_Terrace_CliffStone_065",
+        "Castle_Terrace_CliffStone_066",
+        "Castle_Terrace_CliffStone_067",
+        "Castle_Terrace_CliffStone_068",
+        "Castle_Terrace_CliffStone_069",
+        "Castle_Terrace_EarthRim",
+        "Castle_Terrace_GrassCap",
+        "Castle_Terrace_RockBody",
+        "Garden_Islet_EarthRim",
+        "Garden_Islet_GrassCap",
+        "Garden_Islet_RockBody",
+        "GrassTuft_00_0",
+        "GrassTuft_00_1",
+        "GrassTuft_00_2",
+        "GrassTuft_01_0",
+        "GrassTuft_01_1",
+        "GrassTuft_01_2",
+        "GrassTuft_02_0",
+        "GrassTuft_02_1",
+        "GrassTuft_02_2",
+        "GrassTuft_03_0",
+        "GrassTuft_03_1",
+        "GrassTuft_03_2",
+        "GrassTuft_04_0",
+        "GrassTuft_04_1",
+        "GrassTuft_04_2",
+        "GrassTuft_05_0",
+        "GrassTuft_05_1",
+        "GrassTuft_05_2",
+        "GrassTuft_06_0",
+        "GrassTuft_06_1",
+        "GrassTuft_06_2",
+        "GrassTuft_07_0",
+        "GrassTuft_07_1",
+        "GrassTuft_07_2",
+        "GrassTuft_08_0",
+        "GrassTuft_08_1",
+        "GrassTuft_08_2",
+        "GrassTuft_09_0",
+        "GrassTuft_09_1",
+        "GrassTuft_09_2",
+        "GrassTuft_10_0",
+        "GrassTuft_10_1",
+        "GrassTuft_10_2",
+        "GrassTuft_11_0",
+        "GrassTuft_11_1",
+        "GrassTuft_11_2",
+        "Highland_Main_CliffStone_000",
+        "Highland_Main_CliffStone_001",
+        "Highland_Main_CliffStone_002",
+        "Highland_Main_CliffStone_003",
+        "Highland_Main_CliffStone_004",
+        "Highland_Main_CliffStone_005",
+        "Highland_Main_CliffStone_006",
+        "Highland_Main_CliffStone_007",
+        "Highland_Main_CliffStone_008",
+        "Highland_Main_CliffStone_009",
+        "Highland_Main_CliffStone_010",
+        "Highland_Main_CliffStone_011",
+        "Highland_Main_CliffStone_012",
+        "Highland_Main_CliffStone_013",
+        "Highland_Main_CliffStone_014",
+        "Highland_Main_CliffStone_015",
+        "Highland_Main_CliffStone_016",
+        "Highland_Main_CliffStone_017",
+        "Highland_Main_CliffStone_018",
+        "Highland_Main_CliffStone_019",
+        "Highland_Main_CliffStone_020",
+        "Highland_Main_CliffStone_021",
+        "Highland_Main_CliffStone_022",
+        "Highland_Main_CliffStone_023",
+        "Highland_Main_CliffStone_024",
+        "Highland_Main_CliffStone_025",
+        "Highland_Main_CliffStone_026",
+        "Highland_Main_CliffStone_027",
+        "Highland_Main_CliffStone_028",
+        "Highland_Main_CliffStone_029",
+        "Highland_Main_CliffStone_030",
+        "Highland_Main_CliffStone_031",
+        "Highland_Main_CliffStone_032",
+        "Highland_Main_CliffStone_033",
+        "Highland_Main_CliffStone_034",
+        "Highland_Main_CliffStone_035",
+        "Highland_Main_CliffStone_036",
+        "Highland_Main_CliffStone_037",
+        "Highland_Main_CliffStone_038",
+        "Highland_Main_CliffStone_039",
+        "Highland_Main_CliffStone_040",
+        "Highland_Main_CliffStone_041",
+        "Highland_Main_CliffStone_042",
+        "Highland_Main_CliffStone_043",
+        "Highland_Main_CliffStone_044",
+        "Highland_Main_CliffStone_045",
+        "Highland_Main_CliffStone_046",
+        "Highland_Main_CliffStone_047",
+        "Highland_Main_CliffStone_048",
+        "Highland_Main_CliffStone_049",
+        "Highland_Main_CliffStone_050",
+        "Highland_Main_CliffStone_051",
+        "Highland_Main_CliffStone_052",
+        "Highland_Main_CliffStone_053",
+        "Highland_Main_CliffStone_054",
+        "Highland_Main_CliffStone_055",
+        "Highland_Main_CliffStone_056",
+        "Highland_Main_CliffStone_057",
+        "Highland_Main_CliffStone_058",
+        "Highland_Main_CliffStone_059",
+        "Highland_Main_CliffStone_060",
+        "Highland_Main_CliffStone_061",
+        "Highland_Main_CliffStone_062",
+        "Highland_Main_CliffStone_063",
+        "Highland_Main_CliffStone_064",
+        "Highland_Main_CliffStone_065",
+        "Highland_Main_CliffStone_066",
+        "Highland_Main_CliffStone_067",
+        "Highland_Main_CliffStone_068",
+        "Highland_Main_CliffStone_069",
+        "Highland_Main_CliffStone_070",
+        "Highland_Main_CliffStone_071",
+        "Highland_Main_CliffStone_072",
+        "Highland_Main_CliffStone_073",
+        "Highland_Main_CliffStone_074",
+        "Highland_Main_CliffStone_075",
+        "Highland_Main_CliffStone_076",
+        "Highland_Main_CliffStone_077",
+        "Highland_Main_CliffStone_078",
+        "Highland_Main_CliffStone_079",
+        "Highland_Main_CliffStone_080",
+        "Highland_Main_CliffStone_081",
+        "Highland_Main_CliffStone_082",
+        "Highland_Main_CliffStone_083",
+        "Highland_Main_CliffStone_084",
+        "Highland_Main_CliffStone_085",
+        "Highland_Main_CliffStone_086",
+        "Highland_Main_CliffStone_087",
+        "Highland_Main_CliffStone_088",
+        "Highland_Main_CliffStone_089",
+        "Highland_Main_CliffStone_090",
+        "Highland_Main_CliffStone_091",
+        "Highland_Main_CliffStone_092",
+        "Highland_Main_CliffStone_093",
+        "Highland_Main_CliffStone_094",
+        "Highland_Main_CliffStone_095",
+        "Highland_Main_CliffStone_096",
+        "Highland_Main_CliffStone_097",
+        "Highland_Main_CliffStone_098",
+        "Highland_Main_CliffStone_099",
+        "Highland_Main_CliffStone_100",
+        "Highland_Main_CliffStone_101",
+        "Highland_Main_CliffStone_102",
+        "Highland_Main_CliffStone_103",
+        "Highland_Main_CliffStone_104",
+        "Highland_Main_CliffStone_105",
+        "Highland_Main_CliffStone_106",
+        "Highland_Main_CliffStone_107",
+        "Highland_Main_CliffStone_108",
+        "Highland_Main_CliffStone_109",
+        "Highland_Main_CliffStone_110",
+        "Highland_Main_CliffStone_111",
+        "Highland_Main_CliffStone_112",
+        "Highland_Main_CliffStone_113",
+        "Highland_Main_EarthRim",
+        "Highland_Main_GrassCap",
+        "Highland_Main_RockBody",
+        "Northern_Forest_CliffStone_000",
+        "Northern_Forest_CliffStone_001",
+        "Northern_Forest_CliffStone_002",
+        "Northern_Forest_CliffStone_003",
+        "Northern_Forest_CliffStone_004",
+        "Northern_Forest_CliffStone_005",
+        "Northern_Forest_CliffStone_006",
+        "Northern_Forest_CliffStone_007",
+        "Northern_Forest_CliffStone_008",
+        "Northern_Forest_CliffStone_009",
+        "Northern_Forest_CliffStone_010",
+        "Northern_Forest_CliffStone_011",
+        "Northern_Forest_CliffStone_012",
+        "Northern_Forest_CliffStone_013",
+        "Northern_Forest_CliffStone_014",
+        "Northern_Forest_CliffStone_015",
+        "Northern_Forest_CliffStone_016",
+        "Northern_Forest_CliffStone_017",
+        "Northern_Forest_EarthRim",
+        "Northern_Forest_GrassCap",
+        "Northern_Forest_RockBody",
+        "PathStone_00",
+        "PathStone_01",
+        "PathStone_02",
+        "PathStone_03",
+        "PathStone_04",
+        "PathStone_05",
+        "Ripple_00",
+        "Ripple_01",
+        "Ripple_02",
+        "Ripple_03",
+        "Ripple_04",
+        "Ripple_05",
+        "Ripple_06",
+        "TerraceStep_00",
+        "TerraceStep_01",
+        "TerraceStep_02",
+        "TerraceStep_03",
+        "TerraceStep_04",
+        "TerraceStep_05",
+        "Tiny_Islet_A_EarthRim",
+        "Tiny_Islet_A_GrassCap",
+        "Tiny_Islet_A_RockBody",
+        "Village_Island_CliffStone_000",
+        "Village_Island_CliffStone_001",
+        "Village_Island_CliffStone_002",
+        "Village_Island_CliffStone_003",
+        "Village_Island_CliffStone_004",
+        "Village_Island_CliffStone_005",
+        "Village_Island_CliffStone_006",
+        "Village_Island_CliffStone_007",
+        "Village_Island_CliffStone_008",
+        "Village_Island_CliffStone_009",
+        "Village_Island_CliffStone_010",
+        "Village_Island_CliffStone_011",
+        "Village_Island_CliffStone_012",
+        "Village_Island_CliffStone_013",
+        "Village_Island_CliffStone_014",
+        "Village_Island_CliffStone_015",
+        "Village_Island_CliffStone_016",
+        "Village_Island_CliffStone_017",
+        "Village_Island_CliffStone_018",
+        "Village_Island_CliffStone_019",
+        "Village_Island_CliffStone_020",
+        "Village_Island_CliffStone_021",
+        "Village_Island_CliffStone_022",
+        "Village_Island_CliffStone_023",
+        "Village_Island_CliffStone_024",
+        "Village_Island_CliffStone_025",
+        "Village_Island_CliffStone_026",
+        "Village_Island_CliffStone_027",
+        "Village_Island_CliffStone_028",
+        "Village_Island_CliffStone_029",
+        "Village_Island_CliffStone_030",
+        "Village_Island_CliffStone_031",
+        "Village_Island_CliffStone_032",
+        "Village_Island_CliffStone_033",
+        "Village_Island_CliffStone_034",
+        "Village_Island_CliffStone_035",
+        "Village_Island_CliffStone_036",
+        "Village_Island_CliffStone_037",
+        "Village_Island_CliffStone_038",
+        "Village_Island_CliffStone_039",
+        "Village_Island_CliffStone_040",
+        "Village_Island_CliffStone_041",
+        "Village_Island_CliffStone_042",
+        "Village_Island_CliffStone_043",
+        "Village_Island_CliffStone_044",
+        "Village_Island_CliffStone_045",
+        "Village_Island_CliffStone_046",
+        "Village_Island_CliffStone_047",
+        "Village_Island_CliffStone_048",
+        "Village_Island_CliffStone_049",
+        "Village_Island_CliffStone_050",
+        "Village_Island_CliffStone_051",
+        "Village_Island_CliffStone_052",
+        "Village_Island_CliffStone_053",
+        "Village_Island_CliffStone_054",
+        "Village_Island_CliffStone_055",
+        "Village_Island_CliffStone_056",
+        "Village_Island_CliffStone_057",
+        "Village_Island_CliffStone_058",
+        "Village_Island_CliffStone_059",
+        "Village_Island_CliffStone_060",
+        "Village_Island_CliffStone_061",
+        "Village_Island_CliffStone_062",
+        "Village_Island_CliffStone_063",
+        "Village_Island_CliffStone_064",
+        "Village_Island_CliffStone_065",
+        "Village_Island_CliffStone_066",
+        "Village_Island_CliffStone_067",
+        "Village_Island_CliffStone_068",
+        "Village_Island_CliffStone_069",
+        "Village_Island_EarthRim",
+        "Village_Island_GrassCap",
+        "Village_Island_RockBody",
+        "Village_Terrace_CliffStone_000",
+        "Village_Terrace_CliffStone_001",
+        "Village_Terrace_CliffStone_002",
+        "Village_Terrace_CliffStone_003",
+        "Village_Terrace_CliffStone_004",
+        "Village_Terrace_CliffStone_005",
+        "Village_Terrace_CliffStone_006",
+        "Village_Terrace_CliffStone_007",
+        "Village_Terrace_CliffStone_008",
+        "Village_Terrace_CliffStone_009",
+        "Village_Terrace_CliffStone_010",
+        "Village_Terrace_CliffStone_011",
+        "Village_Terrace_CliffStone_012",
+        "Village_Terrace_CliffStone_013",
+        "Village_Terrace_CliffStone_014",
+        "Village_Terrace_CliffStone_015",
+        "Village_Terrace_CliffStone_016",
+        "Village_Terrace_CliffStone_017",
+        "Village_Terrace_CliffStone_018",
+        "Village_Terrace_CliffStone_019",
+        "Village_Terrace_CliffStone_020",
+        "Village_Terrace_CliffStone_021",
+        "Village_Terrace_CliffStone_022",
+        "Village_Terrace_CliffStone_023",
+        "Village_Terrace_CliffStone_024",
+        "Village_Terrace_CliffStone_025",
+        "Village_Terrace_CliffStone_026",
+        "Village_Terrace_CliffStone_027",
+        "Village_Terrace_CliffStone_028",
+        "Village_Terrace_CliffStone_029",
+        "Village_Terrace_CliffStone_030",
+        "Village_Terrace_CliffStone_031",
+        "Village_Terrace_CliffStone_032",
+        "Village_Terrace_CliffStone_033",
+        "Village_Terrace_CliffStone_034",
+        "Village_Terrace_CliffStone_035",
+        "Village_Terrace_EarthRim",
+        "Village_Terrace_GrassCap",
+        "Village_Terrace_RockBody",
+        "Watchtower_Islet_CliffStone_000",
+        "Watchtower_Islet_CliffStone_001",
+        "Watchtower_Islet_CliffStone_002",
+        "Watchtower_Islet_CliffStone_003",
+        "Watchtower_Islet_CliffStone_004",
+        "Watchtower_Islet_CliffStone_005",
+        "Watchtower_Islet_CliffStone_006",
+        "Watchtower_Islet_CliffStone_007",
+        "Watchtower_Islet_EarthRim",
+        "Watchtower_Islet_GrassCap",
+        "Watchtower_Islet_RockBody",
+        "WaterRock_00",
+        "WaterRock_01",
+        "WaterRock_02",
+        "WaterRock_03",
+        "WaterRock_04",
+        "WaterRock_05",
+        "WaterRock_06",
+        "Water_Plane",
+        "Western_Lowland_CliffStone_000",
+        "Western_Lowland_CliffStone_001",
+        "Western_Lowland_CliffStone_002",
+        "Western_Lowland_CliffStone_003",
+        "Western_Lowland_CliffStone_004",
+        "Western_Lowland_CliffStone_005",
+        "Western_Lowland_CliffStone_006",
+        "Western_Lowland_CliffStone_007",
+        "Western_Lowland_CliffStone_008",
+        "Western_Lowland_CliffStone_009",
+        "Western_Lowland_CliffStone_010",
+        "Western_Lowland_CliffStone_011",
+        "Western_Lowland_CliffStone_012",
+        "Western_Lowland_CliffStone_013",
+        "Western_Lowland_CliffStone_014",
+        "Western_Lowland_CliffStone_015",
+        "Western_Lowland_CliffStone_016",
+        "Western_Lowland_CliffStone_017",
+        "Western_Lowland_CliffStone_018",
+        "Western_Lowland_CliffStone_019",
+        "Western_Lowland_CliffStone_020",
+        "Western_Lowland_CliffStone_021",
+        "Western_Lowland_CliffStone_022",
+        "Western_Lowland_CliffStone_023",
+        "Western_Lowland_CliffStone_024",
+        "Western_Lowland_CliffStone_025",
+        "Western_Lowland_CliffStone_026",
+        "Western_Lowland_CliffStone_027",
+        "Western_Lowland_CliffStone_028",
+        "Western_Lowland_CliffStone_029",
+        "Western_Lowland_CliffStone_030",
+        "Western_Lowland_CliffStone_031",
+        "Western_Lowland_CliffStone_032",
+        "Western_Lowland_CliffStone_033",
+        "Western_Lowland_CliffStone_034",
+        "Western_Lowland_CliffStone_035",
+        "Western_Lowland_CliffStone_036",
+        "Western_Lowland_CliffStone_037",
+        "Western_Lowland_CliffStone_038",
+        "Western_Lowland_CliffStone_039",
+        "Western_Lowland_CliffStone_040",
+        "Western_Lowland_CliffStone_041",
+        "Western_Lowland_CliffStone_042",
+        "Western_Lowland_CliffStone_043",
+        "Western_Lowland_EarthRim",
+        "Western_Lowland_GrassCap",
+        "Western_Lowland_RockBody"
+      ],
+      "localBounds": {
+        "min": [
+          -17.0,
+          -14.5,
+          -0.270000011
+        ],
+        "max": [
+          17.0,
+          14.5,
+          4.440000057
+        ],
+        "size": [
+          34.0,
+          29.0,
+          4.710000038
+        ],
+        "center": [
+          0.0,
+          0.0,
+          2.085000038
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -17.0,
+          -14.5,
+          -0.270000011
+        ],
+        "max": [
+          17.0,
+          14.5,
+          4.440000057
+        ],
+        "size": [
+          34.0,
+          29.0,
+          4.710000038
+        ],
+        "center": [
+          0.0,
+          0.0,
+          2.085000038
+        ]
+      },
+      "gdevelopDefaultSize": [
+        4680.0,
+        3991.764705882,
+        648.31765231
+      ],
+      "glb": {
+        "bytes": 1537368,
+        "sha256": "505b3ab1c8962d06d1ae2de2b9d46ab2d13889e1c1a8ab1a29090e44189cb955",
+        "nodes": 450,
+        "meshes": 450,
+        "materials": 10,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 450,
+        "localBounds": {
+          "min": [
+            -17.0,
+            -14.5,
+            -0.270000011
+          ],
+          "max": [
+            17.0,
+            14.5,
+            4.440000057
+          ],
+          "size": [
+            34.0,
+            29.0,
+            4.710000038
+          ],
+          "center": [
+            0.0,
+            0.0,
+            2.085000038
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 1,
+      "key": "cottage",
+      "kind": "building",
+      "filename": "building_cottage.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage.glb",
+      "gdevelopObjectName": "BuildingCottage",
+      "representativeKey": "cottage_a",
+      "sourceMeshCount": 8,
+      "sourceTriangleCount": 836,
+      "sourceObjects": [
+        "Cottage_A_BeamL",
+        "Cottage_A_BeamR",
+        "Cottage_A_BeamTop",
+        "Cottage_A_Door",
+        "Cottage_A_House",
+        "Cottage_A_Roof",
+        "Cottage_A_WindowL",
+        "Cottage_A_WindowR"
+      ],
+      "localBounds": {
+        "min": [
+          -1.049999952,
+          -0.946748257,
+          6e-08
+        ],
+        "max": [
+          1.049999952,
+          0.946748257,
+          2.158969641
+        ],
+        "size": [
+          2.099999905,
+          1.893496513,
+          2.158969641
+        ],
+        "center": [
+          0.0,
+          0.0,
+          1.07948482
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -1.049999952,
+          -0.946748257,
+          0.0
+        ],
+        "max": [
+          1.049999952,
+          0.946748257,
+          2.158969641
+        ],
+        "size": [
+          2.099999905,
+          1.893496513,
+          2.158969641
+        ],
+        "center": [
+          0.0,
+          0.0,
+          1.07948482
+        ]
+      },
+      "gdevelopDefaultSize": [
+        289.058810402,
+        260.634225958,
+        297.175821136
+      ],
+      "glb": {
+        "bytes": 60716,
+        "sha256": "65a64982f5fc1df16a76c60f2a8234844d15dc275a74020d2486eb2193508628",
+        "nodes": 8,
+        "meshes": 8,
+        "materials": 5,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 8,
+        "localBounds": {
+          "min": [
+            -1.049999952,
+            -0.946748257,
+            6e-08
+          ],
+          "max": [
+            1.049999952,
+            0.946748257,
+            2.158969641
+          ],
+          "size": [
+            2.099999905,
+            1.893496513,
+            2.158969641
+          ],
+          "center": [
+            0.0,
+            0.0,
+            1.07948482
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 2,
+      "key": "castle",
+      "kind": "building",
+      "filename": "building_castle.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_castle.glb",
+      "gdevelopObjectName": "BuildingCastle",
+      "representativeKey": "castle",
+      "sourceMeshCount": 56,
+      "sourceTriangleCount": 5536,
+      "sourceObjects": [
+        "Castle_Drawbridge",
+        "Castle_Gate",
+        "Castle_Keep",
+        "Castle_Merlon_00",
+        "Castle_Merlon_01",
+        "Castle_Merlon_02",
+        "Castle_Merlon_03",
+        "Castle_Merlon_04",
+        "Castle_Merlon_05",
+        "Castle_Merlon_06",
+        "Castle_Merlon_07",
+        "Castle_Merlon_08",
+        "Castle_Merlon_09",
+        "Castle_Merlon_10",
+        "Castle_Merlon_11",
+        "Castle_Parapet",
+        "Castle_Tower_0_Body",
+        "Castle_Tower_0_Crenel_00",
+        "Castle_Tower_0_Crenel_01",
+        "Castle_Tower_0_Crenel_02",
+        "Castle_Tower_0_Crenel_03",
+        "Castle_Tower_0_Crenel_04",
+        "Castle_Tower_0_Crenel_05",
+        "Castle_Tower_0_Crenel_06",
+        "Castle_Tower_0_Crenel_07",
+        "Castle_Tower_0_TopRing",
+        "Castle_Tower_1_Body",
+        "Castle_Tower_1_Crenel_00",
+        "Castle_Tower_1_Crenel_01",
+        "Castle_Tower_1_Crenel_02",
+        "Castle_Tower_1_Crenel_03",
+        "Castle_Tower_1_Crenel_04",
+        "Castle_Tower_1_Crenel_05",
+        "Castle_Tower_1_Crenel_06",
+        "Castle_Tower_1_Crenel_07",
+        "Castle_Tower_1_TopRing",
+        "Castle_Tower_2_Body",
+        "Castle_Tower_2_Crenel_00",
+        "Castle_Tower_2_Crenel_01",
+        "Castle_Tower_2_Crenel_02",
+        "Castle_Tower_2_Crenel_03",
+        "Castle_Tower_2_Crenel_04",
+        "Castle_Tower_2_Crenel_05",
+        "Castle_Tower_2_Crenel_06",
+        "Castle_Tower_2_Crenel_07",
+        "Castle_Tower_2_TopRing",
+        "Castle_Tower_3_Body",
+        "Castle_Tower_3_Crenel_00",
+        "Castle_Tower_3_Crenel_01",
+        "Castle_Tower_3_Crenel_02",
+        "Castle_Tower_3_Crenel_03",
+        "Castle_Tower_3_Crenel_04",
+        "Castle_Tower_3_Crenel_05",
+        "Castle_Tower_3_Crenel_06",
+        "Castle_Tower_3_Crenel_07",
+        "Castle_Tower_3_TopRing"
+      ],
+      "localBounds": {
+        "min": [
+          -2.907500505,
+          -2.350000381,
+          -0.980000019
+        ],
+        "max": [
+          2.907500029,
+          2.037499666,
+          1.939999819
+        ],
+        "size": [
+          5.815000534,
+          4.387499809,
+          2.919999838
+        ],
+        "center": [
+          -2.38e-07,
+          -0.156250358,
+          0.4799999
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -2.907500505,
+          -2.350000381,
+          -0.980000019
+        ],
+        "max": [
+          2.907500029,
+          2.037499666,
+          1.939999819
+        ],
+        "size": [
+          5.815000534,
+          4.387499809,
+          2.919999838
+        ],
+        "center": [
+          -2.38e-07,
+          -0.156250358,
+          0.4799999
+        ]
+      },
+      "gdevelopDefaultSize": [
+        800.41772057,
+        603.926444334,
+        401.929389449
+      ],
+      "glb": {
+        "bytes": 396680,
+        "sha256": "a2e028d38566263a55cbde1f98e6b36334ad607d994cbb33402c853c52934ee4",
+        "nodes": 56,
+        "meshes": 56,
+        "materials": 4,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 56,
+        "localBounds": {
+          "min": [
+            -2.907500505,
+            -2.350000381,
+            -0.980000019
+          ],
+          "max": [
+            2.907500029,
+            2.037499666,
+            1.939999819
+          ],
+          "size": [
+            5.815000534,
+            4.387499809,
+            2.919999838
+          ],
+          "center": [
+            -2.38e-07,
+            -0.156250358,
+            0.4799999
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 3,
+      "key": "watchtower",
+      "kind": "building",
+      "filename": "building_watchtower.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_watchtower.glb",
+      "gdevelopObjectName": "BuildingWatchtower",
+      "representativeKey": "western_watchtower",
+      "sourceMeshCount": 12,
+      "sourceTriangleCount": 1016,
+      "sourceObjects": [
+        "Western_Watchtower_BannerPole",
+        "Western_Watchtower_Body",
+        "Western_Watchtower_Crenel_00",
+        "Western_Watchtower_Crenel_01",
+        "Western_Watchtower_Crenel_02",
+        "Western_Watchtower_Crenel_03",
+        "Western_Watchtower_Crenel_04",
+        "Western_Watchtower_Crenel_05",
+        "Western_Watchtower_Crenel_06",
+        "Western_Watchtower_Crenel_07",
+        "Western_Watchtower_Door",
+        "Western_Watchtower_TopRing"
+      ],
+      "localBounds": {
+        "min": [
+          -0.849129856,
+          -0.849130094,
+          -0.783749998
+        ],
+        "max": [
+          0.84913075,
+          0.849129975,
+          2.256250143
+        ],
+        "size": [
+          1.698260546,
+          1.698260069,
+          3.0400002
+        ],
+        "center": [
+          4.47e-07,
+          -6e-08,
+          0.736250043
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -0.849129856,
+          -0.849130094,
+          -0.783749998
+        ],
+        "max": [
+          0.84913075,
+          0.849129975,
+          2.256250143
+        ],
+        "size": [
+          1.698260546,
+          1.698260069,
+          3.0400002
+        ],
+        "center": [
+          4.47e-07,
+          -6e-08,
+          0.736250043
+        ]
+      },
+      "gdevelopDefaultSize": [
+        233.760569236,
+        233.760503601,
+        418.44708639
+      ],
+      "glb": {
+        "bytes": 75704,
+        "sha256": "c1a39b5460bbb65b02f984da5b2085b05fdf2b747b8f5e9b082969d6c3de1e12",
+        "nodes": 12,
+        "meshes": 12,
+        "materials": 4,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 12,
+        "localBounds": {
+          "min": [
+            -0.849129856,
+            -0.849130094,
+            -0.783749998
+          ],
+          "max": [
+            0.84913075,
+            0.849129975,
+            2.256250143
+          ],
+          "size": [
+            1.698260546,
+            1.698260069,
+            3.0400002
+          ],
+          "center": [
+            4.47e-07,
+            -6e-08,
+            0.736250043
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 4,
+      "key": "pine",
+      "kind": "tree",
+      "filename": "tree_pine.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine.glb",
+      "gdevelopObjectName": "TreePine",
+      "representativeKey": "pine_01",
+      "sourceMeshCount": 4,
+      "sourceTriangleCount": 108,
+      "sourceObjects": [
+        "Pine_01_Lower",
+        "Pine_01_Middle",
+        "Pine_01_Top",
+        "Pine_01_Trunk"
+      ],
+      "localBounds": {
+        "min": [
+          -0.906023145,
+          -0.864517212,
+          -0.550000012
+        ],
+        "max": [
+          0.906023145,
+          0.920000017,
+          2.420000076
+        ],
+        "size": [
+          1.812046289,
+          1.784517288,
+          2.970000029
+        ],
+        "center": [
+          0.0,
+          0.027741402,
+          0.935000062
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -0.906023145,
+          -0.864517212,
+          -0.550000012
+        ],
+        "max": [
+          0.906023145,
+          0.920000017,
+          2.420000076
+        ],
+        "size": [
+          1.812046289,
+          1.784517288,
+          2.970000029
+        ],
+        "center": [
+          0.0,
+          0.027741402,
+          0.935000062
+        ]
+      },
+      "gdevelopDefaultSize": [
+        249.422842194,
+        245.633556142,
+        408.811768644
+      ],
+      "glb": {
+        "bytes": 10588,
+        "sha256": "581b9affd7bb82335710f5d1556af4f632519c8be391908e4cefa7ce31ef18cf",
+        "nodes": 4,
+        "meshes": 4,
+        "materials": 3,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 4,
+        "localBounds": {
+          "min": [
+            -0.906023145,
+            -0.864517212,
+            -0.550000012
+          ],
+          "max": [
+            0.906023145,
+            0.920000017,
+            2.420000076
+          ],
+          "size": [
+            1.812046289,
+            1.784517288,
+            2.970000029
+          ],
+          "center": [
+            0.0,
+            0.027741402,
+            0.935000062
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 5,
+      "key": "broad_tree",
+      "kind": "tree",
+      "filename": "tree_broad.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad.glb",
+      "gdevelopObjectName": "TreeBroad",
+      "representativeKey": "broad_tree_04",
+      "sourceMeshCount": 4,
+      "sourceTriangleCount": 88,
+      "sourceObjects": [
+        "BroadTree_04_CrownA",
+        "BroadTree_04_CrownB",
+        "BroadTree_04_CrownC",
+        "BroadTree_04_Trunk"
+      ],
+      "localBounds": {
+        "min": [
+          -0.948766768,
+          -0.612460852,
+          -0.579999983
+        ],
+        "max": [
+          0.91193378,
+          0.612460852,
+          1.570000052
+        ],
+        "size": [
+          1.860700607,
+          1.224921703,
+          2.150000095
+        ],
+        "center": [
+          -0.018416494,
+          0.0,
+          0.495000035
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -0.948766768,
+          -0.612460852,
+          -0.579999983
+        ],
+        "max": [
+          0.91193378,
+          0.612460852,
+          1.570000052
+        ],
+        "size": [
+          1.860700607,
+          1.224921703,
+          2.150000095
+        ],
+        "center": [
+          -0.018416494,
+          0.0,
+          0.495000035
+        ]
+      },
+      "gdevelopDefaultSize": [
+        256.119965946,
+        168.606869754,
+        295.941189598
+      ],
+      "glb": {
+        "bytes": 11560,
+        "sha256": "80df37d515e835043c960af3fb35567cbb1ce0bfe988c0efd9f4ccf028551f43",
+        "nodes": 4,
+        "meshes": 4,
+        "materials": 3,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 4,
+        "localBounds": {
+          "min": [
+            -0.948766768,
+            -0.612460852,
+            -0.579999983
+          ],
+          "max": [
+            0.91193378,
+            0.612460852,
+            1.570000052
+          ],
+          "size": [
+            1.860700607,
+            1.224921703,
+            2.150000095
+          ],
+          "center": [
+            -0.018416494,
+            0.0,
+            0.495000035
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    },
+    {
+      "index": 6,
+      "key": "sheep",
+      "kind": "sheep",
+      "filename": "sheep.glb",
+      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/sheep.glb",
+      "gdevelopObjectName": "Sheep",
+      "representativeKey": "sheep_01",
+      "sourceMeshCount": 6,
+      "sourceTriangleCount": 120,
+      "sourceObjects": [
+        "Sheep_01_Body",
+        "Sheep_01_Head",
+        "Sheep_01_Leg_0",
+        "Sheep_01_Leg_1",
+        "Sheep_01_Leg_2",
+        "Sheep_01_Leg_3"
+      ],
+      "localBounds": {
+        "min": [
+          -0.465100974,
+          -0.289217651,
+          8.9e-08
+        ],
+        "max": [
+          0.694661975,
+          0.289217532,
+          0.76000011
+        ],
+        "size": [
+          1.159762979,
+          0.578435183,
+          0.75999999
+        ],
+        "center": [
+          0.114780501,
+          -6e-08,
+          0.380000114
+        ]
+      },
+      "localBoundsIncludingOrigin": {
+        "min": [
+          -0.465100974,
+          -0.289217651,
+          0.0
+        ],
+        "max": [
+          0.694661975,
+          0.289217532,
+          0.76000011
+        ],
+        "size": [
+          1.159762979,
+          0.578435183,
+          0.76000011
+        ],
+        "center": [
+          0.114780501,
+          -6e-08,
+          0.380000055
+        ]
+      },
+      "gdevelopDefaultSize": [
+        159.63796293,
+        79.619901601,
+        104.611779802
+      ],
+      "glb": {
+        "bytes": 14096,
+        "sha256": "01d4678fc268d2ddaf5bf309ca2ae377acccd6a6b4e3e764d7e1988a4ba3e775",
+        "nodes": 6,
+        "meshes": 6,
+        "materials": 2,
+        "cameras": 0,
+        "animations": 0
+      },
+      "roundTrip": {
+        "verified": true,
+        "meshCount": 6,
+        "localBounds": {
+          "min": [
+            -0.465100974,
+            -0.289217591,
+            8.9e-08
+          ],
+          "max": [
+            0.694661975,
+            0.289217591,
+            0.76000011
+          ],
+          "size": [
+            1.159762979,
+            0.578435183,
+            0.75999999
+          ],
+          "center": [
+            0.114780501,
+            0.0,
+            0.380000114
+          ]
+        },
+        "tolerance": 0.0001
+      }
+    }
+  ],
+  "instances": [
+    {
+      "index": 0,
+      "key": "terrain",
+      "kind": "terrain",
+      "prototypeKey": "terrain",
       "gdevelopObjectName": "Terrain",
       "sourceMeshCount": 450,
       "sourceTriangleCount": 15788,
@@ -552,6 +1840,33 @@
         "Western_Lowland_GrassCap",
         "Western_Lowland_RockBody"
       ],
+      "rootObject": null,
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         0.0,
         0.0,
@@ -561,6 +1876,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -584,7 +1904,7 @@
           2.085000038
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -17.0,
           -14.5,
@@ -606,7 +1926,7 @@
           2.085000038
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -17.0,
           -14.5,
@@ -627,6 +1947,11 @@
           0.0,
           2.085000038
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -644,52 +1969,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 1537368,
-        "sha256": "8ae7643db73c3074e0e719921128727e98bbbf92c3848fe672eb9e5f4c8e77a7",
-        "nodes": 450,
-        "meshes": 450,
-        "materials": 10,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 450,
-        "localBounds": {
-          "min": [
-            -17.0,
-            -14.5,
-            -0.270000011
-          ],
-          "max": [
-            17.0,
-            14.5,
-            4.440000057
-          ],
-          "size": [
-            34.0,
-            29.0,
-            4.710000038
-          ],
-          "center": [
-            0.0,
-            0.0,
-            2.085000038
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 1,
       "key": "cottage_a",
       "kind": "building",
-      "filename": "building_cottage_a.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage_a.glb",
-      "gdevelopObjectName": "BuildingCottageA",
+      "prototypeKey": "cottage",
+      "gdevelopObjectName": "BuildingCottage",
       "sourceMeshCount": 8,
       "sourceTriangleCount": 836,
       "sourceObjects": [
@@ -702,6 +1995,33 @@
         "Cottage_A_WindowL",
         "Cottage_A_WindowR"
       ],
+      "rootObject": "Cottage_A",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.900000095
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         5.0,
         -2.900000095,
@@ -711,6 +2031,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -734,7 +2059,7 @@
           3.419484615
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -1.049999952,
           -0.946748257,
@@ -756,7 +2081,7 @@
           1.07948482
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -1.049999952,
           -0.946748257,
@@ -778,6 +2103,11 @@
           1.07948482
         ]
       },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
+      },
       "gdevelop": {
         "position": [
           1328.235294118,
@@ -794,52 +2124,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 60716,
-        "sha256": "6bc1ec1f696988d77b8172489f92fa9904edd6ae74f38247214b383f1ff6e46f",
-        "nodes": 8,
-        "meshes": 8,
-        "materials": 5,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 8,
-        "localBounds": {
-          "min": [
-            -1.049999952,
-            -0.946748257,
-            6e-08
-          ],
-          "max": [
-            1.049999952,
-            0.946748257,
-            2.158969641
-          ],
-          "size": [
-            2.099999905,
-            1.893496513,
-            2.158969641
-          ],
-          "center": [
-            0.0,
-            0.0,
-            1.07948482
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 2,
       "key": "cottage_b",
       "kind": "building",
-      "filename": "building_cottage_b.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage_b.glb",
-      "gdevelopObjectName": "BuildingCottageB",
+      "prototypeKey": "cottage",
+      "gdevelopObjectName": "BuildingCottage",
       "sourceMeshCount": 8,
       "sourceTriangleCount": 836,
       "sourceObjects": [
@@ -852,6 +2150,33 @@
         "Cottage_B_WindowL",
         "Cottage_B_WindowR"
       ],
+      "rootObject": "Cottage_B",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.100000381
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.359999895
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         8.100000381,
         -2.0,
@@ -861,6 +2186,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -884,7 +2214,7 @@
           4.38498497
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.997500002,
           -0.897998214,
@@ -906,7 +2236,7 @@
           1.024984837
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.997500002,
           -0.897998214,
@@ -928,6 +2258,11 @@
           1.024984717
         ]
       },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
+      },
       "gdevelop": {
         "position": [
           1754.941228979,
@@ -935,61 +2270,29 @@
           -25.464698006
         ],
         "size": [
-          274.605883009,
-          247.213625908,
-          282.17226337
+          274.605869882,
+          247.213625956,
+          282.172263335
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 60736,
-        "sha256": "e6e97975fa227eab294592b5fc0d5435e4bf497e65abb2b36679bcd59cb433c8",
-        "nodes": 8,
-        "meshes": 8,
-        "materials": 5,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 8,
-        "localBounds": {
-          "min": [
-            -0.997500002,
-            -0.897998214,
-            1.19e-07
-          ],
-          "max": [
-            0.997500002,
-            0.897998214,
-            2.049969435
-          ],
-          "size": [
-            1.995000005,
-            1.795996428,
-            2.049969196
-          ],
-          "center": [
-            0.0,
-            0.0,
-            1.024984837
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.95,
+          0.948507914,
+          0.949512858
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 3,
       "key": "cottage_c",
       "kind": "building",
-      "filename": "building_cottage_c.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage_c.glb",
-      "gdevelopObjectName": "BuildingCottageC",
+      "prototypeKey": "cottage",
+      "gdevelopObjectName": "BuildingCottage",
       "sourceMeshCount": 8,
       "sourceTriangleCount": 836,
       "sourceObjects": [
@@ -1002,6 +2305,33 @@
         "Cottage_C_WindowL",
         "Cottage_C_WindowR"
       ],
+      "rootObject": "Cottage_C",
+      "rootMatrix": [
+        [
+          0.990268052,
+          0.139173105,
+          0.0,
+          10.399999619
+        ],
+        [
+          -0.139173105,
+          0.990268052,
+          0.0,
+          -3.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.359999895
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         10.399999619,
         -3.0,
@@ -1010,73 +2340,83 @@
       "pivotEulerDegrees": [
         0.0,
         0.0,
-        -7.999999938
+        -8.000002499
+      ],
+      "rootScale": [
+        0.99999994,
+        0.99999994,
+        1.0
       ],
       "rawBounds": {
         "min": [
           9.228456497,
-          -4.083666325,
+          -4.083665848,
           3.359999895
         ],
         "max": [
           11.57154274,
-          -1.916333675,
-          5.518969536
+          -1.916333199,
+          5.518969059
         ],
         "size": [
           2.343086243,
           2.167332649,
-          2.158969641
+          2.158969164
         ],
         "center": [
           10.399999619,
-          -3.0,
+          -2.999999523,
           4.439484596
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -1.17154336,
-          -1.083666325,
-          6e-08
+          -1.050000191,
+          -0.946747899,
+          -1.79e-07
         ],
         "max": [
-          1.17154336,
-          1.083666325,
-          2.158969641
+          1.049999714,
+          0.946748614,
+          2.158969402
         ],
         "size": [
-          2.34308672,
-          2.167332649,
+          2.099999905,
+          1.893496513,
           2.158969641
         ],
         "center": [
-          0.0,
-          0.0,
-          1.07948482
+          -2.38e-07,
+          3.58e-07,
+          1.079484582
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -1.17154336,
-          -1.083666325,
-          0.0
+          -1.050000191,
+          -0.946747899,
+          -1.79e-07
         ],
         "max": [
-          1.17154336,
-          1.083666325,
-          2.158969641
+          1.049999714,
+          0.946748614,
+          2.158969402
         ],
         "size": [
-          2.34308672,
-          2.167332649,
+          2.099999905,
+          1.893496513,
           2.158969641
         ],
         "center": [
-          0.0,
-          0.0,
-          1.07948482
+          -2.38e-07,
+          3.58e-07,
+          1.079484582
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1085,61 +2425,29 @@
           -25.464698006
         ],
         "size": [
-          322.518995509,
-          298.326964659,
+          289.058810402,
+          260.634225958,
           297.175821136
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          8.000002499
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 61212,
-        "sha256": "ab3ad040b6c0bb0e50da23094da5399786821b473297c049c3608dfc048159e8",
-        "nodes": 8,
-        "meshes": 8,
-        "materials": 5,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 8,
-        "localBounds": {
-          "min": [
-            -1.17154336,
-            -1.083666325,
-            6e-08
-          ],
-          "max": [
-            1.17154336,
-            1.083666325,
-            2.158969641
-          ],
-          "size": [
-            2.34308672,
-            2.167332649,
-            2.158969641
-          ],
-          "center": [
-            0.0,
-            0.0,
-            1.07948482
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 4,
       "key": "cottage_d",
       "kind": "building",
-      "filename": "building_cottage_d.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage_d.glb",
-      "gdevelopObjectName": "BuildingCottageD",
+      "prototypeKey": "cottage",
+      "gdevelopObjectName": "BuildingCottage",
       "sourceMeshCount": 8,
       "sourceTriangleCount": 836,
       "sourceObjects": [
@@ -1152,6 +2460,33 @@
         "Cottage_D_WindowL",
         "Cottage_D_WindowR"
       ],
+      "rootObject": "Cottage_D",
+      "rootMatrix": [
+        [
+          0.990268052,
+          -0.139173105,
+          0.0,
+          6.400000095
+        ],
+        [
+          0.139173105,
+          0.990268052,
+          0.0,
+          -5.800000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         6.400000095,
         -5.800000191,
@@ -1160,73 +2495,83 @@
       "pivotEulerDegrees": [
         0.0,
         0.0,
-        7.999999938
+        8.000002499
+      ],
+      "rootScale": [
+        0.99999994,
+        0.99999994,
+        1.0
       ],
       "rawBounds": {
         "min": [
-          5.346004486,
-          -6.772501945,
-          2.339999914
+          5.346004009,
+          -6.772501469,
+          2.339999676
         ],
         "max": [
-          7.453995705,
-          -4.827498436,
-          4.28096962
+          7.453995228,
+          -4.827497959,
+          4.280969143
         ],
         "size": [
           2.107991219,
           1.94500351,
-          1.940969706
+          1.940969467
         ],
         "center": [
-          6.400000095,
-          -5.800000191,
-          3.310484886
+          6.399999619,
+          -5.799999714,
+          3.310484409
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -1.053995848,
-          -0.972501993,
-          0.0
+          -0.94500035,
+          -0.849247754,
+          -2.38e-07
         ],
         "max": [
-          1.053995848,
-          0.972501993,
-          1.940969467
+          0.944999635,
+          0.849248707,
+          1.940969229
         ],
         "size": [
-          2.107991695,
-          1.945003986,
+          1.889999986,
+          1.698496461,
           1.940969467
         ],
         "center": [
-          0.0,
-          0.0,
-          0.970484734
+          -3.58e-07,
+          4.77e-07,
+          0.970484495
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -1.053995848,
-          -0.972501993,
-          0.0
+          -0.94500035,
+          -0.849247754,
+          -2.38e-07
         ],
         "max": [
-          1.053995848,
-          0.972501993,
-          1.940969467
+          0.944999635,
+          0.849248707,
+          1.940969229
         ],
         "size": [
-          2.107991695,
-          1.945003986,
+          1.889999986,
+          1.698496461,
           1.940969467
         ],
         "center": [
-          0.0,
-          0.0,
-          0.970484734
+          -3.58e-07,
+          4.77e-07,
+          0.970484495
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1235,61 +2580,29 @@
           -165.864695381
         ],
         "size": [
-          290.158856897,
-          267.724078122,
-          267.168738421
+          260.152929362,
+          233.793028378,
+          267.168738388
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          -8.000002499
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 61220,
-        "sha256": "2094dfdc2983737c7982ab165a39f61bd57a848c9955231baace549b02782568",
-        "nodes": 8,
-        "meshes": 8,
-        "materials": 5,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 8,
-        "localBounds": {
-          "min": [
-            -1.053995848,
-            -0.972502053,
-            0.0
-          ],
-          "max": [
-            1.053995848,
-            0.972502053,
-            1.940969467
-          ],
-          "size": [
-            2.107991695,
-            1.945004106,
-            1.940969467
-          ],
-          "center": [
-            0.0,
-            0.0,
-            0.970484734
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.9,
+          0.897015837,
+          0.899025827
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 5,
       "key": "cottage_e",
       "kind": "building",
-      "filename": "building_cottage_e.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_cottage_e.glb",
-      "gdevelopObjectName": "BuildingCottageE",
+      "prototypeKey": "cottage",
+      "gdevelopObjectName": "BuildingCottage",
       "sourceMeshCount": 8,
       "sourceTriangleCount": 836,
       "sourceObjects": [
@@ -1302,6 +2615,33 @@
         "Cottage_E_WindowL",
         "Cottage_E_WindowR"
       ],
+      "rootObject": "Cottage_E",
+      "rootMatrix": [
+        [
+          0.99619472,
+          0.087155737,
+          0.0,
+          9.5
+        ],
+        [
+          -0.087155737,
+          0.99619472,
+          0.0,
+          -5.800000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         9.5,
         -5.800000191,
@@ -1310,7 +2650,12 @@
       "pivotEulerDegrees": [
         0.0,
         0.0,
-        -4.999999428
+        -4.999999855
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -1321,62 +2666,67 @@
         "max": [
           10.560660362,
           -4.829109192,
-          4.368169785
+          4.368169308
         ],
         "size": [
           2.121320724,
           1.941781998,
-          2.02816987
+          2.028169394
         ],
         "center": [
           9.5,
           -5.800000191,
-          3.354084969
+          3.354084492
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -1.060660124,
-          -0.97089088,
+          -0.987000346,
+          -0.888248265,
           0.0
         ],
         "max": [
-          1.060660124,
-          0.97089088,
+          0.986999631,
+          0.888248146,
           2.028169632
         ],
         "size": [
-          2.121320248,
-          1.941781759,
+          1.973999977,
+          1.77649641,
           2.028169632
         ],
         "center": [
-          0.0,
-          0.0,
+          -3.58e-07,
+          -6e-08,
           1.014084816
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -1.060660124,
-          -0.97089088,
+          -0.987000346,
+          -0.888248265,
           0.0
         ],
         "max": [
-          1.060660124,
-          0.97089088,
+          0.986999631,
+          0.888248146,
           2.028169632
         ],
         "size": [
-          2.121320248,
-          1.941781759,
+          1.973999977,
+          1.77649641,
           2.028169632
         ],
         "center": [
-          0.0,
-          0.0,
+          -3.58e-07,
+          -6e-08,
           1.014084816
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1385,60 +2735,28 @@
           -165.864695381
         ],
         "size": [
-          291.993492912,
-          267.28054804,
-          279.171584634
+          271.715290919,
+          244.529505946,
+          279.1715846
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          4.999999855
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 61224,
-        "sha256": "0203638ad6350d5600a595bcea6f9ff5d1eb428a3b865b5ba6238047260412ab",
-        "nodes": 8,
-        "meshes": 8,
-        "materials": 5,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 8,
-        "localBounds": {
-          "min": [
-            -1.060660124,
-            -0.97089088,
-            0.0
-          ],
-          "max": [
-            1.060660124,
-            0.97089088,
-            2.028169632
-          ],
-          "size": [
-            2.121320248,
-            1.941781759,
-            2.028169632
-          ],
-          "center": [
-            0.0,
-            0.0,
-            1.014084816
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.940000032,
+          0.938209497,
+          0.93941554
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 6,
       "key": "castle",
       "kind": "building",
-      "filename": "building_castle.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_castle.glb",
+      "prototypeKey": "castle",
       "gdevelopObjectName": "BuildingCastle",
       "sourceMeshCount": 56,
       "sourceTriangleCount": 5536,
@@ -1500,6 +2818,33 @@
         "Castle_Tower_3_Crenel_07",
         "Castle_Tower_3_TopRing"
       ],
+      "rootObject": "Castle_Keep",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -8.699999809
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.300000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          5.420000076
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         -8.699999809,
         7.300000191,
@@ -1510,6 +2855,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           -11.607500076,
@@ -1517,12 +2867,12 @@
           4.440000057
         ],
         "max": [
-          -5.792499542,
+          -5.792500019,
           9.337499619,
           7.359999657
         ],
         "size": [
-          5.815000534,
+          5.815000057,
           4.387499809,
           2.919999599
         ],
@@ -1532,7 +2882,7 @@
           5.899999619
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -2.907500505,
           -2.350000381,
@@ -1554,7 +2904,7 @@
           0.4799999
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -2.907500505,
           -2.350000381,
@@ -1575,6 +2925,11 @@
           -0.156250358,
           0.4799999
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1592,52 +2947,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 396680,
-        "sha256": "d41e3b0ee494bd9ebedb999fb4b0016976bb56e61459d4a18148f5a0c09c9e1f",
-        "nodes": 56,
-        "meshes": 56,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 56,
-        "localBounds": {
-          "min": [
-            -2.907500505,
-            -2.350000381,
-            -0.980000019
-          ],
-          "max": [
-            2.907500029,
-            2.037499666,
-            1.939999819
-          ],
-          "size": [
-            5.815000534,
-            4.387499809,
-            2.919999838
-          ],
-          "center": [
-            -2.38e-07,
-            -0.156250358,
-            0.4799999
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 7,
       "key": "western_watchtower",
       "kind": "building",
-      "filename": "building_western_watchtower.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_western_watchtower.glb",
-      "gdevelopObjectName": "BuildingWesternWatchtower",
+      "prototypeKey": "watchtower",
+      "gdevelopObjectName": "BuildingWatchtower",
       "sourceMeshCount": 12,
       "sourceTriangleCount": 1016,
       "sourceObjects": [
@@ -1654,6 +2977,33 @@
         "Western_Watchtower_Door",
         "Western_Watchtower_TopRing"
       ],
+      "rootObject": "Western_Watchtower_Body",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -10.600000381
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.299999952
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.723750114
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         -10.600000381,
         -1.299999952,
@@ -1664,6 +3014,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           -11.449130058,
@@ -1672,21 +3027,21 @@
         ],
         "max": [
           -9.750869751,
-          -0.450869977,
-          4.980000496
+          -0.450870007,
+          4.980000019
         ],
         "size": [
           1.698260307,
           1.698260069,
-          3.040000439
+          3.039999962
         ],
         "center": [
           -10.600000381,
           -1.300000072,
-          3.460000277
+          3.460000038
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.849129856,
           -0.849130094,
@@ -1708,7 +3063,7 @@
           0.736250043
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.849129856,
           -0.849130094,
@@ -1729,6 +3084,11 @@
           -6e-08,
           0.736250043
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1746,52 +3106,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 75704,
-        "sha256": "c1a39b5460bbb65b02f984da5b2085b05fdf2b747b8f5e9b082969d6c3de1e12",
-        "nodes": 12,
-        "meshes": 12,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 12,
-        "localBounds": {
-          "min": [
-            -0.849129856,
-            -0.849130094,
-            -0.783749998
-          ],
-          "max": [
-            0.84913075,
-            0.849129975,
-            2.256250143
-          ],
-          "size": [
-            1.698260546,
-            1.698260069,
-            3.0400002
-          ],
-          "center": [
-            4.47e-07,
-            -6e-08,
-            0.736250043
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 8,
       "key": "southern_watchtower",
       "kind": "building",
-      "filename": "building_southern_watchtower.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/building_southern_watchtower.glb",
-      "gdevelopObjectName": "BuildingSouthernWatchtower",
+      "prototypeKey": "watchtower",
+      "gdevelopObjectName": "BuildingWatchtower",
       "sourceMeshCount": 12,
       "sourceTriangleCount": 1016,
       "sourceObjects": [
@@ -1808,6 +3136,33 @@
         "Southern_Watchtower_Door",
         "Southern_Watchtower_TopRing"
       ],
+      "rootObject": "Southern_Watchtower_Body",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -10.300000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.019000053
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         0.0,
         -10.300000191,
@@ -1817,6 +3172,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -1840,7 +3200,7 @@
           2.731999874
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.827368021,
           -0.827367961,
@@ -1862,7 +3222,7 @@
           0.71299994
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.827368021,
           -0.827367961,
@@ -1883,6 +3243,11 @@
           0.0,
           0.71299994
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -1891,61 +3256,29 @@
           -210.049382098
         ],
         "size": [
-          227.769549314,
-          227.769532905,
-          405.232941964
+          227.769549278,
+          227.769532891,
+          405.232942
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 75704,
-        "sha256": "6a86d642d92f0cc7d113aba7b3b0c8c92e363e69bac1216baff9fb236c261fc0",
-        "nodes": 12,
-        "meshes": 12,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 12,
-        "localBounds": {
-          "min": [
-            -0.827368021,
-            -0.827367961,
-            -0.759000003
-          ],
-          "max": [
-            0.827368021,
-            0.827367961,
-            2.184999943
-          ],
-          "size": [
-            1.654736042,
-            1.654735923,
-            2.944000006
-          ],
-          "center": [
-            0.0,
-            0.0,
-            0.71299994
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.974371127,
+          0.97437133,
+          0.968420991
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 9,
       "key": "pine_00",
       "kind": "tree",
-      "filename": "tree_pine_00.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_00.glb",
-      "gdevelopObjectName": "TreePine00",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -1953,6 +3286,33 @@
         "Pine_00_Middle",
         "Pine_00_Top",
         "Pine_00_Trunk"
+      ],
+      "rootObject": "Pine_00_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          8.100000381
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.172499895
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         5.0,
@@ -1964,6 +3324,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           3.958073616,
@@ -1973,20 +3338,20 @@
         "max": [
           6.041926384,
           9.157999992,
-          4.955499649
+          4.955500126
         ],
         "size": [
           2.083852768,
           2.052194595,
-          3.415499687
+          3.415500164
         ],
         "center": [
           5.0,
           8.131902695,
-          3.247749805
+          3.247750044
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -1.041926503,
           -0.994194746,
@@ -2008,7 +3373,7 @@
           1.07525003
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -1.041926503,
           -0.994194746,
@@ -2029,6 +3394,11 @@
           0.031902611,
           1.07525003
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2037,61 +3407,29 @@
           -188.920580359
         ],
         "size": [
-          286.836237346,
-          282.478550182,
-          470.133519173
+          286.836268523,
+          282.478589563,
+          470.133533941
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10600,
-        "sha256": "ef72b50c5509c85628ca0688588c39c84b19dadc6f3a28d3075cda1b2441beb0",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -1.041926503,
-            -0.994194746,
-            -0.632499993
-          ],
-          "max": [
-            1.041926503,
-            1.057999969,
-            2.782999992
-          ],
-          "size": [
-            2.083853006,
-            2.052194595,
-            3.415499926
-          ],
-          "center": [
-            0.0,
-            0.031902611,
-            1.07525003
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.15,
+          1.15,
+          1.15
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 10,
       "key": "pine_01",
       "kind": "tree",
-      "filename": "tree_pine_01.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_01.glb",
-      "gdevelopObjectName": "TreePine01",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2099,6 +3437,33 @@
         "Pine_01_Middle",
         "Pine_01_Top",
         "Pine_01_Trunk"
+      ],
+      "rootObject": "Pine_01_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          6.300000191
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          8.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.089999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         6.300000191,
@@ -2109,6 +3474,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -2132,7 +3502,7 @@
           3.025000095
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.906023145,
           -0.864517212,
@@ -2154,7 +3524,7 @@
           0.935000062
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.906023145,
           -0.864517212,
@@ -2175,6 +3545,11 @@
           0.027741402,
           0.935000062
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2192,52 +3567,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10588,
-        "sha256": "581b9affd7bb82335710f5d1556af4f632519c8be391908e4cefa7ce31ef18cf",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.906023145,
-            -0.864517212,
-            -0.550000012
-          ],
-          "max": [
-            0.906023145,
-            0.920000017,
-            2.420000076
-          ],
-          "size": [
-            1.812046289,
-            1.784517288,
-            2.970000029
-          ],
-          "center": [
-            0.0,
-            0.027741402,
-            0.935000062
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 11,
       "key": "pine_02",
       "kind": "tree",
-      "filename": "tree_pine_02.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_02.glb",
-      "gdevelopObjectName": "TreePine02",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2245,6 +3588,33 @@
         "Pine_02_Middle",
         "Pine_02_Top",
         "Pine_02_Trunk"
+      ],
+      "rootObject": "Pine_02_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.599999905
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.900000095
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.227499962
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         7.599999905,
@@ -2256,6 +3626,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           6.467471123,
@@ -2265,20 +3640,20 @@
         "max": [
           8.732528687,
           9.050000191,
-          5.25249958
+          5.252500057
         ],
         "size": [
           2.265057564,
           2.23064661,
-          3.712499619
+          3.712500095
         ],
         "center": [
           7.599999905,
           7.934677124,
-          3.396249771
+          3.39625001
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -1.132528901,
           -1.080646515,
@@ -2300,7 +3675,7 @@
           1.168749928
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -1.132528901,
           -1.080646515,
@@ -2321,6 +3696,11 @@
           0.034676731,
           1.168749928
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2329,61 +3709,29 @@
           -181.349982935
         ],
         "size": [
-          311.778544538,
+          311.778552742,
           307.041945177,
-          511.014686192
+          511.014710805
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10524,
-        "sha256": "38878421f376a3a6f9e97d0f8c1711a4f98e13516ca9b187f7c6a78a748e33bc",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -1.132528901,
-            -1.080646515,
-            -0.6875
-          ],
-          "max": [
-            1.132528901,
-            1.149999976,
-            3.024999857
-          ],
-          "size": [
-            2.265057802,
-            2.23064661,
-            3.712499857
-          ],
-          "center": [
-            0.0,
-            0.034676731,
-            1.168749928
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.25,
+          1.25,
+          1.25
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 12,
       "key": "pine_03",
       "kind": "tree",
-      "filename": "tree_pine_03.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_03.glb",
-      "gdevelopObjectName": "TreePine03",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2391,6 +3739,33 @@
         "Pine_03_Middle",
         "Pine_03_Top",
         "Pine_03_Trunk"
+      ],
+      "rootObject": "Pine_03_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          8.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.089999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         9.0,
@@ -2401,6 +3776,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -2424,7 +3804,7 @@
           3.025000095
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.906023145,
           -0.864517212,
@@ -2446,7 +3826,7 @@
           0.935000062
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.906023145,
           -0.864517212,
@@ -2467,6 +3847,11 @@
           0.027741402,
           0.935000062
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2484,52 +3869,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10588,
-        "sha256": "9f32bd1640bcb1e32d564e3f92db5c513ebf50b942f77768632f0527086b9254",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.906023145,
-            -0.864517212,
-            -0.550000012
-          ],
-          "max": [
-            0.906023145,
-            0.920000017,
-            2.420000076
-          ],
-          "size": [
-            1.812046289,
-            1.784517288,
-            2.970000029
-          ],
-          "center": [
-            0.0,
-            0.027741402,
-            0.935000062
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 13,
       "key": "pine_04",
       "kind": "tree",
-      "filename": "tree_pine_04.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_04.glb",
-      "gdevelopObjectName": "TreePine04",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2537,6 +3890,33 @@
         "Pine_04_Middle",
         "Pine_04_Top",
         "Pine_04_Trunk"
+      ],
+      "rootObject": "Pine_04_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          10.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.800000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.200000048
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         10.5,
@@ -2547,6 +3927,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -2570,7 +3955,7 @@
           3.322000027
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -1.087227702,
           -1.03742063,
@@ -2592,7 +3977,7 @@
           1.12199986
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -1.087227702,
           -1.03742063,
@@ -2613,6 +3998,11 @@
           0.033289671,
           1.12199986
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2621,61 +4011,29 @@
           -185.135265238
         ],
         "size": [
-          299.307390942,
-          294.760247679,
-          490.574102682
+          299.307410633,
+          294.76026737,
+          490.574122373
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10596,
-        "sha256": "db9133dcc9cb02a0921583c03be4fbd39314ae4263b2b39a5dbc32f589000a8e",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -1.087227702,
-            -1.03742063,
-            -0.660000026
-          ],
-          "max": [
-            1.087227702,
-            1.103999972,
-            2.903999805
-          ],
-          "size": [
-            2.174455404,
-            2.141420603,
-            3.563999891
-          ],
-          "center": [
-            0.0,
-            0.033289671,
-            1.12199986
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.2,
+          1.2,
+          1.2
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 14,
       "key": "pine_05",
       "kind": "tree",
-      "filename": "tree_pine_05.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_05.glb",
-      "gdevelopObjectName": "TreePine05",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2683,6 +4041,33 @@
         "Pine_05_Middle",
         "Pine_05_Top",
         "Pine_05_Trunk"
+      ],
+      "rootObject": "Pine_05_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          11.300000191
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          6.199999809
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.0625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         11.300000191,
@@ -2693,6 +4078,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -2716,7 +4106,7 @@
           2.950750113
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.860721946,
           -0.821291387,
@@ -2738,7 +4128,7 @@
           0.888250113
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.860721946,
           -0.821291387,
@@ -2759,6 +4149,11 @@
           0.026354313,
           0.888250113
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2767,61 +4162,29 @@
           -204.06174239
         ],
         "size": [
-          236.951688598,
-          233.351875053,
-          388.371217952
+          236.951700084,
+          233.351878335,
+          388.371180212
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10600,
-        "sha256": "806357bbdd871e4cbdad94fb623a2913cd5876f188d012afbd14235f750607df",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.860721946,
-            -0.821291387,
-            -0.522499979
-          ],
-          "max": [
-            0.860721946,
-            0.874000013,
-            2.299000263
-          ],
-          "size": [
-            1.721443892,
-            1.6952914,
-            2.821500301
-          ],
-          "center": [
-            0.0,
-            0.026354313,
-            0.888250113
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.95,
+          0.95,
+          0.95
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 15,
       "key": "pine_06",
       "kind": "tree",
-      "filename": "tree_pine_06.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_pine_06.glb",
-      "gdevelopObjectName": "TreePine06",
+      "prototypeKey": "pine",
+      "gdevelopObjectName": "TreePine",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 108,
       "sourceObjects": [
@@ -2829,6 +4192,33 @@
         "Pine_06_Middle",
         "Pine_06_Top",
         "Pine_06_Trunk"
+      ],
+      "rootObject": "Pine_06_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.900000095
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          6.599999905
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.035000086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         4.900000095,
@@ -2840,6 +4230,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           4.084579468,
@@ -2849,20 +4244,20 @@
         "max": [
           5.715420723,
           7.427999973,
-          4.213000298
+          4.212999821
         ],
         "size": [
           1.630841255,
           1.60606575,
-          2.673000336
+          2.672999859
         ],
         "center": [
           4.900000095,
           6.624967098,
-          2.87650013
+          2.876499891
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.815420806,
           -0.778065503,
@@ -2884,7 +4279,7 @@
           0.841499984
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.815420806,
           -0.778065503,
@@ -2905,6 +4300,11 @@
           0.024967253,
           0.841499984
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -2913,61 +4313,29 @@
           -207.847024693
         ],
         "size": [
-          224.480551411,
-          221.070193964,
-          367.930568807
+          224.480557975,
+          221.070200528,
+          367.93059178
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 10604,
-        "sha256": "77019b45fdc8b5eb681ef12851e6ef938f25f5dca8a1d49291b4b92dbb42afab",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.815420806,
-            -0.778065503,
-            -0.495000005
-          ],
-          "max": [
-            0.815420806,
-            0.828000009,
-            2.177999973
-          ],
-          "size": [
-            1.630841613,
-            1.606065512,
-            2.672999859
-          ],
-          "center": [
-            0.0,
-            0.024967253,
-            0.841499984
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 16,
       "key": "broad_tree_00",
       "kind": "tree",
-      "filename": "tree_broad_00.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_00.glb",
-      "gdevelopObjectName": "TreeBroad00",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -2975,6 +4343,33 @@
         "BroadTree_00_CrownB",
         "BroadTree_00_CrownC",
         "BroadTree_00_Trunk"
+      ],
+      "rootObject": "BroadTree_00_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -11.600000381
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.400000095
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.861000061
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         -11.600000381,
@@ -2985,6 +4380,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3008,7 +4408,7 @@
           4.331250191
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3030,7 +4430,7 @@
           0.470249951
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3051,6 +4451,11 @@
           0.0,
           0.470249951
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3059,61 +4464,29 @@
           43.496501306
         ],
         "size": [
-          243.313892168,
-          160.176516421,
-          281.144120272
+          243.313967649,
+          160.176526266,
+          281.144130118
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11572,
-        "sha256": "7b471c20e125a9da172a680bc41b232d6691cbe629c5744633a2a63403e604f1",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.901327848,
-            -0.581837773,
-            -0.550999999
-          ],
-          "max": [
-            0.86633718,
-            0.581837773,
-            1.491499901
-          ],
-          "size": [
-            1.767665029,
-            1.163675547,
-            2.042500019
-          ],
-          "center": [
-            -0.017495334,
-            0.0,
-            0.470249951
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.95,
+          0.95,
+          0.95
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 17,
       "key": "broad_tree_01",
       "kind": "tree",
-      "filename": "tree_broad_01.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_01.glb",
-      "gdevelopObjectName": "TreeBroad01",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3121,6 +4494,33 @@
         "BroadTree_01_CrownB",
         "BroadTree_01_CrownC",
         "BroadTree_01_Trunk"
+      ],
+      "rootObject": "BroadTree_01_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.300000191
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.890000105
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         -4.300000191,
@@ -3131,6 +4531,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3154,7 +4559,7 @@
           4.385000229
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.948766291,
           -0.612460852,
@@ -3176,7 +4581,7 @@
           0.495000094
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.948766291,
           -0.612460852,
@@ -3197,6 +4602,11 @@
           0.0,
           0.495000094
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "canonical-substitution",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3205,7 +4615,7 @@
           47.48827205
         ],
         "size": [
-          256.119900311,
+          256.119965946,
           168.606869754,
           295.941189598
         ],
@@ -3214,52 +4624,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11764,
-        "sha256": "2e510a27f9b724e13d86181600d03edf1a0a5446989dfc603a9a1f59ea3f65ce",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.948766291,
-            -0.612460852,
-            -0.579999983
-          ],
-          "max": [
-            0.91193378,
-            0.612460852,
-            1.570000172
-          ],
-          "size": [
-            1.86070013,
-            1.224921703,
-            2.150000095
-          ],
-          "center": [
-            -0.018416256,
-            0.0,
-            0.495000094
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 18,
       "key": "broad_tree_02",
       "kind": "tree",
-      "filename": "tree_broad_02.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_02.glb",
-      "gdevelopObjectName": "TreeBroad02",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3267,6 +4645,33 @@
         "BroadTree_02_CrownB",
         "BroadTree_02_CrownC",
         "BroadTree_02_Trunk"
+      ],
+      "rootObject": "BroadTree_02_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -11.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.490999937
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         -11.5,
@@ -3277,6 +4682,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3300,7 +4710,7 @@
           2.961250067
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3322,7 +4732,7 @@
           0.47025007
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3343,6 +4753,11 @@
           0.0,
           0.47025007
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3351,61 +4766,29 @@
           -145.079986348
         ],
         "size": [
-          243.313892168,
-          160.176516421,
-          281.144120272
+          243.313967649,
+          160.176526266,
+          281.144130118
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11568,
-        "sha256": "92f15e5cce2553da9baeb0fbd6ff32a58f13d110f0daece82c273057f781870f",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.901327848,
-            -0.581837773,
-            -0.550999999
-          ],
-          "max": [
-            0.86633718,
-            0.581837773,
-            1.491500139
-          ],
-          "size": [
-            1.767665029,
-            1.163675547,
-            2.042500019
-          ],
-          "center": [
-            -0.017495334,
-            0.0,
-            0.47025007
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.95,
+          0.95,
+          0.95
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 19,
       "key": "broad_tree_03",
       "kind": "tree",
-      "filename": "tree_broad_03.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_03.glb",
-      "gdevelopObjectName": "TreeBroad03",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3413,6 +4796,33 @@
         "BroadTree_03_CrownB",
         "BroadTree_03_CrownC",
         "BroadTree_03_Trunk"
+      ],
+      "rootObject": "BroadTree_03_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -11.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -7.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.549000025
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         -11.0,
@@ -3423,6 +4833,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3446,7 +4861,7 @@
           3.068750143
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.996204793,
           -0.643083811,
@@ -3468,7 +4883,7 @@
           0.519749999
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.996204793,
           -0.643083811,
@@ -3489,6 +4904,11 @@
           0.0,
           0.519749999
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "canonical-substitution",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3497,61 +4917,29 @@
           -137.096444859
         ],
         "size": [
-          268.925892045,
-          177.037190269,
-          310.738258923
+          268.925964243,
+          177.037213242,
+          310.738249078
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11768,
-        "sha256": "76b7073c9ddb360eb6d85693da3633669f5f751f22c3800d82612cbe9472155e",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.996204793,
-            -0.643083811,
-            -0.609000027
-          ],
-          "max": [
-            0.957530379,
-            0.643083811,
-            1.648500085
-          ],
-          "size": [
-            1.953735113,
-            1.286167622,
-            2.257500172
-          ],
-          "center": [
-            -0.019337207,
-            0.0,
-            0.519749999
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.05,
+          1.05,
+          1.05
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 20,
       "key": "broad_tree_04",
       "kind": "tree",
-      "filename": "tree_broad_04.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_04.glb",
-      "gdevelopObjectName": "TreeBroad04",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3559,6 +4947,33 @@
         "BroadTree_04_CrownB",
         "BroadTree_04_CrownC",
         "BroadTree_04_Trunk"
+      ],
+      "rootObject": "BroadTree_04_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          9.100000381
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -7.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.920000076
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         9.100000381,
@@ -3569,6 +4984,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3592,7 +5012,7 @@
           3.4150002
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.948766768,
           -0.612460852,
@@ -3614,7 +5034,7 @@
           0.495000035
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.948766768,
           -0.612460852,
@@ -3635,6 +5055,11 @@
           0.0,
           0.495000035
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3652,52 +5077,20 @@
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11560,
-        "sha256": "80df37d515e835043c960af3fb35567cbb1ce0bfe988c0efd9f4ccf028551f43",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.948766768,
-            -0.612460852,
-            -0.579999983
-          ],
-          "max": [
-            0.91193378,
-            0.612460852,
-            1.570000052
-          ],
-          "size": [
-            1.860700607,
-            1.224921703,
-            2.150000095
-          ],
-          "center": [
-            -0.018416494,
-            0.0,
-            0.495000035
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 21,
       "key": "broad_tree_05",
       "kind": "tree",
-      "filename": "tree_broad_05.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_05.glb",
-      "gdevelopObjectName": "TreeBroad05",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3705,6 +5098,33 @@
         "BroadTree_05_CrownB",
         "BroadTree_05_CrownC",
         "BroadTree_05_Trunk"
+      ],
+      "rootObject": "BroadTree_05_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          10.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -7.199999809
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.891000032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         10.5,
@@ -3716,6 +5136,11 @@
         0.0,
         0.0
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           9.598671913,
@@ -3725,20 +5150,20 @@
         "max": [
           11.366336823,
           -6.618162155,
-          4.382499695
+          4.382500172
         ],
         "size": [
           1.767664909,
           1.163675308,
-          2.042499542
+          2.042500019
         ],
         "center": [
           10.482503891,
           -7.199999809,
-          3.361249924
+          3.361250162
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3760,7 +5185,7 @@
           0.470249951
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.901327848,
           -0.581837773,
@@ -3781,6 +5206,11 @@
           0.0,
           0.470249951
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "canonical-substitution",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3789,61 +5219,29 @@
           -90.021149691
         ],
         "size": [
-          243.313892168,
-          160.176516421,
-          281.144120272
+          243.313967649,
+          160.176526266,
+          281.144130118
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11772,
-        "sha256": "16122b0226bbb0bc9eb9a52197a153b8c7f1b5f046394f113015433734acf4f4",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 4,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.901327848,
-            -0.581837773,
-            -0.550999999
-          ],
-          "max": [
-            0.86633718,
-            0.581837773,
-            1.491499901
-          ],
-          "size": [
-            1.767665029,
-            1.163675547,
-            2.042500019
-          ],
-          "center": [
-            -0.017495334,
-            0.0,
-            0.470249951
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.95,
+          0.95,
+          0.95
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 22,
       "key": "broad_tree_06",
       "kind": "tree",
-      "filename": "tree_broad_06.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_06.glb",
-      "gdevelopObjectName": "TreeBroad06",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3851,6 +5249,33 @@
         "BroadTree_06_CrownB",
         "BroadTree_06_CrownC",
         "BroadTree_06_Trunk"
+      ],
+      "rootObject": "BroadTree_06_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.400000095
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -9.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.832999945
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         7.400000095,
@@ -3861,6 +5286,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -3884,7 +5314,7 @@
           3.253749847
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.806451499,
           -0.520591676,
@@ -3906,7 +5336,7 @@
           0.420750022
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.806451499,
           -0.520591676,
@@ -3927,6 +5357,11 @@
           0.0,
           0.420750022
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -3935,61 +5370,29 @@
           -98.00469118
         ],
         "size": [
-          217.701908701,
-          143.315826164,
-          251.55001444
+          217.701971054,
+          143.315839291,
+          251.550011158
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11572,
-        "sha256": "4a89f8567c266437e226644b8b33fe455d2accbcff3120ab59f264e7b2f0eef9",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.806451499,
-            -0.520591676,
-            -0.493000001
-          ],
-          "max": [
-            0.775143564,
-            0.520591676,
-            1.334500074
-          ],
-          "size": [
-            1.581595063,
-            1.041183352,
-            1.827500105
-          ],
-          "center": [
-            -0.015653968,
-            0.0,
-            0.420750022
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.85,
+          0.85,
+          0.85
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 23,
       "key": "broad_tree_07",
       "kind": "tree",
-      "filename": "tree_broad_07.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/tree_broad_07.glb",
-      "gdevelopObjectName": "TreeBroad07",
+      "prototypeKey": "broad_tree",
+      "gdevelopObjectName": "TreeBroad",
       "sourceMeshCount": 4,
       "sourceTriangleCount": 88,
       "sourceObjects": [
@@ -3997,6 +5400,33 @@
         "BroadTree_07_CrownB",
         "BroadTree_07_CrownC",
         "BroadTree_07_Trunk"
+      ],
+      "rootObject": "BroadTree_07_Trunk",
+      "rootMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          11.399999619
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.861999989
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         11.399999619,
@@ -4007,6 +5437,11 @@
         0.0,
         0.0,
         0.0
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -4030,7 +5465,7 @@
           3.307499886
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
           -0.853889942,
           -0.551214695,
@@ -4052,7 +5487,7 @@
           0.445500046
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
           -0.853889942,
           -0.551214695,
@@ -4073,6 +5508,11 @@
           0.0,
           0.445500046
         ]
+      },
+      "reusePolicy": {
+        "geometry": "canonical-substitution",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -4081,61 +5521,29 @@
           -94.012920436
         ],
         "size": [
-          230.507982478,
-          151.746163088,
-          266.347083765
+          230.507969351,
+          151.746182779,
+          266.347070638
         ],
         "layoutRotation": [
           0.0,
           0.0,
           0.0
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 11572,
-        "sha256": "377062d78f15f46b3595a407555c9e751f703ef97c93f94eed32207ced410403",
-        "nodes": 4,
-        "meshes": 4,
-        "materials": 3,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 4,
-        "localBounds": {
-          "min": [
-            -0.853889942,
-            -0.551214695,
-            -0.522000015
-          ],
-          "max": [
-            0.82074064,
-            0.551214695,
-            1.413000107
-          ],
-          "size": [
-            1.674630642,
-            1.10242939,
-            1.935000181
-          ],
-          "center": [
-            -0.016574651,
-            0.0,
-            0.445500046
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 24,
       "key": "sheep_01",
       "kind": "sheep",
-      "filename": "sheep_01.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/sheep_01.glb",
-      "gdevelopObjectName": "Sheep01",
+      "prototypeKey": "sheep",
+      "gdevelopObjectName": "Sheep",
       "sourceMeshCount": 6,
       "sourceTriangleCount": 120,
       "sourceObjects": [
@@ -4146,6 +5554,33 @@
         "Sheep_01_Leg_2",
         "Sheep_01_Leg_3"
       ],
+      "rootObject": "Sheep_01",
+      "rootMatrix": [
+        [
+          0.980066597,
+          -0.198669329,
+          0.0,
+          4.0
+        ],
+        [
+          0.198669329,
+          0.980066597,
+          0.0,
+          -4.800000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         4.0,
         -4.800000191,
@@ -4154,7 +5589,12 @@
       "pivotEulerDegrees": [
         0.0,
         0.0,
-        11.45915522
+        11.459154366
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -4178,49 +5618,54 @@
           2.71999979
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -0.513288558,
-          -0.375853807,
+          -0.465100974,
+          -0.289217651,
           8.9e-08
         ],
         "max": [
-          0.721967459,
-          0.375853807,
+          0.694661975,
+          0.289217532,
           0.76000011
         ],
         "size": [
-          1.235255957,
-          0.751707613,
+          1.159762979,
+          0.578435183,
           0.75999999
         ],
         "center": [
-          0.104339451,
-          0.0,
+          0.114780501,
+          -6e-08,
           0.380000114
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -0.513288558,
-          -0.375853807,
+          -0.465100974,
+          -0.289217651,
           0.0
         ],
         "max": [
-          0.721967459,
-          0.375853807,
+          0.694661975,
+          0.289217532,
           0.76000011
         ],
         "size": [
-          1.235255957,
-          0.751707613,
+          1.159762979,
+          0.578435183,
           0.76000011
         ],
         "center": [
-          0.104339451,
-          0.0,
+          0.114780501,
+          -6e-08,
           0.380000055
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -4229,61 +5674,29 @@
           -165.864695381
         ],
         "size": [
-          170.029349327,
-          103.470342089,
+          159.63796293,
+          79.619901601,
           104.611779802
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          -11.459154366
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 14428,
-        "sha256": "99e725448b55b0032d4fe901b04bf1072894b438a52f419d493bd8b69dd8cab5",
-        "nodes": 6,
-        "meshes": 6,
-        "materials": 2,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 6,
-        "localBounds": {
-          "min": [
-            -0.513288558,
-            -0.375853777,
-            8.9e-08
-          ],
-          "max": [
-            0.721967459,
-            0.375853777,
-            0.76000011
-          ],
-          "size": [
-            1.235255957,
-            0.751707554,
-            0.75999999
-          ],
-          "center": [
-            0.104339451,
-            0.0,
-            0.380000114
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 25,
       "key": "sheep_02",
       "kind": "sheep",
-      "filename": "sheep_02.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/sheep_02.glb",
-      "gdevelopObjectName": "Sheep02",
+      "prototypeKey": "sheep",
+      "gdevelopObjectName": "Sheep",
       "sourceMeshCount": 6,
       "sourceTriangleCount": 120,
       "sourceObjects": [
@@ -4293,6 +5706,33 @@
         "Sheep_02_Leg_1",
         "Sheep_02_Leg_2",
         "Sheep_02_Leg_3"
+      ],
+      "rootObject": "Sheep_02",
+      "rootMatrix": [
+        [
+          -0.737393796,
+          -0.67546314,
+          0.0,
+          7.800000191
+        ],
+        [
+          0.67546314,
+          -0.737393796,
+          0.0,
+          -7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
       "pivot": [
         7.800000191,
@@ -4304,10 +5744,15 @@
         0.0,
         137.509876296
       ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
       "rawBounds": {
         "min": [
           7.174863338,
-          -7.527425766,
+          -7.527425289,
           2.339999914
         ],
         "max": [
@@ -4317,7 +5762,7 @@
         ],
         "size": [
           1.163455486,
-          1.14938879,
+          1.149388313,
           0.75999999
         ],
         "center": [
@@ -4326,49 +5771,54 @@
           2.71999979
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -0.625136912,
-          -0.527425826,
+          -0.465100974,
+          -0.289218068,
           8.9e-08
         ],
         "max": [
-          0.538318396,
-          0.621962905,
+          0.694661975,
+          0.289217114,
           0.76000011
         ],
         "size": [
-          1.163455248,
-          1.14938879,
+          1.159762979,
+          0.578435183,
           0.75999999
         ],
         "center": [
-          -0.043409258,
-          0.04726854,
+          0.114780501,
+          -4.77e-07,
           0.380000114
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -0.625136912,
-          -0.527425826,
+          -0.465100974,
+          -0.289218068,
           0.0
         ],
         "max": [
-          0.538318396,
-          0.621962905,
+          0.694661975,
+          0.289217114,
           0.76000011
         ],
         "size": [
-          1.163455248,
-          1.14938879,
+          1.159762979,
+          0.578435183,
           0.76000011
         ],
         "center": [
-          -0.043409258,
-          0.04726854,
+          0.114780501,
+          -4.77e-07,
           0.380000055
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -4377,61 +5827,29 @@
           -165.864695381
         ],
         "size": [
-          160.146192943,
-          158.209986406,
+          159.63796293,
+          79.619901601,
           104.611779802
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          -137.509876296
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 14428,
-        "sha256": "661a1f2f08f213db68a901d9a98d318adbac32d2c01409e0e1c19d892c8bae0a",
-        "nodes": 6,
-        "meshes": 6,
-        "materials": 2,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 6,
-        "localBounds": {
-          "min": [
-            -0.625136971,
-            -0.527425885,
-            8.9e-08
-          ],
-          "max": [
-            0.538318455,
-            0.621962905,
-            0.76000011
-          ],
-          "size": [
-            1.163455486,
-            1.14938879,
-            0.75999999
-          ],
-          "center": [
-            -0.043409258,
-            0.04726851,
-            0.380000114
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 26,
       "key": "sheep_03",
       "kind": "sheep",
-      "filename": "sheep_03.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/sheep_03.glb",
-      "gdevelopObjectName": "Sheep03",
+      "prototypeKey": "sheep",
+      "gdevelopObjectName": "Sheep",
       "sourceMeshCount": 6,
       "sourceTriangleCount": 120,
       "sourceObjects": [
@@ -4442,6 +5860,33 @@
         "Sheep_03_Leg_2",
         "Sheep_03_Leg_3"
       ],
+      "rootObject": "Sheep_03",
+      "rootMatrix": [
+        [
+          0.764842212,
+          0.64421767,
+          0.0,
+          11.0
+        ],
+        [
+          -0.64421767,
+          0.764842212,
+          0.0,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         11.0,
         0.5,
@@ -4450,73 +5895,83 @@
       "pivotEulerDegrees": [
         0.0,
         0.0,
-        -40.107044976
+        -40.107048391
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
           10.457952499,
-          -0.105943561,
+          -0.105943337,
           2.339999914
         ],
         "max": [
           11.638981819,
-          1.020832062,
+          1.020831943,
           3.099999905
         ],
         "size": [
           1.18102932,
-          1.126775622,
+          1.126775265,
           0.75999999
         ],
         "center": [
           11.048467636,
-          0.457444251,
+          0.45744431,
           2.71999979
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -0.542047977,
-          -0.605943561,
+          -0.465100586,
+          -0.289217502,
           8.9e-08
         ],
         "max": [
-          0.638981402,
-          0.520832062,
+          0.694661736,
+          0.289217681,
           0.76000011
         ],
         "size": [
-          1.18102932,
-          1.126775622,
+          1.159762383,
+          0.578435183,
           0.75999999
         ],
         "center": [
-          0.048466712,
-          -0.042555749,
+          0.114780575,
+          8.9e-08,
           0.380000114
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -0.542047977,
-          -0.605943561,
+          -0.465100586,
+          -0.289217502,
           0.0
         ],
         "max": [
-          0.638981402,
-          0.520832062,
+          0.694661736,
+          0.289217681,
           0.76000011
         ],
         "size": [
-          1.18102932,
-          1.126775622,
+          1.159762383,
+          0.578435183,
           0.76000011
         ],
         "center": [
-          0.048466712,
-          -0.042555749,
+          0.114780575,
+          8.9e-08,
           0.380000055
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -4525,61 +5980,29 @@
           -165.864695381
         ],
         "size": [
-          162.56521225,
-          155.097350373,
+          159.63796293,
+          79.619901601,
           104.611779802
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          40.107048391
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 14436,
-        "sha256": "73ca944999eca5213154e5001114a5ae27adf789e33c592a310eeaecc93c3cab",
-        "nodes": 6,
-        "meshes": 6,
-        "materials": 2,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 6,
-        "localBounds": {
-          "min": [
-            -0.542047918,
-            -0.605943561,
-            8.9e-08
-          ],
-          "max": [
-            0.638981402,
-            0.520832062,
-            0.76000011
-          ],
-          "size": [
-            1.18102932,
-            1.126775622,
-            0.75999999
-          ],
-          "center": [
-            0.048466742,
-            -0.042555749,
-            0.380000114
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     },
     {
       "index": 27,
       "key": "sheep_04",
       "kind": "sheep",
-      "filename": "sheep_04.glb",
-      "resourcePath": "assets/models/stylized_fantasy_terrain_parts/sheep_04.glb",
-      "gdevelopObjectName": "Sheep04",
+      "prototypeKey": "sheep",
+      "gdevelopObjectName": "Sheep",
       "sourceMeshCount": 6,
       "sourceTriangleCount": 120,
       "sourceObjects": [
@@ -4590,6 +6013,33 @@
         "Sheep_04_Leg_2",
         "Sheep_04_Leg_3"
       ],
+      "rootObject": "Sheep_04",
+      "rootMatrix": [
+        [
+          0.453596085,
+          -0.891207397,
+          0.0,
+          2.5
+        ],
+        [
+          0.891207397,
+          0.453596085,
+          0.0,
+          -8.800000191
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.339999914
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "pivot": [
         2.5,
         -8.800000191,
@@ -4599,6 +6049,11 @@
         0.0,
         0.0,
         63.02535883
+      ],
+      "rootScale": [
+        1.0,
+        1.0,
+        1.0
       ],
       "rawBounds": {
         "min": [
@@ -4622,49 +6077,54 @@
           2.71999979
         ]
       },
-      "localBounds": {
+      "sourceLocalBounds": {
         "min": [
-          -0.468720853,
-          -0.545689404,
+          -0.465101093,
+          -0.289217591,
           8.9e-08
         ],
         "max": [
-          0.499701262,
-          0.694902539,
+          0.694662094,
+          0.289217591,
           0.76000011
         ],
         "size": [
-          0.968422115,
-          1.240592003,
+          1.159763217,
+          0.578435183,
           0.75999999
         ],
         "center": [
-          0.015490204,
-          0.074606568,
+          0.114780501,
+          0.0,
           0.380000114
         ]
       },
-      "localBoundsIncludingOrigin": {
+      "sourceLocalBoundsIncludingOrigin": {
         "min": [
-          -0.468720853,
-          -0.545689404,
+          -0.465101093,
+          -0.289217591,
           0.0
         ],
         "max": [
-          0.499701262,
-          0.694902539,
+          0.694662094,
+          0.289217591,
           0.76000011
         ],
         "size": [
-          0.968422115,
-          1.240592003,
+          1.159763217,
+          0.578435183,
           0.76000011
         ],
         "center": [
-          0.015490204,
-          0.074606568,
+          0.114780501,
+          0.0,
           0.380000055
         ]
+      },
+      "reusePolicy": {
+        "geometry": "equivalent",
+        "materials": "preserved",
+        "acceptedByConsolidationRequest": true
       },
       "gdevelop": {
         "position": [
@@ -4673,52 +6133,21 @@
           -165.864695381
         ],
         "size": [
-          133.300455809,
-          170.763840395,
+          159.63796293,
+          79.619901601,
           104.611779802
         ],
         "layoutRotation": [
           0.0,
           0.0,
-          0.0
+          -63.02535883
         ],
-        "rootRotationBakedIntoGlb": true
-      },
-      "glb": {
-        "bytes": 14424,
-        "sha256": "f801d11b0f55f406ca1d51930f8ad35e5842b67fb35de7b24b5e252a22462d7f",
-        "nodes": 6,
-        "meshes": 6,
-        "materials": 2,
-        "cameras": 0,
-        "animations": 0
-      },
-      "roundTrip": {
-        "verified": true,
-        "meshCount": 6,
-        "localBounds": {
-          "min": [
-            -0.468720853,
-            -0.545689404,
-            8.9e-08
-          ],
-          "max": [
-            0.499701262,
-            0.694902539,
-            0.76000011
-          ],
-          "size": [
-            0.968422115,
-            1.240592003,
-            0.75999999
-          ],
-          "center": [
-            0.015490204,
-            0.074606568,
-            0.380000114
-          ]
-        },
-        "tolerance": 0.0001
+        "appliedScale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "rootTransformBakedIntoGlb": false
       }
     }
   ]

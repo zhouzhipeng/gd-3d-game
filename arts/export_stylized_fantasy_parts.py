@@ -1,4 +1,10 @@
-"""Export the stylized fantasy scene into origin-local, per-instance GLBs.
+"""Export the fantasy terrain as seven reusable, origin-local GLB prototypes.
+
+The source Blender scene contains 28 placed terrain/building/tree/sheep groups.
+This exporter keeps all 28 source placements in the manifest, but writes only
+seven GLBs: terrain, cottage, castle, watchtower, pine, broad tree, and sheep.
+Root translation, yaw, and scale are moved to the GDevelop instances so every
+copy can share its family's GLB.
 
 Run with Blender 5.1 or newer:
 
@@ -8,10 +14,7 @@ Run with Blender 5.1 or newer:
     --output-dir assets/models/stylized_fantasy_terrain_parts \
     --overwrite
 
-The source .blend is opened read-only and is never saved. Each output is made
-from evaluated mesh copies, so render-enabled modifiers are baked without
-mutating the authored scene. The generated manifest records the exact Blender
-pivot and the GDevelop placement/size mapping used by this project.
+The source .blend is opened read-only and is never saved.
 """
 
 from __future__ import annotations
@@ -33,16 +36,79 @@ EXPECTED_TERRAIN_MESHES = 450
 EXPECTED_BUILDING_MESHES = 120
 EXPECTED_TREE_MESHES = 60
 EXPECTED_SHEEP_MESHES = 24
-EXPECTED_ASSETS = 28
+EXPECTED_SOURCE_INSTANCES = 28
+EXPECTED_PROTOTYPES = 7
+EXPECTED_SOURCE_TRIANGLES = 29476
+EXPECTED_OUTPUT_MESHES = 540
+EXPECTED_OUTPUT_TRIANGLES = 23492
 
 GDEVELOP_ANCHOR = Vector((640.0, 360.0, 0.0))
 GDEVELOP_TARGET_WIDTH = 4680.0
 BOUNDS_TOLERANCE = 1.0e-4
+ROTATION_TOLERANCE_DEGREES = 1.0e-4
 
+PROTOTYPE_DEFINITIONS = {
+    "terrain": {
+        "filename": "terrain.glb",
+        "gdevelopName": "Terrain",
+        "representative": "terrain",
+    },
+    "cottage": {
+        "filename": "building_cottage.glb",
+        "gdevelopName": "BuildingCottage",
+        "representative": "cottage_a",
+    },
+    "castle": {
+        "filename": "building_castle.glb",
+        "gdevelopName": "BuildingCastle",
+        "representative": "castle",
+    },
+    "watchtower": {
+        "filename": "building_watchtower.glb",
+        "gdevelopName": "BuildingWatchtower",
+        "representative": "western_watchtower",
+    },
+    "pine": {
+        "filename": "tree_pine.glb",
+        "gdevelopName": "TreePine",
+        "representative": "pine_01",
+    },
+    "broad_tree": {
+        "filename": "tree_broad.glb",
+        "gdevelopName": "TreeBroad",
+        "representative": "broad_tree_04",
+    },
+    "sheep": {
+        "filename": "sheep.glb",
+        "gdevelopName": "Sheep",
+        "representative": "sheep_01",
+    },
+}
+
+# These families contain small authored mesh/material variations. Consolidation
+# deliberately standardizes them to the representative named above.
+APPROXIMATE_GEOMETRY_INSTANCES = {
+    "cottage_b",
+    "cottage_d",
+    "cottage_e",
+    "southern_watchtower",
+    "broad_tree_00",
+    "broad_tree_01",
+    "broad_tree_02",
+    "broad_tree_03",
+    "broad_tree_05",
+    "broad_tree_06",
+    "broad_tree_07",
+}
+CANONICAL_MATERIAL_SUBSTITUTIONS = {
+    "broad_tree_01",
+    "broad_tree_03",
+    "broad_tree_05",
+}
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Split stylized_fantasy_terrain.blend into dedicated GLBs."
+        description="Export seven reusable GLBs and all 28 source placements."
     )
     parser.add_argument("--input", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
@@ -65,8 +131,18 @@ def rounded(value: float) -> float:
     return 0.0 if abs(result) < 5.0e-10 else result
 
 
+def normalized_scale(value: float) -> float:
+    """Snap float noise around the scene's authored 0.05 scale increments."""
+    authored_increment = round(float(value) * 20.0) / 20.0
+    return authored_increment if abs(float(value) - authored_increment) < 1.0e-5 else float(value)
+
+
 def vector_values(vector: Vector) -> list[float]:
     return [rounded(component) for component in vector]
+
+
+def matrix_values(matrix: Matrix) -> list[list[float]]:
+    return [[rounded(value) for value in row] for row in matrix]
 
 
 def bounds_record(minimum: Vector, maximum: Vector) -> dict[str, list[float]]:
@@ -78,9 +154,12 @@ def bounds_record(minimum: Vector, maximum: Vector) -> dict[str, list[float]]:
     }
 
 
-def bounds_for_objects(objects: list[bpy.types.Object]) -> tuple[Vector, Vector]:
+def bounds_for_objects(
+    objects: list[bpy.types.Object], transform: Matrix | None = None
+) -> tuple[Vector, Vector]:
+    outer = transform if transform is not None else Matrix.Identity(4)
     points = [
-        obj.matrix_world @ Vector(corner)
+        outer @ obj.matrix_world @ Vector(corner)
         for obj in objects
         if obj.type == "MESH"
         for corner in obj.bound_box
@@ -181,12 +260,13 @@ def mesh_triangles(objects: list[bpy.types.Object]) -> int:
 
 
 def evaluated_duplicates(
-    sources: list[bpy.types.Object], pivot: Vector, slug: str
+    sources: list[bpy.types.Object], basis_world: Matrix, slug: str
 ) -> tuple[bpy.types.Collection, list[bpy.types.Object]]:
     depsgraph = bpy.context.evaluated_depsgraph_get()
     export_collection = bpy.data.collections.new(f"__EXPORT_{slug}")
     bpy.context.scene.collection.children.link(export_collection)
     duplicates: list[bpy.types.Object] = []
+    inverse_basis = basis_world.inverted_safe()
 
     for source in sorted(sources, key=lambda item: item.name):
         evaluated = source.evaluated_get(depsgraph)
@@ -195,7 +275,7 @@ def evaluated_duplicates(
         )
         duplicate = bpy.data.objects.new(source.name, mesh)
         export_collection.objects.link(duplicate)
-        duplicate.matrix_world = Matrix.Translation(-pivot) @ source.matrix_world
+        duplicate.matrix_world = inverse_basis @ source.matrix_world
         duplicates.append(duplicate)
 
     return export_collection, duplicates
@@ -252,21 +332,19 @@ def object_named(name: str) -> bpy.types.Object:
     return obj
 
 
-def make_specs(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
+def make_source_instances(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
     mesh_set = set(meshes)
     buildings_collection = collection_objects("04_Buildings")
-
-    specs: list[dict[str, object]] = []
+    instances: list[dict[str, object]] = []
     claimed: set[bpy.types.Object] = set()
 
     def add(
         key: str,
         kind: str,
-        filename: str,
-        gdevelop_name: str,
+        prototype_key: str,
         sources: list[bpy.types.Object],
-        pivot_object: bpy.types.Object | None = None,
-        pivot: Vector | None = None,
+        root_object: bpy.types.Object | None = None,
+        basis_world: Matrix | None = None,
     ) -> None:
         source_set = set(sources)
         if not source_set or not source_set <= mesh_set:
@@ -277,44 +355,36 @@ def make_specs(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
                 f"{key} overlaps already claimed meshes: "
                 + ", ".join(sorted(item.name for item in overlap))
             )
+        if prototype_key not in PROTOTYPE_DEFINITIONS:
+            raise RuntimeError(f"{key} has unknown prototype {prototype_key}.")
         claimed.update(source_set)
-        root_pivot = (
-            pivot.copy()
-            if pivot is not None
-            else pivot_object.matrix_world.translation.copy()
+        root_matrix = (
+            basis_world.copy()
+            if basis_world is not None
+            else root_object.matrix_world.copy()
         )
-        root_euler = (
-            pivot_object.matrix_world.to_euler("XYZ")
-            if pivot_object is not None
-            else Vector((0.0, 0.0, 0.0))
-        )
-        specs.append(
+        instances.append(
             {
                 "key": key,
                 "kind": kind,
-                "filename": filename,
-                "gdevelopName": gdevelop_name,
+                "prototypeKey": prototype_key,
                 "sources": sorted(source_set, key=lambda item: item.name),
-                "pivot": root_pivot,
-                "pivotEulerDegrees": [
-                    rounded(math.degrees(component)) for component in root_euler
-                ],
+                "rootObject": root_object.name if root_object is not None else None,
+                "rootMatrix": root_matrix,
             }
         )
 
     for letter in "ABCDE":
         root = object_named(f"Cottage_{letter}")
-        children = [obj for obj in meshes if obj.parent == root]
         add(
             f"cottage_{letter.lower()}",
             "building",
-            f"building_cottage_{letter.lower()}.glb",
-            f"BuildingCottage{letter}",
-            children,
-            pivot_object=root,
+            "cottage",
+            [obj for obj in meshes if obj.parent == root],
+            root_object=root,
         )
 
-    castle = [
+    castle_sources = [
         obj
         for obj in meshes
         if obj in buildings_collection
@@ -324,81 +394,66 @@ def make_specs(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
     add(
         "castle",
         "building",
-        "building_castle.glb",
-        "BuildingCastle",
-        castle,
-        pivot_object=object_named("Castle_Keep"),
+        "castle",
+        castle_sources,
+        root_object=object_named("Castle_Keep"),
     )
 
     for direction in ("Western", "Southern"):
-        sources = [
-            obj
-            for obj in meshes
-            if obj in buildings_collection
-            and obj.name.startswith(f"{direction}_Watchtower_")
-        ]
         add(
             f"{direction.lower()}_watchtower",
             "building",
-            f"building_{direction.lower()}_watchtower.glb",
-            f"Building{direction}Watchtower",
-            sources,
-            pivot_object=object_named(f"{direction}_Watchtower_Body"),
+            "watchtower",
+            [
+                obj
+                for obj in meshes
+                if obj in buildings_collection
+                and obj.name.startswith(f"{direction}_Watchtower_")
+            ],
+            root_object=object_named(f"{direction}_Watchtower_Body"),
         )
 
     for index in range(7):
-        prefix = f"Pine_{index:02d}_"
-        sources = [obj for obj in meshes if obj.name.startswith(prefix)]
         add(
             f"pine_{index:02d}",
             "tree",
-            f"tree_pine_{index:02d}.glb",
-            f"TreePine{index:02d}",
-            sources,
-            pivot_object=object_named(f"Pine_{index:02d}_Trunk"),
+            "pine",
+            [obj for obj in meshes if obj.name.startswith(f"Pine_{index:02d}_")],
+            root_object=object_named(f"Pine_{index:02d}_Trunk"),
         )
 
     for index in range(8):
-        prefix = f"BroadTree_{index:02d}_"
-        sources = [obj for obj in meshes if obj.name.startswith(prefix)]
         add(
             f"broad_tree_{index:02d}",
             "tree",
-            f"tree_broad_{index:02d}.glb",
-            f"TreeBroad{index:02d}",
-            sources,
-            pivot_object=object_named(f"BroadTree_{index:02d}_Trunk"),
+            "broad_tree",
+            [obj for obj in meshes if obj.name.startswith(f"BroadTree_{index:02d}_")],
+            root_object=object_named(f"BroadTree_{index:02d}_Trunk"),
         )
 
     for index in range(1, 5):
         root = object_named(f"Sheep_{index:02d}")
-        children = [obj for obj in meshes if obj.parent == root]
         add(
             f"sheep_{index:02d}",
             "sheep",
-            f"sheep_{index:02d}.glb",
-            f"Sheep{index:02d}",
-            children,
-            pivot_object=root,
+            "sheep",
+            [obj for obj in meshes if obj.parent == root],
+            root_object=root,
         )
 
     terrain = sorted(mesh_set - claimed, key=lambda item: item.name)
-    specs.insert(
-        0,
-        {
-            "key": "terrain",
-            "kind": "terrain",
-            "filename": "terrain.glb",
-            "gdevelopName": "Terrain",
-            "sources": terrain,
-            "pivot": Vector((0.0, 0.0, 0.0)),
-            "pivotEulerDegrees": [0.0, 0.0, 0.0],
-        },
+    add(
+        "terrain",
+        "terrain",
+        "terrain",
+        terrain,
+        basis_world=Matrix.Identity(4),
     )
-    claimed.update(terrain)
+    terrain_record = instances.pop()
+    instances.insert(0, terrain_record)
 
     kind_counts = {
-        kind: sum(len(spec["sources"]) for spec in specs if spec["kind"] == kind)
+        kind: sum(len(instance["sources"]) for instance in instances if instance["kind"] == kind)
         for kind in ("terrain", "building", "tree", "sheep")
     }
     expected_counts = {
@@ -407,15 +462,67 @@ def make_specs(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
         "tree": EXPECTED_TREE_MESHES,
         "sheep": EXPECTED_SHEEP_MESHES,
     }
-    if len(specs) != EXPECTED_ASSETS:
-        raise RuntimeError(f"Expected {EXPECTED_ASSETS} assets, found {len(specs)}.")
+    if len(instances) != EXPECTED_SOURCE_INSTANCES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_SOURCE_INSTANCES} source instances, found {len(instances)}."
+        )
     if claimed != mesh_set:
-        raise RuntimeError("Asset partition does not cover every source mesh exactly once.")
+        raise RuntimeError("Source partition does not cover every mesh exactly once.")
     if kind_counts != expected_counts:
         raise RuntimeError(
             f"Unexpected partition counts: {kind_counts}; expected {expected_counts}."
         )
-    return specs
+    return instances
+
+
+def make_prototypes(instances: list[dict[str, object]]) -> list[dict[str, object]]:
+    instances_by_key = {str(instance["key"]): instance for instance in instances}
+    prototypes: list[dict[str, object]] = []
+    for prototype_key, definition in PROTOTYPE_DEFINITIONS.items():
+        representative_key = str(definition["representative"])
+        representative = instances_by_key.get(representative_key)
+        if representative is None:
+            raise RuntimeError(
+                f"Prototype {prototype_key} is missing representative {representative_key}."
+            )
+        if representative["prototypeKey"] != prototype_key:
+            raise RuntimeError(
+                f"Representative {representative_key} maps to the wrong prototype."
+            )
+        prototypes.append(
+            {
+                "key": prototype_key,
+                "kind": representative["kind"],
+                "filename": definition["filename"],
+                "gdevelopName": definition["gdevelopName"],
+                "representativeKey": representative_key,
+                "sources": representative["sources"],
+                "rootMatrix": representative["rootMatrix"],
+            }
+        )
+    if len(prototypes) != EXPECTED_PROTOTYPES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_PROTOTYPES} prototypes, found {len(prototypes)}."
+        )
+    mapped = {str(instance["prototypeKey"]) for instance in instances}
+    if mapped != set(PROTOTYPE_DEFINITIONS):
+        raise RuntimeError(f"Prototype mapping mismatch: {sorted(mapped)}")
+    return prototypes
+
+
+def previous_manifest_glbs(manifest_path: Path) -> set[str]:
+    if not manifest_path.is_file():
+        return set()
+    document = json.loads(manifest_path.read_text(encoding="utf-8"))
+    records = document.get("assets", document.get("prototypes", []))
+    filenames: set[str] = set()
+    for record in records:
+        filename = record.get("filename")
+        if not isinstance(filename, str) or Path(filename).name != filename:
+            raise RuntimeError("Prior manifest contains an unsafe output filename.")
+        if filename.lower().endswith(".glb"):
+            filenames.add(filename)
+    return filenames
 
 
 def main() -> None:
@@ -428,6 +535,7 @@ def main() -> None:
     if not input_path.is_file():
         raise RuntimeError(f"Input Blender file does not exist: {input_path}")
     output_dir.mkdir(parents=True, exist_ok=True)
+    stale_candidates = previous_manifest_glbs(manifest_path)
 
     bpy.ops.wm.open_mainfile(filepath=str(input_path), load_ui=False)
     source_scene = bpy.context.scene
@@ -437,12 +545,11 @@ def main() -> None:
             f"Expected {EXPECTED_SOURCE_MESHES} source meshes, found {len(meshes)}."
         )
 
-    specs = make_specs(meshes)
+    instances = make_source_instances(meshes)
+    prototypes = make_prototypes(instances)
 
-    # Evaluated full-scene bounds establish the anchor used by the current
-    # combined terrain object. Temporary copies include every render modifier.
     full_collection, full_duplicates = evaluated_duplicates(
-        meshes, Vector((0.0, 0.0, 0.0)), "full_bounds"
+        meshes, Matrix.Identity(4), "full_bounds"
     )
     full_minimum, full_maximum = bounds_for_objects(full_duplicates)
     full_center = (full_minimum + full_maximum) * 0.5
@@ -451,19 +558,25 @@ def main() -> None:
 
     project_root = input_path.parent.parent
     source_relative = input_path.relative_to(project_root).as_posix()
-    output_relative = output_dir.relative_to(project_root).as_posix()
-    asset_records: list[dict[str, object]] = []
-    total_triangles = 0
+    try:
+        output_relative = output_dir.relative_to(project_root).as_posix()
+    except ValueError:
+        output_relative = output_dir.as_posix()
 
-    for asset_index, spec in enumerate(specs, start=1):
-        output_path = output_dir / spec["filename"]
+    prototype_records: list[dict[str, object]] = []
+    prototype_by_key: dict[str, dict[str, object]] = {}
+    output_mesh_count = 0
+    output_triangle_count = 0
+
+    for prototype_index, prototype in enumerate(prototypes, start=1):
+        output_path = output_dir / str(prototype["filename"])
         if output_path.exists() and not args.overwrite:
             raise RuntimeError(
                 f"Output exists (use --overwrite): {output_path.as_posix()}"
             )
 
         collection, duplicates = evaluated_duplicates(
-            spec["sources"], spec["pivot"], str(spec["key"])
+            prototype["sources"], prototype["rootMatrix"], str(prototype["key"])
         )
         try:
             local_minimum, local_maximum = bounds_for_objects(duplicates)
@@ -476,12 +589,13 @@ def main() -> None:
             remove_duplicates(collection, duplicates)
 
         summary = glb_summary(output_path)
+        expected_meshes = len(prototype["sources"])
         if summary["cameras"] or summary["animations"]:
             raise RuntimeError(f"{output_path.name} contains a camera or animation.")
-        if summary["meshes"] != len(spec["sources"]):
+        if summary["meshes"] != expected_meshes:
             raise RuntimeError(
                 f"{output_path.name} exported {summary['meshes']} meshes; "
-                f"expected {len(spec['sources'])}."
+                f"expected {expected_meshes}."
             )
 
         imported_minimum, imported_maximum, imported_mesh_count = round_trip_bounds(
@@ -489,57 +603,32 @@ def main() -> None:
         )
         assert_close(imported_minimum, local_minimum, f"{output_path.name} min")
         assert_close(imported_maximum, local_maximum, f"{output_path.name} max")
-        if imported_mesh_count != len(spec["sources"]):
+        if imported_mesh_count != expected_meshes:
             raise RuntimeError(
                 f"{output_path.name} round trip found {imported_mesh_count} meshes; "
-                f"expected {len(spec['sources'])}."
+                f"expected {expected_meshes}."
             )
 
-        pivot: Vector = spec["pivot"]
-        # Keep the integration numbers as Python doubles. mathutils.Vector
-        # stores float32 components, which is appropriate for Blender geometry
-        # but needlessly rounds the authored GDevelop positions and dimensions.
-        gdevelop_position = [
-            rounded(float(GDEVELOP_ANCHOR.x) + uniform_scale * float(pivot.x)),
-            rounded(float(GDEVELOP_ANCHOR.y) - uniform_scale * float(pivot.y)),
-            rounded(
-                float(GDEVELOP_ANCHOR.z)
-                + uniform_scale * (float(pivot.z) - float(full_center.z))
-            ),
-        ]
         local_size = origin_maximum - origin_minimum
-        gdevelop_size = [
+        default_size = [
             rounded(uniform_scale * float(local_size.x)),
             rounded(uniform_scale * float(local_size.y)),
             rounded(uniform_scale * float(local_size.z)),
         ]
-        raw_minimum = local_minimum + pivot
-        raw_maximum = local_maximum + pivot
-        total_triangles += triangle_count
-
         record = {
-            "index": asset_index - 1,
-            "key": spec["key"],
-            "kind": spec["kind"],
-            "filename": spec["filename"],
-            "resourcePath": f"{output_relative}/{spec['filename']}",
-            "gdevelopObjectName": spec["gdevelopName"],
-            "sourceMeshCount": len(spec["sources"]),
+            "index": prototype_index - 1,
+            "key": prototype["key"],
+            "kind": prototype["kind"],
+            "filename": prototype["filename"],
+            "resourcePath": f"{output_relative}/{prototype['filename']}",
+            "gdevelopObjectName": prototype["gdevelopName"],
+            "representativeKey": prototype["representativeKey"],
+            "sourceMeshCount": expected_meshes,
             "sourceTriangleCount": triangle_count,
-            "sourceObjects": [obj.name for obj in spec["sources"]],
-            "pivot": vector_values(pivot),
-            "pivotEulerDegrees": spec["pivotEulerDegrees"],
-            "rawBounds": bounds_record(raw_minimum, raw_maximum),
+            "sourceObjects": [obj.name for obj in prototype["sources"]],
             "localBounds": bounds_record(local_minimum, local_maximum),
-            "localBoundsIncludingOrigin": bounds_record(
-                origin_minimum, origin_maximum
-            ),
-            "gdevelop": {
-                "position": gdevelop_position,
-                "size": gdevelop_size,
-                "layoutRotation": [0.0, 0.0, 0.0],
-                "rootRotationBakedIntoGlb": True,
-            },
+            "localBoundsIncludingOrigin": bounds_record(origin_minimum, origin_maximum),
+            "gdevelopDefaultSize": default_size,
             "glb": summary,
             "roundTrip": {
                 "verified": True,
@@ -548,15 +637,142 @@ def main() -> None:
                 "tolerance": BOUNDS_TOLERANCE,
             },
         }
-        asset_records.append(record)
+        prototype_records.append(record)
+        prototype_by_key[str(prototype["key"])] = record
+        output_mesh_count += expected_meshes
+        output_triangle_count += triangle_count
         print(
-            f"EXPORTED {asset_index:02d}/{EXPECTED_ASSETS} "
-            f"{output_path.name} meshes={len(spec['sources'])} "
+            f"EXPORTED_PROTOTYPE {prototype_index:02d}/{EXPECTED_PROTOTYPES} "
+            f"{output_path.name} meshes={expected_meshes} "
             f"triangles={triangle_count} bytes={summary['bytes']}"
         )
 
+    if output_mesh_count != EXPECTED_OUTPUT_MESHES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_OUTPUT_MESHES} output meshes, found {output_mesh_count}."
+        )
+    if output_triangle_count != EXPECTED_OUTPUT_TRIANGLES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_OUTPUT_TRIANGLES} output triangles, "
+            f"found {output_triangle_count}."
+        )
+
+    instance_records: list[dict[str, object]] = []
+    source_triangle_count = 0
+    for instance_index, instance in enumerate(instances):
+        root_matrix: Matrix = instance["rootMatrix"]
+        location, rotation, root_scale = root_matrix.decompose()
+        euler = rotation.to_euler("XYZ")
+        euler_degrees = [rounded(math.degrees(component)) for component in euler]
+        if abs(euler_degrees[0]) > ROTATION_TOLERANCE_DEGREES or abs(euler_degrees[1]) > ROTATION_TOLERANCE_DEGREES:
+            raise RuntimeError(
+                f"{instance['key']} has unsupported X/Y root rotation: {euler_degrees}"
+            )
+
+        collection, duplicates = evaluated_duplicates(
+            instance["sources"], root_matrix, f"audit_{instance['key']}"
+        )
+        try:
+            source_local_minimum, source_local_maximum = bounds_for_objects(duplicates)
+            raw_minimum, raw_maximum = bounds_for_objects(duplicates, root_matrix)
+            triangle_count = mesh_triangles(duplicates)
+        finally:
+            remove_duplicates(collection, duplicates)
+
+        source_triangle_count += triangle_count
+        prototype_record = prototype_by_key[str(instance["prototypeKey"])]
+        default_size = prototype_record["gdevelopDefaultSize"]
+        source_origin_minimum, source_origin_maximum = expanded_to_origin(
+            source_local_minimum, source_local_maximum
+        )
+        source_origin_size = source_origin_maximum - source_origin_minimum
+        prototype_origin_size = prototype_record["localBoundsIncludingOrigin"]["size"]
+        applied_scale = [
+            normalized_scale(
+                abs(float(root_scale[index]))
+                * float(source_origin_size[index])
+                / float(prototype_origin_size[index])
+            )
+            for index in range(3)
+        ]
+        gdevelop_position = [
+            rounded(float(GDEVELOP_ANCHOR.x) + uniform_scale * float(location.x)),
+            rounded(float(GDEVELOP_ANCHOR.y) - uniform_scale * float(location.y)),
+            rounded(
+                float(GDEVELOP_ANCHOR.z)
+                + uniform_scale * (float(location.z) - float(full_center.z))
+            ),
+        ]
+        gdevelop_size = [
+            rounded(float(default_size[index]) * applied_scale[index])
+            for index in range(3)
+        ]
+        layout_yaw = rounded(-euler_degrees[2])
+        geometry_policy = (
+            "canonical-substitution"
+            if instance["key"] in APPROXIMATE_GEOMETRY_INSTANCES
+            else "equivalent"
+        )
+        material_policy = (
+            "canonical-substitution"
+            if instance["key"] in CANONICAL_MATERIAL_SUBSTITUTIONS
+            else "preserved"
+        )
+        record = {
+            "index": instance_index,
+            "key": instance["key"],
+            "kind": instance["kind"],
+            "prototypeKey": instance["prototypeKey"],
+            "gdevelopObjectName": prototype_record["gdevelopObjectName"],
+            "sourceMeshCount": len(instance["sources"]),
+            "sourceTriangleCount": triangle_count,
+            "sourceObjects": [obj.name for obj in instance["sources"]],
+            "rootObject": instance["rootObject"],
+            "rootMatrix": matrix_values(root_matrix),
+            "pivot": vector_values(location),
+            "pivotEulerDegrees": euler_degrees,
+            "rootScale": vector_values(root_scale),
+            "rawBounds": bounds_record(raw_minimum, raw_maximum),
+            "sourceLocalBounds": bounds_record(
+                source_local_minimum, source_local_maximum
+            ),
+            "sourceLocalBoundsIncludingOrigin": bounds_record(
+                source_origin_minimum, source_origin_maximum
+            ),
+            "reusePolicy": {
+                "geometry": geometry_policy,
+                "materials": material_policy,
+                "acceptedByConsolidationRequest": True,
+            },
+            "gdevelop": {
+                "position": gdevelop_position,
+                "size": gdevelop_size,
+                "layoutRotation": [0.0, 0.0, layout_yaw],
+                "appliedScale": [rounded(value) for value in applied_scale],
+                "rootTransformBakedIntoGlb": False,
+            },
+        }
+        instance_records.append(record)
+
+    if source_triangle_count != EXPECTED_SOURCE_TRIANGLES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_SOURCE_TRIANGLES} source triangles, "
+            f"found {source_triangle_count}."
+        )
+
+    current_filenames = {str(record["filename"]) for record in prototype_records}
+    stale_filenames = sorted(stale_candidates - current_filenames)
+    removed_stale: list[str] = []
+    for filename in stale_filenames:
+        stale_path = (output_dir / filename).resolve()
+        if stale_path.parent != output_dir:
+            raise RuntimeError(f"Refusing to remove output outside {output_dir}.")
+        if stale_path.is_file():
+            stale_path.unlink()
+            removed_stale.append(filename)
+
     manifest = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "source": {
             "file": source_relative,
             "sha256": sha256(input_path),
@@ -570,23 +786,33 @@ def main() -> None:
             "evaluatedBounds": bounds_record(full_minimum, full_maximum),
         },
         "partition": {
-            "assetCount": len(asset_records),
-            "meshCount": sum(record["sourceMeshCount"] for record in asset_records),
-            "triangleCount": total_triangles,
+            "instanceCount": len(instance_records),
+            "meshCount": sum(record["sourceMeshCount"] for record in instance_records),
+            "triangleCount": source_triangle_count,
             "countsByKind": {
-                kind: sum(1 for record in asset_records if record["kind"] == kind)
+                kind: sum(1 for record in instance_records if record["kind"] == kind)
                 for kind in ("terrain", "building", "tree", "sheep")
             },
             "meshesByKind": {
                 kind: sum(
                     record["sourceMeshCount"]
-                    for record in asset_records
+                    for record in instance_records
                     if record["kind"] == kind
                 )
                 for kind in ("terrain", "building", "tree", "sheep")
             },
             "exhaustive": True,
             "pairwiseDisjoint": True,
+        },
+        "outputs": {
+            "prototypeCount": len(prototype_records),
+            "meshCount": output_mesh_count,
+            "triangleCount": output_triangle_count,
+            "removedPriorManifestOutputs": removed_stale,
+            "countsByKind": {
+                kind: sum(1 for record in prototype_records if record["kind"] == kind)
+                for kind in ("terrain", "building", "tree", "sheep")
+            },
         },
         "gdevelopIntegration": {
             "anchor": vector_values(GDEVELOP_ANCHOR),
@@ -597,6 +823,7 @@ def main() -> None:
                 "y = anchorY - scale * blenderY",
                 "z = anchorZ + scale * (blenderZ - fullSceneCenterZ)",
             ],
+            "rotationFormula": "gdevelopZ = -blenderZ",
             "content": {
                 "originLocation": "ModelOrigin",
                 "centerLocation": "ModelOrigin",
@@ -607,7 +834,13 @@ def main() -> None:
                 "materialType": "KeepOriginal",
             },
         },
-        "assets": asset_records,
+        "consolidation": {
+            "policy": "one shared prototype per semantic model family",
+            "geometrySubstitutionInstances": sorted(APPROXIMATE_GEOMETRY_INSTANCES),
+            "materialSubstitutionInstances": sorted(CANONICAL_MATERIAL_SUBSTITUTIONS),
+        },
+        "prototypes": prototype_records,
+        "instances": instance_records,
     }
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(
@@ -615,8 +848,11 @@ def main() -> None:
     )
     print(
         "EXPORT_SUMMARY "
-        f"assets={len(asset_records)} meshes={manifest['partition']['meshCount']} "
-        f"triangles={total_triangles} failures=0 manifest={manifest_path.as_posix()}"
+        f"prototypes={len(prototype_records)} instances={len(instance_records)} "
+        f"sourceMeshes={manifest['partition']['meshCount']} "
+        f"outputMeshes={output_mesh_count} sourceTriangles={source_triangle_count} "
+        f"outputTriangles={output_triangle_count} failures=0 "
+        f"manifest={manifest_path.as_posix()}"
     )
 
 
