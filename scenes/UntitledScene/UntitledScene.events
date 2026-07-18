@@ -28,10 +28,3 @@ if MousePointerLock::IsMoving
 do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementX() * 0.12"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementY() * 0.12"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="=" value="clamp(Knight.ThirdPersonCamera::ElevationAngleOffset(), -10, 55)"
-
-@event aiGeneratedEventId="lock-knight-movement-camera-angle"
-if KeyFromTextPressed key_to_check="\"w\""
-or KeyFromTextPressed key_to_check="\"a\""
-or KeyFromTextPressed key_to_check="\"s\""
-or KeyFromTextPressed key_to_check="\"d\""
-do PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper::SetLockedCameraAngle object="Knight" behavior="Platformer3DKeyboardMapper" lock_the_camera="yes"
