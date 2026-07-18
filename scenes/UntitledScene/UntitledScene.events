@@ -14,3 +14,10 @@ do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="P
 do Physics3D::Physics3DBehavior::EnableLayer object="GroundPlatform" behavior="Physics3D" layer_1_8="5" enable="yes"
 do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="1" enable="yes"
 do Physics3D::Physics3DBehavior::EnableMask object="GroundPlatform" behavior="Physics3D" mask_1_8="5" enable="yes"
+
+@event aiGeneratedEventId="lock-knight-movement-camera-angle"
+if KeyFromTextPressed key_to_check="\"w\""
+or KeyFromTextPressed key_to_check="\"a\""
+or KeyFromTextPressed key_to_check="\"s\""
+or KeyFromTextPressed key_to_check="\"d\""
+do PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper::SetLockedCameraAngle object="Knight" behavior="Platformer3DKeyboardMapper" lock_the_camera="yes"

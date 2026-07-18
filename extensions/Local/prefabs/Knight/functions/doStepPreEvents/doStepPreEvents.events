@@ -1,17 +1,19 @@
-@event aiGeneratedEventId="lock-movement-camera-angle"
+@event aiGeneratedEventId="play-knight-run-while-moving"
 if KeyFromTextPressed key_to_check="\"w\""
 or KeyFromTextPressed key_to_check="\"a\""
 or KeyFromTextPressed key_to_check="\"s\""
 or KeyFromTextPressed key_to_check="\"d\""
-do PhysicsCharacter3DKeyMapper::Platformer3DKeyboardMapper::SetLockedCameraAngle object="Object" behavior="Platformer3DKeyboardMapper" lock_the_camera="yes"
-
-@event aiGeneratedEventId="play-knight-run-while-moving"
-if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Running_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Running_A\""
 
 @event aiGeneratedEventId="play-knight-idle-while-stopped"
 @instruction inverted=true
-if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
+if KeyFromTextPressed key_to_check="\"w\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"a\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"s\""
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"d\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
