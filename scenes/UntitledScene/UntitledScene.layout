@@ -8,13 +8,13 @@
     grid-color=#D7FFFF
     grid-alpha=0.35
     snap=true
-    zoom=1.4497798546454532
+    zoom=0.1679203449169753
     window-mask=false
     selected-layer="3D Terrain"
     mode=embedded-game
   />
 
-  <layer name="">
+  <layer name="" locked=true>
     <camera size=default viewport=default />
   </layer>
 
@@ -23,6 +23,7 @@
     rendering=3d
     camera-type=perspective
     camera-behavior=do-nothing
+    locked=true
     ambient=#FFFFFF
     near=1
     max-2d-distance=10000
@@ -44,10 +45,26 @@
     <StylizedTerrain3D
       id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
       at=640,360
-      size=600x512
-      depth=135
+      size=4680x3993.6000000000004
+      depth=1053
       locked
     />
-    <Knight3D id="b0843978-025c-440d-801a-c130baa8477d" at=640,360,68 size=92x62 depth=120 />
+  </layer>
+
+  <layer name="Game">
+    <effect
+      name="3D Ambient Hemisphere Light"
+      type="Scene3D::HemisphereLight"
+      numbers={"elevation":40,"intensity":0.33,"rotation":300}
+      strings={"groundColor":"127;127;127","skyColor":"255;255;255","top":"Z+"}
+    />
+    <effect
+      name="3D Sun Light"
+      type="Scene3D::DirectionalLight"
+      numbers={"distanceFromCamera":1500,"elevation":40,"frustumSize":4000,"intensity":0.75,"minimumShadowBias":0,"rotation":300}
+      strings={"color":"255;255;255","shadowQuality":"medium","top":"Z+"}
+      booleans={"isCastingShadow":true}
+    />
+    <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,-96 z-order=1 />
   </layer>
 </layout>

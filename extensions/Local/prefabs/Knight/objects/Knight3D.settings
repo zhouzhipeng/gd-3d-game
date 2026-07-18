@@ -1,16 +1,16 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 1
+order = 0
 assetStoreId = ""
 name = "Knight3D"
-persistentUuid = "f966dbdc-b56a-4799-ad2d-9ea76aff87d8"
+persistentUuid = "79ec5400-47d2-4418-a752-c513a2f01619"
 type = "Scene3D::Model3DObject"
 effects = [ ]
 behaviors = [ ]
 folder = [ ]
 
 [content]
-centerLocation = "CenteredOnZ"
+centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
 depth = 120
 height = 64

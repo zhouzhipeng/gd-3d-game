@@ -1,10 +1,10 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 0
+order = 1
 assetStoreId = ""
-name = "Warrior"
-persistentUuid = "9d63146d-3ad5-4beb-b6c8-05e814b05cae"
-type = "Local::Warrior"
+name = "Knight"
+persistentUuid = "cdc44089-338e-4c8c-92ca-065fdde36e88"
+type = "Local::Knight"
 variant = ""
 effects = [ ]
 behaviors = [ ]
