@@ -482,6 +482,34 @@ name = "assets/models/Rogue_Hooded.glb"
 userAdded = true
 
 [[resources]]
+file = "assets/models/Skeleton_Mage.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Skeleton_Mage.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Skeleton_Minion.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Skeleton_Minion.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Skeleton_Rogue.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Skeleton_Rogue.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Skeleton_Warrior.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Skeleton_Warrior.glb"
+userAdded = true
+
+[[resources]]
 file = "assets/props/arrow_bow.glb"
 kind = "model3D"
 metadata = ""
