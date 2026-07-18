@@ -8,7 +8,7 @@ Single-file example (PowerShell):
 
   & "D:\\Program Files\\Blender Foundation\\Blender 5.1\\blender.exe" `
     --background --factory-startup `
-    --python tools/convert_gltf_to_glb.py -- `
+    --python skills/gdevelop-project-files/scripts/convert_gltf_to_glb.py -- `
     --input "D:\\models\\wand.gltf" `
     --output "D:\\models\\wand.glb" `
     --overwrite
@@ -17,7 +17,7 @@ Batch example:
 
   & "D:\\Program Files\\Blender Foundation\\Blender 5.1\\blender.exe" `
     --background --factory-startup `
-    --python tools/convert_gltf_to_glb.py -- `
+    --python skills/gdevelop-project-files/scripts/convert_gltf_to_glb.py -- `
     --input "D:\\models\\gltf" `
     --output-dir "D:\\models\\glb" `
     --recursive --overwrite

@@ -9,7 +9,7 @@ Example (PowerShell):
 
   & "C:\\Program Files\\Blender Foundation\\Blender 5.1\\blender.exe" `
     --background --factory-startup `
-    --python tools/combine_same_rig_glb_animations.py -- `
+    --python skills/gdevelop-project-files/scripts/combine_same_rig_glb_animations.py -- `
     --character "D:\\models\\Knight.glb" `
     --animations "D:\\animations\\Rig_Medium_General.glb" `
     --output "D:\\game\\assets\\models\\Knight_Animated.glb" `
