@@ -8,7 +8,7 @@
     grid-color=#D7FFFF
     grid-alpha=0.35
     snap=true
-    zoom=0.04034333917317813
+    zoom=0.39772493073633547
     window-mask=false
     selected-layer="3D Terrain"
     mode=embedded-game
@@ -413,6 +413,7 @@
       locked
     />
     <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,100 z-order=1 />
+    <Skeleton_Minion id="6e868261-ec5f-457e-bbc6-e2b050430e95" at=384,-320 z-order=2 />
   </layer>
 
   <layer name="Game">

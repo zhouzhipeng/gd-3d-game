@@ -24,6 +24,13 @@ object3D = "Object3D"
 restitution = 0
 shape = "Box"
 shapeOrientation = "Z"
+meshShapeResourceName = { }
+shapeOffsetX = 0
+shapeOffsetY = 0
+shapeOffsetZ = 0
+massCenterOffsetX = 0
+massCenterOffsetY = 0
+massCenterOffsetZ = 0
 
 [content]
 centerLocation = "ModelOrigin"
@@ -40,6 +47,7 @@ rotationX = 90
 rotationY = 0
 rotationZ = 0
 width = 172.058823529
+sharedAnimationModelResources = [ ]
 animations = [ ]
 
 [variables]

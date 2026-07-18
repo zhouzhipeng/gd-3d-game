@@ -774,3 +774,24 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/stylized_fantasy_terrain_parts/ladder_step_cube.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/Skeleton_Minion.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/Skeleton_Minion.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/Rig_Medium_MovementBasic.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/Rig_Medium_MovementBasic.glb"
+userAdded = false
+
+[[resources]]
+file = "assets/Rig_Medium_Special.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/Rig_Medium_Special.glb"
+userAdded = false

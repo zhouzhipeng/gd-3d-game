@@ -6,6 +6,7 @@ name = "Terrain"
 persistentUuid = "d2a3bb4f-1ea9-46c6-a99f-90e7fc4501c8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
+behaviors = [ ]
 folder = [ ]
 
 [content]
@@ -23,6 +24,7 @@ rotationX = 90
 rotationY = 0
 rotationZ = 0
 width = 4_680
+sharedAnimationModelResources = [ ]
 animations = [ ]
 
 [variables]

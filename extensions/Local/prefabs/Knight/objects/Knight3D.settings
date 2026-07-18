@@ -24,145 +24,174 @@ rotationX = 90
 rotationY = 0
 rotationZ = 0
 width = 64
+sharedAnimationModelResources = [ ]
 
 [[content.animations]]
 loop = true
 name = "Idle_A"
 source = "Idle_A"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Idle_B"
 source = "Idle_B"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Hit_A"
 source = "Hit_A"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Hit_B"
 source = "Hit_B"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Melee_1H_Attack_Slice_Horizontal"
 source = "Melee_1H_Attack_Slice_Horizontal"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Melee_1H_Attack_Slice_Diagonal"
 source = "Melee_1H_Attack_Slice_Diagonal"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Melee_1H_Attack_Stab"
 source = "Melee_1H_Attack_Stab"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Interact"
 source = "Interact"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "PickUp"
 source = "PickUp"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Spawn_Air"
 source = "Spawn_Air"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Spawn_Ground"
 source = "Spawn_Ground"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Throw"
 source = "Throw"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Use_Item"
 source = "Use_Item"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Death_A"
 source = "Death_A"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Death_A_Pose"
 source = "Death_A_Pose"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Death_B"
 source = "Death_B"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Death_B_Pose"
 source = "Death_B_Pose"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "T-Pose"
 source = "T-Pose"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Jump_Full_Long"
 source = "Jump_Full_Long"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Jump_Full_Short"
 source = "Jump_Full_Short"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Jump_Idle"
 source = "Jump_Idle"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Jump_Land"
 source = "Jump_Land"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Jump_Start"
 source = "Jump_Start"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Running_A"
 source = "Running_A"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = false
 name = "Running_B"
 source = "Running_B"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Walking_A"
 source = "Walking_A"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Walking_B"
 source = "Walking_B"
+sourceModelResourceName = ""
 
 [[content.animations]]
 loop = true
 name = "Walking_C"
 source = "Walking_C"
+sourceModelResourceName = ""
 
 [variables]

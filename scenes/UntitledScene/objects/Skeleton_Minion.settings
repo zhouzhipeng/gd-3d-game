@@ -1,0 +1,190 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 10
+assetStoreId = ""
+name = "Skeleton_Minion"
+persistentUuid = "18019dad-edd9-49fd-8dbe-4a600d1524fc"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.1000000014901161
+depth = 100
+height = 100
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "StandardWithoutMetalness"
+modelResourceName = "assets/Skeleton_Minion.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 90
+width = 100
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Jump_Full_Long"
+source = "Jump_Full_Long"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Jump_Full_Short"
+source = "Jump_Full_Short"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Jump_Idle"
+source = "Jump_Idle"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Jump_Land"
+source = "Jump_Land"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Jump_Start"
+source = "Jump_Start"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Running_A"
+source = "Running_A"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Running_B"
+source = "Running_B"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "T-Pose"
+source = "T-Pose"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = true
+name = "Walking_A"
+source = "Walking_A"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = true
+name = "Walking_B"
+source = "Walking_B"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = true
+name = "Walking_C"
+source = "Walking_C"
+sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "EXPERIMENTAL_Medium_Transform"
+source = "EXPERIMENTAL_Medium_Transform"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Awaken_Floor"
+source = "Skeletons_Awaken_Floor"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Awaken_Floor_Long"
+source = "Skeletons_Awaken_Floor_Long"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Awaken_Standing"
+source = "Skeletons_Awaken_Standing"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Death"
+source = "Skeletons_Death"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Death_Pose"
+source = "Skeletons_Death_Pose"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Death_Resurrect"
+source = "Skeletons_Death_Resurrect"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Idle"
+source = "Skeletons_Idle"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Inactive_Floor_Pose"
+source = "Skeletons_Inactive_Floor_Pose"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Inactive_Standing_Pose"
+source = "Skeletons_Inactive_Standing_Pose"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Spawn_Ground"
+source = "Skeletons_Spawn_Ground"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Taunt"
+source = "Skeletons_Taunt"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Taunt_Longer"
+source = "Skeletons_Taunt_Longer"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Skeletons_Walking"
+source = "Skeletons_Walking"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = ""
+source = "T-Pose"
+sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[variables]
