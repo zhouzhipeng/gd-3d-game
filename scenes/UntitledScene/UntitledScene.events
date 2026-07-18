@@ -39,6 +39,12 @@ do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D
 do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="1" enable=yes
 do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="5" enable=yes
 
+> for each "TerrainSupportCollider"
+>> do Physics3D::Physics3DBehavior::EnableLayer object="TerrainSupportCollider" behavior="Physics3D" layer_1_8="1" enable=yes
+>> do Physics3D::Physics3DBehavior::EnableLayer object="TerrainSupportCollider" behavior="Physics3D" layer_1_8="5" enable=yes
+>> do Physics3D::Physics3DBehavior::EnableMask object="TerrainSupportCollider" behavior="Physics3D" mask_1_8="1" enable=yes
+>> do Physics3D::Physics3DBehavior::EnableMask object="TerrainSupportCollider" behavior="Physics3D" mask_1_8="5" enable=yes
+
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
 @instruction inverted=true

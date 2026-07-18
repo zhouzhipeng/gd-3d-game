@@ -1,0 +1,59 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 9
+assetStoreId = ""
+name = "TerrainSupportCollider"
+persistentUuid = "83dd0e23-2639-4275-907a-0086f304e5b2"
+type = "Scene3D::Cube3DObject"
+effects = [ ]
+folder = [ "Stylized Terrain", "Collision" ]
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0
+bodyType = "Static"
+bullet = false
+density = 1
+fixedRotation = true
+friction = 1
+gravityScale = 1
+linearDamping = 0
+massOverride = 0
+object3D = "Object3D"
+restitution = 0
+shape = "Box"
+shapeOrientation = "Z"
+
+[content]
+width = 100
+height = 100
+depth = 24
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = ""
+backFaceResourceName = ""
+backFaceUpThroughWhichAxisRotation = "X"
+leftFaceResourceName = ""
+rightFaceResourceName = ""
+topFaceResourceName = ""
+bottomFaceResourceName = ""
+frontFaceVisible = false
+backFaceVisible = false
+leftFaceVisible = false
+rightFaceVisible = false
+topFaceVisible = false
+bottomFaceVisible = false
+frontFaceResourceRepeat = false
+backFaceResourceRepeat = false
+leftFaceResourceRepeat = false
+rightFaceResourceRepeat = false
+topFaceResourceRepeat = false
+bottomFaceResourceRepeat = false
+tileScale = 1
+materialType = "Basic"
+tint = "255;255;255"
+isCastingShadow = false
+isReceivingShadow = false
+
+[variables]

@@ -42,6 +42,54 @@
       booleans={"isCastingShadow":true}
     />
     <Terrain id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a" at=640,360,-487.958801213 locked />
+    <TerrainSupportCollider
+      id="278237b3-c12e-4780-b26c-a2d2a5d5240f"
+      at=-144.588235297,222.352941176,-56.347044371
+      size=977.29411765x261.529411766
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="2f1cc7b8-be53-403c-b7b0-1e795229f660"
+      at=-144.588235297,139.764705882,-56.347044371
+      size=1472.823529417x82.588235294
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="5537a4d6-1fa9-4a70-a19c-f005a475710c"
+      at=-598.823529416,15.88235294,-56.347044371
+      size=1927.058823536x123.882352942
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="64d5bc7a-52ab-4e0a-8130-67d753699690"
+      at=-1080.5882353,-342.000000002,-56.347044371
+      size=2408.82352942x357.882352942
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="2d8f4831-1468-48a1-8d42-5dfb971174a4"
+      at=-1080.5882353,-741.176470592,-56.347044371
+      size=1968.352941183x399.17647059
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="fad94661-b888-457b-8080-c42c7c674ea5"
+      at=-1080.5882353,-947.647058828,-56.347044371
+      size=1018.588235298x206.470588236
+      depth=24
+      opacity=0
+      locked
+    />
     <LadderStep
       id="35bb0a36-39f4-41f4-b2fd-d489dc74c8cc"
       at=729.470580082,712.795281131,-167.241131856
