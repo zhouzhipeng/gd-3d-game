@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 25
+description = "the ahead distance offset of the object."
+fullName = "Ahead distance offset"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "OffsetY"
+sentence = "the ahead distance offset"
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/OffsetY/OffsetY.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

@@ -1,0 +1,37 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 5
+fullName = "Move to object"
+functionType = "Action"
+name = "MoveToObject"
+private = true
+sentence = "Change the camera position to _PARAM0_ with offset _PARAM2_, _PARAM3_, _PARAM4_ "
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/MoveToObject/MoveToObject.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"
+
+[[parameters]]
+description = "X offset"
+name = "LocalOffsetX"
+type = "expression"
+
+[[parameters]]
+description = "Y offset"
+name = "LocalOffsetY"
+type = "expression"
+
+[[parameters]]
+description = "Z offset"
+name = "LocalOffsetZ"
+type = "expression"

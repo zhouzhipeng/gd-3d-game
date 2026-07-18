@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="ElevationAngleOffset" modification_sign="=" value="Value"

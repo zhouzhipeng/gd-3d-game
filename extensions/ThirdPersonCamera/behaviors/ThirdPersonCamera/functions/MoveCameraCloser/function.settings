@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+description = "Move the camera closer to the object. This action must be called after the object has moved for the frame."
+fullName = "Move the camera closer"
+functionType = "Action"
+name = "MoveCameraCloser"
+sentence = "Move the camera closer to _PARAM0_"
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/MoveCameraCloser/MoveCameraCloser.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

@@ -6,8 +6,25 @@ name = "Knight3D"
 persistentUuid = "79ec5400-47d2-4418-a752-c513a2f01619"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "ThirdPersonCamera"
+type = "ThirdPersonCamera::ThirdPersonCamera"
+Object3D = "Object3D"
+RotationHalfwayDuration = 0.15
+ElevationHalfwayDuration = 0.15
+TranslationZHalfwayDuration = 0.15
+Distance = 360
+OffsetX = 28
+OffsetY = 0
+OffsetZ = 70
+RotationAngleOffset = 0
+ElevationAngleOffset = 22
+FollowFreeAreaZMax = 0
+FollowFreeAreaZMin = 0
+IsRotatingWithObject = true
+RotationMode = "Z"
 
 [content]
 centerLocation = "ModelOrigin"

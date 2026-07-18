@@ -1,0 +1,1 @@
+@comment "The upstream ZYX quaternion helper used private Three.js renderer APIs. This project uses the native Z rotation mode, so the unsupported helper is intentionally disabled." background=[255,230,109] text=[0,0,0]

@@ -1,0 +1,9 @@
+@event
+do ThirdPersonCamera::DefineHelperClasses
+
+@comment "Update private properties through setters to check their values and initialize state." background=[255,230,109] text=[0,0,0]
+
+@event
+do ThirdPersonCamera::ThirdPersonCamera::SetRotationHalfwayDuration object="Object" behavior="Behavior" modification_sign="=" value="RotationHalfwayDuration"
+do ThirdPersonCamera::ThirdPersonCamera::SetElevationHalfwayDuration object="Object" behavior="Behavior" modification_sign="=" value="ElevationHalfwayDuration"
+do ThirdPersonCamera::ThirdPersonCamera::SetTranslationZHalfwayDuration object="Object" behavior="Behavior" modification_sign="=" value="TranslationZHalfwayDuration"

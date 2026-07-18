@@ -1,0 +1,13 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 0
+description = "Define helper classes JavaScript code."
+fullName = "Define helper classes"
+functionType = "Action"
+name = "DefineHelperClasses"
+private = true
+sentence = "Define helper classes JavaScript code"
+parameters = [ ]
+extension = "ThirdPersonCamera"
+events = "game://extensions/ThirdPersonCamera/functions/DefineHelperClasses/DefineHelperClasses.events"
+objectGroups = { }

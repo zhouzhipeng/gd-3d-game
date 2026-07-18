@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 11
+description = "the halfway  time for elevation rotation of the object."
+fullName = "Halfway  time for elevation rotation"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "ElevationHalfwayDuration"
+sentence = "the halfway  time for elevation rotation"
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/ElevationHalfwayDuration/ElevationHalfwayDuration.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

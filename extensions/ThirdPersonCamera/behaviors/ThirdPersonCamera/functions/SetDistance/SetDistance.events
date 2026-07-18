@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="Distance" modification_sign="=" value="Value"

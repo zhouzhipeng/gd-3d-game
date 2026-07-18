@@ -1,0 +1,42 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+description = "Move the camera to look at a position from a distance."
+fullName = "Look at a position from a distance (deprecated)"
+functionType = "Action"
+name = "LookFromDistanceAtPosition"
+private = true
+sentence = "Move the camera of _PARAM6_ to look at _PARAM1_; _PARAM2_ from _PARAM3_ pixels with a rotation of _PARAM4_° and an elevation of _PARAM5_°"
+extension = "ThirdPersonCamera"
+events = "game://extensions/ThirdPersonCamera/functions/LookFromDistanceAtPosition/LookFromDistanceAtPosition.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Position on X axis"
+name = "PositionX"
+type = "expression"
+
+[[parameters]]
+description = "Position on Y axis"
+name = "PositionY"
+type = "expression"
+
+[[parameters]]
+description = "Distance"
+name = "Distance"
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle (around Z axis)"
+name = "RotationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Elevation angle (around Y axis)"
+name = "ElevationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Layer"
+name = "Layer"
+type = "layer"

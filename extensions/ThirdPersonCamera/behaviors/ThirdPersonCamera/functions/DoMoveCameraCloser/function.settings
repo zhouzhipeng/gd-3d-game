@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 3
+description = "Move the camera closer to the object."
+fullName = "Do move the camera closer"
+functionType = "Action"
+name = "DoMoveCameraCloser"
+private = true
+sentence = "Do move the camera closer _PARAM0_"
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/DoMoveCameraCloser/DoMoveCameraCloser.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

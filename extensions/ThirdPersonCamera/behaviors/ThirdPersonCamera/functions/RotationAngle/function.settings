@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 7
+description = "the camera rotation."
+fullName = "Camera rotation"
+functionType = "ExpressionAndCondition"
+name = "RotationAngle"
+private = true
+sentence = "the camera rotation"
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/RotationAngle/RotationAngle.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

@@ -1,0 +1,2 @@
+@event
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis="Object.CenterX()" position_on_y_axis="Object.CenterY()" position_on_z_axis="Object.Object3D::CenterZ()" distance="Distance" rotation_angle_around_z_axis="RotationAngle" elevation_angle_around_y_axis="ElevationAngle" layer="Layer"

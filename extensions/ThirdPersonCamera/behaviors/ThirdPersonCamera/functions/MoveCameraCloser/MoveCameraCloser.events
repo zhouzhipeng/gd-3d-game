@@ -1,0 +1,6 @@
+@comment "The camera following is called with an action, the call from doStepPreEvents must be disabled to avoid to do it twice." background=[255,230,109] text=[0,0,0]
+
+@event
+if BehaviorActivated object="Object" behavior="Behavior"
+do SetBooleanVariable variable="IsCalledManually" modification_sign="False"
+do ThirdPersonCamera::ThirdPersonCamera::DoMoveCameraCloser object="Object" behavior="Behavior"

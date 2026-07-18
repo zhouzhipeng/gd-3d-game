@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 15
+description = "Return follow free area bottom border Z."
+fullName = "Free area Z min"
+functionType = "Expression"
+group = "Private"
+name = "FreeAreaZMin"
+private = true
+sentence = ""
+folder = [ "Private" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/FreeAreaZMin/FreeAreaZMin.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

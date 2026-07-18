@@ -1,0 +1,234 @@
+kind = "behavior"
+settingsFormatVersion = 1
+order = 0
+description = "Smoothly follow an object at a distance."
+fullName = "Third person camera"
+helpPath = ""
+iconUrl = ""
+name = "ThirdPersonCamera"
+objectType = ""
+previewIconUrl = ""
+quickCustomizationVisibility = "hidden"
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D capability"
+extraInformation = [ "Scene3D::Base3DBehavior" ]
+choices = [ ]
+name = "Object3D"
+
+[[propertyDescriptors]]
+value = "0.125"
+type = "Number"
+unit = "Second"
+label = "Halfway time for rotation"
+group = "Catch-up speed"
+quickCustomizationVisibility = "hidden"
+name = "RotationHalfwayDuration"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Second"
+label = "Halfway time for elevation rotation"
+description = "Only used by Z and ZY rotation modes"
+group = "Catch-up speed"
+quickCustomizationVisibility = "hidden"
+name = "ElevationHalfwayDuration"
+
+[[propertyDescriptors]]
+value = "0.125"
+type = "Number"
+unit = "Second"
+label = "Halfway time on Z axis"
+description = "Only used by Z and ZY rotation modes"
+group = "Catch-up speed"
+quickCustomizationVisibility = "hidden"
+name = "TranslationZHalfwayDuration"
+
+[[propertyDescriptors]]
+value = "500"
+type = "Number"
+unit = "Pixel"
+label = "Camera distance"
+group = "Position"
+name = "Distance"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Lateral distance offset"
+group = "Position"
+name = "OffsetX"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Ahead distance offset"
+group = "Position"
+name = "OffsetY"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Z offset"
+group = "Position"
+name = "OffsetZ"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "DegreeAngle"
+label = "Rotation angle offset"
+group = "Position"
+advanced = true
+name = "RotationAngleOffset"
+
+[[propertyDescriptors]]
+value = "20"
+type = "Number"
+unit = "DegreeAngle"
+label = "Elevation angle offset"
+group = "Position"
+name = "ElevationAngleOffset"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Follow free area top border on Z axis"
+group = "Position"
+advanced = true
+quickCustomizationVisibility = "hidden"
+name = "FollowFreeAreaZMax"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Follow free area bottom border on Z axis"
+group = "Position"
+advanced = true
+quickCustomizationVisibility = "hidden"
+name = "FollowFreeAreaZMin"
+
+[[propertyDescriptors]]
+value = ""
+type = "Number"
+label = ""
+hidden = true
+name = "RotationLogSpeed"
+
+[[propertyDescriptors]]
+value = ""
+type = "Number"
+label = ""
+hidden = true
+name = "ElevationLogSpeed"
+
+[[propertyDescriptors]]
+value = ""
+type = "Number"
+label = ""
+hidden = true
+name = "TranslationZLogSpeed"
+
+[[propertyDescriptors]]
+value = ""
+type = "Boolean"
+label = ""
+hidden = true
+name = "IsCalledManually"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = ""
+hidden = true
+name = "CameraZ"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = ""
+hidden = true
+name = "HasJustBeenCreated"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = "Automatically rotate the camera with the object"
+quickCustomizationVisibility = "hidden"
+name = "IsRotatingWithObject"
+
+[[propertyDescriptors]]
+value = "false"
+type = "Boolean"
+label = "Automatically rotate the camera with the object (elevation)"
+description = "Best left unchecked, use the rotation mode instead"
+deprecated = true
+quickCustomizationVisibility = "hidden"
+name = "IsElevatingWithObject"
+
+[[propertyDescriptors]]
+value = "Z"
+type = "Choice"
+label = "Rotation mode"
+name = "RotationMode"
+
+[[propertyDescriptors.choices]]
+label = "Horizontal rotation (good for characters)"
+value = "Z"
+
+[[propertyDescriptors.choices]]
+label = "Vertical and horizontal rotations (good for cars)"
+value = "ZY"
+
+[[propertyDescriptors.choices]]
+label = "All rotations (good for spaceships)"
+value = "ZYX"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "DegreeAngle"
+label = "Targeted camera rotation angle"
+hidden = true
+name = "TargetedRotationAngle"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "DegreeAngle"
+label = "Targeted camera rotation angle"
+hidden = true
+name = "TargetedElevationAngle"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Forward X"
+hidden = true
+name = "ForwardX"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Forward Y"
+hidden = true
+name = "ForwardY"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Forward Z"
+hidden = true
+name = "ForwardZ"

@@ -1,0 +1,5 @@
+@comment "ln((1 - speed)) = ln(1 / 2) / halfwatTime" background=[255,230,109] text=[0,0,0]
+
+@event
+do SetNumberVariable variable="RotationHalfwayDuration" modification_sign="=" value="Value"
+do SetNumberVariable variable="RotationLogSpeed" modification_sign="=" value="log(0.5) / Value"

@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 10
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "RotationHalfwayDuration"
+group = "Third person camera configuration"
+name = "SetRotationHalfwayDuration"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/SetRotationHalfwayDuration/SetRotationHalfwayDuration.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

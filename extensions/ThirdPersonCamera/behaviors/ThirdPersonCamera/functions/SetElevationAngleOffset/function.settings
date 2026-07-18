@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 32
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "ElevationAngleOffset"
+group = "Third person camera configuration"
+name = "SetElevationAngleOffset"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/SetElevationAngleOffset/SetElevationAngleOffset.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

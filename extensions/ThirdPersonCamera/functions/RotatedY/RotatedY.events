@@ -1,0 +1,6 @@
+@event
+local Cos = var(type="number",value=0,persistentUuid="",folded=true,hasMixedValues=false)
+local Sin = var(type="number",value=0,persistentUuid="",folded=true,hasMixedValues=false)
+do SetNumberVariable variable="Cos" modification_sign="=" value="cos(ToRad(RotationAngle))"
+do SetNumberVariable variable="Sin" modification_sign="=" value="sin(ToRad(RotationAngle))"
+do SetReturnNumber the_number_to_be_returned="Sin * X + Cos * Y"

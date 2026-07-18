@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 31
+description = "the elevation angle offset of the object."
+fullName = "Elevation angle offset"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "ElevationAngleOffset"
+sentence = "the elevation angle offset"
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/ElevationAngleOffset/ElevationAngleOffset.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

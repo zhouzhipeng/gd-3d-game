@@ -1,0 +1,3 @@
+@event
+do SetNumberVariable variable="TargetedRotationAngle" modification_sign="=" value="Value"
+do SetBooleanVariable variable="IsRotatingWithObject" modification_sign="False"

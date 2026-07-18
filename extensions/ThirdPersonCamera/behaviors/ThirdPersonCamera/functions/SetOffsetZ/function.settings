@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 28
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "OffsetZ"
+group = "Third person camera configuration"
+name = "SetOffsetZ"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/SetOffsetZ/SetOffsetZ.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

@@ -1,0 +1,12 @@
+@event
+if BooleanVariable variable="IsRotatingWithObject" check_if_the_value_is="True"
+do SetNumberVariable variable="TargetedRotationAngle" modification_sign="=" value="Object.Angle()"
+
+@event
+if BooleanVariable variable="IsElevatingWithObject" check_if_the_value_is="True"
+do SetNumberVariable variable="TargetedElevationAngle" modification_sign="=" value="Object.Object3D::RotationY()"
+
+@event
+local CameraAngle = var(type="number",value=0,persistentUuid="",folded=true,hasMixedValues=false)
+do SetNumberVariable variable="CameraAngle" modification_sign="=" value="TargetedRotationAngle + 90 + RotationAngleOffset"
+do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis="Object.CenterX() + ThirdPersonCamera::RotatedX(CameraAngle, OffsetX, -OffsetY)" position_on_y_axis="Object.CenterY() + ThirdPersonCamera::RotatedY(CameraAngle, OffsetX, -OffsetY)" position_on_z_axis="CameraZ + OffsetZ" distance="Distance" rotation_angle_around_z_axis="CameraAngle" elevation_angle_around_y_axis="Object.Object3D::RotationY() + ElevationAngleOffset" layer=""

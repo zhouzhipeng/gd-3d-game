@@ -1,0 +1,37 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 4
+fullName = "Lerp camera"
+functionType = "Action"
+name = "Slerp"
+private = true
+sentence = "Lerp the camera rotation to _PARAM0_ with a ratio of _PARAM2_ with rotation offset _PARAM3_° and elevation offset _PARAM4_°"
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/Slerp/Slerp.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"
+
+[[parameters]]
+description = "Ratio"
+name = "Ratio"
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle offset"
+name = "NewRotationAngleOffset"
+type = "expression"
+
+[[parameters]]
+description = "Elevation angle offset"
+name = "NewElevationAngleOffset"
+type = "expression"

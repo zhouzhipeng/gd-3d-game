@@ -1,0 +1,4 @@
+@event
+do SetCameraCenterX modification_sign="=" value="Object.CenterX() + LocalOffsetX * Object.Object3D::ForwardX() + LocalOffsetY * Object.Object3D::RightX() + LocalOffsetZ * Object.Object3D::UpX()" layer="Object.Layer()" camera_number_default_0=""
+do SetCameraCenterY modification_sign="=" value="Object.CenterY() + LocalOffsetX * Object.Object3D::ForwardY() + LocalOffsetY * Object.Object3D::RightY() + LocalOffsetZ * Object.Object3D::UpY()" layer="Object.Layer()" camera_number_default_0=""
+do Scene3D::SetCameraZ modification_sign="=" value="Object.Object3D::CenterZ() + LocalOffsetX * Object.Object3D::ForwardZ() + LocalOffsetY * Object.Object3D::RightZ() + LocalOffsetZ * Object.Object3D::UpZ()" layer="Object.Layer()" camera_number_default_0=""

@@ -1,0 +1,30 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 5
+fullName = ""
+functionType = "Expression"
+name = "RotatedX"
+private = true
+sentence = ""
+extension = "ThirdPersonCamera"
+events = "game://extensions/ThirdPersonCamera/functions/RotatedX/RotatedX.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle"
+name = "RotationAngle"
+supplementaryInformation = "Tank::Tank"
+type = "expression"
+
+[[parameters]]
+description = ""
+name = "X"
+type = "expression"
+
+[[parameters]]
+description = ""
+name = "Y"
+type = "expression"

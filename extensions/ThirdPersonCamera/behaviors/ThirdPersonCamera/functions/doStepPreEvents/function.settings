@@ -1,0 +1,21 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+fullName = ""
+functionType = "Action"
+name = "doStepPreEvents"
+sentence = ""
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/doStepPreEvents/doStepPreEvents.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

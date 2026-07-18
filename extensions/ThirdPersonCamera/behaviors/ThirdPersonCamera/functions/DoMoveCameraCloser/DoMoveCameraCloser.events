@@ -1,0 +1,41 @@
+@comment "At each frame, the camera must catchup the target by a given ratio (speed)\ncameraX(t) - targetX = (cameraX(t - 1) - targetX) * (1 - speed)\n\nThe frame rate must not impact on the catch-up speed, we don't want a speed in ratio per frame but a speed ratio per second, like this:\ncameraX(t) - targetX = (cameraX(t - 1s) - targetX) * (1 - speed)\n\nOk, but we still need to process each frame, we can use a exponent for this:\ncameraX(t) - targetX = (cameraX(t - timeDelta) - targetX) * (1 - speed)^timeDelta\ncameraX(t) = targetX + (cameraX(t - timeDelta) - targetX) * exp(timeDelta * ln((1 - speed)))\n\npow is probably more efficient than precalculated log if the speed is changed continuously but this might be rare enough." background=[255,230,109] text=[0,0,0]
+
+@event
+if StringVariable variable="RotationMode" comparison_sign="=" value="\"ZYX\""
+if BooleanVariable variable="IsRotatingWithObject" check_if_the_value_is="True"
+do ThirdPersonCamera::ThirdPersonCamera::Slerp object="Object" behavior="Behavior" ratio="1 - exp(TimeDelta() * RotationLogSpeed)" rotation_angle_offset="RotationAngleOffset" elevation_angle_offset="ElevationAngleOffset"
+do ThirdPersonCamera::ThirdPersonCamera::MoveToObject object="Object" behavior="Behavior" x_offset="OffsetY" y_offset="OffsetX" z_offset="OffsetZ"
+do SetCameraCenterX modification_sign="-" value="Distance * Scene3D::CameraForwardX(Object.Layer())" layer="Object.Layer()" camera_number_default_0=""
+do SetCameraCenterY modification_sign="-" value="Distance * Scene3D::CameraForwardY(Object.Layer())" layer="Object.Layer()" camera_number_default_0=""
+do Scene3D::SetCameraZ modification_sign="-" value="Distance * Scene3D::CameraForwardZ(Object.Layer())" layer="Object.Layer()" camera_number_default_0=""
+
+@event
+if StringVariable variable="RotationMode" comparison_sign="!=" value="\"ZYX\""
+or BooleanVariable variable="IsRotatingWithObject" check_if_the_value_is="False"
+> @group "Z translation" source="" creationTime=0 color=[74,176,228] parameters=[]
+> @event
+> if NumberVariable variable="CameraZ" comparison_sign="<" value="Object.Behavior::FreeAreaZMin()"
+> do SetNumberVariable variable="CameraZ" modification_sign="=" value="Object.Behavior::FreeAreaZMin() + (CameraZ - Object.Behavior::FreeAreaZMin()) * exp(TimeDelta() * TranslationZLogSpeed)"
+
+> @event
+> if NumberVariable variable="CameraZ" comparison_sign=">" value="Object.Behavior::FreeAreaZMax()"
+> do SetNumberVariable variable="CameraZ" modification_sign="=" value="Object.Behavior::FreeAreaZMax() + (CameraZ - Object.Behavior::FreeAreaZMax()) * exp(TimeDelta() * TranslationZLogSpeed)"
+> @end group
+
+> @group "Z rotation" source="" creationTime=0 color=[74,176,228] parameters=[]
+> @event
+> if BooleanVariable variable="IsRotatingWithObject" check_if_the_value_is="True"
+> do SetNumberVariable variable="TargetedRotationAngle" modification_sign="=" value="Object.Angle()"
+
+> @event
+> if StringVariable variable="RotationMode" comparison_sign="!=" value="\"Z\""
+> or BooleanVariable variable="IsElevatingWithObject" check_if_the_value_is="True"
+> do SetNumberVariable variable="TargetedElevationAngle" modification_sign="=" value="Object.Object3D::RotationY()"
+
+> @event
+> local CameraRotationAngle = var(type="number",value=0,persistentUuid="",folded=true,hasMixedValues=false)
+> local CameraElevationAngle = var(type="number",value=0,persistentUuid="",folded=false,hasMixedValues=false)
+> do SetNumberVariable variable="CameraRotationAngle" modification_sign="=" value="TargetedRotationAngle + 90 + RotationAngleOffset + AngleDifference(CameraAngle(Object.Layer()), TargetedRotationAngle + 90 + RotationAngleOffset) * exp(TimeDelta() * RotationLogSpeed)"
+> do SetNumberVariable variable="CameraElevationAngle" modification_sign="=" value="TargetedElevationAngle + ElevationAngleOffset + AngleDifference(90 - Scene3D::CameraRotationX(Object.Layer()), TargetedElevationAngle + ElevationAngleOffset) * exp(TimeDelta() * ElevationLogSpeed)"
+> do ThirdPersonCamera::LookFromDistanceAtPosition3D position_on_x_axis="Object.CenterX() + ThirdPersonCamera::RotatedX(CameraRotationAngle, OffsetX, -OffsetY)" position_on_y_axis="Object.CenterY() + ThirdPersonCamera::RotatedY(CameraRotationAngle, OffsetX, -OffsetY)" position_on_z_axis="CameraZ + OffsetZ" distance="Distance" rotation_angle_around_z_axis="CameraRotationAngle" elevation_angle_around_y_axis="CameraElevationAngle" layer="Object.Layer()"
+> @end group

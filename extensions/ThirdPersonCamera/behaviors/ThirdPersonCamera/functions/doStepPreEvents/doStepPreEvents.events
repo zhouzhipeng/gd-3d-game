@@ -1,0 +1,10 @@
+@event
+if BooleanVariable variable="HasJustBeenCreated" check_if_the_value_is="True"
+do SetBooleanVariable variable="HasJustBeenCreated" modification_sign="False"
+do SetNumberVariable variable="CameraZ" modification_sign="=" value="Object.Object3D::CenterZ()"
+do ThirdPersonCamera::ThirdPersonCamera::JumpToTargetedRotation object="Object" behavior="Behavior"
+
+@event
+@instruction inverted=true
+if BooleanVariable variable="IsCalledManually" check_if_the_value_is="True"
+do ThirdPersonCamera::ThirdPersonCamera::DoMoveCameraCloser object="Object" behavior="Behavior"

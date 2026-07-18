@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+description = "Rotate the camera all the way to the targeted angle."
+fullName = "Rotate the camera all the way"
+functionType = "Action"
+name = "JumpToTargetedRotation"
+sentence = "Rotate the camera all the way to the targeted angle of _PARAM0_"
+folder = [ ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/JumpToTargetedRotation/JumpToTargetedRotation.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

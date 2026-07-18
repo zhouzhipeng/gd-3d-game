@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="FollowFreeAreaZMin" modification_sign="=" value="Value"

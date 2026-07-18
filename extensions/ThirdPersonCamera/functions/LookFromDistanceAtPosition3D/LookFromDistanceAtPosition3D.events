@@ -1,0 +1,7 @@
+@event
+do SetCameraCenterX modification_sign="=" value="PositionX + Distance * cos(ToRad(RotationAngle + 90)) * cos(ToRad(ElevationAngle))" layer="Layer" camera_number_default_0=""
+do SetCameraCenterY modification_sign="=" value="PositionY + Distance * sin(ToRad(RotationAngle + 90)) * cos(ToRad(ElevationAngle))" layer="Layer" camera_number_default_0=""
+do Scene3D::SetCameraZ modification_sign="=" value="PositionZ + Distance * sin(ToRad(ElevationAngle))" layer="Layer" camera_number_default_0=""
+do Scene3D::SetCameraRotationX modification_sign="=" angle_in_degrees="90 - ElevationAngle" layer="Layer" camera_number_default_0=""
+do Scene3D::SetCameraRotationY modification_sign="=" angle_in_degrees="0" layer="Layer" camera_number_default_0=""
+do SetCameraAngle modification_sign="=" value="RotationAngle" layer="Layer" camera_number_default_0=""

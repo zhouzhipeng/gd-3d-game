@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 27
+description = "the z offset of the object."
+fullName = "Z offset"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "OffsetZ"
+sentence = "the z offset"
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/OffsetZ/OffsetZ.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

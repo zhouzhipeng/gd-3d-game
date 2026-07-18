@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 34
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "TargetedRotationAngle"
+group = "Third person camera configuration"
+name = "SetTargetedRotationAngle"
+sentence = ""
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/SetTargetedRotationAngle/SetTargetedRotationAngle.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

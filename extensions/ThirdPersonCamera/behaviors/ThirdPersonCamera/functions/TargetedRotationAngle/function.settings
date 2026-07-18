@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 33
+description = "the targeted camera rotation angle of the object. When this angle is set, the camera follow this value instead of the object angle."
+fullName = "Targeted rotation angle"
+functionType = "ExpressionAndCondition"
+group = "Third person camera configuration"
+name = "TargetedRotationAngle"
+sentence = "the targeted camera rotation angle"
+folder = [ "Third person camera configuration" ]
+events = "game://extensions/ThirdPersonCamera/behaviors/ThirdPersonCamera/functions/TargetedRotationAngle/TargetedRotationAngle.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
+type = "behavior"

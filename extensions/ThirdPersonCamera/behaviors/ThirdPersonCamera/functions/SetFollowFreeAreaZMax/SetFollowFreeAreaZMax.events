@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="FollowFreeAreaZMax" modification_sign="=" value="Value"

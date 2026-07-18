@@ -1,0 +1,43 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 4
+description = "Move the camera to look at an object from a distance."
+fullName = "Look at an object from a distance"
+functionType = "Action"
+group = "Layers and cameras"
+name = "LookFromDistanceAtObject3D"
+sentence = "Move the camera of _PARAM6_ to look at _PARAM1_ from _PARAM3_ pixels with a rotation of _PARAM4_° and an elevation of _PARAM5_°"
+extension = "ThirdPersonCamera"
+events = "game://extensions/ThirdPersonCamera/functions/LookFromDistanceAtObject3D/LookFromDistanceAtObject3D.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "3D capability"
+name = "Object3D"
+supplementaryInformation = "Scene3D::Base3DBehavior"
+type = "behavior"
+
+[[parameters]]
+description = "Distance"
+name = "Distance"
+type = "expression"
+
+[[parameters]]
+description = "Rotation angle (around Z axis)"
+name = "RotationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Elevation angle (around Y axis)"
+name = "ElevationAngle"
+type = "expression"
+
+[[parameters]]
+description = "Layer"
+name = "Layer"
+type = "layer"
