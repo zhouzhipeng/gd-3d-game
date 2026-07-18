@@ -43,6 +43,22 @@
     />
     <Terrain id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a" at=640,360,-487.958801213 locked />
     <TerrainSupportCollider
+      id="a5e14cd2-3eae-4a6f-a14f-fa4e4f1b6dcc"
+      at=-998,-878.823529412,99.194139963
+      size=853.411764706x454.235294118
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="e94d77a1-2a0d-4c53-acfa-feed38df0298"
+      at=-103.294117647,1832.823529412,-404.594095331
+      size=344.117647059x178.941176471
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
       id="278237b3-c12e-4780-b26c-a2d2a5d5240f"
       at=-144.588235297,222.352941176,-56.347044371
       size=977.29411765x261.529411766
@@ -86,6 +102,110 @@
       id="fad94661-b888-457b-8080-c42c7c674ea5"
       at=-1080.5882353,-947.647058828,-56.347044371
       size=1018.588235298x206.470588236
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="9db4e9e2-f4b8-46f9-9665-4ecce0cadd67"
+      at=1741.176470588,-424.588235294,-299.982330625
+      size=564.352941176x192.705882353
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="f4852aa4-9044-4e71-8ee1-d5403b7ee036"
+      at=1245.647058824,-933.882352941,-299.982330625
+      size=1059.882352941x509.294117647
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="30a82c70-d203-485d-b8e4-8be4be1ac612"
+      at=-1287.058823529,1777.764705882,-421.111742389
+      size=344.117647059x165.176470588
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="79efa886-f3e9-4f23-8034-d337e29e7ef6"
+      at=818.941176471,1543.764705882,-189.864683566
+      size=660.705882353x247.764705882
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="9215f41d-3c6e-4c31-926f-82085c21a3fb"
+      at=818.941176471,1185.882352941,-189.864683566
+      size=1266.352941176x357.882352941
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="19c333ff-9dbc-4601-af62-3f5f18469dd9"
+      at=640,1020.705882353,-189.864683566
+      size=1445.294117647x165.176470588
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="8dfa5731-c56d-41cb-b101-c8583bf35f87"
+      at=640,552.705882353,-189.864683566
+      size=1693.058823529x468
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="1e850957-450b-4ccb-9b59-db937ac67fea"
+      at=1094.235294118,29.647058824,-189.864683566
+      size=1238.823529412x523.058823529
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="5c591b99-e4f3-4e48-af57-6a7374713915"
+      at=1479.647058824,483.882352941,-49.464683566
+      size=770.823529412x481.764705882
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="80b00b68-63c0-4c22-82ad-c97853cba3cc"
+      at=419.764705882,1598.823529412,-338.523507095
+      size=440.470588235x385.411764706
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="14196861-96bf-4dc5-82a3-c906754496da"
+      at=-1080.588235294,1103.294117647,-244.923507095
+      size=702x468
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="f067f1dd-23a4-4e36-9956-cb1268bcb982"
+      at=-1080.588235294,704.117647059,-244.923507095
+      size=908.470588235x399.176470588
+      depth=24
+      opacity=0
+      locked
+    />
+    <TerrainSupportCollider
+      id="a18eb934-68dc-4c6f-b871-4778111f842f"
+      at=-1080.588235294,277.411764706,-244.923507095
+      size=605.647058824x426.705882353
       depth=24
       opacity=0
       locked

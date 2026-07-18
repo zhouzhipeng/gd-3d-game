@@ -2,10 +2,6 @@
 
 @event aiGeneratedEventId="initialize-physics3d-collision-filters"
 if SceneJustBegins
-do Physics3D::Physics3DBehavior::EnableLayer object="Terrain" behavior="Physics3D" layer_1_8="1" enable=yes
-do Physics3D::Physics3DBehavior::EnableLayer object="Terrain" behavior="Physics3D" layer_1_8="5" enable=yes
-do Physics3D::Physics3DBehavior::EnableMask object="Terrain" behavior="Physics3D" mask_1_8="1" enable=yes
-do Physics3D::Physics3DBehavior::EnableMask object="Terrain" behavior="Physics3D" mask_1_8="5" enable=yes
 do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCottage" behavior="Physics3D" layer_1_8="1" enable=yes
 do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCottage" behavior="Physics3D" layer_1_8="5" enable=yes
 do Physics3D::Physics3DBehavior::EnableMask object="BuildingCottage" behavior="Physics3D" mask_1_8="1" enable=yes
