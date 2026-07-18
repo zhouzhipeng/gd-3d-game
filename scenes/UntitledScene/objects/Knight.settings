@@ -41,7 +41,7 @@ gravity = 1_000
 jumpHeight = 200
 jumpSustainTime = 0.2
 physics3D = "Physics3D"
-shouldBindObjectAndForwardAngle = false
+shouldBindObjectAndForwardAngle = true
 sidewaysAcceleration = 3_200
 sidewaysDeceleration = 5_000
 sidewaysSpeedMax = 400
@@ -75,7 +75,7 @@ RotationAngleOffset = 0
 ElevationAngleOffset = 18
 FollowFreeAreaZMax = 0
 FollowFreeAreaZMin = 0
-IsRotatingWithObject = true
+IsRotatingWithObject = false
 RotationMode = "Z"
 
 [variables]
