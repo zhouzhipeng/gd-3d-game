@@ -1,0 +1,13 @@
+@event
+if HasAnyTouchOrMouseStarted
+if NumberVariable variable="TouchId" comparison_sign="=" value="-1"
+do SetNumberVariable variable="TouchId" modification_sign="=" value="StartedTouchOrMouseId(0)"
+do SetNumberVariable variable="OldX" modification_sign="=" value="MousePointerLock::TouchX(TouchId)"
+do SetNumberVariable variable="OldY" modification_sign="=" value="MousePointerLock::TouchY(TouchId)"
+
+@js strict=false expanded=false
+const { handler } = gdjs._MousePointerLockExtension;
+
+handler.requestPointerLock();
+
+@end js

@@ -1,0 +1,6 @@
+@event
+do CentreCamera object="Object" anticipate_the_movement_of_the_object_yes_by_default="" layer="Object.Layer()" camera_number_default_0=""
+do Scene3D::SetCameraZ modification_sign="=" value="Object.Object3D::Z() + Object.Object3D::Depth() + OffsetZ" layer="" camera_number_default_0=""
+do Scene3D::SetCameraRotationX modification_sign="=" angle_in_degrees="- Object.Object3D::RotationY() + 90" layer="GetArgumentAsString(\"Layer\")" camera_number_default_0=""
+do Scene3D::SetCameraRotationY modification_sign="=" angle_in_degrees="Object.Object3D::RotationX()" layer="GetArgumentAsString(\"Layer\")" camera_number_default_0=""
+do SetCameraAngle modification_sign="=" value="Object.Angle() + 90" layer="Object.Layer()" camera_number_default_0=""

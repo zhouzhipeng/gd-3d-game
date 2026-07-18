@@ -1,0 +1,8 @@
+@event
+if NumberVariable variable="TouchId" comparison_sign=">=" value="0"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"
+
+@event
+if NumberVariable variable="TouchId" comparison_sign="<" value="0"
+if MousePointerLock::isPointerActuallyLocked
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

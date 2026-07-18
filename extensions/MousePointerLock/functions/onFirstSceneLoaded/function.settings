@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 0
+fullName = ""
+functionType = "Action"
+name = "onFirstSceneLoaded"
+sentence = ""
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/onFirstSceneLoaded/onFirstSceneLoaded.events"
+objectGroups = { }

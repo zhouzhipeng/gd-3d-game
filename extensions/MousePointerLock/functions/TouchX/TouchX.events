@@ -1,0 +1,5 @@
+@js strict=false expanded=false
+const touchId = eventsFunctionContext.getArgument("NewTouchId");
+eventsFunctionContext.returnValue = runtimeScene.getGame().getInputManager().getTouchX(touchId);
+
+@end js

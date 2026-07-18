@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+description = "the minimum vertical camera angle of the object."
+fullName = "Minimum vertical camera angle"
+functionType = "ExpressionAndCondition"
+group = "First person camera mouse mapper configuration"
+name = "VerticalAngleMin"
+sentence = "the minimum vertical camera angle"
+folder = [ "First person camera mouse mapper configuration" ]
+events = "game://extensions/MousePointerLock/behaviors/FirstPersonPointerMapper/functions/VerticalAngleMin/VerticalAngleMin.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "MousePointerLock::FirstPersonPointerMapper"
+type = "behavior"

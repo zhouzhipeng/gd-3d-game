@@ -1,0 +1,12 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 7
+description = "Check if the locked pointer is moving."
+fullName = "Locked pointer is moving"
+functionType = "Condition"
+name = "IsMoving"
+sentence = "Locked pointer is moving"
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/IsMoving/IsMoving.events"
+objectGroups = { }

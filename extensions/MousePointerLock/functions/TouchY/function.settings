@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 13
+description = "Return the Y position of a specific touch"
+fullName = "Touch Y position"
+functionType = "Expression"
+name = "TouchY"
+private = true
+sentence = ""
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/TouchY/TouchY.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Touch identifier"
+name = "NewTouchId"
+type = "expression"

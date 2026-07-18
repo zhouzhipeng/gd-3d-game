@@ -1,0 +1,10 @@
+@event
+do SetNumberVariable variable="TouchId" modification_sign="=" value="-1"
+
+@js strict=false expanded=false
+
+const { handler } = gdjs._MousePointerLockExtension;
+
+handler.exitPointerLock();
+
+@end js

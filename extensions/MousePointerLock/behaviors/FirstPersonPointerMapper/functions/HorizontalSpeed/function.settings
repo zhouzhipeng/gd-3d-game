@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+description = "the horizontal rotation speed factor of the object."
+fullName = "Horizontal rotation speed factor"
+functionType = "ExpressionAndCondition"
+group = "First person camera mouse mapper configuration"
+name = "HorizontalSpeed"
+sentence = "the horizontal rotation speed factor"
+folder = [ "First person camera mouse mapper configuration" ]
+events = "game://extensions/MousePointerLock/behaviors/FirstPersonPointerMapper/functions/HorizontalSpeed/HorizontalSpeed.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "MousePointerLock::FirstPersonPointerMapper"
+type = "behavior"

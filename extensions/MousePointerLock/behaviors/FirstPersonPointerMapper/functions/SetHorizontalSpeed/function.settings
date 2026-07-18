@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 3
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "HorizontalSpeed"
+group = "First person camera mouse mapper configuration"
+name = "SetHorizontalSpeed"
+sentence = ""
+folder = [ "First person camera mouse mapper configuration" ]
+events = "game://extensions/MousePointerLock/behaviors/FirstPersonPointerMapper/functions/SetHorizontalSpeed/SetHorizontalSpeed.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "MousePointerLock::FirstPersonPointerMapper"
+type = "behavior"

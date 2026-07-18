@@ -1,0 +1,5 @@
+@event
+@instruction inverted=true
+if MousePointerLock::isPointerActuallyLocked
+if NumberVariable variable="TouchId" comparison_sign=">=" value="0"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

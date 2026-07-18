@@ -1,0 +1,12 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 15
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "TouchSpeedFactor"
+name = "SetTouchSpeedFactor"
+sentence = ""
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/SetTouchSpeedFactor/SetTouchSpeedFactor.events"
+objectGroups = { }

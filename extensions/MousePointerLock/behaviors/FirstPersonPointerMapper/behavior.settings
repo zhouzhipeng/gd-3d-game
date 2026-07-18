@@ -1,0 +1,59 @@
+kind = "behavior"
+settingsFormatVersion = 1
+order = 0
+description = "Control camera rotations with a mouse."
+fullName = "First person camera mouse mapper"
+helpPath = ""
+iconUrl = ""
+name = "FirstPersonPointerMapper"
+objectType = ""
+previewIconUrl = ""
+
+[[propertyDescriptors]]
+value = ""
+type = "Behavior"
+label = "3D capability"
+extraInformation = [ "Scene3D::Base3DBehavior" ]
+choices = [ ]
+name = "Object3D"
+
+[[propertyDescriptors]]
+value = "200"
+type = "Number"
+unit = "Dimensionless"
+label = "Horizontal rotation speed factor"
+name = "HorizontalSpeed"
+
+[[propertyDescriptors]]
+value = "100"
+type = "Number"
+unit = "Dimensionless"
+label = "Vertical rotation speed factor"
+name = "VerticalSpeed"
+
+[[propertyDescriptors]]
+value = "-90"
+type = "Number"
+unit = "DegreeAngle"
+label = "Minimum vertical camera angle"
+name = "VerticalAngleMin"
+
+[[propertyDescriptors]]
+value = "90"
+type = "Number"
+unit = "DegreeAngle"
+label = "Maximum vertical camera angle"
+name = "VerticalAngleMax"
+
+[[propertyDescriptors]]
+value = "0"
+type = "Number"
+unit = "Pixel"
+label = "Z position offset"
+name = "OffsetZ"
+
+[[propertyDescriptors]]
+value = "true"
+type = "Boolean"
+label = "Lock the pointer on click"
+name = "ShouldLock"

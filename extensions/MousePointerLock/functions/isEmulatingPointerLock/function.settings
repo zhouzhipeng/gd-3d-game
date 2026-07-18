@@ -1,0 +1,13 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+description = "Check if the mouse pointer lock is emulated."
+fullName = "Pointer lock is emulated"
+functionType = "Condition"
+name = "isEmulatingPointerLock"
+private = true
+sentence = "The mouse pointer lock is emulated"
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/isEmulatingPointerLock/isEmulatingPointerLock.events"
+objectGroups = { }

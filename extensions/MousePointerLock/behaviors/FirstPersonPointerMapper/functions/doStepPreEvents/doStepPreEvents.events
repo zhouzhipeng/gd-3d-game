@@ -1,0 +1,15 @@
+@comment "TODO It's probably a bad idea to rotate the object around Y." background=[255,230,109] text=[0,0,0]
+
+@event
+if MousePointerLock::isPointerLocked
+do SetAngle object="Object" modification_sign="+" angle_in_degrees="MousePointerLock::MovementX() * HorizontalSpeed / SceneWindowWidth()"
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="+" angle_in_degrees="MousePointerLock::MovementY() * VerticalSpeed / SceneWindowHeight()"
+do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="Object" behavior="Object3D" modification_sign="=" angle_in_degrees="clamp(Object.Object3D::RotationY(), VerticalAngleMin, VerticalAngleMax)"
+do MousePointerLock::FirstPersonPointerMapper::LookFromObjectEyes object="Object" behavior="Behavior"
+
+@event
+if MouseButtonReleased button_to_check="Left"
+if BooleanVariable variable="ShouldLock" check_if_the_value_is="True"
+@instruction inverted=true
+if MousePointerLock::isPointerLocked
+do MousePointerLock::RequestPointerLock

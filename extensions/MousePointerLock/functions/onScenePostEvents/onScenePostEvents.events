@@ -1,0 +1,17 @@
+@js strict=false expanded=false
+const { handler } = gdjs._MousePointerLockExtension;
+
+handler.resetMovement();
+
+@end js
+
+@event
+if MousePointerLock::isEmulatingPointerLock
+do MousePointerLock::SetMovementX modification_sign="=" value="(MousePointerLock::TouchX(TouchId) - OldX) * TouchSpeedFactor"
+do MousePointerLock::SetMovementY modification_sign="=" value="(MousePointerLock::TouchY(TouchId) - OldY) * TouchSpeedFactor"
+do SetNumberVariable variable="OldX" modification_sign="=" value="MousePointerLock::TouchX(TouchId)"
+do SetNumberVariable variable="OldY" modification_sign="=" value="MousePointerLock::TouchY(TouchId)"
+
+@event
+if HasTouchEnded touch_identifier="TouchId"
+do SetNumberVariable variable="TouchId" modification_sign="=" value="-1"

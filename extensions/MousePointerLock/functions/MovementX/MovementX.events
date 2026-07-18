@@ -1,0 +1,5 @@
+@js strict=false expanded=false
+
+eventsFunctionContext.returnValue = gdjs._MousePointerLockExtension.handler.movementX || 0;
+
+@end js

@@ -1,0 +1,12 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+description = "Lock the mouse pointer to hide it."
+fullName = "Request Pointer Lock"
+functionType = "Action"
+name = "RequestPointerLock"
+sentence = "Request Pointer Lock"
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/RequestPointerLock/RequestPointerLock.events"
+objectGroups = { }

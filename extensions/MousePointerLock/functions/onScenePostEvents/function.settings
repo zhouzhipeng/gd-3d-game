@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+fullName = ""
+functionType = "Action"
+name = "onScenePostEvents"
+sentence = ""
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/onScenePostEvents/onScenePostEvents.events"
+objectGroups = { }

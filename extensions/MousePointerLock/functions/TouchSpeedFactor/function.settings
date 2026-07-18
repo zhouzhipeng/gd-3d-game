@@ -1,0 +1,15 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 14
+description = "the speed factor for touch movement."
+fullName = "Speed factor for touch movement"
+functionType = "ExpressionAndCondition"
+name = "TouchSpeedFactor"
+sentence = "the speed factor for touch movement"
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/TouchSpeedFactor/TouchSpeedFactor.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"

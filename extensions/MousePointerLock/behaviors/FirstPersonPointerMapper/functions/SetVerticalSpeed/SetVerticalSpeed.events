@@ -1,0 +1,2 @@
+@event
+do SetNumberVariable variable="VerticalSpeed" modification_sign="=" value="Value"

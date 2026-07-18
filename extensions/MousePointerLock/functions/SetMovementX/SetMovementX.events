@@ -1,0 +1,6 @@
+@js strict=false expanded=false
+
+const value = eventsFunctionContext.getArgument("Value");
+gdjs._MousePointerLockExtension.handler.movementX = value;
+
+@end js

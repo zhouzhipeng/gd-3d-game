@@ -1,0 +1,14 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 9
+description = "the movement of the locked pointer on the X axis."
+fullName = "Pointer X movement"
+functionType = "ActionWithOperator"
+getterName = "MovementX"
+name = "SetMovementX"
+private = true
+sentence = "the movement of the locked pointer on the X axis"
+parameters = [ ]
+extension = "MousePointerLock"
+events = "game://extensions/MousePointerLock/functions/SetMovementX/SetMovementX.events"
+objectGroups = { }

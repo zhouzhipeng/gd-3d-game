@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 8
+description = "the maximum vertical camera angle of the object."
+fullName = "Maximum vertical camera angle"
+functionType = "ExpressionAndCondition"
+group = "First person camera mouse mapper configuration"
+name = "VerticalAngleMax"
+sentence = "the maximum vertical camera angle"
+folder = [ "First person camera mouse mapper configuration" ]
+events = "game://extensions/MousePointerLock/behaviors/FirstPersonPointerMapper/functions/VerticalAngleMax/VerticalAngleMax.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "object"
+
+[[parameters]]
+description = "Behavior"
+name = "Behavior"
+supplementaryInformation = "MousePointerLock::FirstPersonPointerMapper"
+type = "behavior"
