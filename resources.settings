@@ -447,6 +447,41 @@ name = "assets/models/Knight_Animated.glb"
 userAdded = true
 
 [[resources]]
+file = "assets/models/Barbarian.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Barbarian.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Mage.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Mage.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Ranger.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Ranger.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Rogue.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Rogue.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/models/Rogue_Hooded.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Rogue_Hooded.glb"
+userAdded = true
+
+[[resources]]
 file = "assets/props/arrow_bow.glb"
 kind = "model3D"
 metadata = ""
