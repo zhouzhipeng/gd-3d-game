@@ -54,7 +54,7 @@
       at=-1700,-1636.8,-195.5
       locked
     />
-    <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,-96 z-order=1 />
+    <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,100 z-order=1 />
   </layer>
 
   <layer name="Game">
