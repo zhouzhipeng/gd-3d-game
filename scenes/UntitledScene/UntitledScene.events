@@ -1,5 +1,44 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
 
+@event aiGeneratedEventId="initialize-physics3d-collision-filters"
+if SceneJustBegins
+do Physics3D::Physics3DBehavior::EnableLayer object="Terrain" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="Terrain" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Terrain" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Terrain" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCottage" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCottage" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingCottage" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingCottage" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCastle" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingCastle" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingCastle" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingCastle" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingWatchtower" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="BuildingWatchtower" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingWatchtower" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="BuildingWatchtower" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="TreePine" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="TreePine" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="TreePine" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="TreePine" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="TreeBroad" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="TreeBroad" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="TreeBroad" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="TreeBroad" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="Sheep" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="Sheep" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Sheep" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Sheep" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="LadderStep" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="LadderStep" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="LadderStep" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="LadderStep" behavior="Physics3D" mask_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableLayer object="Knight" behavior="Physics3D" layer_1_8="5" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="1" enable=yes
+do Physics3D::Physics3DBehavior::EnableMask object="Knight" behavior="Physics3D" mask_1_8="5" enable=yes
+
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
 @instruction inverted=true

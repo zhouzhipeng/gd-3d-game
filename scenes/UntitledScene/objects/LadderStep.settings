@@ -1,12 +1,12 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 2
+order = 8
 assetStoreId = ""
-name = "BuildingCottage"
-persistentUuid = "b2ceb42a-c684-489c-b69f-57eed4e581f8"
+name = "LadderStep"
+persistentUuid = "1cc2f570-0324-44f3-8ea3-385fa872f34b"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-folder = [ "Stylized Terrain", "Buildings" ]
+folder = [ "Stylized Terrain", "Ladders" ]
 
 [[behaviors]]
 name = "Physics3D"
@@ -22,24 +22,24 @@ linearDamping = 0
 massOverride = 0
 object3D = "Object3D"
 restitution = 0
-shape = "Mesh"
+shape = "Box"
 shapeOrientation = "Z"
 
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 297.175821136
-height = 260.634225958
+depth = 24.776470588
+height = 75.705882353
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/stylized_fantasy_terrain_parts/building_cottage.glb"
+modelResourceName = "assets/models/stylized_fantasy_terrain_parts/ladder_step_cube.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 289.058810402
+width = 172.058823529
 animations = [ ]
 
 [variables]

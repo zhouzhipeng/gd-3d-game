@@ -42,6 +42,36 @@
       booleans={"isCastingShadow":true}
     />
     <Terrain id="3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a" at=640,360,-487.958801213 locked />
+    <LadderStep
+      id="35bb0a36-39f4-41f4-b2fd-d489dc74c8cc"
+      at=729.470580082,712.795281131,-167.241131856
+      locked
+    />
+    <LadderStep
+      id="eb919fcc-9051-4fd5-b14b-69d3375f3a68"
+      at=729.470580082,674.254075781,-145.217623448
+      locked
+    />
+    <LadderStep
+      id="0e11ae0d-1f81-4c88-8b28-f0c8a7cb8455"
+      at=729.470584185,635.712878635,-123.194082222
+      locked
+    />
+    <LadderStep
+      id="6e58c4b2-597b-421d-bca8-8c4bd6dbae87"
+      at=729.470584185,597.171714307,-101.170540995
+      locked
+    />
+    <LadderStep
+      id="58e2b9d8-9433-4385-871c-f9e36d768079"
+      at=729.470596491,558.630508956,-79.147032587
+      locked
+    />
+    <LadderStep
+      id="e781cb4d-a5c0-4f60-b6ac-1027ce6875a8"
+      at=729.470596491,517.820666924,-57.123491361
+      locked
+    />
     <BuildingCottage
       id="28148c50-f2f0-4c06-9204-b581b06bf6d5"
       at=1328.235294118,759.176483715,-165.864695381

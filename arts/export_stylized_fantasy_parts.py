@@ -32,15 +32,18 @@ from mathutils import Matrix, Vector
 
 
 EXPECTED_SOURCE_MESHES = 654
-EXPECTED_TERRAIN_MESHES = 450
+EXPECTED_TERRAIN_MESHES = 444
 EXPECTED_BUILDING_MESHES = 120
 EXPECTED_TREE_MESHES = 60
 EXPECTED_SHEEP_MESHES = 24
 EXPECTED_SOURCE_INSTANCES = 28
 EXPECTED_PROTOTYPES = 7
-EXPECTED_SOURCE_TRIANGLES = 29476
-EXPECTED_OUTPUT_MESHES = 540
-EXPECTED_OUTPUT_TRIANGLES = 23492
+EXPECTED_SOURCE_TRIANGLES = 28828
+EXPECTED_OUTPUT_MESHES = 534
+EXPECTED_OUTPUT_TRIANGLES = 22844
+SEPARATE_LADDER_STEP_OBJECTS = tuple(
+    f"TerraceStep_{index:02d}" for index in range(6)
+)
 
 GDEVELOP_ANCHOR = Vector((640.0, 360.0, 0.0))
 GDEVELOP_TARGET_WIDTH = 4680.0
@@ -334,6 +337,9 @@ def object_named(name: str) -> bpy.types.Object:
 
 def make_source_instances(meshes: list[bpy.types.Object]) -> list[dict[str, object]]:
     mesh_set = set(meshes)
+    ladder_steps = {object_named(name) for name in SEPARATE_LADDER_STEP_OBJECTS}
+    if not ladder_steps <= mesh_set:
+        raise RuntimeError("The separately exported ladder steps are not all meshes.")
     buildings_collection = collection_objects("04_Buildings")
     instances: list[dict[str, object]] = []
     claimed: set[bpy.types.Object] = set()
@@ -441,7 +447,7 @@ def make_source_instances(meshes: list[bpy.types.Object]) -> list[dict[str, obje
             root_object=root,
         )
 
-    terrain = sorted(mesh_set - claimed, key=lambda item: item.name)
+    terrain = sorted(mesh_set - claimed - ladder_steps, key=lambda item: item.name)
     add(
         "terrain",
         "terrain",
@@ -466,8 +472,10 @@ def make_source_instances(meshes: list[bpy.types.Object]) -> list[dict[str, obje
         raise RuntimeError(
             f"Expected {EXPECTED_SOURCE_INSTANCES} source instances, found {len(instances)}."
         )
-    if claimed != mesh_set:
-        raise RuntimeError("Source partition does not cover every mesh exactly once.")
+    if claimed != mesh_set - ladder_steps:
+        raise RuntimeError(
+            "Environment partition does not cover every non-ladder mesh exactly once."
+        )
     if kind_counts != expected_counts:
         raise RuntimeError(
             f"Unexpected partition counts: {kind_counts}; expected {expected_counts}."
@@ -780,6 +788,7 @@ def main() -> None:
             "scene": source_scene.name,
             "objectCount": len(source_scene.objects),
             "meshCount": len(meshes),
+            "separatelyExportedMeshObjects": list(SEPARATE_LADDER_STEP_OBJECTS),
             "excludedObjects": sorted(
                 obj.name for obj in source_scene.objects if obj.type != "MESH"
             ),
@@ -801,7 +810,8 @@ def main() -> None:
                 )
                 for kind in ("terrain", "building", "tree", "sheep")
             },
-            "exhaustive": True,
+            "exhaustive": False,
+            "exhaustiveOfNonLadderMeshes": True,
             "pairwiseDisjoint": True,
         },
         "outputs": {
