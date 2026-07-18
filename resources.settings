@@ -445,3 +445,220 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/Knight_Animated.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/props/arrow_bow.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/arrow_bow.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/arrow_bow_bundle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/arrow_bow_bundle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/arrow_crossbow.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/arrow_crossbow.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/arrow_crossbow_bundle.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/arrow_crossbow_bundle.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/axe_1handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/axe_1handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/axe_2handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/axe_2handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/bow.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/bow.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/bow_withString.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/bow_withString.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/crossbow_1handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/crossbow_1handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/crossbow_2handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/crossbow_2handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/dagger.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/dagger.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/mug_empty.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/mug_empty.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/mug_full.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/mug_full.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/quiver.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/quiver.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_badge.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_badge.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_badge_color.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_badge_color.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_round.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_round.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_round_barbarian.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_round_barbarian.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_round_color.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_round_color.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_spikes.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_spikes.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_spikes_color.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_spikes_color.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_square.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_square.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/shield_square_color.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/shield_square_color.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/smokebomb.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/smokebomb.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/spellbook_closed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/spellbook_closed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/spellbook_open.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/spellbook_open.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/staff.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/staff.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/sword_1handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/sword_1handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/sword_2handed.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/sword_2handed.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/sword_2handed_color.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/sword_2handed_color.glb"
+userAdded = true
+
+[[resources]]
+file = "assets/props/wand.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/props/wand.glb"
+userAdded = true
