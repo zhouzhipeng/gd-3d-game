@@ -767,3 +767,10 @@ kind = "model3D"
 metadata = ""
 name = "assets/models/stylized_fantasy_terrain_parts/sheep.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/models/stylized_fantasy_terrain_parts/ladder_step_cube.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/stylized_fantasy_terrain_parts/ladder_step_cube.glb"
+userAdded = true
