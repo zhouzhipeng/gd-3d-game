@@ -28,3 +28,8 @@ if MousePointerLock::IsMoving
 do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementX() * 0.12"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementY() * 0.12"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="=" value="clamp(Knight.ThirdPersonCamera::ElevationAngleOffset(), -10, 55)"
+
+@event aiGeneratedEventId="smooth-knight-turn-toward-movement"
+for each Knight
+> if BuiltinCommonInstructions::CompareNumbers first_expression="abs(AngleDifference(Knight.Angle(), Knight.PhysicsCharacter3D::ForwardAngle()))" comparison_sign=">" second_expression="0.5"
+> do SetAngle object="Knight" modification_sign="=" angle_in_degrees="lerpAngle(Knight.Angle(), Knight.PhysicsCharacter3D::ForwardAngle(), 1 - exp(-10 * TimeDelta()))"
