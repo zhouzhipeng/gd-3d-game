@@ -6,8 +6,24 @@ name = "Sheep"
 persistentUuid = "09457a74-34f5-4dde-a226-2c431f6d77a8"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-behaviors = [ ]
 folder = ["Stylized Terrain", "Sheep"]
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0
+bodyType = "Static"
+bullet = false
+density = 1
+fixedRotation = true
+friction = 1
+gravityScale = 1
+linearDamping = 0
+massOverride = 0
+object3D = "Object3D"
+restitution = 0
+shape = "Mesh"
+shapeOrientation = "Z"
 
 [content]
 centerLocation = "ModelOrigin"

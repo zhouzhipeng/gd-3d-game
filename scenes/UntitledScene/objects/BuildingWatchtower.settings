@@ -6,8 +6,24 @@ name = "BuildingWatchtower"
 persistentUuid = "d8c76ac1-2230-4057-958b-1072aed07b6e"
 type = "Scene3D::Model3DObject"
 effects = [ ]
-behaviors = [ ]
 folder = ["Stylized Terrain", "Buildings"]
+
+[[behaviors]]
+name = "Physics3D"
+type = "Physics3D::Physics3DBehavior"
+angularDamping = 0
+bodyType = "Static"
+bullet = false
+density = 1
+fixedRotation = true
+friction = 1
+gravityScale = 1
+linearDamping = 0
+massOverride = 0
+object3D = "Object3D"
+restitution = 0
+shape = "Mesh"
+shapeOrientation = "Z"
 
 [content]
 centerLocation = "ModelOrigin"
