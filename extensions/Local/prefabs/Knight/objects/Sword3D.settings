@@ -10,190 +10,21 @@ behaviors = [ ]
 folder = [ ]
 
 [content]
-centerLocation = "CenteredOnZ"
+centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 120
-height = 92.092797
+depth = 6.164129
+height = 83.768203
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/Knight_Weapon_Sword.glb"
+modelResourceName = "assets/props/sword_1handed.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 99.379864
-
-[[content.sharedAnimationModelResources]]
-resourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Idle_A"
-source = "Idle_A"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Idle_B"
-source = "Idle_B"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Hit_A"
-source = "Hit_A"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Hit_B"
-source = "Hit_B"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Melee_1H_Attack_Slice_Horizontal"
-source = "Melee_1H_Attack_Slice_Horizontal"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Melee_1H_Attack_Slice_Diagonal"
-source = "Melee_1H_Attack_Slice_Diagonal"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Melee_1H_Attack_Stab"
-source = "Melee_1H_Attack_Stab"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Interact"
-source = "Interact"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "PickUp"
-source = "PickUp"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Spawn_Air"
-source = "Spawn_Air"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Spawn_Ground"
-source = "Spawn_Ground"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Throw"
-source = "Throw"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Use_Item"
-source = "Use_Item"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Death_A"
-source = "Death_A"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Death_A_Pose"
-source = "Death_A_Pose"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Death_B"
-source = "Death_B"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Death_B_Pose"
-source = "Death_B_Pose"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "T-Pose"
-source = "T-Pose"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Jump_Full_Long"
-source = "Jump_Full_Long"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Jump_Full_Short"
-source = "Jump_Full_Short"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Jump_Idle"
-source = "Jump_Idle"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Jump_Land"
-source = "Jump_Land"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Jump_Start"
-source = "Jump_Start"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Running_A"
-source = "Running_A"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = false
-name = "Running_B"
-source = "Running_B"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Walking_A"
-source = "Walking_A"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Walking_B"
-source = "Walking_B"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
-
-[[content.animations]]
-loop = true
-name = "Walking_C"
-source = "Walking_C"
-sourceModelResourceName = "assets/models/Knight_Animated.glb"
+width = 23.755743
+sharedAnimationModelResources = [ ]
+animations = [ ]
 
 [variables]

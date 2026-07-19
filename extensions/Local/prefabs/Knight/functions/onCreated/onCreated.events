@@ -1,3 +1,9 @@
 @event aiGeneratedEventId="initialize-knight-idle-animation"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+
+@event aiGeneratedEventId="attach-knight-sword-to-right-hand"
+if Scene3D::Model3DObject::HasBone parameter_3d_model="Knight3D" bone_name="\"handslot.r\""
+@instruction inverted=true
+if Scene3D::Base3DBehavior::IsAttachedToModelBone parameter_3d_object="Sword3D" behavior="Object3D"
+do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="Sword3D" behavior="Object3D" target_3d_model="Knight3D" bone_name="\"handslot.r\""
