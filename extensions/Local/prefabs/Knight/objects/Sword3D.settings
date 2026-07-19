@@ -12,8 +12,8 @@ folder = [ ]
 [content]
 centerLocation = "ModelOrigin"
 crossfadeDuration = 0.1
-depth = 6.164129
-height = 83.768203
+depth = 83.768203
+height = 6.164129
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
