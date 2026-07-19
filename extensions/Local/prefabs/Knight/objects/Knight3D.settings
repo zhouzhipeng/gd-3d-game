@@ -10,20 +10,20 @@ behaviors = [ ]
 folder = [ ]
 
 [content]
-centerLocation = "ModelOrigin"
+centerLocation = "CenteredOnZ"
 crossfadeDuration = 0.1
 depth = 120
-height = 61.709342
+height = 92.092797
 isCastingShadow = true
 isReceivingShadow = true
 keepAspectRatio = true
 materialType = "KeepOriginal"
-modelResourceName = "assets/models/Knight_Animated.glb"
+modelResourceName = "assets/models/Knight_Animated_MountBase.glb"
 originLocation = "ModelOrigin"
 rotationX = 90
 rotationY = 0
 rotationZ = 0
-width = 91.659929
+width = 99.379864
 sharedAnimationModelResources = [ ]
 
 [[content.animations]]

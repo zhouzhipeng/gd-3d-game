@@ -447,6 +447,13 @@ name = "assets/models/Knight_Animated.glb"
 userAdded = true
 
 [[resources]]
+file = "assets/models/Knight_Animated_MountBase.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Knight_Animated_MountBase.glb"
+userAdded = true
+
+[[resources]]
 file = "assets/models/Knight_Animated_Sword.glb"
 kind = "model3D"
 metadata = ""

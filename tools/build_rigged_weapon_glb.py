@@ -157,6 +157,100 @@ def scene_bounds(document: dict[str, Any]) -> tuple[list[float], list[float]]:
     return minimum, maximum
 
 
+def append_invisible_bounds(
+    document: dict[str, Any],
+    binary: bytes,
+    minimum: list[float],
+    maximum: list[float],
+) -> bytes:
+    """Add transparent points so different mount GLBs normalize identically."""
+    existing = [
+        index
+        for index, node in enumerate(document.get("nodes", []))
+        if node.get("name") == "__GDevelopWeaponMountBounds"
+    ]
+    if existing:
+        raise ValueError("The GLB already contains a weapon-mount bounds helper")
+
+    binary += b"\x00" * ((-len(binary)) % 4)
+    byte_offset = len(binary)
+    corners = [
+        (x, y, z)
+        for x in (minimum[0], maximum[0])
+        for y in (minimum[1], maximum[1])
+        for z in (minimum[2], maximum[2])
+    ]
+    binary += b"".join(struct.pack("<fff", *corner) for corner in corners)
+
+    buffer_views = document.setdefault("bufferViews", [])
+    buffer_view_index = len(buffer_views)
+    buffer_views.append(
+        {
+            "buffer": 0,
+            "byteOffset": byte_offset,
+            "byteLength": len(corners) * 12,
+            "target": 34962,
+        }
+    )
+
+    accessors = document.setdefault("accessors", [])
+    accessor_index = len(accessors)
+    accessors.append(
+        {
+            "bufferView": buffer_view_index,
+            "componentType": 5126,
+            "count": len(corners),
+            "type": "VEC3",
+            "min": minimum,
+            "max": maximum,
+        }
+    )
+
+    materials = document.setdefault("materials", [])
+    material_index = len(materials)
+    materials.append(
+        {
+            "name": "__GDevelopInvisibleMountBounds",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [0.0, 0.0, 0.0, 0.0],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0,
+            },
+            "alphaMode": "BLEND",
+            "doubleSided": True,
+        }
+    )
+
+    meshes = document.setdefault("meshes", [])
+    mesh_index = len(meshes)
+    meshes.append(
+        {
+            "name": "__GDevelopWeaponMountBounds",
+            "primitives": [
+                {
+                    "attributes": {"POSITION": accessor_index},
+                    "material": material_index,
+                    "mode": 0,
+                }
+            ],
+        }
+    )
+
+    nodes = document.setdefault("nodes", [])
+    node_index = len(nodes)
+    nodes.append(
+        {
+            "name": "__GDevelopWeaponMountBounds",
+            "mesh": mesh_index,
+            "extras": {"purpose": "Keep character and weapon model bounds identical"},
+        }
+    )
+    scene_index = document.get("scene", 0)
+    document["scenes"][scene_index].setdefault("nodes", []).append(node_index)
+    document.setdefault("buffers", [{"byteLength": 0}])[0]["byteLength"] = len(binary)
+    return binary
+
+
 def copy_joint_hierarchy(
     character: dict[str, Any], output: dict[str, Any], joint_name: str
 ) -> tuple[list[dict[str, Any]], int]:
@@ -199,8 +293,10 @@ def build_weapon(
     output_path: Path,
     joint_name: str,
     target_depth: float,
+    envelope_source_path: Path | None,
+    character_output_path: Path | None,
 ) -> None:
-    character, _ = read_glb(character_path)
+    character, character_binary = read_glb(character_path)
     weapon, weapon_binary = read_glb(weapon_path)
     output = copy.deepcopy(weapon)
 
@@ -226,9 +322,30 @@ def build_weapon(
         f"{output.get('asset', {}).get('generator', 'glTF')} + GDevelop shared-rig weapon mount"
     )
 
+    envelope_document = character
+    if envelope_source_path is not None:
+        envelope_document, _ = read_glb(envelope_source_path)
+    envelope_min, envelope_max = scene_bounds(envelope_document)
+    weapon_binary = append_invisible_bounds(output, weapon_binary, envelope_min, envelope_max)
+
+    if character_output_path is not None:
+        character_output = copy.deepcopy(character)
+        character_output.setdefault("asset", {})["generator"] = (
+            f"{character_output.get('asset', {}).get('generator', 'glTF')}"
+            " + GDevelop weapon-mount sizing envelope"
+        )
+        character_binary = append_invisible_bounds(
+            character_output, character_binary, envelope_min, envelope_max
+        )
+        write_glb(character_output_path, character_output, character_binary)
+
     write_glb(output_path, output, weapon_binary)
     round_trip, _ = read_glb(output_path)
-    character_min, character_max = scene_bounds(character)
+    if character_output_path is not None:
+        character_round_trip, _ = read_glb(character_output_path)
+    else:
+        character_round_trip = character
+    character_min, character_max = scene_bounds(character_round_trip)
     weapon_min, weapon_max = scene_bounds(round_trip)
     character_size = [character_max[i] - character_min[i] for i in range(3)]
     weapon_size = [weapon_max[i] - weapon_min[i] for i in range(3)]
@@ -244,6 +361,11 @@ def build_weapon(
     knight_dimensions = dimensions(character_size)
     weapon_dimensions = dimensions(weapon_size)
     print(f"Wrote {output_path} ({output_path.stat().st_size} bytes)")
+    if character_output_path is not None:
+        print(
+            f"Wrote {character_output_path} "
+            f"({character_output_path.stat().st_size} bytes)"
+        )
     print(f"Attachment joint: {joint_name}")
     print(f"Character bounds: min={character_min}, max={character_max}")
     print(f"Weapon bounds: min={weapon_min}, max={weapon_max}")
@@ -264,8 +386,26 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--joint", default="handslot.r")
     parser.add_argument("--target-depth", type=float, default=120.0)
+    parser.add_argument(
+        "--envelope-source",
+        type=Path,
+        help="GLB whose complete bind-pose bounds should normalize every mount object",
+    )
+    parser.add_argument(
+        "--character-output",
+        type=Path,
+        help="Optional character copy with the same invisible sizing envelope",
+    )
     args = parser.parse_args()
-    build_weapon(args.character, args.weapon, args.output, args.joint, args.target_depth)
+    build_weapon(
+        args.character,
+        args.weapon,
+        args.output,
+        args.joint,
+        args.target_depth,
+        args.envelope_source,
+        args.character_output,
+    )
 
 
 if __name__ == "__main__":
