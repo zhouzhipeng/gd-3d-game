@@ -28,15 +28,6 @@ width = 91.659929
 [[content.sharedAnimationModelResources]]
 resourceName = "assets/Rig_Medium_MovementBasic.glb"
 
-[[content.sharedAnimationModelResources]]
-resourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = true
-name = "Idle_A"
-source = "Skeletons_Idle"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
 [[content.animations]]
 loop = false
 name = "Jump_Full_Long"
@@ -102,89 +93,5 @@ loop = true
 name = "Walking_C"
 source = "Walking_C"
 sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
-
-[[content.animations]]
-loop = false
-name = "EXPERIMENTAL_Medium_Transform"
-source = "EXPERIMENTAL_Medium_Transform"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Awaken_Floor"
-source = "Skeletons_Awaken_Floor"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Awaken_Floor_Long"
-source = "Skeletons_Awaken_Floor_Long"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Awaken_Standing"
-source = "Skeletons_Awaken_Standing"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Death"
-source = "Skeletons_Death"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Death_Pose"
-source = "Skeletons_Death_Pose"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Death_Resurrect"
-source = "Skeletons_Death_Resurrect"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = true
-name = "Skeletons_Idle"
-source = "Skeletons_Idle"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Inactive_Floor_Pose"
-source = "Skeletons_Inactive_Floor_Pose"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Inactive_Standing_Pose"
-source = "Skeletons_Inactive_Standing_Pose"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Spawn_Ground"
-source = "Skeletons_Spawn_Ground"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Taunt"
-source = "Skeletons_Taunt"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = false
-name = "Skeletons_Taunt_Longer"
-source = "Skeletons_Taunt_Longer"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[[content.animations]]
-loop = true
-name = "Skeletons_Walking"
-source = "Skeletons_Walking"
-sourceModelResourceName = "assets/Rig_Medium_Special.glb"
 
 [variables]
