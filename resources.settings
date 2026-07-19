@@ -454,6 +454,13 @@ name = "assets/models/Knight_Animated_Sword.glb"
 userAdded = true
 
 [[resources]]
+file = "assets/models/Knight_Weapon_Sword.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/models/Knight_Weapon_Sword.glb"
+userAdded = true
+
+[[resources]]
 file = "assets/models/Barbarian.glb"
 kind = "model3D"
 metadata = ""

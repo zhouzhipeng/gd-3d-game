@@ -178,3 +178,11 @@ if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+
+@group "Mounted weapon animation synchronization" source="" creationTime=0 color=[74,176,228] parameters=[]
+@event aiGeneratedEventId="synchronize-mounted-weapon-animation"
+if AnimatableCapability::AnimatableBehavior::Name object="Sword3D" behavior="Animation" comparison_sign="!=" animation_name="Knight3D.Animation::Name()"
+do AnimatableCapability::AnimatableBehavior::SetName object="Sword3D" behavior="Animation" modification_sign="=" animation_name="Knight3D.Animation::Name()"
+do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Sword3D" behavior="Animation" modification_sign="=" speed_scale="Knight3D.Animation::SpeedScale()"
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Sword3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="Knight3D.Animation::ElapsedTime()"
+@end group
