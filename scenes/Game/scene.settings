@@ -1,11 +1,11 @@
 kind = "scene"
 settingsFormatVersion = 1
 order = 0
-layout = "game://scenes/UntitledScene/UntitledScene.layout"
-events = "game://scenes/UntitledScene/UntitledScene.events"
+layout = "game://scenes/Game/Game.layout"
+events = "game://scenes/Game/Game.events"
 disableInputWhenNotFocused = true
-mangledName = "UntitledScene"
-name = "UntitledScene"
+mangledName = "Game"
+name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""

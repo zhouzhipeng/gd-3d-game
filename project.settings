@@ -2,7 +2,7 @@ combinedSettingsFormatVersion = 1
 eventsDslVersion = "2.0"
 kind = "project"
 settingsFormatVersion = 1
-firstLayout = "UntitledScene"
+firstLayout = "Game"
 initialGDVersion = "6.0.0"
 objectGroups = { }
 

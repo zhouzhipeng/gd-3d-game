@@ -18,7 +18,19 @@
 
   <layer name="">
     <camera size=default viewport=default />
-    <Knight3D id="1cd579b7-6b3c-4210-a45b-f6bfeef276f5" at=0,0 rotation=-90 size=91.659929x61.709342 depth=120 />
-    <Sword3D id="f6d027d2-c097-4133-a1aa-c0ee9c159335" at=0,0 rotation=-90 size=23.755743x6.164129 depth=83.768203 />
+    <Knight3D
+      id="1cd579b7-6b3c-4210-a45b-f6bfeef276f5"
+      at=0,0
+      rotation=-90
+      size=91.659929x61.709342
+      depth=120
+    />
+    <Sword3D
+      id="f6d027d2-c097-4133-a1aa-c0ee9c159335"
+      at=0,0
+      rotation=-90
+      size=23.755743x6.164129
+      depth=83.768203
+    />
   </layer>
 </layout>
