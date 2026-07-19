@@ -1,5 +1,15 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
 
+@event aiGeneratedEventId="initialize-physics3d-collision-filters"
+if SceneJustBegins
+> @event aiGeneratedEventId="for-each-physics3d-world-body"
+> for each "Physics3DWorldBodies"
+>> @event aiGeneratedEventId="enable-physics3d-world-body-collision-filter"
+>> do Physics3D::Physics3DBehavior::EnableLayer object="Physics3DWorldBodies" behavior="Physics3D" layer_1_8="1" enable="yes"
+>> do Physics3D::Physics3DBehavior::EnableLayer object="Physics3DWorldBodies" behavior="Physics3D" layer_1_8="5" enable="yes"
+>> do Physics3D::Physics3DBehavior::EnableMask object="Physics3DWorldBodies" behavior="Physics3D" mask_1_8="1" enable="yes"
+>> do Physics3D::Physics3DBehavior::EnableMask object="Physics3DWorldBodies" behavior="Physics3D" mask_1_8="5" enable="yes"
+
 @event aiGeneratedEventId="initialize-minion-animation"
 if SceneJustBegins
 do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Walking_A\""

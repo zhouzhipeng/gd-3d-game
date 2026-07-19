@@ -9,7 +9,12 @@ name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
-objectGroups = { }
+
+[objectGroups]
+Physics3DWorldBodies = ["BuildingCottage", "BuildingCastle", "BuildingWatchtower", "TreePine", "TreeBroad", "Sheep", "LadderStep", "Knight", "TerrainSupportCollider"]
+
+[objectGroupRequiredBehaviors]
+Physics3DWorldBodies = ["Physics3D::Physics3DBehavior"]
 
 [[behaviorsSharedData]]
 name = "Physics3D"
