@@ -18,6 +18,6 @@
 
   <layer name="">
     <camera size=default viewport=default />
-    <Knight3D id="1cd579b7-6b3c-4210-a45b-f6bfeef276f5" at=0,0 rotation=-90 size=92x62 depth=120 />
+    <Knight3D id="1cd579b7-6b3c-4210-a45b-f6bfeef276f5" at=0,0 rotation=-90 size=99.38x92.09 depth=120 />
   </layer>
 </layout>
