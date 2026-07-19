@@ -253,7 +253,7 @@ def append_invisible_bounds(
 
 def copy_joint_hierarchy(
     character: dict[str, Any], output: dict[str, Any], joint_name: str
-) -> tuple[list[dict[str, Any]], int]:
+) -> tuple[list[dict[str, Any]], int, dict[str, Any]]:
     skins = character.get("skins", [])
     if not skins:
         raise ValueError("The character GLB has no skin/joint hierarchy")
@@ -284,7 +284,23 @@ def copy_joint_hierarchy(
     roots = [remap[old] for old in ordered if old not in parented_joints]
     container_index = len(copied)
     copied.append({"name": "Rig_Medium_WeaponMount", "children": roots})
-    return copied, remap[matching[0]]
+
+    # GLTFLoader only creates THREE.Bone objects for nodes referenced by a skin.
+    # GDevelop's shared-animation compatibility check deliberately compares those
+    # Bone objects, so a copied joint hierarchy without this lightweight skin
+    # declaration looks like it has no rig at runtime. No inverse bind matrices
+    # are needed because the weapon mesh itself is rigidly parented to a hand
+    # joint rather than skinned.
+    source_skin = skins[0]
+    copied_skin: dict[str, Any] = {
+        "name": f"{source_skin.get('name', 'CharacterRig')}_WeaponMount",
+        "joints": [remap[index] for index in source_skin.get("joints", [])],
+    }
+    skeleton_index = source_skin.get("skeleton")
+    if skeleton_index in remap:
+        copied_skin["skeleton"] = remap[skeleton_index]
+
+    return copied, remap[matching[0]], copied_skin
 
 
 def build_weapon(
@@ -300,7 +316,9 @@ def build_weapon(
     weapon, weapon_binary = read_glb(weapon_path)
     output = copy.deepcopy(weapon)
 
-    skeleton_nodes, target_joint_index = copy_joint_hierarchy(character, output, joint_name)
+    skeleton_nodes, target_joint_index, copied_skin = copy_joint_hierarchy(
+        character, output, joint_name
+    )
     skeleton_count = len(skeleton_nodes)
     weapon_nodes = copy.deepcopy(weapon.get("nodes", []))
     for node in weapon_nodes:
@@ -317,7 +335,7 @@ def build_weapon(
     output["scenes"] = [{"name": "RiggedWeapon", "nodes": [skeleton_count - 1]}]
     output["scene"] = 0
     output.pop("animations", None)
-    output.pop("skins", None)
+    output["skins"] = [copied_skin]
     output.setdefault("asset", {})["generator"] = (
         f"{output.get('asset', {}).get('generator', 'glTF')} + GDevelop shared-rig weapon mount"
     )
