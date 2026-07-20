@@ -5,6 +5,8 @@ if KeyFromTextJustPressed key_to_check="\"f\""
 > if Visible object="Sword3D"
 > do Hide object="Sword3D"
 > do Show object="Axe3D"
+
+> @event
 > else
 > do Hide object="Axe3D"
 > do Show object="Sword3D"

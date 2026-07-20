@@ -816,3 +816,10 @@ kind = "model3D"
 metadata = ""
 name = "assets/Rig_Medium_Special.glb"
 userAdded = false
+
+[[resources]]
+file = "assets/Rig_Medium_CombatMelee.glb"
+kind = "model3D"
+metadata = ""
+name = "assets/Rig_Medium_CombatMelee.glb"
+userAdded = false

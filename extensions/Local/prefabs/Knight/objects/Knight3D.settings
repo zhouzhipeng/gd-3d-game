@@ -28,6 +28,9 @@ width = 91.659929
 [[content.sharedAnimationModelResources]]
 resourceName = "assets/Rig_Medium_MovementBasic.glb"
 
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/Rig_Medium_CombatMelee.glb"
+
 [[content.animations]]
 loop = false
 name = "Jump_Full_Long"
@@ -93,5 +96,137 @@ loop = true
 name = "Walking_C"
 source = "Walking_C"
 sourceModelResourceName = "assets/Rig_Medium_MovementBasic.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Chop"
+source = "Melee_1H_Attack_Chop"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Jump_Chop"
+source = "Melee_1H_Attack_Jump_Chop"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Slice_Diagonal"
+source = "Melee_1H_Attack_Slice_Diagonal"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Slice_Horizontal"
+source = "Melee_1H_Attack_Slice_Horizontal"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_1H_Attack_Stab"
+source = "Melee_1H_Attack_Stab"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Attack_Chop"
+source = "Melee_2H_Attack_Chop"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Attack_Slice"
+source = "Melee_2H_Attack_Slice"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Attack_Spin"
+source = "Melee_2H_Attack_Spin"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Attack_Spinning"
+source = "Melee_2H_Attack_Spinning"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Attack_Stab"
+source = "Melee_2H_Attack_Stab"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_2H_Idle"
+source = "Melee_2H_Idle"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Block"
+source = "Melee_Block"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Block_Attack"
+source = "Melee_Block_Attack"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Block_Hit"
+source = "Melee_Block_Hit"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Blocking"
+source = "Melee_Blocking"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Dualwield_Attack_Chop"
+source = "Melee_Dualwield_Attack_Chop"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Dualwield_Attack_Slice"
+source = "Melee_Dualwield_Attack_Slice"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Dualwield_Attack_Stab"
+source = "Melee_Dualwield_Attack_Stab"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Unarmed_Attack_Kick"
+source = "Melee_Unarmed_Attack_Kick"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Unarmed_Attack_Punch_A"
+source = "Melee_Unarmed_Attack_Punch_A"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Unarmed_Idle"
+source = "Melee_Unarmed_Idle"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
+
+[[content.animations]]
+loop = false
+name = ""
+source = "T-Pose"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
 
 [variables]
