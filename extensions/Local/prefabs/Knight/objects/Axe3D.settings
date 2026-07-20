@@ -1,0 +1,30 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 2
+assetStoreId = ""
+name = "Axe3D"
+persistentUuid = "99fd96d2-45fd-4ba5-824a-6071363a0ca1"
+type = "Scene3D::Model3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 81.37901
+height = 12.353435
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/axe_2handed.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 58.489842
+sharedAnimationModelResources = [ ]
+animations = [ ]
+
+[variables]

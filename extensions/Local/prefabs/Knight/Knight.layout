@@ -1,6 +1,6 @@
 <layout version=1>
 
-  <bounds min=-25,-45,0 max=36,46,119 />
+  <bounds min=-30,-45,0 max=36,46,119 />
 
   <editor
     grid=false
@@ -31,6 +31,13 @@
       rotation=-90
       size=23.755743x6.164129
       depth=83.768203
+    />
+    <Axe3D
+      id="f974a5f7-9990-4be5-a9af-8fd24d894067"
+      at=0,0
+      rotation=-90
+      size=58.489842x12.353435
+      depth=81.37901
     />
   </layer>
 </layout>

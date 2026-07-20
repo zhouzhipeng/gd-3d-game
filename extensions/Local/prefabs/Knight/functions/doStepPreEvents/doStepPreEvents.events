@@ -1,3 +1,15 @@
+@group "Knight weapon switching" source="" creationTime=0 color=[255,165,70] parameters=[]
+@event aiGeneratedEventId="switch-knight-weapon-with-f"
+if KeyFromTextJustPressed key_to_check="\"f\""
+> @event aiGeneratedEventId="equip-knight-axe"
+> if Visible object="Sword3D"
+> do Hide object="Sword3D"
+> do Show object="Axe3D"
+> else
+> do Hide object="Axe3D"
+> do Show object="Sword3D"
+@end group
+
 @group "Knight melee combo" source="" creationTime=0 color=[190,92,255] parameters=[]
 @event aiGeneratedEventId="buffer-knight-melee-follow-up"
 if MouseButtonFromTextReleased button_to_check="\"Left\""
