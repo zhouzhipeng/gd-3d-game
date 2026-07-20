@@ -414,6 +414,13 @@
     />
     <Knight id="caeba47e-3d74-4562-8f4a-d6ccaf3f184d" at=832,896,100 z-order=1 />
     <Skeleton_Minion id="6e868261-ec5f-457e-bbc6-e2b050430e95" at=1024,896 z-order=2 />
+    <SkeletonHurtbox
+      id="393bd11c-08e4-4555-9a77-bf868d866391"
+      at=994,871,-45
+      size=60x50
+      depth=90
+      opacity=0
+    />
   </layer>
 
   <layer name="Game">

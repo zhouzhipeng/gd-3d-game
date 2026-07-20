@@ -1,0 +1,6 @@
+@event aiGeneratedEventId="initialize-sword-damage"
+do SetReturnNumber the_number_to_be_returned="25"
+
+@event aiGeneratedEventId="use-axe-damage"
+if Visible object="Axe3D"
+do SetReturnNumber the_number_to_be_returned="40"

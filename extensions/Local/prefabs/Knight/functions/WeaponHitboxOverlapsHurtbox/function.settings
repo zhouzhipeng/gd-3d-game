@@ -1,0 +1,28 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+fullName = "Weapon hitbox overlaps hurtbox"
+description = "Checks the active weapon's hitbox against a 3D hurtbox during an attack impact window."
+functionType = "Condition"
+name = "WeaponHitboxOverlapsHurtbox"
+sentence = "The active weapon hitbox of _PARAM0_ overlaps _PARAM1_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/WeaponHitboxOverlapsHurtbox/WeaponHitboxOverlapsHurtbox.events"
+private = false
+async = false
+helpUrl = ""
+deprecated = false
+deprecationMessage = ""
+objectGroups = { }
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"
+
+[[parameters]]
+description = "Hurtbox"
+name = "Hurtbox"
+supplementaryInformation = "Scene3D::Cube3DObject"
+type = "object"

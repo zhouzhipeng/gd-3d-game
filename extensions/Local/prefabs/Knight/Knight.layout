@@ -1,6 +1,6 @@
 <layout version=1>
 
-  <bounds min=-30,-45,0 max=36,46,119 />
+  <bounds min=-30,-45,-21 max=36,46,119 />
 
   <editor
     grid=false
@@ -38,6 +38,20 @@
       rotation=-90
       size=58.489842x12.353435
       depth=81.37901
+    />
+    <SwordHitbox
+      id="be23f034-eae7-4ebd-be8b-432d0bab1de9"
+      at=-11.877698,-3.082062,-17.259167
+      size=23.755743x6.164129
+      depth=83.768203
+      opacity=0
+    />
+    <AxeHitbox
+      id="a81b5a05-f845-45f7-9e12-c7201096b58f"
+      at=-29.244921,-6.176662,-20.430855
+      size=58.489842x12.353435
+      depth=81.37901
+      opacity=0
     />
   </layer>
 </layout>

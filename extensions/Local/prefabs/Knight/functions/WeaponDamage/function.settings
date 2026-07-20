@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 4
+fullName = "Weapon damage"
+description = "Returns damage for the currently equipped weapon."
+functionType = "ExpressionAndCondition"
+name = "WeaponDamage"
+sentence = "Weapon damage of _PARAM0_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/WeaponDamage/WeaponDamage.events"
+private = false
+async = false
+helpUrl = ""
+deprecated = false
+deprecationMessage = ""
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"

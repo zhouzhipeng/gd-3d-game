@@ -1,0 +1,3 @@
+@event aiGeneratedEventId="consume-active-melee-hit"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+do ResetObjectTimer object="Knight3D" timer_name="\"HitCooldown\""

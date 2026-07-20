@@ -1,0 +1,43 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 11
+assetStoreId = ""
+name = "SkeletonHurtbox"
+persistentUuid = "d267fe1b-f5b7-4fd8-8327-bcba9522c5f9"
+type = "Scene3D::Cube3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[content]
+width = 60
+height = 50
+depth = 90
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = ""
+backFaceResourceName = ""
+backFaceUpThroughWhichAxisRotation = "X"
+leftFaceResourceName = ""
+rightFaceResourceName = ""
+topFaceResourceName = ""
+bottomFaceResourceName = ""
+frontFaceVisible = false
+backFaceVisible = false
+leftFaceVisible = false
+rightFaceVisible = false
+topFaceVisible = false
+bottomFaceVisible = false
+frontFaceResourceRepeat = false
+backFaceResourceRepeat = false
+leftFaceResourceRepeat = false
+rightFaceResourceRepeat = false
+topFaceResourceRepeat = false
+bottomFaceResourceRepeat = false
+tileScale = 1
+materialType = "Basic"
+tint = "255;255;255"
+isCastingShadow = false
+isReceivingShadow = false
+
+[variables]

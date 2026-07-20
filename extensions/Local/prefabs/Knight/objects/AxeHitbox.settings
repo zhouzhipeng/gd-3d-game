@@ -1,0 +1,43 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 4
+assetStoreId = ""
+name = "AxeHitbox"
+persistentUuid = "b7cb52a0-ef65-4bd7-8965-8227adf9462c"
+type = "Scene3D::Cube3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[content]
+width = 58.489842
+height = 12.353435
+depth = 81.37901
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = ""
+backFaceResourceName = ""
+backFaceUpThroughWhichAxisRotation = "X"
+leftFaceResourceName = ""
+rightFaceResourceName = ""
+topFaceResourceName = ""
+bottomFaceResourceName = ""
+frontFaceVisible = false
+backFaceVisible = false
+leftFaceVisible = false
+rightFaceVisible = false
+topFaceVisible = false
+bottomFaceVisible = false
+frontFaceResourceRepeat = false
+backFaceResourceRepeat = false
+leftFaceResourceRepeat = false
+rightFaceResourceRepeat = false
+topFaceResourceRepeat = false
+bottomFaceResourceRepeat = false
+tileScale = 1
+materialType = "Basic"
+tint = "255;255;255"
+isCastingShadow = false
+isReceivingShadow = false
+
+[variables]

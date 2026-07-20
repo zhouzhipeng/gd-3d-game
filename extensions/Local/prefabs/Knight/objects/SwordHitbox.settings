@@ -1,0 +1,43 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 3
+assetStoreId = ""
+name = "SwordHitbox"
+persistentUuid = "8f8f75e7-f13a-4a9f-bd29-5646d4ce38d3"
+type = "Scene3D::Cube3DObject"
+effects = [ ]
+behaviors = [ ]
+folder = [ "Combat" ]
+
+[content]
+width = 23.755743
+height = 6.164129
+depth = 83.768203
+enableTextureTransparency = false
+facesOrientation = "Y"
+frontFaceResourceName = ""
+backFaceResourceName = ""
+backFaceUpThroughWhichAxisRotation = "X"
+leftFaceResourceName = ""
+rightFaceResourceName = ""
+topFaceResourceName = ""
+bottomFaceResourceName = ""
+frontFaceVisible = false
+backFaceVisible = false
+leftFaceVisible = false
+rightFaceVisible = false
+topFaceVisible = false
+bottomFaceVisible = false
+frontFaceResourceRepeat = false
+backFaceResourceRepeat = false
+leftFaceResourceRepeat = false
+rightFaceResourceRepeat = false
+topFaceResourceRepeat = false
+bottomFaceResourceRepeat = false
+tileScale = 1
+materialType = "Basic"
+tint = "255;255;255"
+isCastingShadow = false
+isReceivingShadow = false
+
+[variables]

@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 3
+fullName = "Consume weapon hit"
+description = "Starts the per-swing hit cooldown after damage is dealt."
+functionType = "Action"
+name = "ConsumeWeaponHit"
+sentence = "Consume the current weapon hit for _PARAM0_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/ConsumeWeaponHit/ConsumeWeaponHit.events"
+private = false
+async = false
+helpUrl = ""
+deprecated = false
+deprecationMessage = ""
+objectGroups = { }
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"

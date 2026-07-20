@@ -10,6 +10,7 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "Knight"
 previewIconUrl = ""
+private = false
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Knight/Knight.layout"
 variants = [ ]

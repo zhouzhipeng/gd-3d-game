@@ -21,3 +21,25 @@ do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object=
 @event aiGeneratedEventId="initialize-knight-axe-hidden"
 if Visible object="Axe3D"
 do Hide object="Axe3D"
+
+@event aiGeneratedEventId="attach-sword-hitbox-to-right-hand"
+if Scene3D::Model3DObject::HasBone parameter_3d_model="Knight3D" bone_name="\"handslot.r\""
+@instruction inverted=true
+if Scene3D::Base3DBehavior::IsAttachedToModelBone parameter_3d_object="SwordHitbox" behavior="Object3D"
+do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="SwordHitbox" behavior="Object3D" target_3d_model="Knight3D" bone_name="\"handslot.r\""
+do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="SwordHitbox" behavior="Object3D" x_offset="-11.877698" y_offset="-3.082062" z_offset="-17.259167"
+do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="SwordHitbox" behavior="Object3D" x_rotation_offset="0" y_rotation_offset="0" z_rotation_offset="0"
+do Hide object="SwordHitbox"
+
+@event aiGeneratedEventId="attach-axe-hitbox-to-right-hand"
+if Scene3D::Model3DObject::HasBone parameter_3d_model="Knight3D" bone_name="\"handslot.r\""
+@instruction inverted=true
+if Scene3D::Base3DBehavior::IsAttachedToModelBone parameter_3d_object="AxeHitbox" behavior="Object3D"
+do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="AxeHitbox" behavior="Object3D" target_3d_model="Knight3D" bone_name="\"handslot.r\""
+do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="AxeHitbox" behavior="Object3D" x_offset="-29.244921" y_offset="-6.176662" z_offset="-20.430855"
+do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="AxeHitbox" behavior="Object3D" x_rotation_offset="0" y_rotation_offset="0" z_rotation_offset="0"
+do Hide object="AxeHitbox"
+
+@event aiGeneratedEventId="initialize-weapon-hit-cooldown"
+if Visible object="Knight3D"
+do ResetObjectTimer object="Knight3D" timer_name="\"HitCooldown\""
