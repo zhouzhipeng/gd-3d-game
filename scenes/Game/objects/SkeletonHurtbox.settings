@@ -6,8 +6,8 @@ name = "SkeletonHurtbox"
 persistentUuid = "d267fe1b-f5b7-4fd8-8327-bcba9522c5f9"
 type = "Scene3D::Cube3DObject"
 effects = [ ]
-folder = [ "Combat" ]
 behaviors = [ ]
+folder = [ "Combat" ]
 
 [content]
 width = 60

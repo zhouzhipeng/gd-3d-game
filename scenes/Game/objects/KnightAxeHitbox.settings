@@ -6,8 +6,8 @@ name = "KnightAxeHitbox"
 persistentUuid = "0956ca96-053b-43ab-b587-5bf67cf7bcfd"
 type = "Scene3D::Cube3DObject"
 effects = [ ]
-folder = [ "Combat" ]
 behaviors = [ ]
+folder = [ "Combat" ]
 
 [content]
 width = 58.489842

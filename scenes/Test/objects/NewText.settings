@@ -1,0 +1,57 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 1
+assetStoreId = ""
+bold = false
+italic = false
+name = "NewText"
+persistentUuid = "42704175-4179-4fb8-b00c-39452add4eef"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+string = "Text"
+font = ""
+textAlignment = "left"
+characterSize = 20
+folder = [ ]
+
+[[behaviors]]
+canBeGrabbed = false
+name = "Platform"
+platformType = "NormalPlatform"
+type = "PlatformBehavior::PlatformBehavior"
+yGrabOffset = 10
+
+[color]
+b = 0
+g = 0
+r = 0
+
+[content]
+bold = false
+isOutlineEnabled = false
+isShadowEnabled = false
+italic = false
+outlineColor = "255;255;255"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 4
+shadowOpacity = 127
+smoothed = true
+underlined = false
+text = "Text"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "0;0;0"
+
+[variables]
+Variable = [ { type = "number", value = 0 } ]
+Variable2 = [ { type = "string", value = "" } ]
+Variable3 = [ { type = "enum", value = "New Option", values = [ "New Option", "New Option222" ] } ]
+Variable4 = [ { type = "structure", children = [ { name = "ChildVariable", type = "number", value = 0 }, { name = "ChildVariable2", type = "string", value = "" }, { name = "ChildVariable3", type = "number", value = 0 }, { name = "ChildVariable4", type = "number", value = 0 } ] } ]

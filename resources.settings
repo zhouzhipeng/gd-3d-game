@@ -823,3 +823,11 @@ kind = "model3D"
 metadata = ""
 name = "assets/Rig_Medium_CombatMelee.glb"
 userAdded = false
+
+[[resources]]
+file = "assets/NewSprite2.png"
+kind = "image"
+metadata = '{"extension":".png"}'
+name = "NewSprite"
+smoothed = true
+userAdded = false

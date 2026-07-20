@@ -1,0 +1,15 @@
+kind = "scene"
+settingsFormatVersion = 1
+order = 1
+layout = "game://scenes/Test/Test.layout"
+events = "game://scenes/Test/Test.events"
+disableInputWhenNotFocused = true
+mangledName = "Test"
+name = "Test"
+standardSortMethod = true
+stopSoundsOnStartup = true
+title = ""
+behaviorsSharedData = [ ]
+objectGroups = { }
+
+[variables]
