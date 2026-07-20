@@ -2,16 +2,24 @@
 @event aiGeneratedEventId="switch-knight-weapon-with-f"
 if KeyFromTextJustPressed key_to_check="\"f\""
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 > @event aiGeneratedEventId="equip-knight-axe"
 > if Visible object="Sword3D"
 > do Hide object="Sword3D"
 > do Show object="Axe3D"
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 
 > @event
 > else
 > do Hide object="Axe3D"
 > do Show object="Sword3D"
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 @end group
 
 @group "Knight melee combo" source="" creationTime=0 color=[190,92,255] parameters=[]
@@ -36,7 +44,9 @@ if MouseButtonFromTextPressed button_to_check="\"Left\""
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if BuiltinCommonInstructions::Once
 > @event aiGeneratedEventId="start-knight-sword-attack"
 > if Visible object="Sword3D"
@@ -87,49 +97,51 @@ do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Slice_Horizontal\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
 @event aiGeneratedEventId="finish-knight-melee-diagonal"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Slice_Diagonal\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
 @event aiGeneratedEventId="finish-knight-melee-stab"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Stab\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
 @event aiGeneratedEventId="finish-knight-axe-chop"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_2H_Attack_Chop\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
 @event aiGeneratedEventId="finish-knight-axe-slice"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_2H_Attack_Slice\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
 @event aiGeneratedEventId="finish-knight-axe-spinning"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_2H_Attack_Spinning\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 @end group
 
 @event aiGeneratedEventId="play-knight-jump-start"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
@@ -144,7 +156,9 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="play-knight-long-jump-while-held"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
@@ -157,7 +171,9 @@ do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" be
 @event aiGeneratedEventId="play-knight-short-jump-when-released"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsJumping object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
@@ -171,7 +187,9 @@ do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" be
 @event aiGeneratedEventId="finish-knight-short-jump-takeoff"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Full_Short\""
@@ -181,7 +199,9 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="finish-knight-long-jump-airtime"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Full_Long\""
@@ -191,7 +211,9 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="play-knight-airborne-animation"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsFalling object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
@@ -201,7 +223,9 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="play-knight-landing-animation"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Jump_Land\""
@@ -210,7 +234,9 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="finish-knight-landing-while-moving"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Land\""
@@ -220,18 +246,22 @@ do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior=
 @event aiGeneratedEventId="finish-knight-landing-while-stopped"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Jump_Land\""
 if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Knight3D" behavior="Animation"
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 
 @event aiGeneratedEventId="play-knight-run-while-moving"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
@@ -239,14 +269,32 @@ if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="An
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Running_A\""
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Running_A\""
 
-@event aiGeneratedEventId="play-knight-idle-while-stopped"
+@event aiGeneratedEventId="play-knight-sword-idle-while-stopped"
 if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
 if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
 @instruction inverted=true
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+if Visible object="Sword3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Melee_Unarmed_Idle\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
+
+@event aiGeneratedEventId="play-knight-axe-idle-while-stopped"
+if BehaviorActivated object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_1H_Attack_\""
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Melee_2H_Attack_\""
+if Physics3D::PhysicsCharacter3D::IsOnFloor object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if Physics3D::PhysicsCharacter3D::IsMovingEvenALittle object="Object" behavior="PhysicsCharacter3D"
+@instruction inverted=true
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="startsWith" animation_name="\"Jump_\""
+if Visible object="Axe3D"
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Melee_2H_Idle\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""

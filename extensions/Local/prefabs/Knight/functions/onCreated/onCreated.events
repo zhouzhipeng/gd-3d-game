@@ -1,6 +1,6 @@
 @event aiGeneratedEventId="initialize-knight-idle-animation"
-if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Idle_A\""
-do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Idle_A\""
+if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Melee_Unarmed_Idle\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 
 @event aiGeneratedEventId="attach-knight-sword-to-right-hand"
 if Scene3D::Model3DObject::HasBone parameter_3d_model="Knight3D" bone_name="\"handslot.r\""
