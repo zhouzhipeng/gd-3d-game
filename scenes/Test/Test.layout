@@ -122,4 +122,4 @@ id = "b5376b2d-607e-42f9-8b89-10c1c630c1fc"
 [[behavior]]
 instance = "7e4ae76c-12d6-4b20-b237-130c3e965287"
 name = "Platform"
-properties = { canBeGrabbed = true, yGrabOffset = 20 }
+properties = { canBeGrabbed = true, yGrabOffset = 208 }

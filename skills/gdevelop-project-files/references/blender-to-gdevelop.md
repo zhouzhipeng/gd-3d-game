@@ -44,13 +44,8 @@ Standard practice:
 3. A practical convention is one Blender unit equals one meter, but consistency matters more than the exact unit.
 4. Do not rotate the entire asset merely to make the Blender file “look like glTF.” Let the exporter perform the format conversion.
 5. Do not apply the same axis correction in both Blender and GDevelop.
-6. Choose one project-wide axis policy and document where its single correction is applied.
 
 If an imported asset is sideways, first determine whether its original orientation was wrong or whether an extra correction was applied. Fix the cause once. Avoid stacking rotations until the asset happens to look correct.
-
-Treat orientation and proportional sizing as separate checks. A model can be
-upright after an axis correction while still being stretched because its width,
-height, and depth were assigned independently.
 
 ## 3. Build clean transforms and origins
 
@@ -229,40 +224,6 @@ Change `use_selection` to `False` only when the complete Blender scene is delibe
 
 GDevelop's [3D Model object guide](https://wiki.gdevelop.io/gdevelop5/objects/3d-model/) documents materials, shadows, origin/center choices, animation, and GLB support.
 
-### Preserve proportions after a 90-degree X correction
-
-Do not initialize a rotated model with arbitrary box-like dimensions such as
-`64 x 64 x 120`. Keep aspect ratio enabled, but do not rely on that option to
-repair defaults that are already non-uniform.
-
-Measure the exported GLB's native bounding-box extents as `Bx`, `By`, and `Bz`.
-When a Y-up GLB is made upright in GDevelop's Z-up world with a positive or
-negative 90-degree X rotation, the absolute extent mapping is:
-
-```text
-GLB X -> GDevelop width
-GLB Y -> GDevelop depth (vertical Z extent)
-GLB Z -> GDevelop height
-```
-
-For a chosen GDevelop vertical extent `targetDepth`, calculate uniform-scale
-dimensions with:
-
-```text
-width  = targetDepth * Bx / By
-height = targetDepth * Bz / By
-depth  = targetDepth
-```
-
-For example, bounds of `1.943 x 2.543 x 1.308` and a target depth of `120`
-produce approximately `91.7 x 61.7 x 120`.
-
-Write the calculated values into the 3D Model object's default width, height,
-and depth. Correcting only one scene instance leaves future instances vulnerable
-to the same distortion. Keep instance dimensions proportional to these defaults,
-and change one dimension at a time with aspect-ratio locking enabled whenever the
-editor supports it.
-
 ## 11. Configure the 3D layer and camera
 
 Create or select a layer and enable 3D rendering. Keep 2D interface objects on a separate 2D layer when possible.
@@ -323,7 +284,6 @@ Verify:
 
 - Orientation is correct.
 - Width, height, and depth proportions match Blender.
-- Object defaults and scene-instance dimensions use the same proportional ratio.
 - The asset sits on the intended ground plane.
 - The origin produces correct movement and rotation.
 - Materials and transparency render correctly.
@@ -334,9 +294,6 @@ Verify:
 - Performance is acceptable on the target device.
 
 Always test from more than one camera angle when diagnosing scale or axis problems. A single top-down view can hide an incorrect vertical axis.
-Use front and side views to distinguish an orientation error from non-uniform
-scaling. An upright but unusually thin or wide model usually has mismatched
-dimensions rather than a bad axis correction.
 
 ## 15. Standard update loop
 
@@ -359,7 +316,6 @@ Keep the same GLB path when the asset identity has not changed. This preserves o
 | Model is sideways | Source orientation is wrong or an extra correction was added | Return to a clean Blender orientation; use only one correction point |
 | Model is mirrored | Negative scale or flipped normals | Apply scale and recalculate normals in Blender |
 | Model is stretched | Non-uniform scale or GDevelop aspect ratio unlocked | Restore uniform transforms and enable Keep aspect ratio |
-| Upright model is unusually thin or wide | A 90-degree correction swapped the axes used by independently assigned dimensions | Measure the GLB bounds, apply the rotated-axis formula, and update the object's default dimensions |
 | Model is the wrong size | Inconsistent unit convention | Establish one project scale and export a known-size test cube |
 | Model floats or sinks | Origin or ground plane is wrong | Put the origin at the intended placement point and align ground contact |
 | Material is missing | Unsupported nodes or unsaved textures | Use glTF-compatible Principled materials and image textures |
@@ -379,7 +335,6 @@ Keep the same GLB path when the asset identity has not changed. This preserves o
 - [ ] Names are stable and descriptive.
 - [ ] Orientation is upright in Blender.
 - [ ] Scale convention is consistent.
-- [ ] Export roots and armatures use uniform scale, preferably `1,1,1`.
 - [ ] No accidental non-uniform or negative scale remains.
 - [ ] Origin matches placement and rotation needs.
 - [ ] Normals face outward.
@@ -395,7 +350,6 @@ Keep the same GLB path when the asset identity has not changed. This preserves o
 - [ ] Format is binary GLB.
 - [ ] The intended objects or collection are included.
 - [ ] Modifiers are applied by the exporter when required.
-- [ ] Axis correction is applied in exactly one place, not duplicated in Blender and GDevelop.
 - [ ] Cameras and lights are included only intentionally.
 - [ ] Animation export is enabled only when needed.
 - [ ] The exported GLB passes a round-trip inspection.
@@ -405,8 +359,6 @@ Keep the same GLB path when the asset identity has not changed. This preserves o
 - [ ] GLB is registered as a 3D Model resource.
 - [ ] Object is on a 3D layer.
 - [ ] Aspect ratio is preserved.
-- [ ] Width, height, and depth defaults are derived from the GLB bounds after axis mapping.
-- [ ] New scene instances inherit the proportional object defaults.
 - [ ] Material mode matches the lighting design.
 - [ ] Camera position, target, projection, and clipping are intentional.
 - [ ] Lighting and shadow settings are intentional.

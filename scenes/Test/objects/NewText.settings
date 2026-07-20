@@ -17,10 +17,10 @@ characterSize = 20
 folder = [ ]
 
 [[behaviors]]
-canBeGrabbed = false
 name = "Platform"
-platformType = "NormalPlatform"
 type = "PlatformBehavior::PlatformBehavior"
+canBeGrabbed = false
+platformType = "NormalPlatform"
 yGrabOffset = 10
 
 [color]
@@ -51,7 +51,7 @@ lineHeight = 0
 color = "0;0;0"
 
 [variables]
-Variable = [ { type = "number", value = 0 } ]
-Variable2 = [ { type = "string", value = "" } ]
-Variable3 = [ { type = "enum", value = "New Option", values = [ "New Option", "New Option222" ] } ]
-Variable4 = [ { type = "structure", children = [ { name = "ChildVariable", type = "number", value = 0 }, { name = "ChildVariable2", type = "string", value = "" }, { name = "ChildVariable3", type = "number", value = 0 }, { name = "ChildVariable4", type = "number", value = 0 } ] } ]
+Variable = [ { persistentUuid = "08507034-1987-4f4b-9991-daa0e0924159", type = "number", value = 0 } ]
+Variable2 = [ { persistentUuid = "20aaaf7e-b558-4283-8796-fd0e10572d3f", type = "string", value = "" } ]
+Variable3 = [ { persistentUuid = "27885350-331f-4f18-94a3-b7d8ec784457", type = "enum", value = "New Option", values = [ "New Option", "New Option222" ] } ]
+Variable4 = [ { persistentUuid = "491c9a20-6033-47e7-a3a4-53e2d4bc7531", type = "structure", children = [ { name = "ChildVariable", persistentUuid = "738570e1-0e69-4f59-9573-6510b6f776f4", type = "number", value = 0 }, { name = "ChildVariable2", persistentUuid = "2bb84074-b51c-44b2-93b9-a1c6fc4f9bbb", type = "string", value = "" }, { name = "ChildVariable3", persistentUuid = "3bb88b9c-04f8-421b-a055-811d8a306bc1", type = "number", value = 0 }, { name = "ChildVariable4", persistentUuid = "26bedbd8-e9f7-422d-b11b-03d4d337c230", type = "number", value = 0 } ] } ]
