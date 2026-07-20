@@ -1,0 +1,39 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 8
+description = "Check the collision between two objects using their collision masks. Object rotation around X and Y axes are ignored."
+fullName = "Collision in 3D"
+functionType = "Condition"
+group = "Collision"
+name = "AreInCollision"
+sentence = "_PARAM1_ is in collision with _PARAM3_"
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/AreInCollision/AreInCollision.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "3D capability"
+name = "Object3D"
+supplementaryInformation = "Scene3D::Base3DBehavior"
+type = "behavior"
+
+[[parameters]]
+description = "Other object"
+name = "OtherObject"
+type = "objectList"
+
+[[parameters]]
+description = "3D capability"
+name = "OtherObjectCapability"
+supplementaryInformation = "Scene3D::Base3DBehavior"
+type = "behavior"
+
+[[parameters]]
+description = "Ignore objects that are touching each other on their edges, but are not overlapping (default: no)"
+name = "IgnoreEdges"
+type = "yesorno"

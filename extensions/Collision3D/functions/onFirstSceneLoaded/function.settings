@@ -1,0 +1,11 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+fullName = ""
+functionType = "Action"
+name = "onFirstSceneLoaded"
+sentence = ""
+parameters = [ ]
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/onFirstSceneLoaded/onFirstSceneLoaded.events"
+objectGroups = { }

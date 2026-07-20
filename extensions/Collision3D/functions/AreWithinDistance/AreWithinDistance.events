@@ -1,0 +1,13 @@
+@js strict=false expanded=true
+// TODO If condition is inverted, only objects that have a distance greater than specified to any other object will be picked.
+const inverted = false;
+
+eventsFunctionContext.returnValue = gdjs._collision3DExtension.pickObjectsWithinDistance(
+    eventsFunctionContext.getObjectsLists("Object"),
+    eventsFunctionContext.getObjectsLists("OtherObject"),
+    eventsFunctionContext.getArgument("Distance"),
+    eventsFunctionContext.getArgument("ShouldUseCustomCenter"),
+    inverted
+);
+
+@end js

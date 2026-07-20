@@ -30,19 +30,8 @@ Physics3DWorldBodies = [
 "Knight",
 "TerrainSupportCollider"
 ]
-KnightWeaponHitboxes = [
-"KnightSwordHitbox",
-"KnightAxeHitbox"
-]
-Combat3DBodies = [
-"KnightSwordHitbox",
-"KnightAxeHitbox",
-"SkeletonHurtbox"
-]
 
 [objectGroupRequiredBehaviors]
 Physics3DWorldBodies = [ "Physics3D::Physics3DBehavior" ]
-KnightWeaponHitboxes = [ "Physics3D::Physics3DBehavior" ]
-Combat3DBodies = [ "Physics3D::Physics3DBehavior" ]
 
 [variables]

@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 3
+description = "Distance between two objects in 3D."
+fullName = "Distance between two objects in 3D"
+functionType = "Expression"
+group = "Position"
+name = "Distance"
+sentence = ""
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/Distance/Distance.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "Other object"
+name = "OtherObject"
+type = "objectList"

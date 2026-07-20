@@ -55,6 +55,7 @@ if BuiltinCommonInstructions::Once
 > do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 > do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
 
+> @event
 > else
 > do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1.25"
 > do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Attack_Chop\""

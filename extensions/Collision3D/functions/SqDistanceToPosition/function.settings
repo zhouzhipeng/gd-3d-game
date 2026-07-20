@@ -1,0 +1,35 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+description = "Square distance between an object and a position in 3D."
+fullName = "Square distance between an object and a position"
+functionType = "Expression"
+group = "Position"
+name = "SqDistanceToPosition"
+sentence = ""
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/SqDistanceToPosition/SqDistanceToPosition.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "X position"
+name = "PositionX"
+type = "expression"
+
+[[parameters]]
+description = "Y position"
+name = "PositionY"
+type = "expression"
+
+[[parameters]]
+description = "Z position"
+name = "PositionZ"
+type = "expression"

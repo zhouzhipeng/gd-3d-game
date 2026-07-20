@@ -7,24 +7,7 @@ persistentUuid = "d267fe1b-f5b7-4fd8-8327-bcba9522c5f9"
 type = "Scene3D::Cube3DObject"
 effects = [ ]
 folder = [ "Combat" ]
-
-[[behaviors]]
-isFolded = true
-name = "Physics3D"
-type = "Physics3D::Physics3DBehavior"
-angularDamping = 0
-bodyType = "Dynamic"
-bullet = false
-density = 1
-fixedRotation = false
-friction = 0
-gravityScale = 0
-linearDamping = 0
-massOverride = 0
-object3D = "Object3D"
-restitution = 0
-shape = "Box"
-shapeOrientation = "Z"
+behaviors = [ ]
 
 [content]
 width = 60

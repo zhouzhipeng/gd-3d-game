@@ -1,0 +1,34 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+description = "Compare the distance between two objects in 3D."
+fullName = "Distance between two objects in 3D"
+functionType = "Condition"
+group = "Position"
+name = "AreWithinDistance"
+sentence = "_PARAM1_ distance to _PARAM2_ is below _PARAM3_ pixels"
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/AreWithinDistance/AreWithinDistance.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "Other object"
+name = "OtherObject"
+type = "objectList"
+
+[[parameters]]
+description = "Distance"
+name = "Distance"
+type = "expression"
+
+[[parameters]]
+defaultValue = "yes"
+description = "Use custom center"
+name = "ShouldUseCustomCenter"
+optional = true
+type = "yesorno"

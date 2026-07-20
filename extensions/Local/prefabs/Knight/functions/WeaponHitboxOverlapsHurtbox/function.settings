@@ -1,18 +1,13 @@
 kind = "function"
 settingsFormatVersion = 1
 order = 2
+description = "Checks the active weapon attack window; the caller pairs this with the lightweight Collision3D community extension condition."
 fullName = "Weapon hitbox overlaps hurtbox"
-description = "Checks the active weapon attack window; the caller pairs this with the 3D physics collision condition."
 functionType = "Condition"
 name = "WeaponHitboxOverlapsHurtbox"
 sentence = "The active weapon hitbox of _PARAM0_ can hit _PARAM1_"
 folder = [ ]
 events = "game://extensions/Local/prefabs/Knight/functions/WeaponHitboxOverlapsHurtbox/WeaponHitboxOverlapsHurtbox.events"
-private = false
-async = false
-helpUrl = ""
-deprecated = false
-deprecationMessage = ""
 objectGroups = { }
 
 [[parameters]]

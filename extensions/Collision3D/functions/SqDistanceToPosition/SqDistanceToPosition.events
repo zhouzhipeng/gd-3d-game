@@ -1,0 +1,12 @@
+@js objects="Object" strict=false expanded=true
+
+if (objects.length > 0) {
+    eventsFunctionContext.returnValue = gdjs._collision3DExtension.getSqDistanceToPosition(
+        objects[0],
+        eventsFunctionContext.getArgument("PositionX"),
+        eventsFunctionContext.getArgument("PositionY"),
+        eventsFunctionContext.getArgument("PositionZ"),
+    );
+}
+
+@end js

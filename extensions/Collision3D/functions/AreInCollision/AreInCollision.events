@@ -1,0 +1,11 @@
+@js strict=false expanded=true
+// TODO If the condition is inverted, the object farthest from the specified position is picked instead.
+const inverted = false;
+
+eventsFunctionContext.returnValue = gdjs._collision3DExtension.pickObjectsInCollision(
+    eventsFunctionContext.getObjectsLists("Object"),
+    eventsFunctionContext.getObjectsLists("OtherObject"),
+    eventsFunctionContext.getArgument("IgnoreEdges"),
+    inverted
+);
+@end js

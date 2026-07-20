@@ -1,0 +1,32 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 7
+description = "Pick the object of this type that is nearest to the specified position in 3D."
+fullName = "Pick nearest object in 3D"
+functionType = "Condition"
+group = "Objects"
+name = "PickNearest"
+sentence = "Pick the _PARAM1_ that is nearest to _PARAM2_ ; _PARAM3_ ; _PARAM4_"
+extension = "Collision3D"
+events = "game://extensions/Collision3D/functions/PickNearest/PickNearest.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+type = "objectList"
+
+[[parameters]]
+description = "X position"
+name = "PositionX"
+type = "expression"
+
+[[parameters]]
+description = "Y position"
+name = "PositionY"
+type = "expression"
+
+[[parameters]]
+description = "Z position"
+name = "PositionZ"
+type = "expression"

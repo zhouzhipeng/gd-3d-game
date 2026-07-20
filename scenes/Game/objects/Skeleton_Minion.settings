@@ -188,5 +188,5 @@ source = "T-Pose"
 sourceModelResourceName = "assets/Rig_Medium_Special.glb"
 
 [variables]
-Health = [{ type = "number", value = 100 }]
-IsDead = [{ type = "boolean", value = false }]
+Health = [ { type = "number", value = 100 } ]
+IsDead = [ { type = "boolean", value = false } ]

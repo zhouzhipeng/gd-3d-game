@@ -1,0 +1,11 @@
+@js objects="Object" strict=false expanded=true
+
+const otherObjects = eventsFunctionContext.getObjects("OtherObject");
+
+for (const object of objects) {
+    gdjs._collision3DExtension.separateFromObjects(
+        object,
+        otherObjects,
+    );
+}
+@end js
