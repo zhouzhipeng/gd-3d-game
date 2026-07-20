@@ -421,6 +421,20 @@
       depth=90
       opacity=0
     />
+    <KnightSwordHitbox
+      id="beb6a798-0b1a-4549-b973-d010e2757beb"
+      at=0,0,-100000
+      size=23.755743x6.164129
+      depth=83.768203
+      opacity=0
+    />
+    <KnightAxeHitbox
+      id="ecd6a30f-f50f-4071-a8a1-eff23d602294"
+      at=0,0,-100000
+      size=58.489842x12.353435
+      depth=81.37901
+      opacity=0
+    />
   </layer>
 
   <layer name="Game">

@@ -1,9 +1,9 @@
 kind = "object"
 settingsFormatVersion = 1
-order = 11
+order = 13
 assetStoreId = ""
-name = "SkeletonHurtbox"
-persistentUuid = "d267fe1b-f5b7-4fd8-8327-bcba9522c5f9"
+name = "KnightAxeHitbox"
+persistentUuid = "0956ca96-053b-43ab-b587-5bf67cf7bcfd"
 type = "Scene3D::Cube3DObject"
 effects = [ ]
 folder = [ "Combat" ]
@@ -13,7 +13,7 @@ isFolded = true
 name = "Physics3D"
 type = "Physics3D::Physics3DBehavior"
 angularDamping = 0
-bodyType = "Dynamic"
+bodyType = "Kinematic"
 bullet = false
 density = 1
 fixedRotation = false
@@ -27,9 +27,9 @@ shape = "Box"
 shapeOrientation = "Z"
 
 [content]
-width = 60
-height = 50
-depth = 90
+width = 58.489842
+height = 12.353435
+depth = 81.37901
 enableTextureTransparency = false
 facesOrientation = "Y"
 frontFaceResourceName = ""
