@@ -14,6 +14,67 @@ if SceneJustBegins
 if SceneJustBegins
 do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Walking_A\""
 
+@group "Knight melee combat" source="" creationTime=0 color=[190,92,255] parameters=[]
+@event aiGeneratedEventId="attach-and-link-skeleton-hurtbox"
+if SceneJustBegins
+> @event aiGeneratedEventId="for-each-skeleton-hurtbox-owner"
+> for each "Skeleton_Minion"
+>> @event aiGeneratedEventId="for-each-skeleton-hurtbox"
+>> for each "SkeletonHurtbox"
+>>> @event aiGeneratedEventId="attach-skeleton-hurtbox-to-spine"
+>>> if Scene3D::Model3DObject::HasBone parameter_3d_model="Skeleton_Minion" bone_name="\"spine\""
+>>> @instruction inverted=true
+>>> if Scene3D::Base3DBehavior::IsAttachedToModelBone parameter_3d_object="SkeletonHurtbox" behavior="Object3D"
+>>> do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="SkeletonHurtbox" behavior="Object3D" target_3d_model="Skeleton_Minion" bone_name="\"spine\""
+>>> do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="SkeletonHurtbox" behavior="Object3D" x_offset="-30" y_offset="-25" z_offset="-45"
+>>> do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="SkeletonHurtbox" behavior="Object3D" x_rotation_offset="0" y_rotation_offset="0" z_rotation_offset="0"
+>>> do LinkedObjects::LinkObjects object_1="Skeleton_Minion" object_2="SkeletonHurtbox"
+>>> do Hide object="SkeletonHurtbox"
+
+@event aiGeneratedEventId="apply-knight-weapon-hit"
+for each "Knight"
+> @event aiGeneratedEventId="test-each-skeleton-hurtbox"
+> for each "SkeletonHurtbox"
+>> @event aiGeneratedEventId="damage-linked-living-skeleton"
+>> if Local::Knight::WeaponHitboxOverlapsHurtbox knight="Knight" hurtbox="SkeletonHurtbox"
+>> if LinkedObjects::PickObjectsLinkedTo pick_these_objects="Skeleton_Minion" if_they_are_linked_to_this_object="SkeletonHurtbox"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="0"
+>> do Local::Knight::ConsumeWeaponHit knight="Knight"
+>> do SetNumberObjectVariable object="Skeleton_Minion" variable="Health" modification_sign="-" value="Knight.WeaponDamage()"
+
+@event aiGeneratedEventId="begin-skeleton-death"
+for each "Skeleton_Minion"
+> @event aiGeneratedEventId="play-skeleton-death-on-zero-health"
+> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="0"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+> do SetBooleanObjectVariable object="Skeleton_Minion" variable="IsDead" modification_sign="True"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="Health" modification_sign="=" value="0"
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Skeletons_Death\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+>> @event aiGeneratedEventId="disable-dead-skeleton-hurtbox"
+>> if LinkedObjects::PickObjectsLinkedTo pick_these_objects="SkeletonHurtbox" if_they_are_linked_to_this_object="Skeleton_Minion"
+>> do Hide object="SkeletonHurtbox"
+
+@event aiGeneratedEventId="remove-finished-skeleton-hurtbox"
+for each "Skeleton_Minion"
+> @event aiGeneratedEventId="delete-linked-hurtbox-after-death"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="True"
+> if AnimatableCapability::AnimatableBehavior::Name object="Skeleton_Minion" behavior="Animation" comparison_sign="=" animation_name="\"Skeletons_Death\""
+> if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Skeleton_Minion" behavior="Animation"
+> if LinkedObjects::PickObjectsLinkedTo pick_these_objects="SkeletonHurtbox" if_they_are_linked_to_this_object="Skeleton_Minion"
+> do Delete object="SkeletonHurtbox"
+
+@event aiGeneratedEventId="remove-finished-skeleton"
+for each "Skeleton_Minion"
+> @event aiGeneratedEventId="delete-skeleton-after-death"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="True"
+> if AnimatableCapability::AnimatableBehavior::Name object="Skeleton_Minion" behavior="Animation" comparison_sign="=" animation_name="\"Skeletons_Death\""
+> if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Skeleton_Minion" behavior="Animation"
+> do Delete object="Skeleton_Minion"
+@end group
+
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
 @instruction inverted=true
