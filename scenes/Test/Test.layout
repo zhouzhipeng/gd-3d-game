@@ -1,0 +1,125 @@
+[layout]
+version = 1
+background = "#DFE0E2"
+
+[editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 0.546875
+window_mask = false
+selected_layer = ""
+mode = "instances-editor"
+
+[[layer]]
+id = "base"
+name = ""
+cameras = [{ size = "default", viewport = "default" }]
+
+[[layer]]
+id = "ui"
+name = "UI"
+
+[[layer]]
+id = "shape"
+name = "Shape"
+
+[[effect]]
+layer = "base"
+name = "3D Ambient Hemisphere Light"
+type = "Scene3D::HemisphereLight"
+params = { elevation = 40, groundColor = "127;127;127", intensity = 0.33, rotation = 300, skyColor = "255;255;255", top = "Z+" }
+
+[[effect]]
+layer = "base"
+name = "3D Sun Light"
+type = "Scene3D::DirectionalLight"
+params = { color = "255;255;255", distanceFromCamera = 1500, elevation = 40, frustumSize = 4000, intensity = 0.75, isCastingShadow = true, minimumShadowBias = 0, rotation = 300, shadowQuality = "medium", top = "Z+" }
+
+[[effect]]
+layer = "ui"
+name = "3D Ambient Hemisphere Light"
+type = "Scene3D::HemisphereLight"
+params = { elevation = 40, groundColor = "127;127;127", intensity = 0.33, rotation = 300, skyColor = "255;255;255", top = "Z+" }
+
+[[effect]]
+layer = "ui"
+name = "3D Sun Light"
+type = "Scene3D::DirectionalLight"
+params = { color = "255;255;255", distanceFromCamera = 1500, elevation = 40, frustumSize = 4000, intensity = 0.75, isCastingShadow = true, minimumShadowBias = 0, rotation = 300, shadowQuality = "medium", top = "Z+" }
+
+[[effect]]
+layer = "shape"
+name = "3D Ambient Hemisphere Light"
+type = "Scene3D::HemisphereLight"
+params = { elevation = 40, groundColor = "127;127;127", intensity = 0.33, rotation = 300, skyColor = "255;255;255", top = "Z+" }
+
+[[effect]]
+layer = "shape"
+name = "3D Sun Light"
+type = "Scene3D::DirectionalLight"
+params = { color = "255;255;255", distanceFromCamera = 1500, elevation = 40, frustumSize = 4000, intensity = 0.75, isCastingShadow = true, minimumShadowBias = 0, rotation = 300, shadowQuality = "medium", top = "Z+" }
+
+[[instance]]
+id = "baf286bc-803f-4c84-b56c-f67e8fdb9463"
+object = "NewSprite"
+layer = "shape"
+at = [640, 360]
+z_order = 1
+
+[[instance]]
+id = "b4974f3c-f5bc-4d5b-a5c7-f27f5d2f8aa4"
+object = "NewSprite"
+layer = "shape"
+at = [552, 222]
+z_order = 1
+
+[[instance]]
+id = "d43a79c4-a654-4b08-9c68-9c9cbf11deec"
+object = "NewText"
+layer = "ui"
+at = [330, 219]
+z_order = 2
+size = [125, 23]
+depth = 1
+
+[[instance]]
+id = "34206e5b-3935-4494-81c9-c10fcc82374f"
+object = "NewText"
+layer = "ui"
+at = [313, 260]
+z_order = 2
+size = [125, 23]
+depth = 1
+
+[[instance]]
+id = "7e4ae76c-12d6-4b20-b237-130c3e965287"
+object = "NewText"
+layer = "ui"
+at = [313, 348]
+z_order = 2
+size = [125, 23]
+depth = 1
+
+[[variable]]
+instance = "34206e5b-3935-4494-81c9-c10fcc82374f"
+name = "Variable"
+type = "number"
+value = 1
+id = "cb4d5657-5963-4fa3-ad2e-e10c6d169a93"
+
+[[variable]]
+instance = "7e4ae76c-12d6-4b20-b237-130c3e965287"
+name = "Variable"
+type = "number"
+value = 2
+id = "b5376b2d-607e-42f9-8b89-10c1c630c1fc"
+
+[[behavior]]
+instance = "7e4ae76c-12d6-4b20-b237-130c3e965287"
+name = "Platform"
+properties = { canBeGrabbed = true, yGrabOffset = 20 }

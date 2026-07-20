@@ -1,57 +1,66 @@
-<layout version=1>
+[layout]
+version = 1
+bounds = { max = [36, 46, 119], min = [-30, -45, -21] }
 
-  <bounds min=-30,-45,-21 max=36,46,119 />
+[editor]
+grid = false
+grid_type = "rectangular"
+grid_size = [32, 32, 32]
+grid_offset = [0, 0, 0]
+grid_color = "#9EB4FF"
+grid_alpha = 0.8
+snap = false
+zoom = 2.5468848633822643
+window_mask = false
+selected_layer = ""
+mode = "embedded-game"
 
-  <editor
-    grid=false
-    grid-type=rectangular
-    grid-size=32,32,32
-    grid-offset=0,0,0
-    grid-color=#9EB4FF
-    grid-alpha=0.8
-    snap=false
-    zoom=2.5468848633822643
-    window-mask=false
-    selected-layer=""
-    mode=embedded-game
-  />
+[[layer]]
+id = "base"
+name = ""
+cameras = [{ size = "default", viewport = "default" }]
 
-  <layer name="">
-    <camera size=default viewport=default />
-    <Knight3D
-      id="1cd579b7-6b3c-4210-a45b-f6bfeef276f5"
-      at=0,0
-      rotation=-90
-      size=91.659929x61.709342
-      depth=120
-    />
-    <Sword3D
-      id="f6d027d2-c097-4133-a1aa-c0ee9c159335"
-      at=0,0
-      rotation=-90
-      size=23.755743x6.164129
-      depth=83.768203
-    />
-    <Axe3D
-      id="f974a5f7-9990-4be5-a9af-8fd24d894067"
-      at=0,0
-      rotation=-90
-      size=58.489842x12.353435
-      depth=81.37901
-    />
-    <SwordHitbox
-      id="be23f034-eae7-4ebd-be8b-432d0bab1de9"
-      at=-11.877698,-3.082062,-17.259167
-      size=23.755743x6.164129
-      depth=83.768203
-      opacity=0
-    />
-    <AxeHitbox
-      id="a81b5a05-f845-45f7-9e12-c7201096b58f"
-      at=-29.244921,-6.176662,-20.430855
-      size=58.489842x12.353435
-      depth=81.37901
-      opacity=0
-    />
-  </layer>
-</layout>
+[[instance]]
+id = "1cd579b7-6b3c-4210-a45b-f6bfeef276f5"
+object = "Knight3D"
+layer = "base"
+at = [0, 0]
+rotation = -90
+size = [91.659929, 61.709342]
+depth = 120
+
+[[instance]]
+id = "f6d027d2-c097-4133-a1aa-c0ee9c159335"
+object = "Sword3D"
+layer = "base"
+at = [0, 0]
+rotation = -90
+size = [23.755743, 6.164129]
+depth = 83.768203
+
+[[instance]]
+id = "f974a5f7-9990-4be5-a9af-8fd24d894067"
+object = "Axe3D"
+layer = "base"
+at = [0, 0]
+rotation = -90
+size = [58.489842, 12.353435]
+depth = 81.37901
+
+[[instance]]
+id = "be23f034-eae7-4ebd-be8b-432d0bab1de9"
+object = "SwordHitbox"
+layer = "base"
+at = [-11.877698, -3.082062, -17.259167]
+size = [23.755743, 6.164129]
+depth = 83.768203
+opacity = 0
+
+[[instance]]
+id = "a81b5a05-f845-45f7-9e12-c7201096b58f"
+object = "AxeHitbox"
+layer = "base"
+at = [-29.244921, -6.176662, -20.430855]
+size = [58.489842, 12.353435]
+depth = 81.37901
+opacity = 0
