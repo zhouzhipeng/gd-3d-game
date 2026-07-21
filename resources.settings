@@ -833,6 +833,14 @@ smoothed = true
 userAdded = false
 
 [[resources]]
+file = "assets/ui/KnightBackpackPanel.png"
+kind = "image"
+metadata = '{"extension":".png"}'
+name = "KnightBackpackPanel"
+smoothed = true
+userAdded = true
+
+[[resources]]
 file = "assets/props/Gold_Bar.glb"
 kind = "model3D"
 metadata = ""

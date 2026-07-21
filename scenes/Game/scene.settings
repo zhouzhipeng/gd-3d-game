@@ -12,8 +12,8 @@ title = ""
 
 [[variables]]
 name = "BackpackOpen"
-type = "boolean"
-value = false
+type = "number"
+value = 0
 
 [[behaviorsSharedData]]
 name = "Physics3D"

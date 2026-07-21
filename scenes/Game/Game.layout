@@ -628,7 +628,7 @@ layer = "backpack-ui"
 at = [330, 90]
 z_order = 100
 size = [620, 530]
-opacity = 235
+opacity = 255
 locked = true
 
 [[instances]]

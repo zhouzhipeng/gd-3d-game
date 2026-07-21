@@ -3,7 +3,7 @@
 @group "Knight backpack" source="" creationTime=0 color=[255,180,72] parameters=[]
 @event aiGeneratedEventId="initialize-knight-backpack"
 if SceneJustBegins
-do SetBooleanVariable variable="BackpackOpen" modification_sign="False"
+do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="0"
 do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Sword\""
 do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Axe\""
 do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Shield\""
@@ -23,10 +23,9 @@ do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name=
 
 @event aiGeneratedEventId="toggle-knight-backpack-with-q"
 if KeyFromTextJustPressed key_to_check="\"q\""
-do SetBooleanVariable variable="BackpackOpen" modification_sign="Toggle"
+do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="1 - Variable(BackpackOpen)"
 > @event aiGeneratedEventId="open-knight-backpack"
-> if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
-> @instruction inverted=true
+> if NumberVariable variable="BackpackOpen" comparison_sign="=" value="1"
 >> @event aiGeneratedEventId="show-knight-backpack-window"
 >> for each "BackpackWindow"
 >>> do Show object="BackpackWindow"
@@ -40,7 +39,7 @@ do SetBooleanVariable variable="BackpackOpen" modification_sign="Toggle"
 >>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
 
 > @event aiGeneratedEventId="close-knight-backpack"
-> if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
+> if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 >> @event aiGeneratedEventId="hide-knight-backpack-window"
 >> for each "BackpackWindow"
 >>> do Hide object="BackpackWindow"
@@ -50,7 +49,7 @@ do SetBooleanVariable variable="BackpackOpen" modification_sign="Toggle"
 >>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="yes"
 
 @event aiGeneratedEventId="refresh-knight-backpack-content"
-if BooleanVariable variable="BackpackOpen" check_if_the_value_is="True"
+if NumberVariable variable="BackpackOpen" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-knight-backpack-counts"
 > for each "BackpackContent"
 >> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackContent" behavior="Text" modification_sign="=" text="\"WEAPONS\" + NewLine() + \"  Sword                 x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Sword\")) + NewLine() + \"  Battle Axe            x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Axe\")) + NewLine() + \"  Shield                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Shield\")) + NewLine() + NewLine() + \"MATERIALS\" + NewLine() + \"  Gold Bar              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + NewLine() + \"  Stone Brick           x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + NewLine() + \"  Wood Log              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + NewLine() + NewLine() + \"F  Switch weapon     Q  Close\""
@@ -201,7 +200,7 @@ for each "Skeleton_Minion"
 
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
-if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
+if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 @instruction inverted=true
 if MousePointerLock::isPointerLocked
 do MousePointerLock::RequestPointerLock
