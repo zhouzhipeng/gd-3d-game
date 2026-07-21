@@ -1,0 +1,4 @@
+@event
+if Inventories::IsLimitedItemCapacity inventory_name="InventoryName" item_name="ItemName"
+if Inventories::ItemCount comparison_sign=">=" value="Inventories::ItemCapacity(ItemName, InventoryName)" inventory_name="InventoryName" item_name="ItemName"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

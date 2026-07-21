@@ -1,5 +1,99 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
 
+@group "Knight backpack" source="" creationTime=0 color=[255,180,72] parameters=[]
+@event aiGeneratedEventId="initialize-knight-backpack"
+if SceneJustBegins
+do SetBooleanVariable variable="BackpackOpen" modification_sign="False"
+do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Sword\""
+do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Axe\""
+do Inventories::SetItemCount modification_sign="=" value="1" inventory_name="\"KnightBackpack\"" item_name="\"Shield\""
+do Inventories::SetItemCount modification_sign="=" value="0" inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
+do Inventories::SetItemCount modification_sign="=" value="0" inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
+do Inventories::SetItemCount modification_sign="=" value="0" inventory_name="\"KnightBackpack\"" item_name="\"Wood\""
+do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name="\"Sword\"" equip="yes"
+do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name="\"Axe\"" equip="no"
+do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name="\"Shield\"" equip="yes"
+> @event aiGeneratedEventId="hide-backpack-window-on-start"
+> for each "BackpackWindow"
+>> do Hide object="BackpackWindow"
+
+> @event aiGeneratedEventId="hide-pickup-toast-on-start"
+> for each "PickupToast"
+>> do Hide object="PickupToast"
+
+@event aiGeneratedEventId="toggle-knight-backpack-with-q"
+if KeyFromTextJustPressed key_to_check="\"q\""
+> @event aiGeneratedEventId="open-knight-backpack"
+> if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
+> do SetBooleanVariable variable="BackpackOpen" modification_sign="True"
+>> @event aiGeneratedEventId="show-knight-backpack-window"
+>> for each "BackpackWindow"
+>>> do Show object="BackpackWindow"
+
+>> @event aiGeneratedEventId="release-mouse-for-backpack"
+>> if MousePointerLock::isPointerLocked
+>> do MousePointerLock::ExitPointerLock
+
+>> @event aiGeneratedEventId="pause-knight-backpack-movement"
+>> for each "Knight"
+>>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
+
+> @event aiGeneratedEventId="close-knight-backpack"
+> else
+> do SetBooleanVariable variable="BackpackOpen" modification_sign="False"
+>> @event aiGeneratedEventId="hide-knight-backpack-window"
+>> for each "BackpackWindow"
+>>> do Hide object="BackpackWindow"
+
+>> @event aiGeneratedEventId="resume-knight-backpack-movement"
+>> for each "Knight"
+>>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="yes"
+
+@event aiGeneratedEventId="refresh-knight-backpack-content"
+if BooleanVariable variable="BackpackOpen" check_if_the_value_is="True"
+> @event aiGeneratedEventId="write-knight-backpack-counts"
+> for each "BackpackContent"
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackContent" behavior="Text" modification_sign="=" text="\"WEAPONS\" + NewLine() + \"  Sword                 x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Sword\")) + NewLine() + \"  Battle Axe            x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Axe\")) + NewLine() + \"  Shield                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Shield\")) + NewLine() + NewLine() + \"MATERIALS\" + NewLine() + \"  Gold Bar              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + NewLine() + \"  Stone Brick           x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + NewLine() + \"  Wood Log              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + NewLine() + NewLine() + \"F  Switch weapon     Q  Close\""
+
+@event aiGeneratedEventId="collect-gold-for-knight-backpack"
+for each "GoldPickup"
+> if Collision3D::AreWithinDistance object="Knight" other_object="GoldPickup" distance="85" use_custom_center="yes"
+> do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
+> do ResetTimer timer_name="\"BackpackPickupToast\""
+> do Delete object="GoldPickup"
+>> @event aiGeneratedEventId="show-gold-pickup-toast"
+>> for each "PickupToast"
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"+ GOLD BAR COLLECTED\""
+>>> do Show object="PickupToast"
+
+@event aiGeneratedEventId="collect-stone-for-knight-backpack"
+for each "StonePickup"
+> if Collision3D::AreWithinDistance object="Knight" other_object="StonePickup" distance="85" use_custom_center="yes"
+> do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
+> do ResetTimer timer_name="\"BackpackPickupToast\""
+> do Delete object="StonePickup"
+>> @event aiGeneratedEventId="show-stone-pickup-toast"
+>> for each "PickupToast"
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"+ STONE BRICK COLLECTED\""
+>>> do Show object="PickupToast"
+
+@event aiGeneratedEventId="collect-wood-for-knight-backpack"
+for each "WoodPickup"
+> if Collision3D::AreWithinDistance object="Knight" other_object="WoodPickup" distance="85" use_custom_center="yes"
+> do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Wood\""
+> do ResetTimer timer_name="\"BackpackPickupToast\""
+> do Delete object="WoodPickup"
+>> @event aiGeneratedEventId="show-wood-pickup-toast"
+>> for each "PickupToast"
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"+ WOOD LOG COLLECTED\""
+>>> do Show object="PickupToast"
+
+@event aiGeneratedEventId="hide-knight-backpack-pickup-toast"
+if CompareTimer timer_name="\"BackpackPickupToast\"" comparison_sign=">" time_in_seconds="2"
+> for each "PickupToast"
+>> do Hide object="PickupToast"
+@end group
+
 @event aiGeneratedEventId="initialize-physics3d-collision-filters"
 if SceneJustBegins
 > @event aiGeneratedEventId="for-each-physics3d-world-body"
@@ -107,6 +201,7 @@ for each "Skeleton_Minion"
 
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
+if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
 @instruction inverted=true
 if MousePointerLock::isPointerLocked
 do MousePointerLock::RequestPointerLock

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 15
+assetStoreId = ""
+bold = true
+italic = false
+name = "BackpackTitle"
+persistentUuid = "7d487e77-b464-4679-b085-b95f8aa93c44"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "KNIGHT'S BACKPACK"
+font = ""
+textAlignment = "center"
+characterSize = 36
+folder = [ ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "49;26;12"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "KNIGHT'S BACKPACK"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 36
+lineHeight = 0
+color = "255;214;126"

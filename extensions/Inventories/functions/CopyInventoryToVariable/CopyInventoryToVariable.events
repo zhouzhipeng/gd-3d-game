@@ -1,0 +1,2 @@
+@event
+do CopyVariableToArgument2 parameter_name="\"SceneVariable\"" variable="Inventories[InventoryName]"

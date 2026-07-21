@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 5
+description = "the maximum number of the specified item that can be added in the inventory. By default, the number allowed for each item is unlimited."
+fullName = "Item capacity"
+functionType = "ExpressionAndCondition"
+name = "ItemCapacity"
+sentence = "_PARAM2_ capacity in inventory _PARAM1_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/ItemCapacity/ItemCapacity.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

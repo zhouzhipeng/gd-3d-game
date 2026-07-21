@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 21
+assetStoreId = ""
+name = "WoodPickup"
+persistentUuid = "c4d36c38-2eef-46c0-9cf7-6f67df5ea358"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
+depth = 24
+height = 24
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/Wood_Log_A.glb"
+originLocation = "ObjectCenter"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 64
+sharedAnimationModelResources = [ ]
+animations = [ ]

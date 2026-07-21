@@ -1,0 +1,8 @@
+@event
+@instruction inverted=true
+if Inventories::IsLimitedItemCapacity inventory_name="InventoryName" item_name="ItemName"
+do SetNumberVariable variable="Inventories[InventoryName][ItemName].Count" modification_sign="=" value="max(0, Value)"
+
+@event
+if Inventories::IsLimitedItemCapacity inventory_name="InventoryName" item_name="ItemName"
+do SetNumberVariable variable="Inventories[InventoryName][ItemName].Count" modification_sign="=" value="clamp(0, Inventories::ItemCapacity(InventoryName, ItemName), Value)"

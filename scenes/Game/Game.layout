@@ -36,6 +36,17 @@ cameras = [{ size = "default", viewport = "default" }]
 id = "game"
 name = "Game"
 
+[[layers]]
+id = "backpack-ui"
+name = "Backpack UI"
+rendering = "2d"
+camera_behavior = "top-left-anchored-if-never-moved"
+visible = true
+locked = true
+lighting = false
+follow_base_camera = false
+cameras = [{ size = "default", viewport = "default" }]
+
 [[effects]]
 layer = "3d-terrain"
 name = "Terrain Ambient Light"
@@ -609,3 +620,73 @@ at = [0, 0, -100000]
 size = [58.489842, 12.353435]
 depth = 81.37901
 opacity = 0
+
+[[instances]]
+id = "8f2b8b89-4156-4aaa-a28a-d1292060b538"
+object = "BackpackPanel"
+layer = "backpack-ui"
+at = [330, 90]
+z_order = 100
+size = [620, 530]
+opacity = 235
+locked = true
+
+[[instances]]
+id = "f724ed43-adb5-4649-9d3b-984ebe3a40bb"
+object = "BackpackTitle"
+layer = "backpack-ui"
+at = [380, 125]
+z_order = 101
+size = [520, 48]
+locked = true
+
+[[instances]]
+id = "fc409238-1f15-4eb3-b206-49ab0dd60e2c"
+object = "BackpackContent"
+layer = "backpack-ui"
+at = [405, 200]
+z_order = 101
+size = [470, 370]
+locked = true
+
+[[instances]]
+id = "961e862c-11db-49d6-99f4-62045f8066a7"
+object = "BackpackPrompt"
+layer = "backpack-ui"
+at = [32, 28]
+z_order = 110
+size = [220, 28]
+locked = true
+
+[[instances]]
+id = "36bfe5c5-a3df-467d-8209-2f67e149f6ad"
+object = "PickupToast"
+layer = "backpack-ui"
+at = [440, 655]
+z_order = 110
+size = [400, 30]
+locked = true
+
+[[instances]]
+id = "f743e76d-8f7a-4a61-a05a-70fea6a67d32"
+object = "GoldPickup"
+layer = "3d-terrain"
+at = [740, 780, -125]
+rotation = 20
+locked = true
+
+[[instances]]
+id = "4f64f8fd-736d-4139-9724-ab6a6913288a"
+object = "StonePickup"
+layer = "3d-terrain"
+at = [640, 780, -125]
+rotation = -15
+locked = true
+
+[[instances]]
+id = "997974d0-5d9b-448b-9cc8-27cfd2866750"
+object = "WoodPickup"
+layer = "3d-terrain"
+at = [540, 780, -125]
+rotation = 30
+locked = true

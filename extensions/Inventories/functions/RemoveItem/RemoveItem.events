@@ -1,0 +1,2 @@
+@event
+do Inventories::SetItemCount modification_sign="-" value="1" inventory_name="InventoryName" item_name="ItemName"

@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 1
+description = "Remove an item from an inventory."
+fullName = "Remove an item"
+functionType = "Action"
+name = "RemoveItem"
+sentence = "Remove a _PARAM2_ from inventory _PARAM1_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/RemoveItem/RemoveItem.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

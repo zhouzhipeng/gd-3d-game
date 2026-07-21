@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 18
+assetStoreId = ""
+bold = true
+italic = false
+name = "PickupToast"
+persistentUuid = "4f777ee3-2c75-421b-a6d3-2857e0994422"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "+ ITEM COLLECTED"
+font = ""
+textAlignment = "center"
+characterSize = 22
+folder = [ ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "+ ITEM COLLECTED"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 22
+lineHeight = 0
+color = "255;214;126"

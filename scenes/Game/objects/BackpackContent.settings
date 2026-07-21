@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 16
+assetStoreId = ""
+bold = false
+italic = false
+name = "BackpackContent"
+persistentUuid = "28615651-f809-4db1-be53-37ea688aaf83"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "WEAPONS\n\nMATERIALS"
+font = ""
+textAlignment = "left"
+characterSize = 24
+folder = [ ]
+
+[color]
+b = 235
+g = 241
+r = 245
+
+[content]
+bold = false
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 160
+smoothed = true
+underlined = false
+text = "WEAPONS\n\nMATERIALS"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 24
+lineHeight = 34
+color = "245;241;235"

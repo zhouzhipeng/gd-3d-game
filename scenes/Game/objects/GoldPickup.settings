@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 19
+assetStoreId = ""
+name = "GoldPickup"
+persistentUuid = "aba61d01-fc6d-43cc-a92a-dfd145363c8f"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
+depth = 18
+height = 18
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/Gold_Bar.glb"
+originLocation = "ObjectCenter"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 48
+sharedAnimationModelResources = [ ]
+animations = [ ]

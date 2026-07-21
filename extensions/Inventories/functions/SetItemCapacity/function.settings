@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+fullName = "Item capacity"
+functionType = "ActionWithOperator"
+getterName = "ItemCapacity"
+name = "SetItemCapacity"
+sentence = ""
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/SetItemCapacity/SetItemCapacity.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "Parameter"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "Parameter2"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

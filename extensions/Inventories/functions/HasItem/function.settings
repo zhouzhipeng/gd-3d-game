@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 4
+description = "Check if at least one of the specified items is in the inventory."
+fullName = "Has an item"
+functionType = "Condition"
+name = "HasItem"
+sentence = "Inventory _PARAM1_ contains a _PARAM2_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/HasItem/HasItem.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

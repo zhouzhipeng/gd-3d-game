@@ -1,0 +1,3 @@
+@event
+if Inventories::ItemCount comparison_sign=">" value="0" inventory_name="InventoryName" item_name="ItemName"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

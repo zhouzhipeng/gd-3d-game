@@ -1,0 +1,3 @@
+@event
+if BooleanVariable variable="Inventories[InventoryName][ItemName].IsEquipped" check_if_the_value_is=""
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

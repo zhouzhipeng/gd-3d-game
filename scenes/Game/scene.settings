@@ -9,7 +9,11 @@ name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
-variables = [ ]
+
+[[variables]]
+name = "BackpackOpen"
+type = "boolean"
+value = false
 
 [[behaviorsSharedData]]
 name = "Physics3D"
@@ -20,6 +24,16 @@ gravityZ = -9.8
 worldScale = 100
 
 [objectGroups]
+BackpackWindow = [
+"BackpackPanel",
+"BackpackTitle",
+"BackpackContent"
+]
+Collectibles = [
+"GoldPickup",
+"StonePickup",
+"WoodPickup"
+]
 Physics3DWorldBodies = [
 "BuildingCottage",
 "BuildingCastle",

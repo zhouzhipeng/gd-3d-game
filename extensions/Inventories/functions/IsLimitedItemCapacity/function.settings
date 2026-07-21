@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 7
+description = "Check if a limited amount of an object is allowed by the inventory. Item capacity is unlimited by default."
+fullName = "Limited item capacity"
+functionType = "Condition"
+name = "IsLimitedItemCapacity"
+sentence = "Allow a limited count of _PARAM2_ in inventory _PARAM1_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/IsLimitedItemCapacity/IsLimitedItemCapacity.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

@@ -1,0 +1,30 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 14
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "BackpackPanel"
+persistentUuid = "994f1b9a-6558-4151-9d30-7bf024ae748c"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[[animations]]
+name = "Panel"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+metadata = ""
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "NewSprite"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

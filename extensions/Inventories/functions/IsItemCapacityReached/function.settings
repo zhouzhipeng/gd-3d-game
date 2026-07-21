@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 9
+description = "Check if an item has reached its maximum number allowed in the inventory."
+fullName = "Item full"
+functionType = "Condition"
+name = "IsItemCapacityReached"
+sentence = "Inventory _PARAM1_ is full of _PARAM2_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/IsItemCapacityReached/IsItemCapacityReached.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

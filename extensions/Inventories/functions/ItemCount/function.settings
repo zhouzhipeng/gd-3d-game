@@ -1,0 +1,26 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 2
+description = "the number of an item in an inventory."
+fullName = "Item count"
+functionType = "ExpressionAndCondition"
+name = "ItemCount"
+sentence = "the count of _PARAM2_ in _PARAM1_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/ItemCount/ItemCount.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

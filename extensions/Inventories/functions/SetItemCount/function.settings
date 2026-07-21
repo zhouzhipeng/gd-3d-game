@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 3
+fullName = ""
+functionType = "ActionWithOperator"
+getterName = "ItemCount"
+name = "SetItemCount"
+sentence = ""
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/SetItemCount/SetItemCount.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

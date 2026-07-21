@@ -1,0 +1,8 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="IsCapacityLimited" check_if_the_value_is="True"
+do SetBooleanVariable variable="Inventories[InventoryName][ItemName].IsCapacityLimited" modification_sign="False"
+
+@event
+if BooleanVariable variable="IsCapacityLimited" check_if_the_value_is="True"
+do SetBooleanVariable variable="Inventories[InventoryName][ItemName].IsCapacityLimited" modification_sign="True"

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 17
+assetStoreId = ""
+bold = true
+italic = false
+name = "BackpackPrompt"
+persistentUuid = "0a1ae390-b0aa-45d0-a805-e3a3e1822c8c"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "[ Q ]  BACKPACK"
+font = ""
+textAlignment = "left"
+characterSize = 20
+folder = [ ]
+
+[color]
+b = 255
+g = 255
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "[ Q ]  BACKPACK"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "255;255;255"

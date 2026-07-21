@@ -1,0 +1,28 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 11
+description = "Mark an item as being equipped. If the item count is 0, it won't be marked as equipped."
+fullName = "Equip an item"
+functionType = "Action"
+name = "SetIsItemEquipped"
+sentence = "Set _PARAM2_ as equipped in inventory _PARAM1_: _PARAM3_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/SetIsItemEquipped/SetIsItemEquipped.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"
+
+[[parameters]]
+description = "Equip"
+name = "IsItemEquipped"
+type = "yesorno"

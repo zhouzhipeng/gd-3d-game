@@ -1,0 +1,24 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 15
+description = "Load the content of the inventory from a variable."
+fullName = "Load an inventory from a variable"
+functionType = "Action"
+group = "Variable"
+name = "CopyToVariableToInventory2"
+sentence = "Load inventory _PARAM1_ from variable _PARAM2_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/CopyToVariableToInventory2/CopyToVariableToInventory2.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Variable"
+name = "Variable"
+supplementaryInformation = "scene"
+type = "variable"

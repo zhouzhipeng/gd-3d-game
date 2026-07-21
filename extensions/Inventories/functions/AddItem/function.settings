@@ -1,0 +1,23 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 0
+description = "Add an item in an inventory."
+fullName = "Add an item"
+functionType = "Action"
+name = "AddItem"
+sentence = "Add a _PARAM2_ to inventory _PARAM1_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/AddItem/AddItem.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Item name"
+name = "ItemName"
+supplementaryInformation = "sceneInventoryItem"
+type = "identifier"

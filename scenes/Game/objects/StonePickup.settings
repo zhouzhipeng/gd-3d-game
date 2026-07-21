@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 20
+assetStoreId = ""
+name = "StonePickup"
+persistentUuid = "5144263d-2d1e-4c39-9e6e-d4a7091741d2"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
+depth = 24
+height = 26
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/Stone_Brick.glb"
+originLocation = "ObjectCenter"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 42
+sharedAnimationModelResources = [ ]
+animations = [ ]

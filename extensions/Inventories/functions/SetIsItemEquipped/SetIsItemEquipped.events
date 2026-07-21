@@ -1,0 +1,8 @@
+@event
+@instruction inverted=true
+if BooleanVariable variable="IsItemEquipped" check_if_the_value_is="True"
+do SetBooleanVariable variable="Inventories[InventoryName][ItemName].IsEquipped" modification_sign="False"
+
+@event
+if BooleanVariable variable="IsItemEquipped" check_if_the_value_is="True"
+do SetBooleanVariable variable="Inventories[InventoryName][ItemName].IsEquipped" modification_sign="True"

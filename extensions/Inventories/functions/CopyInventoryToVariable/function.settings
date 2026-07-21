@@ -1,0 +1,25 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 12
+description = "Save all the items of the inventory in a scene variable, so that it can be restored later."
+fullName = "Save an inventory in a scene variable"
+functionType = "Action"
+group = "Variable"
+name = "CopyInventoryToVariable"
+private = true
+sentence = "Save inventory _PARAM1_ in variable _PARAM2_"
+extension = "Inventories"
+events = "game://extensions/Inventories/functions/CopyInventoryToVariable/CopyInventoryToVariable.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Inventory name"
+name = "InventoryName"
+supplementaryInformation = "sceneInventory"
+type = "identifier"
+
+[[parameters]]
+description = "Scene variable"
+name = "SceneVariable"
+supplementaryInformation = "scene"
+type = "scenevar"
