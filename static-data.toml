@@ -8,8 +8,8 @@ en = "KNIGHT'S BACKPACK"
 zh = "骑士背包"
 
 [localization.backpack.prompt]
-en = "[ Q ]  BACKPACK     [ L ]  中文"
-zh = "[ Q ]  背包          [ L ]  EN"
+en = "[Q] BAG  [L] 中文"
+zh = "[Q] 背包  [L] EN"
 
 [localization.backpack.sections.weapons]
 en = "WEAPONS"
