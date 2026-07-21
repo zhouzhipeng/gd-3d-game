@@ -1,64 +1,64 @@
 [i18n]
 defaultLocale = "en"
-alternateLocale = "zh"
-supportedLocales = ["en", "zh"]
+alternateLocale = "cn"
+supportedLocales = ["en", "cn"]
 
-[localization.backpack.title]
+[localization.".backpack.title"]
 en = "KNIGHT'S BACKPACK"
-zh = "骑士背包"
+cn = "骑士背包"
 
-[localization.backpack.prompt]
+[localization.".backpack.prompt"]
 en = "[Q] BAG  [L] 中文"
-zh = "[Q] 背包  [L] EN"
+cn = "[Q] 背包  [L] EN"
 
-[localization.backpack.sections.weapons]
+[localization.".backpack.sections.weapons"]
 en = "WEAPONS"
-zh = "武器"
+cn = "武器"
 
-[localization.backpack.sections.materials]
+[localization.".backpack.sections.materials"]
 en = "MATERIALS"
-zh = "材料"
+cn = "材料"
 
-[localization.backpack.items.sword]
+[localization.".backpack.items.sword"]
 en = "Sword"
-zh = "长剑"
+cn = "长剑"
 
-[localization.backpack.items.axe]
+[localization.".backpack.items.axe"]
 en = "Battle Axe"
-zh = "战斧"
+cn = "战斧"
 
-[localization.backpack.items.shield]
+[localization.".backpack.items.shield"]
 en = "Shield"
-zh = "盾牌"
+cn = "盾牌"
 
-[localization.backpack.items.gold]
+[localization.".backpack.items.gold"]
 en = "Gold Bar"
-zh = "金条"
+cn = "金条"
 
-[localization.backpack.items.stone]
+[localization.".backpack.items.stone"]
 en = "Stone Brick"
-zh = "石砖"
+cn = "石砖"
 
-[localization.backpack.items.wood]
+[localization.".backpack.items.wood"]
 en = "Wood Log"
-zh = "木材"
+cn = "木材"
 
-[localization.backpack.controls]
+[localization.".backpack.controls"]
 en = "F  Switch weapon     Q  Close"
-zh = "F  切换武器          Q  关闭"
+cn = "F  切换武器          Q  关闭"
 
-[localization.backpack.toasts.generic]
+[localization.".backpack.toasts.generic"]
 en = "+ ITEM COLLECTED"
-zh = "+ 获得物品"
+cn = "+ 获得物品"
 
-[localization.backpack.toasts.gold]
+[localization.".backpack.toasts.gold"]
 en = "+ GOLD BAR COLLECTED"
-zh = "+ 获得金条"
+cn = "+ 获得金条"
 
-[localization.backpack.toasts.stone]
+[localization.".backpack.toasts.stone"]
 en = "+ STONE BRICK COLLECTED"
-zh = "+ 获得石砖"
+cn = "+ 获得石砖"
 
-[localization.backpack.toasts.wood]
+[localization.".backpack.toasts.wood"]
 en = "+ WOOD LOG COLLECTED"
-zh = "+ 获得木材"
+cn = "+ 获得木材"
