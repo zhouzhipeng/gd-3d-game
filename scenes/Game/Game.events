@@ -182,6 +182,7 @@ if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 > for each "QuestGiver"
 >> if Collision3D::AreWithinDistance object="Knight" other_object="QuestGiver" distance="260" use_custom_center="yes"
 >> do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="1"
+>> do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
 >>> @event aiGeneratedEventId="release-mouse-for-dialogue"
 >>> if MousePointerLock::isPointerLocked
 >>> do MousePointerLock::ExitPointerLock
