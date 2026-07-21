@@ -40,25 +40,49 @@ name = "Game"
 layer = "3d-terrain"
 name = "Terrain Ambient Light"
 type = "Scene3D::AmbientLight"
-params = { color = "255;255;255", intensity = 0.9 }
+color = "255;255;255"
+intensity = 0.9
 
 [[effect]]
 layer = "3d-terrain"
 name = "Terrain Sun"
 type = "Scene3D::DirectionalLight"
-params = { color = "255;244;220", distanceFromCamera = 1500, elevation = 55, frustumSize = 4000, intensity = 0.65, isCastingShadow = true, minimumShadowBias = 0.001, rotation = 315, shadowQuality = "medium", top = "Z+" }
+color = "255;244;220"
+distanceFromCamera = 1500
+elevation = 55
+frustumSize = 4000
+intensity = 0.65
+isCastingShadow = true
+minimumShadowBias = 0.001
+rotation = 315
+shadowQuality = "medium"
+top = "Z+"
 
 [[effect]]
 layer = "game"
 name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
-params = { elevation = 40, groundColor = "127;127;127", intensity = 0.33, rotation = 300, skyColor = "255;255;255", top = "Z+" }
+elevation = 40
+groundColor = "127;127;127"
+intensity = 0.33
+rotation = 300
+skyColor = "255;255;255"
+top = "Z+"
 
 [[effect]]
 layer = "game"
 name = "3D Sun Light"
 type = "Scene3D::DirectionalLight"
-params = { color = "255;255;255", distanceFromCamera = 1500, elevation = 40, frustumSize = 4000, intensity = 0.75, isCastingShadow = true, minimumShadowBias = 0, rotation = 300, shadowQuality = "medium", top = "Z+" }
+color = "255;255;255"
+distanceFromCamera = 1500
+elevation = 40
+frustumSize = 4000
+intensity = 0.75
+isCastingShadow = true
+minimumShadowBias = 0
+rotation = 300
+shadowQuality = "medium"
+top = "Z+"
 
 [[instance]]
 id = "3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
