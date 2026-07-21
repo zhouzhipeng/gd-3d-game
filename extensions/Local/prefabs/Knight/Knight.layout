@@ -48,6 +48,15 @@ size = [58.489842, 12.353435]
 depth = 81.37901
 
 [[instance]]
+id = "164d9eea-d953-47c4-b65d-d2ece328fc9b"
+object = "Shield3D"
+layer = "base"
+at = [0, 0]
+rotation = -90
+size = [47.518686, 21.695641]
+depth = 48.930555
+
+[[instance]]
 id = "be23f034-eae7-4ebd-be8b-432d0bab1de9"
 object = "SwordHitbox"
 layer = "base"

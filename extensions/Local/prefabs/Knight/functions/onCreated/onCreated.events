@@ -18,6 +18,14 @@ do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="Axe3D" behavi
 do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="Axe3D" behavior="Object3D" x_offset="0" y_offset="0" z_offset="0"
 do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="Axe3D" behavior="Object3D" x_rotation_offset="0" y_rotation_offset="0" z_rotation_offset="0"
 
+@event aiGeneratedEventId="attach-knight-shield-to-left-hand"
+if Scene3D::Model3DObject::HasBone parameter_3d_model="Knight3D" bone_name="\"handslot.l\""
+@instruction inverted=true
+if Scene3D::Base3DBehavior::IsAttachedToModelBone parameter_3d_object="Shield3D" behavior="Object3D"
+do Scene3D::Base3DBehavior::AttachToModelBone parameter_3d_object="Shield3D" behavior="Object3D" target_3d_model="Knight3D" bone_name="\"handslot.l\""
+do Scene3D::Base3DBehavior::SetBoneAttachmentPositionOffset parameter_3d_object="Shield3D" behavior="Object3D" x_offset="0" y_offset="0" z_offset="0"
+do Scene3D::Base3DBehavior::SetBoneAttachmentRotationOffset parameter_3d_object="Shield3D" behavior="Object3D" x_rotation_offset="0" y_rotation_offset="0" z_rotation_offset="0"
+
 @event aiGeneratedEventId="initialize-knight-axe-hidden"
 if Visible object="Axe3D"
 do Hide object="Axe3D"

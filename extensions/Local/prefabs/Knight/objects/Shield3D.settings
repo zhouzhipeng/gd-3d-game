@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 5
+assetStoreId = ""
+name = "Shield3D"
+persistentUuid = "4090f143-dacc-43f8-a301-199701963eda"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ ]
+
+[content]
+centerLocation = "ModelOrigin"
+crossfadeDuration = 0.1
+depth = 48.930555
+height = 21.695641
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/shield_spikes.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 47.518686
+sharedAnimationModelResources = [ ]
+animations = [ ]
