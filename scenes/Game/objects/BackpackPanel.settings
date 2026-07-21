@@ -9,8 +9,16 @@ type = "Sprite"
 updateIfNotVisible = false
 variables = [ ]
 effects = [ ]
-behaviors = [ ]
 folder = [ ]
+
+[[behaviors]]
+name = "Anchor"
+type = "AnchorBehavior::AnchorBehavior"
+bottomEdgeAnchor = "None"
+leftEdgeAnchor = "WindowLeft"
+relativeToOriginalWindowSize = true
+rightEdgeAnchor = "None"
+topEdgeAnchor = "WindowTop"
 
 [[animations]]
 name = "Panel"

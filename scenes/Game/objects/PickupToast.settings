@@ -11,12 +11,20 @@ type = "TextObject::Text"
 underlined = false
 effects = [ ]
 variables = [ ]
-behaviors = [ ]
 string = "+ ITEM COLLECTED"
 font = ""
 textAlignment = "center"
 characterSize = 22
 folder = [ ]
+
+[[behaviors]]
+name = "Anchor"
+type = "AnchorBehavior::AnchorBehavior"
+bottomEdgeAnchor = "None"
+leftEdgeAnchor = "WindowLeft"
+relativeToOriginalWindowSize = true
+rightEdgeAnchor = "None"
+topEdgeAnchor = "WindowTop"
 
 [color]
 b = 126
