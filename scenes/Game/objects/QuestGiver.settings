@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 22
+assetStoreId = ""
+name = "QuestGiver"
+persistentUuid = "52f45f76-2560-40c5-9cb8-cdd890ecdba0"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Quest" ]
+
+[content]
+centerLocation = "CenteredOnZ"
+crossfadeDuration = 0.1
+depth = 110
+height = 100
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/models/Mage.glb"
+originLocation = "ModelOrigin"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 100
+sharedAnimationModelResources = [ ]
+animations = [ ]

@@ -30,6 +30,26 @@ name = "LocaleDirty"
 type = "number"
 value = 1
 
+[[variables]]
+name = "DialogueOpen"
+type = "number"
+value = 0
+
+[[variables]]
+name = "QuestState"
+type = "number"
+value = 0
+
+[[variables]]
+name = "QuestTarget"
+type = "number"
+value = 1
+
+[[variables]]
+name = "QuestNoticeKind"
+type = "number"
+value = 0
+
 [[behaviorsSharedData]]
 name = "Physics3D"
 type = "Physics3D::Physics3DBehavior"
@@ -48,6 +68,17 @@ Collectibles = [
 "GoldPickup",
 "StonePickup",
 "WoodPickup"
+]
+DialogueWindow = [
+"DialoguePanel",
+"DialogueSpeaker",
+"DialogueText",
+"DialogueChoices"
+]
+QuestTrackerWindow = [
+"QuestTrackerPanel",
+"QuestTrackerTitle",
+"QuestTrackerText"
 ]
 Physics3DWorldBodies = [
 "BuildingCottage",

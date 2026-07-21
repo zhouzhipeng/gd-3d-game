@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 31
+assetStoreId = ""
+bold = true
+italic = false
+name = "QuestNotice"
+persistentUuid = "d6523c8f-0696-4332-9580-a06954444a3f"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['quest.toast.accepted'].en}}"
+font = ""
+textAlignment = "center"
+characterSize = 20
+folder = [ "Quest", "Quest UI" ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "49;26;12"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 200
+smoothed = true
+underlined = false
+text = "{{localization['quest.toast.accepted'].en}}"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "255;214;126"

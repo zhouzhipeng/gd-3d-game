@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 26
+assetStoreId = ""
+bold = true
+italic = false
+name = "DialogueChoices"
+persistentUuid = "75c00074-fdcd-4f95-83cb-627d629813a4"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['dialogue.offerChoices'].en}}"
+font = ""
+textAlignment = "center"
+characterSize = 20
+folder = [ "Quest", "Dialogue UI" ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "49;26;12"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "{{localization['dialogue.offerChoices'].en}}"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "255;214;126"

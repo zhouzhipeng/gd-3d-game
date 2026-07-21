@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 27
+assetStoreId = ""
+bold = true
+italic = false
+name = "QuestPrompt"
+persistentUuid = "9efec5ec-9d1e-49f0-b206-418f158fc352"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['dialogue.prompt'].en}}"
+font = ""
+textAlignment = "center"
+characterSize = 20
+folder = [ "Quest", "Quest UI" ]
+
+[color]
+b = 255
+g = 255
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 4
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 200
+smoothed = true
+underlined = false
+text = "{{localization['dialogue.prompt'].en}}"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "255;255;255"

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 25
+assetStoreId = ""
+bold = false
+italic = false
+name = "DialogueText"
+persistentUuid = "1b105b92-94ea-422f-bc2f-209fafb8d4bd"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['dialogue.offer'].en}}"
+font = ""
+textAlignment = "left"
+characterSize = 22
+folder = [ "Quest", "Dialogue UI" ]
+
+[color]
+b = 235
+g = 241
+r = 245
+
+[content]
+bold = false
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 160
+smoothed = true
+underlined = false
+text = "{{localization['dialogue.offer'].en}}"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 22
+lineHeight = 30
+color = "245;241;235"

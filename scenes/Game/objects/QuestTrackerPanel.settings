@@ -1,0 +1,30 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 28
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "QuestTrackerPanel"
+persistentUuid = "b6c5395b-ec98-4001-9dbc-4f815860f0b6"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Quest", "Quest UI" ]
+
+[[animations]]
+name = "Panel"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+metadata = ""
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "KnightBackpackPanel"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

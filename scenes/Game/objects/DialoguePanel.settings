@@ -1,0 +1,30 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 23
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "DialoguePanel"
+persistentUuid = "843840a1-e65c-4ffa-acb6-b9a32a8ad3b4"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Quest", "Dialogue UI" ]
+
+[[animations]]
+name = "Panel"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+metadata = ""
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "KnightBackpackPanel"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

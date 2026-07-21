@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 29
+assetStoreId = ""
+bold = true
+italic = false
+name = "QuestTrackerTitle"
+persistentUuid = "3eebe80f-16dd-4e01-b1a9-fe3639ac08cc"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['quest.title'].en}}"
+font = ""
+textAlignment = "center"
+characterSize = 22
+folder = [ "Quest", "Quest UI" ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "49;26;12"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "{{localization['quest.title'].en}}"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 22
+lineHeight = 0
+color = "255;214;126"

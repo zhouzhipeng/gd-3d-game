@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 24
+assetStoreId = ""
+bold = true
+italic = false
+name = "DialogueSpeaker"
+persistentUuid = "10b39de0-253b-4c5c-b2c4-f3114092ac90"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['dialogue.npc.name'].en}}"
+font = ""
+textAlignment = "center"
+characterSize = 28
+folder = [ "Quest", "Dialogue UI" ]
+
+[color]
+b = 126
+g = 214
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "49;26;12"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 3
+shadowColor = "0;0;0"
+shadowDistance = 3
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "{{localization['dialogue.npc.name'].en}}"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 28
+lineHeight = 0
+color = "255;214;126"

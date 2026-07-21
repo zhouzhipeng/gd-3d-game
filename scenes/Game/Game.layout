@@ -47,6 +47,17 @@ lighting = false
 follow_base_camera = false
 cameras = [{ size = "default", viewport = "default" }]
 
+[[layers]]
+id = "quest-ui"
+name = "Quest UI"
+rendering = "2d"
+camera_behavior = "top-left-anchored-if-never-moved"
+visible = true
+locked = true
+lighting = false
+follow_base_camera = false
+cameras = [{ size = "default", viewport = "default" }]
+
 [[effects]]
 layer = "3d-terrain"
 name = "Terrain Ambient Light"
@@ -689,4 +700,95 @@ object = "WoodPickup"
 layer = "3d-terrain"
 at = [540, 780, -125]
 rotation = 30
+locked = true
+
+[[instances]]
+id = "e98f453b-2023-4115-a578-2c2a81e78844"
+object = "QuestGiver"
+layer = "3d-terrain"
+at = [650, 896, -165.864695381]
+rotation = -90
+z_order = 2
+locked = true
+
+[[instances]]
+id = "5024f81c-6896-4219-a801-dd13ba66d3e6"
+object = "DialoguePanel"
+layer = "quest-ui"
+at = [330, 360]
+z_order = 100
+size = [620, 330]
+locked = true
+
+[[instances]]
+id = "a1632b7b-4fc5-4c04-9ca8-f1af75e2fda2"
+object = "DialogueSpeaker"
+layer = "quest-ui"
+at = [380, 390]
+z_order = 101
+size = [520, 40]
+locked = true
+
+[[instances]]
+id = "8f938945-096c-4d33-9f86-75225fdcfa1a"
+object = "DialogueText"
+layer = "quest-ui"
+at = [405, 450]
+z_order = 101
+size = [470, 120]
+locked = true
+
+[[instances]]
+id = "1c414a27-0a1b-4506-8218-458a8c1503b1"
+object = "DialogueChoices"
+layer = "quest-ui"
+at = [405, 600]
+z_order = 101
+size = [470, 48]
+locked = true
+
+[[instances]]
+id = "05a37b2f-40d8-4ce2-951e-457e35ab4935"
+object = "QuestPrompt"
+layer = "quest-ui"
+at = [390, 650]
+z_order = 120
+size = [500, 32]
+locked = true
+
+[[instances]]
+id = "cc6fbcfe-2f5b-41b9-812c-2e755db41982"
+object = "QuestTrackerPanel"
+layer = "quest-ui"
+at = [920, 70]
+z_order = 90
+size = [330, 250]
+opacity = 235
+locked = true
+
+[[instances]]
+id = "4399edb8-87a4-4355-a361-ddc8653f7736"
+object = "QuestTrackerTitle"
+layer = "quest-ui"
+at = [940, 100]
+z_order = 91
+size = [290, 36]
+locked = true
+
+[[instances]]
+id = "7d70b1f0-7cbe-4eb0-be9a-466d9e3c05fa"
+object = "QuestTrackerText"
+layer = "quest-ui"
+at = [950, 155]
+z_order = 91
+size = [270, 130]
+locked = true
+
+[[instances]]
+id = "46813e98-54d5-4aac-8b24-ac386e8b140e"
+object = "QuestNotice"
+layer = "quest-ui"
+at = [390, 610]
+z_order = 120
+size = [500, 32]
 locked = true

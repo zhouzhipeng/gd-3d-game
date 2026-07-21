@@ -43,6 +43,10 @@ cn = "石砖"
 en = "Wood Log"
 cn = "木材"
 
+[localization."backpack.items.royalSigil"]
+en = "Royal Sigil"
+cn = "皇家徽记"
+
 [localization."backpack.controls"]
 en = "F  Switch weapon     Q  Close"
 cn = "F  切换武器          Q  关闭"
@@ -62,3 +66,83 @@ cn = "+ 获得石砖"
 [localization."backpack.toasts.wood"]
 en = "+ WOOD LOG COLLECTED"
 cn = "+ 获得木材"
+
+[localization."dialogue.npc.name"]
+en = "CAPTAIN EDRIC"
+cn = "埃德里克队长"
+
+[localization."dialogue.prompt"]
+en = "[E] TALK TO CAPTAIN EDRIC"
+cn = "[E] 与埃德里克交谈"
+
+[localization."dialogue.offer"]
+en = "Knight, the village stores are empty. Bring me one Gold Bar from the old road."
+cn = "骑士，村庄的仓库已经空了。请从旧路附近带回一根金条。"
+
+[localization."dialogue.offerChoices"]
+en = "[1] Accept quest     [2] Not now"
+cn = "[1] 接受任务          [2] 暂时不要"
+
+[localization."dialogue.active"]
+en = "The Gold Bar still lies near the old road. Return when you have it."
+cn = "金条还在旧路附近。找到后回来见我。"
+
+[localization."dialogue.activeChoices"]
+en = "[SPACE] Continue     [ESC] Close"
+cn = "[空格] 继续          [ESC] 关闭"
+
+[localization."dialogue.ready"]
+en = "You found it. Hand over the Gold Bar and I will grant you the Royal Sigil."
+cn = "你找到了。交出金条，我会授予你皇家徽记。"
+
+[localization."dialogue.readyChoices"]
+en = "[1] Complete quest   [2] Later"
+cn = "[1] 完成任务          [2] 稍后"
+
+[localization."dialogue.completed"]
+en = "The Royal Sigil marks you as a trusted defender of the village."
+cn = "皇家徽记证明你是村庄值得信赖的守护者。"
+
+[localization."dialogue.completedChoices"]
+en = "[SPACE] Farewell"
+cn = "[空格] 告别"
+
+[localization."quest.title"]
+en = "THE GOLDEN OATH"
+cn = "黄金誓约"
+
+[localization."quest.status.active"]
+en = "STATUS: ACTIVE"
+cn = "状态：进行中"
+
+[localization."quest.status.ready"]
+en = "STATUS: READY TO TURN IN"
+cn = "状态：可以交付"
+
+[localization."quest.status.completed"]
+en = "STATUS: COMPLETED"
+cn = "状态：已完成"
+
+[localization."quest.objective.gold"]
+en = "Collect Gold Bars"
+cn = "收集金条"
+
+[localization."quest.objective.return"]
+en = "Return to Captain Edric"
+cn = "返回埃德里克队长处"
+
+[localization."quest.objective.completed"]
+en = "Reward earned: Royal Sigil"
+cn = "已获得奖励：皇家徽记"
+
+[localization."quest.toast.accepted"]
+en = "+ QUEST ACCEPTED: THE GOLDEN OATH"
+cn = "+ 已接受任务：黄金誓约"
+
+[localization."quest.toast.ready"]
+en = "+ OBJECTIVE COMPLETE — RETURN TO EDRIC"
+cn = "+ 目标完成——返回埃德里克处"
+
+[localization."quest.toast.completed"]
+en = "+ QUEST COMPLETE — ROYAL SIGIL EARNED"
+cn = "+ 任务完成——获得皇家徽记"

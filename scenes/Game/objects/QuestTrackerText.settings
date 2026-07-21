@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 30
+assetStoreId = ""
+bold = false
+italic = false
+name = "QuestTrackerText"
+persistentUuid = "e767db2e-d549-452a-8eec-146c3677129e"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+effects = [ ]
+variables = [ ]
+behaviors = [ ]
+string = "{{localization['quest.status.active'].en}}\n\n{{localization['quest.objective.gold'].en}}"
+font = ""
+textAlignment = "left"
+characterSize = 17
+folder = [ "Quest", "Quest UI" ]
+
+[color]
+b = 235
+g = 241
+r = 245
+
+[content]
+bold = false
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 160
+smoothed = true
+underlined = false
+text = "{{localization['quest.status.active'].en}}\n\n{{localization['quest.objective.gold'].en}}"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 17
+lineHeight = 24
+color = "245;241;235"
