@@ -15,13 +15,13 @@ window_mask = false
 selected_layer = "3D Terrain"
 mode = "embedded-game"
 
-[[layer]]
+[[layers]]
 id = "base"
 name = ""
 locked = true
 cameras = [{ size = "default", viewport = "default" }]
 
-[[layer]]
+[[layers]]
 id = "3d-terrain"
 name = "3D Terrain"
 rendering = "3d"
@@ -32,18 +32,18 @@ near = 1
 max_2d_distance = 10000
 cameras = [{ size = "default", viewport = "default" }]
 
-[[layer]]
+[[layers]]
 id = "game"
 name = "Game"
 
-[[effect]]
+[[effects]]
 layer = "3d-terrain"
 name = "Terrain Ambient Light"
 type = "Scene3D::AmbientLight"
 color = "255;255;255"
 intensity = 0.9
 
-[[effect]]
+[[effects]]
 layer = "3d-terrain"
 name = "Terrain Sun"
 type = "Scene3D::DirectionalLight"
@@ -58,7 +58,7 @@ rotation = 315
 shadowQuality = "medium"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "game"
 name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
@@ -69,7 +69,7 @@ rotation = 300
 skyColor = "255;255;255"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "game"
 name = "3D Sun Light"
 type = "Scene3D::DirectionalLight"
@@ -84,14 +84,14 @@ rotation = 300
 shadowQuality = "medium"
 top = "Z+"
 
-[[instance]]
+[[instances]]
 id = "3c56a5f8-8cb6-4b5e-92e7-65c9f079ae2a"
 object = "Terrain"
 layer = "3d-terrain"
 at = [640, 360, -487.958801213]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "a5e14cd2-3eae-4a6f-a14f-fa4e4f1b6dcc"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -101,7 +101,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "e94d77a1-2a0d-4c53-acfa-feed38df0298"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -111,7 +111,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "278237b3-c12e-4780-b26c-a2d2a5d5240f"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -121,7 +121,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "2f1cc7b8-be53-403c-b7b0-1e795229f660"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -131,7 +131,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "5537a4d6-1fa9-4a70-a19c-f005a475710c"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -141,7 +141,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "64d5bc7a-52ab-4e0a-8130-67d753699690"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -151,7 +151,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "2d8f4831-1468-48a1-8d42-5dfb971174a4"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -161,7 +161,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "fad94661-b888-457b-8080-c42c7c674ea5"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -171,7 +171,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "9db4e9e2-f4b8-46f9-9665-4ecce0cadd67"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -181,7 +181,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "f4852aa4-9044-4e71-8ee1-d5403b7ee036"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -191,7 +191,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "30a82c70-d203-485d-b8e4-8be4be1ac612"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -201,7 +201,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "79efa886-f3e9-4f23-8034-d337e29e7ef6"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -211,7 +211,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "9215f41d-3c6e-4c31-926f-82085c21a3fb"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -221,7 +221,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "19c333ff-9dbc-4601-af62-3f5f18469dd9"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -231,7 +231,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "8dfa5731-c56d-41cb-b101-c8583bf35f87"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -241,7 +241,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "1e850957-450b-4ccb-9b59-db937ac67fea"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -251,7 +251,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "5c591b99-e4f3-4e48-af57-6a7374713915"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -261,7 +261,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "80b00b68-63c0-4c22-82ad-c97853cba3cc"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -271,7 +271,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "14196861-96bf-4dc5-82a3-c906754496da"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -281,7 +281,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "f067f1dd-23a4-4e36-9956-cb1268bcb982"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -291,7 +291,7 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "a18eb934-68dc-4c6f-b871-4778111f842f"
 object = "TerrainSupportCollider"
 layer = "3d-terrain"
@@ -301,56 +301,56 @@ depth = 24
 opacity = 0
 locked = true
 
-[[instance]]
+[[instances]]
 id = "35bb0a36-39f4-41f4-b2fd-d489dc74c8cc"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470580082, 712.795281131, -167.241131856]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "eb919fcc-9051-4fd5-b14b-69d3375f3a68"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470580082, 674.254075781, -145.217623448]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "0e11ae0d-1f81-4c88-8b28-f0c8a7cb8455"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470584185, 635.712878635, -123.194082222]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "6e58c4b2-597b-421d-bca8-8c4bd6dbae87"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470584185, 597.171714307, -101.170540995]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "58e2b9d8-9433-4385-871c-f9e36d768079"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470596491, 558.630508956, -79.147032587]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "e781cb4d-a5c0-4f60-b6ac-1027ce6875a8"
 object = "LadderStep"
 layer = "3d-terrain"
 at = [729.470596491, 517.820666924, -57.123491361]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "28148c50-f2f0-4c06-9204-b581b06bf6d5"
 object = "BuildingCottage"
 layer = "3d-terrain"
 at = [1328.235294118, 759.176483715, -165.864695381]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "965fcb73-c1a9-42cf-8306-e799021c4863"
 object = "BuildingCottage"
 layer = "3d-terrain"
@@ -359,7 +359,7 @@ size = [274.605869882, 247.213625956]
 depth = 282.172263335
 locked = true
 
-[[instance]]
+[[instances]]
 id = "52c7724e-4128-44a9-bcbd-bbb88a03c174"
 object = "BuildingCottage"
 layer = "3d-terrain"
@@ -367,7 +367,7 @@ at = [2071.529359257, 772.941176471, -25.464698006]
 rotation = 8.000002499
 locked = true
 
-[[instance]]
+[[instances]]
 id = "fcd8c4d9-f12c-4134-b705-a5edad47ed30"
 object = "BuildingCottage"
 layer = "3d-terrain"
@@ -377,7 +377,7 @@ size = [260.152929362, 233.793028378]
 depth = 267.168738388
 locked = true
 
-[[instance]]
+[[instances]]
 id = "baa2ea2c-f9a0-4465-a111-cb2507642260"
 object = "BuildingCottage"
 layer = "3d-terrain"
@@ -387,21 +387,21 @@ size = [271.715290919, 244.529505946]
 depth = 279.1715846
 locked = true
 
-[[instance]]
+[[instances]]
 id = "cd18981b-57e7-424a-bf67-b2783de9d1cb"
 object = "BuildingCastle"
 layer = "3d-terrain"
 at = [-557.529385511, -644.823555666, 258.088268112]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "ffd529c7-b642-4422-9566-b00294651986"
 object = "BuildingWatchtower"
 layer = "3d-terrain"
 at = [-819.058876038, 538.941169907, -113.04260899]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "fffe7a63-2c42-4c27-bf50-32a4d1ee2798"
 object = "BuildingWatchtower"
 layer = "3d-terrain"
@@ -410,7 +410,7 @@ size = [227.769549278, 227.769532891]
 depth = 405.232942
 locked = true
 
-[[instance]]
+[[instances]]
 id = "ffca2f4d-5b45-4db4-b194-8f873bcbb704"
 object = "TreePine"
 layer = "3d-terrain"
@@ -419,14 +419,14 @@ size = [286.836268523, 282.478589563]
 depth = 470.133533941
 locked = true
 
-[[instance]]
+[[instances]]
 id = "fef6d8fa-66d4-475d-9e89-c9a6aced3f76"
 object = "TreePine"
 layer = "3d-terrain"
 at = [1507.176496842, -810, -200.276460087]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "36a1d591-e25a-4033-b3f1-1bd976b56a98"
 object = "TreePine"
 layer = "3d-terrain"
@@ -435,14 +435,14 @@ size = [311.778552742, 307.041945177]
 depth = 511.014710805
 locked = true
 
-[[instance]]
+[[instances]]
 id = "21d2cf00-a559-42eb-b4fb-a4abd197c151"
 object = "TreePine"
 layer = "3d-terrain"
 at = [1878.823529412, -810, -200.276460087]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "c57eccdf-41b5-4728-9fe4-15d787bf1766"
 object = "TreePine"
 layer = "3d-terrain"
@@ -451,7 +451,7 @@ size = [299.307410633, 294.76026737]
 depth = 490.574122373
 locked = true
 
-[[instance]]
+[[instances]]
 id = "9bd304c9-ada5-4430-bdcd-a2e23e0e0702"
 object = "TreePine"
 layer = "3d-terrain"
@@ -460,7 +460,7 @@ size = [236.951700084, 233.351878335]
 depth = 388.371180212
 locked = true
 
-[[instance]]
+[[instances]]
 id = "8b79c38c-561e-4baa-a230-d62f40dc1a4c"
 object = "TreePine"
 layer = "3d-terrain"
@@ -469,7 +469,7 @@ size = [224.480557975, 221.070200528]
 depth = 367.93059178
 locked = true
 
-[[instance]]
+[[instances]]
 id = "0d28944c-a6b9-4389-8141-2d8101c1957b"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -478,14 +478,14 @@ size = [243.313967649, 160.176526266]
 depth = 281.144130118
 locked = true
 
-[[instance]]
+[[instances]]
 id = "81eb52d3-39a8-483d-86a2-96c56710485d"
 object = "TreeBroad"
 layer = "3d-terrain"
 at = [48.117620805, -603.529411765, 47.48827205]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "cf11a6a6-a2e8-4608-a603-893f2b8ec23d"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -494,7 +494,7 @@ size = [243.313967649, 160.176526266]
 depth = 281.144130118
 locked = true
 
-[[instance]]
+[[instances]]
 id = "b38d2918-d11a-43be-930c-d73392efa73c"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -503,14 +503,14 @@ size = [268.925964243, 177.037213242]
 depth = 310.738249078
 locked = true
 
-[[instance]]
+[[instances]]
 id = "f68d38ff-9ffb-4851-b1dc-a43f20bf5b93"
 object = "TreeBroad"
 layer = "3d-terrain"
 at = [1892.588287802, 1392.352941176, -86.029378947]
 locked = true
 
-[[instance]]
+[[instances]]
 id = "4f06bf22-678f-4a2b-a791-de8ab3471031"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -519,7 +519,7 @@ size = [243.313967649, 160.176526266]
 depth = 281.144130118
 locked = true
 
-[[instance]]
+[[instances]]
 id = "92cc9ce1-14de-4234-8146-f503a7943349"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -528,7 +528,7 @@ size = [217.701971054, 143.315839291]
 depth = 251.550011158
 locked = true
 
-[[instance]]
+[[instances]]
 id = "ec006369-464d-45b1-9b99-5a7839810992"
 object = "TreeBroad"
 layer = "3d-terrain"
@@ -537,7 +537,7 @@ size = [230.507969351, 151.746182779]
 depth = 266.347070638
 locked = true
 
-[[instance]]
+[[instances]]
 id = "5d48239f-3634-4fdc-9273-d72478439c50"
 object = "Sheep"
 layer = "3d-terrain"
@@ -545,7 +545,7 @@ at = [1190.588235294, 1020.705908607, -165.864695381]
 rotation = -11.459154366
 locked = true
 
-[[instance]]
+[[instances]]
 id = "e22e769a-ee7b-4bea-b35d-0a083752d171"
 object = "Sheep"
 layer = "3d-terrain"
@@ -553,7 +553,7 @@ at = [1713.647085078, 1323.529411765, -165.864695381]
 rotation = -137.509876296
 locked = true
 
-[[instance]]
+[[instances]]
 id = "e64e65bb-91b2-4d52-a604-a58dd6455fa5"
 object = "Sheep"
 layer = "3d-terrain"
@@ -561,7 +561,7 @@ at = [2154.117647059, 291.176470588, -165.864695381]
 rotation = 40.107048391
 locked = true
 
-[[instance]]
+[[instances]]
 id = "de0ca44a-2f6f-4374-afa4-a0f1e4d56cc2"
 object = "Sheep"
 layer = "3d-terrain"
@@ -569,21 +569,21 @@ at = [984.117647059, 1571.294143901, -165.864695381]
 rotation = -63.02535883
 locked = true
 
-[[instance]]
+[[instances]]
 id = "caeba47e-3d74-4562-8f4a-d6ccaf3f184d"
 object = "Knight"
 layer = "3d-terrain"
 at = [832, 896, 100]
 z_order = 1
 
-[[instance]]
+[[instances]]
 id = "6e868261-ec5f-457e-bbc6-e2b050430e95"
 object = "Skeleton_Minion"
 layer = "3d-terrain"
 at = [1024, 896, -165.864695381]
 z_order = 2
 
-[[instance]]
+[[instances]]
 id = "393bd11c-08e4-4555-9a77-bf868d866391"
 object = "SkeletonHurtbox"
 layer = "3d-terrain"
@@ -592,7 +592,7 @@ size = [60, 50]
 depth = 90
 opacity = 0
 
-[[instance]]
+[[instances]]
 id = "beb6a798-0b1a-4549-b973-d010e2757beb"
 object = "KnightSwordHitbox"
 layer = "3d-terrain"
@@ -601,7 +601,7 @@ size = [23.755743, 6.164129]
 depth = 83.768203
 opacity = 0
 
-[[instance]]
+[[instances]]
 id = "ecd6a30f-f50f-4071-a8a1-eff23d602294"
 object = "KnightAxeHitbox"
 layer = "3d-terrain"

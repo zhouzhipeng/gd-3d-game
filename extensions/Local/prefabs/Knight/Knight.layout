@@ -15,12 +15,12 @@ window_mask = false
 selected_layer = ""
 mode = "embedded-game"
 
-[[layer]]
+[[layers]]
 id = "base"
 name = ""
 cameras = [{ size = "default", viewport = "default" }]
 
-[[instance]]
+[[instances]]
 id = "1cd579b7-6b3c-4210-a45b-f6bfeef276f5"
 object = "Knight3D"
 layer = "base"
@@ -29,7 +29,7 @@ rotation = -90
 size = [91.659929, 61.709342]
 depth = 120
 
-[[instance]]
+[[instances]]
 id = "f6d027d2-c097-4133-a1aa-c0ee9c159335"
 object = "Sword3D"
 layer = "base"
@@ -38,7 +38,7 @@ rotation = -90
 size = [23.755743, 6.164129]
 depth = 83.768203
 
-[[instance]]
+[[instances]]
 id = "f974a5f7-9990-4be5-a9af-8fd24d894067"
 object = "Axe3D"
 layer = "base"
@@ -47,7 +47,7 @@ rotation = -90
 size = [58.489842, 12.353435]
 depth = 81.37901
 
-[[instance]]
+[[instances]]
 id = "164d9eea-d953-47c4-b65d-d2ece328fc9b"
 object = "Shield3D"
 layer = "base"
@@ -56,7 +56,7 @@ rotation = -90
 size = [47.518686, 21.695641]
 depth = 48.930555
 
-[[instance]]
+[[instances]]
 id = "be23f034-eae7-4ebd-be8b-432d0bab1de9"
 object = "SwordHitbox"
 layer = "base"
@@ -65,7 +65,7 @@ size = [23.755743, 6.164129]
 depth = 83.768203
 opacity = 0
 
-[[instance]]
+[[instances]]
 id = "a81b5a05-f845-45f7-9e12-c7201096b58f"
 object = "AxeHitbox"
 layer = "base"

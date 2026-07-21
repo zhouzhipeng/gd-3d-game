@@ -15,20 +15,20 @@ window_mask = false
 selected_layer = ""
 mode = "instances-editor"
 
-[[layer]]
+[[layers]]
 id = "base"
 name = ""
 cameras = [{ size = "default", viewport = "default" }]
 
-[[layer]]
+[[layers]]
 id = "ui"
 name = "UI"
 
-[[layer]]
+[[layers]]
 id = "shape"
 name = "Shape"
 
-[[effect]]
+[[effects]]
 layer = "base"
 name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
@@ -39,7 +39,7 @@ rotation = 300
 skyColor = "255;255;255"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "base"
 name = "3D Sun Light"
 type = "Scene3D::DirectionalLight"
@@ -54,7 +54,7 @@ rotation = 300
 shadowQuality = "medium"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "ui"
 name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
@@ -65,7 +65,7 @@ rotation = 300
 skyColor = "255;255;255"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "ui"
 name = "3D Sun Light"
 type = "Scene3D::DirectionalLight"
@@ -80,7 +80,7 @@ rotation = 300
 shadowQuality = "medium"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "shape"
 name = "3D Ambient Hemisphere Light"
 type = "Scene3D::HemisphereLight"
@@ -91,7 +91,7 @@ rotation = 300
 skyColor = "255;255;255"
 top = "Z+"
 
-[[effect]]
+[[effects]]
 layer = "shape"
 name = "3D Sun Light"
 type = "Scene3D::DirectionalLight"
@@ -106,21 +106,21 @@ rotation = 300
 shadowQuality = "medium"
 top = "Z+"
 
-[[instance]]
+[[instances]]
 id = "baf286bc-803f-4c84-b56c-f67e8fdb9463"
 object = "NewSprite"
 layer = "shape"
 at = [640, 360]
 z_order = 1
 
-[[instance]]
+[[instances]]
 id = "b4974f3c-f5bc-4d5b-a5c7-f27f5d2f8aa4"
 object = "NewSprite"
 layer = "shape"
 at = [552, 222]
 z_order = 1
 
-[[instance]]
+[[instances]]
 id = "d43a79c4-a654-4b08-9c68-9c9cbf11deec"
 object = "NewText"
 layer = "ui"
@@ -129,7 +129,7 @@ z_order = 2
 size = [125, 23]
 depth = 1
 
-[[instance]]
+[[instances]]
 id = "34206e5b-3935-4494-81c9-c10fcc82374f"
 object = "NewText"
 layer = "ui"
@@ -138,7 +138,7 @@ z_order = 2
 size = [125, 23]
 depth = 1
 
-[[instance]]
+[[instances]]
 id = "7e4ae76c-12d6-4b20-b237-130c3e965287"
 object = "NewText"
 layer = "ui"
