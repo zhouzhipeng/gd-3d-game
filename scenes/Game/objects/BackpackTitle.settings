@@ -11,20 +11,12 @@ type = "TextObject::Text"
 underlined = false
 effects = [ ]
 variables = [ ]
+behaviors = [ ]
 string = "KNIGHT'S BACKPACK"
 font = ""
 textAlignment = "center"
 characterSize = 36
 folder = [ ]
-
-[[behaviors]]
-name = "Anchor"
-type = "AnchorBehavior::AnchorBehavior"
-bottomEdgeAnchor = "None"
-leftEdgeAnchor = "WindowLeft"
-relativeToOriginalWindowSize = true
-rightEdgeAnchor = "None"
-topEdgeAnchor = "WindowTop"
 
 [color]
 b = 126

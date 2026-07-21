@@ -1,6 +1,11 @@
 @comment "Legacy 2D terrain and tile-map collision events removed for the 3D conversion." background=[210,235,255] text=[0,0,0]
 
 @group "Knight backpack" source="" creationTime=0 color=[255,180,72] parameters=[]
+@event aiGeneratedEventId="pin-backpack-ui-camera"
+if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+do SetCameraCenterX modification_sign="=" value="640" layer="\"Backpack UI\"" camera_number_default_0="0"
+do SetCameraCenterY modification_sign="=" value="360" layer="\"Backpack UI\"" camera_number_default_0="0"
+
 @event aiGeneratedEventId="initialize-knight-backpack"
 if SceneJustBegins
 do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="0"
