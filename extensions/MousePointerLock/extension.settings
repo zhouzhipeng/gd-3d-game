@@ -31,15 +31,28 @@ authorIds = [
 "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
 ]
 dependencies = [ ]
+globalVariables = [ ]
 
 [origin]
 identifier = "MousePointerLock"
 name = "gdevelop-extension-store"
 
-[globalVariables]
+[[sceneVariables]]
+name = "TouchId"
+type = "number"
+value = -1
 
-[sceneVariables]
-TouchId = [ { type = "number", value = -1 } ]
-OldX = [ { type = "number", value = 0 } ]
-OldY = [ { type = "number", value = 0 } ]
-TouchSpeedFactor = [ { type = "number", value = 4 } ]
+[[sceneVariables]]
+name = "OldX"
+type = "number"
+value = 0
+
+[[sceneVariables]]
+name = "OldY"
+type = "number"
+value = 0
+
+[[sceneVariables]]
+name = "TouchSpeedFactor"
+type = "number"
+value = 4

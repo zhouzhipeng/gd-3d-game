@@ -17,11 +17,9 @@ description = '3D platformer and 3D shooter keyboard controls. Add one of the "m
 tags = [ "3d" ]
 authorIds = [ "IWykYNRvhCZBN3vEgKEbBPOR3Oc2" ]
 dependencies = [ ]
+globalVariables = [ ]
+sceneVariables = [ ]
 
 [origin]
 identifier = "PhysicsCharacter3DKeyMapper"
 name = "gdevelop-extension-store"
-
-[globalVariables]
-
-[sceneVariables]

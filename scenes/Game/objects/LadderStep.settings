@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "LadderStep"
 persistentUuid = "1cc2f570-0324-44f3-8ea3-385fa872f34b"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Ladders" ]
 
@@ -42,5 +43,3 @@ rotationZ = 0
 width = 172.058823529
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

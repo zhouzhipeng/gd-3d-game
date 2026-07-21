@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "Sword3D"
 persistentUuid = "f8f778dc-110d-40a0-b45d-7ebd9f0660db"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ ]
@@ -26,5 +27,3 @@ rotationZ = 0
 width = 23.755743
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

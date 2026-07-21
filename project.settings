@@ -4,6 +4,7 @@ kind = "project"
 settingsFormatVersion = 1
 firstLayout = "Game"
 initialGDVersion = "6.0.0"
+variables = [ ]
 objectGroups = { }
 
 [gdVersion]
@@ -64,5 +65,3 @@ showWatermark = false
 
 [[properties.platforms]]
 name = "GDevelop JS platform"
-
-[variables]

@@ -9,6 +9,7 @@ name = "Game"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
+variables = [ ]
 
 [[behaviorsSharedData]]
 name = "Physics3D"
@@ -33,5 +34,3 @@ Physics3DWorldBodies = [
 
 [objectGroupRequiredBehaviors]
 Physics3DWorldBodies = [ "Physics3D::Physics3DBehavior" ]
-
-[variables]

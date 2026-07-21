@@ -10,6 +10,7 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "Knight"
 previewIconUrl = ""
+variables = [ ]
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Knight/Knight.layout"
 variants = [ ]
@@ -82,5 +83,3 @@ FollowFreeAreaZMax = 0
 FollowFreeAreaZMin = 0
 IsRotatingWithObject = true
 RotationMode = "Z"
-
-[variables]

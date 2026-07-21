@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "AxeHitbox"
 persistentUuid = "b7cb52a0-ef65-4bd7-8965-8227adf9462c"
 type = "Scene3D::Cube3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Combat" ]
@@ -39,5 +40,3 @@ materialType = "Basic"
 tint = "255;255;255"
 isCastingShadow = false
 isReceivingShadow = false
-
-[variables]

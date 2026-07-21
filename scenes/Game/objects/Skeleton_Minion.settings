@@ -9,6 +9,16 @@ effects = [ ]
 behaviors = [ ]
 folder = [ ]
 
+[[variables]]
+name = "Health"
+type = "number"
+value = 100
+
+[[variables]]
+name = "IsDead"
+type = "boolean"
+value = false
+
 [content]
 centerLocation = "CenteredOnZ"
 crossfadeDuration = 0.1000000014901161
@@ -186,7 +196,3 @@ loop = false
 name = ""
 source = "T-Pose"
 sourceModelResourceName = "assets/Rig_Medium_Special.glb"
-
-[variables]
-Health = [ { type = "number", value = 100 } ]
-IsDead = [ { type = "boolean", value = false } ]

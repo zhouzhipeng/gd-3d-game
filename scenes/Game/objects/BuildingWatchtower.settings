@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "BuildingWatchtower"
 persistentUuid = "d8c76ac1-2230-4057-958b-1072aed07b6e"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Buildings" ]
 
@@ -42,5 +43,3 @@ rotationZ = 0
 width = 233.760569236
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

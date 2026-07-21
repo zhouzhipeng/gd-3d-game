@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "TerrainSupportCollider"
 persistentUuid = "83dd0e23-2639-4275-907a-0086f304e5b2"
 type = "Scene3D::Cube3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Collision" ]
 
@@ -55,5 +56,3 @@ materialType = "Basic"
 tint = "255;255;255"
 isCastingShadow = false
 isReceivingShadow = false
-
-[variables]

@@ -9,7 +9,6 @@ name = "Test"
 standardSortMethod = true
 stopSoundsOnStartup = true
 title = ""
+variables = [ ]
 behaviorsSharedData = [ ]
 objectGroups = { }
-
-[variables]

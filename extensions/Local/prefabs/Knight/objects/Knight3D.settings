@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "Knight3D"
 persistentUuid = "79ec5400-47d2-4418-a752-c513a2f01619"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ ]
@@ -228,5 +229,3 @@ loop = false
 name = ""
 source = "T-Pose"
 sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"
-
-[variables]

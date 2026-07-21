@@ -20,11 +20,9 @@ authorIds = [
 "PEzPAaWHgYgk5UwIPppsL6f2ugp2"
 ]
 dependencies = [ ]
+globalVariables = [ ]
+sceneVariables = [ ]
 
 [origin]
 identifier = "Collision3D"
 name = "gdevelop-extension-store"
-
-[globalVariables]
-
-[sceneVariables]

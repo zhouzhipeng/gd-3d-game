@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "TreeBroad"
 persistentUuid = "a146e85e-cff7-4aa9-b3d5-927df99aa5d6"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Trees" ]
 
@@ -42,5 +43,3 @@ rotationZ = 0
 width = 256.119965946
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

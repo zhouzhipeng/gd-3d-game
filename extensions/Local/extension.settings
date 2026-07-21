@@ -17,7 +17,5 @@ description = ""
 tags = [ ]
 authorIds = [ ]
 dependencies = [ ]
-
-[globalVariables]
-
-[sceneVariables]
+globalVariables = [ ]
+sceneVariables = [ ]

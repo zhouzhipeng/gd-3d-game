@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "KnightSwordHitbox"
 persistentUuid = "f7885ff0-4f95-4d04-8fd0-812108152712"
 type = "Scene3D::Cube3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ "Combat" ]
@@ -39,5 +40,3 @@ materialType = "Basic"
 tint = "255;255;255"
 isCastingShadow = false
 isReceivingShadow = false
-
-[variables]

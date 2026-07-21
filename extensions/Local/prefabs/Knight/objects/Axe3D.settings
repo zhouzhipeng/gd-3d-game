@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "Axe3D"
 persistentUuid = "99fd96d2-45fd-4ba5-824a-6071363a0ca1"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 behaviors = [ ]
 folder = [ ]
@@ -26,5 +27,3 @@ rotationZ = 0
 width = 58.489842
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

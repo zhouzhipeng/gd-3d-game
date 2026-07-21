@@ -6,6 +6,7 @@ name = "Knight"
 persistentUuid = "cdc44089-338e-4c8c-92ca-065fdde36e88"
 type = "Local::Knight"
 variant = ""
+variables = [ ]
 effects = [ ]
 content = { }
 folder = [ ]
@@ -77,5 +78,3 @@ FollowFreeAreaZMax = 0
 FollowFreeAreaZMin = 0
 IsRotatingWithObject = false
 RotationMode = "Z"
-
-[variables]

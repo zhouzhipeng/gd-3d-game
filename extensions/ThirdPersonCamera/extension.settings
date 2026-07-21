@@ -25,11 +25,9 @@ description = [
 tags = [ "3d", "camera" ]
 authorIds = [ "IWykYNRvhCZBN3vEgKEbBPOR3Oc2" ]
 dependencies = [ ]
+globalVariables = [ ]
+sceneVariables = [ ]
 
 [origin]
 identifier = "ThirdPersonCamera"
 name = "gdevelop-extension-store"
-
-[globalVariables]
-
-[sceneVariables]

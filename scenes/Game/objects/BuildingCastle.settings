@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "BuildingCastle"
 persistentUuid = "ea815a1d-ea97-49fd-9fb5-e81696f46162"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Buildings" ]
 
@@ -42,5 +43,3 @@ rotationZ = 0
 width = 800.41772057
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

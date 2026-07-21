@@ -5,6 +5,7 @@ assetStoreId = ""
 name = "TreePine"
 persistentUuid = "cf71cbac-6160-4c3a-8e24-5901d0813a29"
 type = "Scene3D::Model3DObject"
+variables = [ ]
 effects = [ ]
 folder = [ "Stylized Terrain", "Trees" ]
 
@@ -42,5 +43,3 @@ rotationZ = 0
 width = 249.422842194
 sharedAnimationModelResources = [ ]
 animations = [ ]
-
-[variables]

@@ -147,21 +147,21 @@ z_order = 2
 size = [125, 23]
 depth = 1
 
-[[variable]]
+[[variables]]
 instance = "34206e5b-3935-4494-81c9-c10fcc82374f"
 name = "Variable"
 type = "number"
 value = 1
 id = "cb4d5657-5963-4fa3-ad2e-e10c6d169a93"
 
-[[variable]]
+[[variables]]
 instance = "7e4ae76c-12d6-4b20-b237-130c3e965287"
 name = "Variable"
 type = "number"
 value = 2
 id = "b5376b2d-607e-42f9-8b89-10c1c630c1fc"
 
-[[behavior]]
+[[behaviors]]
 instance = "7e4ae76c-12d6-4b20-b237-130c3e965287"
 name = "Platform"
 properties = { canBeGrabbed = true, yGrabOffset = 208 }
