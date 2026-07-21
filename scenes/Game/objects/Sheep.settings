@@ -42,4 +42,9 @@ rotationY = 0
 rotationZ = 0
 width = 159.63796293
 sharedAnimationModelResources = [ ]
-animations = [ ]
+
+[[content.animations]]
+loop = true
+name = "Walk"
+source = "Walk"
+sourceModelResourceName = "assets/models/stylized_fantasy_terrain_parts/sheep.glb"
