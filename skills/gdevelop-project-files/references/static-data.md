@@ -151,7 +151,7 @@ when they should remain one JSON key:
 [cards."sun.flower"]
 displayName = "Sun Flower"
 
-[localization.".backpack.title"]
+[localization."backpack.title"]
 en = "Knight's Backpack"
 cn = "骑士背包"
 ```
@@ -181,7 +181,7 @@ A placeholder is a string fragment with a path between double braces:
 {{ cards.Sunflower.price }}
 {{waves[0].enemies[2].type}}
 {{cards["sun.flower"].price}}
-{{localization['.backpack.sections.weapons'].en}}
+{{localization['backpack.sections.weapons'].en}}
 ```
 
 Path rules:
@@ -300,20 +300,20 @@ descriptors.
 
 The canonical localization shape for the Static Data window is row-oriented:
 each row key is the complete, stable UI path and each column is a locale code.
-For GUI text, use a leading-dot key such as `.backpack.sections.weapons`. Quote
-that key in TOML so its dots remain part of one literal row key instead of
-creating nested tables:
+For GUI text, use a key such as `backpack.sections.weapons`; no leading dot is
+needed. Quote the key in TOML so its internal dots remain part of one literal
+row key instead of creating nested tables:
 
 ```toml
 [i18n]
 defaultLocale = "en"
 supportedLocales = ["en", "cn"]
 
-[localization.".backpack.title"]
+[localization."backpack.title"]
 en = "Knight's Backpack"
 cn = "骑士背包"
 
-[localization.".backpack.sections.weapons"]
+[localization."backpack.sections.weapons"]
 en = "Weapons"
 cn = "武器"
 ```
@@ -322,8 +322,8 @@ Keep localization metadata such as `defaultLocale` and `supportedLocales` in a
 sibling table such as `i18n`, not inside `localization`. This keeps the
 `localization` grid homogeneous: every row key is a translation key and every
 column is a locale, without an extra generic `value` column. In the Static Data
-window, the example above appears as rows `.backpack.title` and
-`.backpack.sections.weapons` with editable `en` and `cn` cells, so users can
+window, the example above appears as rows `backpack.title` and
+`backpack.sections.weapons` with editable `en` and `cn` cells, so users can
 update translations directly in the grid.
 
 Do not invert this model by making `title`, `prompt`, or `sections` the columns
@@ -332,12 +332,12 @@ as `[localization.backpack.sections.weapons]` either. Both shapes turn the
 translation hierarchy into nested JSON-like cell values and make later edits in
 the Static Data window unnecessarily difficult.
 
-Because the leading dots are literal characters in each row key, consumers use
-quoted bracket segments:
+Because each dotted row key is one literal child name, consumers use quoted
+bracket segments:
 
 ```text
-{{localization['.backpack.title'].en}}
-{{localization['.backpack.sections.weapons'].cn}}
+{{localization['backpack.title'].en}}
+{{localization['backpack.sections.weapons'].cn}}
 ```
 
 Reference the complete localization object once:
@@ -349,7 +349,7 @@ Translations = [{ type = "string", value = "{{localization}}" }]
 ```
 
 At startup, `Translations` contains compact JSON text such as
-`{".backpack.title":{"en":"Knight's Backpack","cn":"骑士背包"},...}`. When
+`{"backpack.title":{"en":"Knight's Backpack","cn":"骑士背包"},...}`. When
 events need variable-style child access, convert that same variable once before
 its first consumer:
 
@@ -360,7 +360,7 @@ do JSONToVariableStructure2 json_string="GlobalVariableString(Translations)" var
 ```
 
 After conversion, the variable is a normal mutable structure. A quoted Static
-Data row key such as `.backpack.title` remains one child name containing dots;
+Data row key such as `backpack.title` remains one child name containing dots;
 it is not automatically expanded into nested `backpack` then `title` children.
 
 Variable rules:
@@ -626,9 +626,9 @@ error with a fabricated value unless that default is part of the user's design.
 - Author user data directly at the TOML root with no wrapper or metadata.
 - Use only values TOML represents losslessly.
 - Choose stable, case-consistent, typed paths.
-- For localization, use complete leading-dot GUI keys such as
-  `.backpack.sections.weapons` as rows and locale codes such as `en` and `cn` as
-  columns; quote the dotted row keys in TOML.
+- For localization, use complete GUI keys such as `backpack.sections.weapons`
+  as rows and locale codes such as `en` and `cn` as columns; do not add a
+  leading dot, and quote the dotted row keys in TOML.
 - Verify every placeholder path, bracket segment, and array index.
 - Use placeholders only on supported action, string-variable, or property
   surfaces.

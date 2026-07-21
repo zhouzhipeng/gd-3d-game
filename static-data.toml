@@ -3,62 +3,62 @@ defaultLocale = "en"
 alternateLocale = "cn"
 supportedLocales = ["en", "cn"]
 
-[localization.".backpack.title"]
+[localization."backpack.title"]
 en = "KNIGHT'S BACKPACK"
 cn = "骑士背包"
 
-[localization.".backpack.prompt"]
+[localization."backpack.prompt"]
 en = "[Q] BAG  [L] 中文"
 cn = "[Q] 背包  [L] EN"
 
-[localization.".backpack.sections.weapons"]
+[localization."backpack.sections.weapons"]
 en = "WEAPONS"
 cn = "武器"
 
-[localization.".backpack.sections.materials"]
+[localization."backpack.sections.materials"]
 en = "MATERIALS"
 cn = "材料"
 
-[localization.".backpack.items.sword"]
+[localization."backpack.items.sword"]
 en = "Sword"
 cn = "长剑"
 
-[localization.".backpack.items.axe"]
+[localization."backpack.items.axe"]
 en = "Battle Axe"
 cn = "战斧"
 
-[localization.".backpack.items.shield"]
+[localization."backpack.items.shield"]
 en = "Shield"
 cn = "盾牌"
 
-[localization.".backpack.items.gold"]
+[localization."backpack.items.gold"]
 en = "Gold Bar"
 cn = "金条"
 
-[localization.".backpack.items.stone"]
+[localization."backpack.items.stone"]
 en = "Stone Brick"
 cn = "石砖"
 
-[localization.".backpack.items.wood"]
+[localization."backpack.items.wood"]
 en = "Wood Log"
 cn = "木材"
 
-[localization.".backpack.controls"]
+[localization."backpack.controls"]
 en = "F  Switch weapon     Q  Close"
 cn = "F  切换武器          Q  关闭"
 
-[localization.".backpack.toasts.generic"]
+[localization."backpack.toasts.generic"]
 en = "+ ITEM COLLECTED"
 cn = "+ 获得物品"
 
-[localization.".backpack.toasts.gold"]
+[localization."backpack.toasts.gold"]
 en = "+ GOLD BAR COLLECTED"
 cn = "+ 获得金条"
 
-[localization.".backpack.toasts.stone"]
+[localization."backpack.toasts.stone"]
 en = "+ STONE BRICK COLLECTED"
 cn = "+ 获得石砖"
 
-[localization.".backpack.toasts.wood"]
+[localization."backpack.toasts.wood"]
 en = "+ WOOD LOG COLLECTED"
 cn = "+ 获得木材"
