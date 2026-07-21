@@ -15,6 +15,21 @@ name = "BackpackOpen"
 type = "number"
 value = 0
 
+[[variables]]
+name = "LocaleIndex"
+type = "number"
+value = 0
+
+[[variables]]
+name = "Locale"
+type = "string"
+value = "{{i18n.defaultLocale}}"
+
+[[variables]]
+name = "LocaleDirty"
+type = "number"
+value = 1
+
 [[behaviorsSharedData]]
 name = "Physics3D"
 type = "Physics3D::Physics3DBehavior"
