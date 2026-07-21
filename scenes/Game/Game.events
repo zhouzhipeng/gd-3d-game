@@ -186,6 +186,9 @@ if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 >>> @event aiGeneratedEventId="release-mouse-for-dialogue"
 >>> if MousePointerLock::isPointerLocked
 >>> do MousePointerLock::ExitPointerLock
+>>> @event aiGeneratedEventId="hide-pickup-toast-for-dialogue"
+>>> for each "PickupToast"
+>>>> do Hide object="PickupToast"
 
 @event aiGeneratedEventId="accept-golden-oath-quest"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
