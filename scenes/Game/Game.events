@@ -23,9 +23,10 @@ do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name=
 
 @event aiGeneratedEventId="toggle-knight-backpack-with-q"
 if KeyFromTextJustPressed key_to_check="\"q\""
+do SetBooleanVariable variable="BackpackOpen" modification_sign="Toggle"
 > @event aiGeneratedEventId="open-knight-backpack"
 > if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
-> do SetBooleanVariable variable="BackpackOpen" modification_sign="True"
+> @instruction inverted=true
 >> @event aiGeneratedEventId="show-knight-backpack-window"
 >> for each "BackpackWindow"
 >>> do Show object="BackpackWindow"
@@ -39,8 +40,7 @@ if KeyFromTextJustPressed key_to_check="\"q\""
 >>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
 
 > @event aiGeneratedEventId="close-knight-backpack"
-> else
-> do SetBooleanVariable variable="BackpackOpen" modification_sign="False"
+> if BooleanVariable variable="BackpackOpen" check_if_the_value_is="False"
 >> @event aiGeneratedEventId="hide-knight-backpack-window"
 >> for each "BackpackWindow"
 >>> do Hide object="BackpackWindow"
