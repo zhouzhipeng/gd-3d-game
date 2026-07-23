@@ -1,5 +1,4 @@
 @js objects="Object" strict=false expanded=true
-
 const otherObjects = eventsFunctionContext.getObjects("OtherObject");
 
 for (const object of objects) {

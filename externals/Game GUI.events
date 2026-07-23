@@ -22,10 +22,12 @@ do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name=
 do Inventories::SetIsItemEquipped inventory_name="\"KnightBackpack\"" item_name="\"Shield\"" equip="yes"
 > @event aiGeneratedEventId="hide-backpack-window-on-start"
 > for each "BackpackWindow"
+>> @event
 >> do Hide object="BackpackWindow"
 
 > @event aiGeneratedEventId="hide-pickup-toast-on-start"
 > for each "PickupToast"
+>> @event
 >> do Hide object="PickupToast"
 
 @event aiGeneratedEventId="toggle-backpack-language-with-l"
@@ -44,16 +46,26 @@ do SetNumberVariable variable="LocaleDirty" modification_sign="=" value="1"
 if NumberVariable variable="LocaleDirty" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="apply-english-backpack-localization"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "BackpackTitle"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackTitle" behavior="Text" modification_sign="=" text="\"{{localization['backpack.title'].en}}\""
+
+>> @event
 >> for each "BackpackPrompt"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackPrompt" behavior="Text" modification_sign="=" text="\"{{localization['backpack.prompt'].en}}\""
 
 > @event aiGeneratedEventId="apply-chinese-backpack-localization"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "BackpackTitle"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackTitle" behavior="Text" modification_sign="=" text="\"{{localization['backpack.title'].cn}}\""
+
+>> @event
 >> for each "BackpackPrompt"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackPrompt" behavior="Text" modification_sign="=" text="\"{{localization['backpack.prompt'].cn}}\""
 
 @event aiGeneratedEventId="finish-backpack-localization-refresh"
@@ -68,6 +80,7 @@ do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="1 - Va
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="1"
 >> @event aiGeneratedEventId="show-knight-backpack-window"
 >> for each "BackpackWindow"
+>>> @event
 >>> do Show object="BackpackWindow"
 
 >> @event aiGeneratedEventId="release-mouse-for-backpack"
@@ -76,84 +89,111 @@ do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="1 - Va
 
 >> @event aiGeneratedEventId="pause-knight-backpack-movement"
 >> for each "Knight"
+>>> @event
 >>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
 
 > @event aiGeneratedEventId="close-knight-backpack"
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 >> @event aiGeneratedEventId="hide-knight-backpack-window"
 >> for each "BackpackWindow"
+>>> @event
 >>> do Hide object="BackpackWindow"
 
 >> @event aiGeneratedEventId="resume-knight-backpack-movement"
 >> for each "Knight"
+>>> @event
 >>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="yes"
 
 @event aiGeneratedEventId="refresh-knight-backpack-content"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-english-knight-backpack-counts"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "BackpackContent"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackContent" behavior="Text" modification_sign="=" text="\"{{localization['backpack.sections.weapons'].en}}\" + NewLine() + \"  {{localization['backpack.items.sword'].en}}                 x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Sword\")) + NewLine() + \"  {{localization['backpack.items.axe'].en}}            x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Axe\")) + NewLine() + \"  {{localization['backpack.items.shield'].en}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Shield\")) + NewLine() + NewLine() + \"{{localization['backpack.sections.materials'].en}}\" + NewLine() + \"  {{localization['backpack.items.gold'].en}}              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + NewLine() + \"  {{localization['backpack.items.stone'].en}}           x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + NewLine() + \"  {{localization['backpack.items.wood'].en}}              x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + NewLine() + \"  {{localization['backpack.items.royalSigil'].en}}          x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"RoyalSigil\")) + NewLine() + NewLine() + \"{{localization['backpack.controls'].en}}\""
 
 > @event aiGeneratedEventId="write-chinese-knight-backpack-counts"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "BackpackContent"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackContent" behavior="Text" modification_sign="=" text="\"{{localization['backpack.sections.weapons'].cn}}\" + NewLine() + \"  {{localization['backpack.items.sword'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Sword\")) + NewLine() + \"  {{localization['backpack.items.axe'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Axe\")) + NewLine() + \"  {{localization['backpack.items.shield'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Shield\")) + NewLine() + NewLine() + \"{{localization['backpack.sections.materials'].cn}}\" + NewLine() + \"  {{localization['backpack.items.gold'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + NewLine() + \"  {{localization['backpack.items.stone'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + NewLine() + \"  {{localization['backpack.items.wood'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + NewLine() + \"  {{localization['backpack.items.royalSigil'].cn}}                x\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"RoyalSigil\")) + NewLine() + NewLine() + \"{{localization['backpack.controls'].cn}}\""
 
 @event aiGeneratedEventId="collect-gold-for-knight-backpack"
 for each "GoldPickup"
+> @event
 > if Collision3D::AreWithinDistance object="Knight" other_object="GoldPickup" distance="85" use_custom_center="yes"
 > do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
 > do ResetTimer timer_name="\"BackpackPickupToast\""
 > do Delete object="GoldPickup"
 >> @event aiGeneratedEventId="show-gold-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.gold'].en}}\""
 >>>> do Show object="PickupToast"
+
 >> @event aiGeneratedEventId="show-chinese-gold-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.gold'].cn}}\""
 >>>> do Show object="PickupToast"
 
 @event aiGeneratedEventId="collect-stone-for-knight-backpack"
 for each "StonePickup"
+> @event
 > if Collision3D::AreWithinDistance object="Knight" other_object="StonePickup" distance="85" use_custom_center="yes"
 > do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
 > do ResetTimer timer_name="\"BackpackPickupToast\""
 > do Delete object="StonePickup"
 >> @event aiGeneratedEventId="show-stone-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.stone'].en}}\""
 >>>> do Show object="PickupToast"
+
 >> @event aiGeneratedEventId="show-chinese-stone-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.stone'].cn}}\""
 >>>> do Show object="PickupToast"
 
 @event aiGeneratedEventId="collect-wood-for-knight-backpack"
 for each "WoodPickup"
+> @event
 > if Collision3D::AreWithinDistance object="Knight" other_object="WoodPickup" distance="85" use_custom_center="yes"
 > do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"Wood\""
 > do ResetTimer timer_name="\"BackpackPickupToast\""
 > do Delete object="WoodPickup"
 >> @event aiGeneratedEventId="show-wood-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.wood'].en}}\""
 >>>> do Show object="PickupToast"
+
 >> @event aiGeneratedEventId="show-chinese-wood-pickup-toast"
 >> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> @event
 >>> for each "PickupToast"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="PickupToast" behavior="Text" modification_sign="=" text="\"{{localization['backpack.toasts.wood'].cn}}\""
 >>>> do Show object="PickupToast"
 
 @event aiGeneratedEventId="hide-knight-backpack-pickup-toast"
 if CompareTimer timer_name="\"BackpackPickupToast\"" comparison_sign=">" time_in_seconds="2"
+> @event
 > for each "PickupToast"
+>> @event
 >> do Hide object="PickupToast"
 @end group
 
@@ -178,14 +218,17 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 > @event aiGeneratedEventId="open-dialogue-for-nearby-captain-edric"
 > for each "QuestGiver"
+>> @event
 >> if Collision3D::AreWithinDistance object="Knight" other_object="QuestGiver" distance="260" use_custom_center="yes"
 >> do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="1"
 >> do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
 >>> @event aiGeneratedEventId="release-mouse-for-dialogue"
 >>> if MousePointerLock::isPointerLocked
 >>> do MousePointerLock::ExitPointerLock
+
 >>> @event aiGeneratedEventId="hide-pickup-toast-for-dialogue"
 >>> for each "PickupToast"
+>>>> @event
 >>>> do Hide object="PickupToast"
 
 @event aiGeneratedEventId="accept-golden-oath-quest"
@@ -244,18 +287,23 @@ do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
 
 @event aiGeneratedEventId="hide-dialogue-window-when-closed"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+> @event
 > for each "DialogueWindow"
+>> @event
 >> do Hide object="DialogueWindow"
 
 @event aiGeneratedEventId="show-dialogue-window-when-open"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
+> @event
 > for each "DialogueWindow"
+>> @event
 >> do Show object="DialogueWindow"
 
 @event aiGeneratedEventId="hide-quest-prompt-by-default"
 if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
 > @event aiGeneratedEventId="hide-each-quest-prompt-by-default"
 > for each "QuestPrompt"
+>> @event
 >> do Hide object="QuestPrompt"
 
 @event aiGeneratedEventId="show-english-quest-prompt-near-npc"
@@ -265,8 +313,11 @@ if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="0"
 if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
 > @event aiGeneratedEventId="show-english-quest-prompt-for-nearby-npc"
 > for each "QuestGiver"
+>> @event
 >> if Collision3D::AreWithinDistance object="Knight" other_object="QuestGiver" distance="260" use_custom_center="yes"
+>>> @event
 >>> for each "QuestPrompt"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestPrompt" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.prompt'].en}}\""
 >>>> do Show object="QuestPrompt"
 
@@ -277,8 +328,11 @@ if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="0"
 if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
 > @event aiGeneratedEventId="show-chinese-quest-prompt-for-nearby-npc"
 > for each "QuestGiver"
+>> @event
 >> if Collision3D::AreWithinDistance object="Knight" other_object="QuestGiver" distance="260" use_custom_center="yes"
+>>> @event
 >>> for each "QuestPrompt"
+>>>> @event
 >>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestPrompt" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.prompt'].cn}}\""
 >>>> do Show object="QuestPrompt"
 
@@ -286,11 +340,16 @@ if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternat
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-english-dialogue-speaker-name"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "DialogueSpeaker"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.npc.name'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-dialogue-speaker-name"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "DialogueSpeaker"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.npc.name'].cn}}\""
 
 @event aiGeneratedEventId="write-available-quest-dialogue"
@@ -298,15 +357,26 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="0"
 > @event aiGeneratedEventId="write-english-available-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.offer'].en}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.offerChoices'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-available-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.offer'].cn}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.offerChoices'].cn}}\""
 
 @event aiGeneratedEventId="write-active-quest-dialogue"
@@ -314,15 +384,26 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-english-active-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.active'].en}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.activeChoices'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-active-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.active'].cn}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.activeChoices'].cn}}\""
 
 @event aiGeneratedEventId="write-ready-quest-dialogue"
@@ -330,15 +411,26 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
 > @event aiGeneratedEventId="write-english-ready-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.ready'].en}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.readyChoices'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-ready-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.ready'].cn}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.readyChoices'].cn}}\""
 
 @event aiGeneratedEventId="write-completed-quest-dialogue"
@@ -346,89 +438,130 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="3"
 > @event aiGeneratedEventId="write-english-completed-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.completed'].en}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.completedChoices'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-completed-quest-dialogue"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "DialogueText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.completed'].cn}}\""
+
+>> @event
 >> for each "DialogueChoices"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['dialogue.completedChoices'].cn}}\""
 
 @event aiGeneratedEventId="hide-quest-tracker-by-default"
 if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
 > @event aiGeneratedEventId="hide-each-quest-tracker-by-default"
 > for each "QuestTrackerWindow"
+>> @event
 >> do Hide object="QuestTrackerWindow"
 
 @event aiGeneratedEventId="show-quest-tracker-when-active"
 if NumberVariable variable="QuestState" comparison_sign=">" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+> @event
 > for each "QuestTrackerWindow"
+>> @event
 >> do Show object="QuestTrackerWindow"
 
 @event aiGeneratedEventId="write-quest-tracker-title"
 if NumberVariable variable="QuestState" comparison_sign=">" value="0"
 > @event aiGeneratedEventId="write-english-quest-tracker-title"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestTrackerTitle"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerTitle" behavior="Text" modification_sign="=" text="\"{{localization['quest.title'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-quest-tracker-title"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestTrackerTitle"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerTitle" behavior="Text" modification_sign="=" text="\"{{localization['quest.title'].cn}}\""
 
 @event aiGeneratedEventId="write-active-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-english-active-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].en}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].en}}: \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \" / \" + ToString(Variable(QuestTarget))"
+
 > @event aiGeneratedEventId="write-chinese-active-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].cn}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].cn}}：\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \" / \" + ToString(Variable(QuestTarget))"
 
 @event aiGeneratedEventId="write-ready-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
 > @event aiGeneratedEventId="write-english-ready-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].en}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.return'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-ready-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].cn}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.return'].cn}}\""
 
 @event aiGeneratedEventId="write-completed-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="3"
 > @event aiGeneratedEventId="write-english-completed-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.completed'].en}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.completed'].en}}\""
+
 > @event aiGeneratedEventId="write-chinese-completed-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestTrackerText"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.completed'].cn}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.completed'].cn}}\""
 
 @event aiGeneratedEventId="hide-quest-notice-when-idle"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="0"
+> @event
 > for each "QuestNotice"
+>> @event
 >> do Hide object="QuestNotice"
 
 @event aiGeneratedEventId="write-accepted-quest-notice"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="1"
 > @event aiGeneratedEventId="write-english-accepted-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.accepted'].en}}\""
 >>> do Show object="QuestNotice"
+
 > @event aiGeneratedEventId="write-chinese-accepted-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.accepted'].cn}}\""
 >>> do Show object="QuestNotice"
 
@@ -436,12 +569,17 @@ if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="1"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="2"
 > @event aiGeneratedEventId="write-english-ready-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.ready'].en}}\""
 >>> do Show object="QuestNotice"
+
 > @event aiGeneratedEventId="write-chinese-ready-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.ready'].cn}}\""
 >>> do Show object="QuestNotice"
 
@@ -449,23 +587,32 @@ if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="2"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="3"
 > @event aiGeneratedEventId="write-english-completed-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.completed'].en}}\""
 >>> do Show object="QuestNotice"
+
 > @event aiGeneratedEventId="write-chinese-completed-quest-notice"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
 >> for each "QuestNotice"
+>>> @event
 >>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestNotice" behavior="Text" modification_sign="=" text="\"{{localization['quest.toast.completed'].cn}}\""
 >>> do Show object="QuestNotice"
 
 @event aiGeneratedEventId="pause-knight-during-dialogue"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
+> @event
 > for each "Knight"
+>> @event
 >> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
 
 @event aiGeneratedEventId="resume-knight-after-dialogue"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+> @event
 > for each "Knight"
+>> @event
 >> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="yes"
 @end group

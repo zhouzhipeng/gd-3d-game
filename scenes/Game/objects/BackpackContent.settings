@@ -9,10 +9,13 @@ persistentUuid = "28615651-f809-4db1-be53-37ea688aaf83"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
-effects = [ ]
 variables = [ ]
+effects = [ ]
 behaviors = [ ]
-string = "{{localization['backpack.sections.weapons'].en}}\n\n{{localization['backpack.sections.materials'].en}}"
+string = """
+{{localization['backpack.sections.weapons'].en}}
+
+{{localization['backpack.sections.materials'].en}}"""
 font = ""
 textAlignment = "left"
 characterSize = 24
@@ -37,7 +40,10 @@ shadowDistance = 2
 shadowOpacity = 160
 smoothed = true
 underlined = false
-text = "{{localization['backpack.sections.weapons'].en}}\n\n{{localization['backpack.sections.materials'].en}}"
+text = """
+{{localization['backpack.sections.weapons'].en}}
+
+{{localization['backpack.sections.materials'].en}}"""
 font = ""
 textAlignment = "left"
 verticalTextAlignment = "top"

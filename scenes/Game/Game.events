@@ -2,9 +2,10 @@
 
 @event aiGeneratedEventId="create-game-gui-from-external-layout"
 if SceneJustBegins
-do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="\"Game GUI\""
+do BuiltinExternalLayouts::CreateObjectsFromExternalLayout name_of_the_external_layout="\"Game GUI\"" x_position_of_the_origin="0" y_position_of_the_origin="0" z_position_of_the_origin="0"
 
-link external "Game GUI"
+@event
+link "Game GUI"
 
 @event aiGeneratedEventId="initialize-physics3d-collision-filters"
 if SceneJustBegins

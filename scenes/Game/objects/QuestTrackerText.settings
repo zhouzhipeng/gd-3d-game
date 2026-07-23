@@ -9,10 +9,13 @@ persistentUuid = "e767db2e-d549-452a-8eec-146c3677129e"
 smoothed = true
 type = "TextObject::Text"
 underlined = false
-effects = [ ]
 variables = [ ]
+effects = [ ]
 behaviors = [ ]
-string = "{{localization['quest.status.active'].en}}\n\n{{localization['quest.objective.gold'].en}}"
+string = """
+{{localization['quest.status.active'].en}}
+
+{{localization['quest.objective.gold'].en}}"""
 font = ""
 textAlignment = "left"
 characterSize = 17
@@ -37,7 +40,10 @@ shadowDistance = 2
 shadowOpacity = 160
 smoothed = true
 underlined = false
-text = "{{localization['quest.status.active'].en}}\n\n{{localization['quest.objective.gold'].en}}"
+text = """
+{{localization['quest.status.active'].en}}
+
+{{localization['quest.objective.gold'].en}}"""
 font = ""
 textAlignment = "left"
 verticalTextAlignment = "top"

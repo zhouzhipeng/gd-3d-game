@@ -24,3 +24,8 @@ description = "Behavior"
 name = "Behavior"
 supplementaryInformation = "ThirdPersonCamera::ThirdPersonCamera"
 type = "behavior"
+
+[[parameters]]
+description = ""
+name = "Parameter"
+type = "objectList"

@@ -18,7 +18,6 @@ useMultipleDirections = false
 
 [[animations.directions]]
 looping = false
-metadata = ""
 timeBetweenFrames = 0.08
 
 [[animations.directions.sprites]]

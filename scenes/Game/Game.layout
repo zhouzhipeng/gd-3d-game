@@ -40,22 +40,14 @@ name = "Game"
 id = "backpack-ui"
 name = "Backpack UI"
 rendering = "2d"
-camera_behavior = "top-left-anchored-if-never-moved"
-visible = true
 locked = true
-lighting = false
-follow_base_camera = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[layers]]
 id = "quest-ui"
 name = "Quest UI"
 rendering = "2d"
-camera_behavior = "top-left-anchored-if-never-moved"
-visible = true
 locked = true
-lighting = false
-follow_base_camera = false
 cameras = [{ size = "default", viewport = "default" }]
 
 [[effects]]

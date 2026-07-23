@@ -59,27 +59,15 @@ gravityZ = -9.8
 worldScale = 100
 
 [objectGroups]
-BackpackWindow = [
-"BackpackPanel",
-"BackpackTitle",
-"BackpackContent"
-]
-Collectibles = [
-"GoldPickup",
-"StonePickup",
-"WoodPickup"
-]
+BackpackWindow = [ "BackpackPanel", "BackpackTitle", "BackpackContent" ]
+Collectibles = [ "GoldPickup", "StonePickup", "WoodPickup" ]
 DialogueWindow = [
 "DialoguePanel",
 "DialogueSpeaker",
 "DialogueText",
 "DialogueChoices"
 ]
-QuestTrackerWindow = [
-"QuestTrackerPanel",
-"QuestTrackerTitle",
-"QuestTrackerText"
-]
+QuestTrackerWindow = [ "QuestTrackerPanel", "QuestTrackerTitle", "QuestTrackerText" ]
 Physics3DWorldBodies = [
 "BuildingCottage",
 "BuildingCastle",

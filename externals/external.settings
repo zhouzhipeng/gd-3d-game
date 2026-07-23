@@ -2,13 +2,11 @@ kind = "externals"
 settingsFormatVersion = 1
 
 [[eventFiles]]
-order = 0
 name = "Game GUI"
 linkedScene = "Game"
-events = "game://externals/GameGUI.events"
+events = "game://externals/Game%20GUI.events"
 
 [[layoutFiles]]
-order = 0
 name = "Game GUI"
 linkedScene = "Game"
-layout = "game://externals/GameGUI.layout"
+layout = "game://externals/Game%20GUI.layout"

@@ -1,5 +1,4 @@
 @js strict=false expanded=false
-
 const { handler } = gdjs._MousePointerLockExtension;
 
 eventsFunctionContext.returnValue = handler.isPointerLocked();
