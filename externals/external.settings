@@ -1,0 +1,14 @@
+kind = "externals"
+settingsFormatVersion = 1
+
+[[eventFiles]]
+order = 0
+name = "Game GUI"
+linkedScene = "Game"
+events = "game://externals/GameGUI.events"
+
+[[layoutFiles]]
+order = 0
+name = "Game GUI"
+linkedScene = "Game"
+layout = "game://externals/GameGUI.layout"
