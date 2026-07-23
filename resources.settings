@@ -860,3 +860,83 @@ kind = "model3D"
 metadata = ""
 name = "assets/props/Wood_Log_A.glb"
 userAdded = true
+
+[[resources]]
+file = "assets/sfx/ui_toggle.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/ui_toggle.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/weapon_equip.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/weapon_equip.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/sword_swing.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/sword_swing.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/axe_swing.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/axe_swing.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/weapon_impact.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/weapon_impact.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/skeleton_break.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/skeleton_break.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/pickup_chime.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/pickup_chime.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
+file = "assets/sfx/quest_fanfare.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/quest_fanfare.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true

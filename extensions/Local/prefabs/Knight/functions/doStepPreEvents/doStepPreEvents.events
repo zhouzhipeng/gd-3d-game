@@ -10,6 +10,7 @@ if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="An
 > do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
 > do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
 > do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+> do PlaySound audio_file_or_audio_resource_name="assets/sfx/weapon_equip.wav" repeat_the_sound="no" volume="34" pitch_speed="0.86"
 
 > @event
 > else
@@ -18,6 +19,7 @@ if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="An
 > do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="1"
 > do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Idle\""
 > do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+> do PlaySound audio_file_or_audio_resource_name="assets/sfx/weapon_equip.wav" repeat_the_sound="no" volume="32" pitch_speed="1.08"
 @end group
 
 @group "Knight melee combo" source="" creationTime=0 color=[190,92,255] parameters=[]
@@ -50,6 +52,7 @@ if BuiltinCommonInstructions::Once
 > do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_1H_Attack_Slice_Horizontal\""
 > do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 > do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+> do PlaySound audio_file_or_audio_resource_name="assets/sfx/sword_swing.wav" repeat_the_sound="no" volume="36" pitch_speed="1.04"
 
 > @event
 > else
@@ -57,6 +60,7 @@ if BuiltinCommonInstructions::Once
 > do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Attack_Chop\""
 > do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 > do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+> do PlaySound audio_file_or_audio_resource_name="assets/sfx/axe_swing.wav" repeat_the_sound="no" volume="44" pitch_speed="0.9"
 
 @event aiGeneratedEventId="chain-knight-melee-one-to-two"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Slice_Horizontal\""
@@ -65,6 +69,7 @@ if CompareObjectTimer object="Knight3D" timer_name="\"AttackBuffer\"" comparison
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_1H_Attack_Slice_Diagonal\""
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+do PlaySound audio_file_or_audio_resource_name="assets/sfx/sword_swing.wav" repeat_the_sound="no" volume="36" pitch_speed="1.1"
 
 @event aiGeneratedEventId="chain-knight-melee-two-to-three"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Slice_Diagonal\""
@@ -73,6 +78,7 @@ if CompareObjectTimer object="Knight3D" timer_name="\"AttackBuffer\"" comparison
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_1H_Attack_Stab\""
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+do PlaySound audio_file_or_audio_resource_name="assets/sfx/sword_swing.wav" repeat_the_sound="no" volume="34" pitch_speed="1.18"
 
 @event aiGeneratedEventId="chain-knight-axe-one-to-two"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_2H_Attack_Chop\""
@@ -81,6 +87,7 @@ if CompareObjectTimer object="Knight3D" timer_name="\"AttackBuffer\"" comparison
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Attack_Slice\""
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+do PlaySound audio_file_or_audio_resource_name="assets/sfx/axe_swing.wav" repeat_the_sound="no" volume="43" pitch_speed="1.02"
 
 @event aiGeneratedEventId="chain-knight-axe-two-to-three"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_2H_Attack_Slice\""
@@ -89,6 +96,7 @@ if CompareObjectTimer object="Knight3D" timer_name="\"AttackBuffer\"" comparison
 do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Attack_Spinning\""
 do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 do RemoveObjectTimer object="Knight3D" timer_name="\"AttackBuffer\""
+do PlaySound audio_file_or_audio_resource_name="assets/sfx/axe_swing.wav" repeat_the_sound="no" volume="46" pitch_speed="1.1"
 
 @event aiGeneratedEventId="finish-knight-melee-horizontal"
 if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="=" animation_name="\"Melee_1H_Attack_Slice_Horizontal\""
