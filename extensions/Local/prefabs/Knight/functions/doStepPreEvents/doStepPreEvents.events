@@ -228,4 +228,8 @@ if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="An
 >>> if Visible object="Axe3D"
 >>> if AnimatableCapability::AnimatableBehavior::Name object="Knight3D" behavior="Animation" comparison_sign="!=" animation_name="\"Melee_2H_Idle\""
 >>> do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="\"Melee_2H_Idle\""
+
+@event aiGeneratedEventId="smooth-knight-turn-toward-movement"
+if BuiltinCommonInstructions::CompareNumbers first_expression="abs(AngleDifference(Object.Angle(), Object.PhysicsCharacter3D::ForwardAngle()))" comparison_sign=">" second_expression="0.5"
+do SetAngle object="Object" modification_sign="=" angle_in_degrees="lerpAngle(Object.Angle(), Object.PhysicsCharacter3D::ForwardAngle(), 1 - exp(-10 * TimeDelta()))"
 @end group
