@@ -46,6 +46,11 @@ type = "number"
 value = 1
 
 [[variables]]
+name = "SkeletonsDefeated"
+type = "number"
+value = 0
+
+[[variables]]
 name = "QuestNoticeKind"
 type = "number"
 value = 0

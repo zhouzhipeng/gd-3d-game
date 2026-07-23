@@ -203,11 +203,15 @@ if SceneJustBegins
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do SetNumberVariable variable="QuestState" modification_sign="=" value="0"
 do SetNumberVariable variable="QuestTarget" modification_sign="=" value="1"
+do SetNumberVariable variable="SkeletonsDefeated" modification_sign="=" value="0"
 do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
 
-@event aiGeneratedEventId="advance-quest-when-gold-is-collected"
+@event aiGeneratedEventId="advance-quest-when-all-village-tasks-are-complete"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if Inventories::ItemCount comparison_sign=">=" value="Variable(QuestTarget)" inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
+if Inventories::ItemCount comparison_sign=">=" value="Variable(QuestTarget)" inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
+if Inventories::ItemCount comparison_sign=">=" value="Variable(QuestTarget)" inventory_name="\"KnightBackpack\"" item_name="\"Wood\""
+if NumberVariable variable="SkeletonsDefeated" comparison_sign=">=" value="Variable(QuestTarget)"
 do SetNumberVariable variable="QuestState" modification_sign="=" value="2"
 do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="2"
 do ResetTimer timer_name="\"QuestNotice\""
@@ -245,6 +249,8 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
 if KeyFromTextJustPressed key_to_check="\"Num1\""
 do Inventories::RemoveItem inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
+do Inventories::RemoveItem inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
+do Inventories::RemoveItem inventory_name="\"KnightBackpack\"" item_name="\"Wood\""
 do Inventories::AddItem inventory_name="\"KnightBackpack\"" item_name="\"RoyalSigil\""
 do SetNumberVariable variable="QuestState" modification_sign="=" value="3"
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
@@ -499,14 +505,14 @@ if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 >> @event
 >> for each "QuestTrackerText"
 >>> @event
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].en}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].en}}: \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \" / \" + ToString(Variable(QuestTarget))"
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].en}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].en}}: \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/\" + ToString(Variable(QuestTarget)) + \"    {{localization['quest.objective.stone'].en}}: \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/\" + ToString(Variable(QuestTarget)) + NewLine() + \"{{localization['quest.objective.wood'].en}}: \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/\" + ToString(Variable(QuestTarget)) + \"    {{localization['quest.objective.skeleton'].en}}: \" + ToString(Variable(SkeletonsDefeated)) + \"/\" + ToString(Variable(QuestTarget))"
 
 > @event aiGeneratedEventId="write-chinese-active-quest-tracker"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
 >> @event
 >> for each "QuestTrackerText"
 >>> @event
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].cn}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].cn}}：\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \" / \" + ToString(Variable(QuestTarget))"
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].cn}}\" + NewLine() + NewLine() + \"{{localization['quest.objective.gold'].cn}}：\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/\" + ToString(Variable(QuestTarget)) + \"    {{localization['quest.objective.stone'].cn}}：\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/\" + ToString(Variable(QuestTarget)) + NewLine() + \"{{localization['quest.objective.wood'].cn}}：\" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/\" + ToString(Variable(QuestTarget)) + \"    {{localization['quest.objective.skeleton'].cn}}：\" + ToString(Variable(SkeletonsDefeated)) + \"/\" + ToString(Variable(QuestTarget))"
 
 @event aiGeneratedEventId="write-ready-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"

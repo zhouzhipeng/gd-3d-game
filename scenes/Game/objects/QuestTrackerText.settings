@@ -15,7 +15,8 @@ behaviors = [ ]
 string = """
 {{localization['quest.status.active'].en}}
 
-{{localization['quest.objective.gold'].en}}"""
+{{localization['quest.objective.gold'].en}}: 0/1    {{localization['quest.objective.stone'].en}}: 0/1
+{{localization['quest.objective.wood'].en}}: 0/1    {{localization['quest.objective.skeleton'].en}}: 0/1"""
 font = ""
 textAlignment = "left"
 characterSize = 17
@@ -43,7 +44,8 @@ underlined = false
 text = """
 {{localization['quest.status.active'].en}}
 
-{{localization['quest.objective.gold'].en}}"""
+{{localization['quest.objective.gold'].en}}: 0/1    {{localization['quest.objective.stone'].en}}: 0/1
+{{localization['quest.objective.wood'].en}}: 0/1    {{localization['quest.objective.skeleton'].en}}: 0/1"""
 font = ""
 textAlignment = "left"
 verticalTextAlignment = "top"
