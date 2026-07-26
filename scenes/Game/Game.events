@@ -132,9 +132,9 @@ for each "Skeleton_Minion"
 > if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 > if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="520" use_custom_center="yes"
+> if Distance object="Skeleton_Minion" object_2="Knight" distance="520"
 > @instruction inverted=true
-> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="90" use_custom_center="yes"
+> if Distance object="Skeleton_Minion" object_2="Knight" distance="90"
 > do AddForceTowardObject object="Skeleton_Minion" target_object="Knight" speed_in_pixels_per_second="85" force_multiplier="0"
 > do RotateTowardObject object="Skeleton_Minion" target_object="Knight" angular_speed_in_degrees_per_second="240"
 
