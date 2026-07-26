@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 8
+description = "Return the elapsed time in the current Knight FSM state."
+fullName = "Animation state time"
+functionType = "Expression"
+name = "AnimationStateTime"
+sentence = "Animation state time of _PARAM0_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/AnimationStateTime/AnimationStateTime.events"
+objectGroups = { }
+
+[expressionType]
+type = "expression"
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"

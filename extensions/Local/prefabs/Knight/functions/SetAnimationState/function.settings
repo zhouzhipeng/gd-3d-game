@@ -1,0 +1,37 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 5
+description = "Transition the Knight FSM and apply its animation atomically."
+fullName = "Set animation state"
+functionType = "Action"
+name = "SetAnimationState"
+sentence = "Set _PARAM0_ state to _PARAM1_ and play _PARAM2_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/SetAnimationState/SetAnimationState.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"
+
+[[parameters]]
+description = "State name"
+name = "StateName"
+type = "string"
+
+[[parameters]]
+description = "Animation name"
+name = "AnimationName"
+type = "string"
+
+[[parameters]]
+description = "Animation speed scale"
+name = "SpeedScale"
+type = "expression"
+
+[[parameters]]
+description = "Animation start time in seconds"
+name = "StartTime"
+type = "expression"

@@ -1,0 +1,7 @@
+@event aiGeneratedEventId="queue-knight-attack-command"
+if BuiltinCommonInstructions::CompareStrings first_string_expression="SignalName" comparison_sign="=" second_string_expression="\"Knight.RequestAttack\""
+do SetBooleanVariable variable="AttackRequested" modification_sign="True"
+
+@event aiGeneratedEventId="queue-knight-weapon-toggle-command"
+if BuiltinCommonInstructions::CompareStrings first_string_expression="SignalName" comparison_sign="=" second_string_expression="\"Knight.RequestToggleWeapon\""
+do SetBooleanVariable variable="WeaponToggleRequested" modification_sign="True"

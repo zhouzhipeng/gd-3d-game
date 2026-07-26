@@ -1,0 +1,23 @@
+@event aiGeneratedEventId="close-attack-window-before-fsm-transition"
+if BooleanVariable variable="AttackWindowOpen" check_if_the_value_is="True"
+if StringVariable variable="AnimationState" comparison_sign="!=" value="StateName"
+do SetBooleanVariable variable="AttackWindowOpen" modification_sign="False"
+do EmitSceneSignal signal_name="\"Knight.AttackWindowClosed\"" payload="ToString(Object.InstanceId()) + \"|\" + Object.VariableString(AnimationState)"
+
+@event aiGeneratedEventId="apply-knight-fsm-transition"
+if StringVariable variable="AnimationState" comparison_sign="!=" value="StateName"
+do SetStringVariable variable="PreviousAnimationState" modification_sign="=" value="Object.VariableString(AnimationState)"
+do SetStringVariable variable="AnimationState" modification_sign="=" value="StateName"
+do ResetObjectTimer object="Object" timer_name="\"AnimationState\""
+do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="SpeedScale"
+do AnimatableCapability::AnimatableBehavior::SetName object="Knight3D" behavior="Animation" modification_sign="=" animation_name="AnimationName"
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Knight3D" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="StartTime"
+do EmitSceneSignal signal_name="\"Knight.AnimationStateChanged\"" payload="ToString(Object.InstanceId()) + \"|\" + StateName"
+
+> @event aiGeneratedEventId="emit-knight-attack-started"
+> if BuiltinCommonInstructions::CompareStrings first_string_expression="StateName" comparison_sign="startsWith" second_string_expression="\"Attack.\""
+> do EmitSceneSignal signal_name="\"Knight.AttackStarted\"" payload="ToString(Object.InstanceId()) + \"|\" + StateName"
+
+> @event aiGeneratedEventId="emit-knight-landed"
+> if BuiltinCommonInstructions::CompareStrings first_string_expression="StateName" comparison_sign="=" second_string_expression="\"Jump.Land\""
+> do EmitSceneSignal signal_name="\"Knight.Landed\"" payload="ToString(Object.InstanceId())"

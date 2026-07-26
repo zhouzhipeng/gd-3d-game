@@ -1,0 +1,22 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 7
+description = "Check whether the Knight FSM is in the requested state."
+fullName = "Is animation state"
+functionType = "Condition"
+name = "IsAnimationState"
+sentence = "_PARAM0_ is in animation state _PARAM1_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/IsAnimationState/IsAnimationState.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"
+
+[[parameters]]
+description = "State name"
+name = "StateName"
+type = "string"

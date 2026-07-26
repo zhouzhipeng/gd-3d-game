@@ -1,0 +1,27 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 9
+description = "Receive queued commands addressed to this Knight instance."
+fullName = "onSignal"
+functionType = "Action"
+name = "onSignal"
+sentence = ""
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/onSignal/onSignal.events"
+objectGroups = { }
+
+[[parameters]]
+description = "Object"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"
+
+[[parameters]]
+description = "Signal name"
+name = "SignalName"
+type = "string"
+
+[[parameters]]
+description = "Signal payload"
+name = "Payload"
+type = "string"

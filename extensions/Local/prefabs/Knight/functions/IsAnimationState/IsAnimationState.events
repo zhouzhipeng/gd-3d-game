@@ -1,0 +1,6 @@
+@event aiGeneratedEventId="initialize-is-knight-animation-state"
+do SetReturnBoolean should_the_condition_be_true_or_false="False"
+
+@event aiGeneratedEventId="return-is-knight-animation-state"
+if StringVariable variable="AnimationState" comparison_sign="=" value="StateName"
+do SetReturnBoolean should_the_condition_be_true_or_false="True"

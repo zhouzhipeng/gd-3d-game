@@ -1,0 +1,20 @@
+kind = "function"
+settingsFormatVersion = 1
+order = 6
+description = "Return the Knight FSM state name."
+fullName = "Animation state"
+functionType = "Expression"
+name = "AnimationState"
+sentence = "Animation state of _PARAM0_"
+folder = [ ]
+events = "game://extensions/Local/prefabs/Knight/functions/AnimationState/AnimationState.events"
+objectGroups = { }
+
+[expressionType]
+type = "string"
+
+[[parameters]]
+description = "Knight"
+name = "Object"
+supplementaryInformation = "Local::Knight"
+type = "object"

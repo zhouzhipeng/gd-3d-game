@@ -10,11 +10,40 @@ is3D = true
 isUsingLegacyInstancesRenderer = false
 name = "Knight"
 previewIconUrl = ""
-variables = [ ]
 propertyDescriptors = [ ]
 layout = "game://extensions/Local/prefabs/Knight/Knight.layout"
 variants = [ ]
 objectGroups = { }
+
+[[variables]]
+name = "AnimationState"
+type = "string"
+value = ""
+
+[[variables]]
+name = "PreviousAnimationState"
+type = "string"
+value = ""
+
+[[variables]]
+name = "Weapon"
+type = "string"
+value = "Sword"
+
+[[variables]]
+name = "AttackRequested"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "WeaponToggleRequested"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "AttackWindowOpen"
+type = "boolean"
+value = false
 
 [[behaviors]]
 isFolded = true
