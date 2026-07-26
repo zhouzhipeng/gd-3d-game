@@ -32,10 +32,11 @@ if BuiltinCommonInstructions::Once
 >> do EmitSignalToObjectInstance instance_id="Knight.InstanceId()" signal_name="\"Knight.RequestAttack\"" payload="\"input\""
 
 @event aiGeneratedEventId="signal-knight-weapon-toggle-request"
-if KeyFromTextJustPressed key_to_check="\"f\""
+if KeyFromTextPressed key_to_check="\"f\""
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+if BuiltinCommonInstructions::Once
 > for each "Knight"
 >> do EmitSignalToObjectInstance instance_id="Knight.InstanceId()" signal_name="\"Knight.RequestToggleWeapon\"" payload="\"input\""
 @end group

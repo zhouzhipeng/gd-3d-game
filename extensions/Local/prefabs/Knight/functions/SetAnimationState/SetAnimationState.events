@@ -2,11 +2,11 @@
 if BooleanVariable variable="AttackWindowOpen" check_if_the_value_is="True"
 if StringVariable variable="AnimationState" comparison_sign="!=" value="StateName"
 do SetBooleanVariable variable="AttackWindowOpen" modification_sign="False"
-do EmitSceneSignal signal_name="\"Knight.AttackWindowClosed\"" payload="ToString(Object.InstanceId()) + \"|\" + Object.VariableString(AnimationState)"
+do EmitSceneSignal signal_name="\"Knight.AttackWindowClosed\"" payload="ToString(Object.InstanceId()) + \"|\" + AnimationState"
 
 @event aiGeneratedEventId="apply-knight-fsm-transition"
 if StringVariable variable="AnimationState" comparison_sign="!=" value="StateName"
-do SetStringVariable variable="PreviousAnimationState" modification_sign="=" value="Object.VariableString(AnimationState)"
+do SetStringVariable variable="PreviousAnimationState" modification_sign="=" value="AnimationState"
 do SetStringVariable variable="AnimationState" modification_sign="=" value="StateName"
 do ResetObjectTimer object="Object" timer_name="\"AnimationState\""
 do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Knight3D" behavior="Animation" modification_sign="=" speed_scale="SpeedScale"
