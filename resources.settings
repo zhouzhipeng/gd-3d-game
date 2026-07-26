@@ -912,6 +912,16 @@ preloadInCache = false
 userAdded = true
 
 [[resources]]
+file = "assets/sfx/knight_footstep.wav"
+kind = "audio"
+metadata = ""
+name = "assets/sfx/knight_footstep.wav"
+preloadAsMusic = false
+preloadAsSound = true
+preloadInCache = false
+userAdded = true
+
+[[resources]]
 file = "assets/sfx/skeleton_break.wav"
 kind = "audio"
 metadata = ""
