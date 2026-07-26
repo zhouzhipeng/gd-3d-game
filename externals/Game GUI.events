@@ -76,6 +76,7 @@ do SetNumberVariable variable="LocaleDirty" modification_sign="=" value="0"
 @event aiGeneratedEventId="toggle-knight-backpack-with-q"
 if KeyFromTextJustPressed key_to_check="\"q\""
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="1 - Variable(BackpackOpen)"
 > @event aiGeneratedEventId="open-knight-backpack"
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="1"
@@ -227,6 +228,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/quest_fanfare.wav" re
 if KeyFromTextJustPressed key_to_check="\"e\""
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 > @event aiGeneratedEventId="open-dialogue-for-nearby-captain-edric"
 > for each "QuestGiver"
 >> @event
@@ -246,16 +248,19 @@ if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 @event aiGeneratedEventId="accept-golden-oath-quest"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Num1\""
 do SetNumberVariable variable="QuestState" modification_sign="=" value="1"
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="1"
 do ResetTimer timer_name="\"QuestNotice\""
+do ResetTimer timer_name="\"SkeletonAttackCooldown\""
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/quest_fanfare.wav" repeat_the_sound="no" volume="48" pitch_speed="0.95"
 
 @event aiGeneratedEventId="turn-in-golden-oath-quest"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Num1\""
 do Inventories::RemoveItem inventory_name="\"KnightBackpack\"" item_name="\"Gold\""
 do Inventories::RemoveItem inventory_name="\"KnightBackpack\"" item_name="\"Stone\""
@@ -269,6 +274,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/quest_fanfare.wav" re
 
 @event aiGeneratedEventId="close-dialogue-with-escape"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Escape\""
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat_the_sound="no" volume="18" pitch_speed="0.78"
@@ -276,6 +282,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat
 @event aiGeneratedEventId="decline-available-quest"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Num2\""
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat_the_sound="no" volume="18" pitch_speed="0.78"
@@ -283,6 +290,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat
 @event aiGeneratedEventId="postpone-ready-quest-turn-in"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Num2\""
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat_the_sound="no" volume="18" pitch_speed="0.78"
@@ -290,6 +298,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat
 @event aiGeneratedEventId="close-active-quest-reminder"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Space\""
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat_the_sound="no" volume="18" pitch_speed="0.78"
@@ -297,6 +306,7 @@ do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat
 @event aiGeneratedEventId="close-completed-quest-dialogue"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 if NumberVariable variable="QuestState" comparison_sign="=" value="3"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if KeyFromTextJustPressed key_to_check="\"Space\""
 do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="0"
 do PlaySound audio_file_or_audio_resource_name="assets/sfx/ui_toggle.wav" repeat_the_sound="no" volume="18" pitch_speed="0.78"
@@ -331,6 +341,7 @@ if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sig
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
 > @event aiGeneratedEventId="show-english-quest-prompt-for-nearby-npc"
 > for each "QuestGiver"
@@ -346,6 +357,7 @@ if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultL
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="QuestNoticeKind" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
 > @event aiGeneratedEventId="show-chinese-quest-prompt-for-nearby-npc"
 > for each "QuestGiver"
@@ -489,16 +501,17 @@ if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sig
 >> do Hide object="QuestTrackerWindow"
 
 @event aiGeneratedEventId="show-quest-tracker-when-active"
-if NumberVariable variable="QuestState" comparison_sign=">" value="0"
+if NumberVariable variable="QuestState" comparison_sign=">=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 > @event
 > for each "QuestTrackerWindow"
 >> @event
 >> do Show object="QuestTrackerWindow"
 
 @event aiGeneratedEventId="write-quest-tracker-title"
-if NumberVariable variable="QuestState" comparison_sign=">" value="0"
+if NumberVariable variable="QuestState" comparison_sign=">=" value="0"
 > @event aiGeneratedEventId="write-english-quest-tracker-title"
 > if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
 >> @event
@@ -632,8 +645,136 @@ if NumberVariable variable="DialogueOpen" comparison_sign="=" value="1"
 @event aiGeneratedEventId="resume-knight-after-dialogue"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 > @event
 > for each "Knight"
 >> @event
 >> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="yes"
+@end group
+
+@group "Playability HUD and game results" source="" creationTime=0 color=[86,164,255] parameters=[]
+@event aiGeneratedEventId="write-english-health-and-shortcuts"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+> @event
+> for each "BackpackPrompt"
+>> @event
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackPrompt" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth)) + \"    {{localization['backpack.prompt'].en}}\""
+
+@event aiGeneratedEventId="write-chinese-health-and-shortcuts"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+> @event
+> for each "BackpackPrompt"
+>> @event
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="BackpackPrompt" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth)) + \"    {{localization['backpack.prompt'].cn}}\""
+
+@event aiGeneratedEventId="write-new-quest-onboarding"
+if NumberVariable variable="QuestState" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+> @event aiGeneratedEventId="write-english-new-quest-onboarding"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
+>> for each "QuestTrackerText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].en}}\" + NewLine() + \"{{localization['hud.start.objective'].en}}\" + NewLine() + NewLine() + \"{{localization['hud.controls.move'].en}}\" + NewLine() + \"{{localization['hud.controls.combat'].en}}\" + NewLine() + \"{{localization['hud.controls.interact'].en}}\""
+
+> @event aiGeneratedEventId="write-chinese-new-quest-onboarding"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
+>> for each "QuestTrackerText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].cn}}\" + NewLine() + \"{{localization['hud.start.objective'].cn}}\" + NewLine() + NewLine() + \"{{localization['hud.controls.move'].cn}}\" + NewLine() + \"{{localization['hud.controls.combat'].cn}}\" + NewLine() + \"{{localization['hud.controls.interact'].cn}}\""
+
+@event aiGeneratedEventId="write-victory-result-window"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="1"
+> @event aiGeneratedEventId="write-english-victory-result-window"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
+>> for each "DialogueSpeaker"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['game.victory.title'].en}}\""
+>> @event
+>> for each "DialogueText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['game.victory.text'].en}}\""
+>> @event
+>> for each "DialogueChoices"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['game.restart'].en}}\""
+
+> @event aiGeneratedEventId="write-chinese-victory-result-window"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
+>> for each "DialogueSpeaker"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['game.victory.title'].cn}}\""
+>> @event
+>> for each "DialogueText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['game.victory.text'].cn}}\""
+>> @event
+>> for each "DialogueChoices"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['game.restart'].cn}}\""
+
+@event aiGeneratedEventId="write-defeat-result-window"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="2"
+> @event aiGeneratedEventId="write-english-defeat-result-window"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> @event
+>> for each "DialogueSpeaker"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['game.defeat.title'].en}}\""
+>> @event
+>> for each "DialogueText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['game.defeat.text'].en}}\""
+>> @event
+>> for each "DialogueChoices"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['game.restart'].en}}\""
+
+> @event aiGeneratedEventId="write-chinese-defeat-result-window"
+> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> @event
+>> for each "DialogueSpeaker"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueSpeaker" behavior="Text" modification_sign="=" text="\"{{localization['game.defeat.title'].cn}}\""
+>> @event
+>> for each "DialogueText"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueText" behavior="Text" modification_sign="=" text="\"{{localization['game.defeat.text'].cn}}\""
+>> @event
+>> for each "DialogueChoices"
+>>> @event
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="DialogueChoices" behavior="Text" modification_sign="=" text="\"{{localization['game.restart'].cn}}\""
+
+@event aiGeneratedEventId="hide-play-overlays-on-game-result"
+if NumberVariable variable="GameEnded" comparison_sign=">" value="0"
+> @event
+> for each "QuestTrackerWindow"
+>> @event
+>> do Hide object="QuestTrackerWindow"
+> @event
+> for each "QuestPrompt"
+>> @event
+>> do Hide object="QuestPrompt"
+> @event
+> for each "QuestNotice"
+>> @event
+>> do Hide object="QuestNotice"
+> @event
+> for each "PickupToast"
+>> @event
+>> do Hide object="PickupToast"
+> @event
+> for each "BackpackPrompt"
+>> @event
+>> do Hide object="BackpackPrompt"
+
+@event aiGeneratedEventId="restart-game-after-result"
+if NumberVariable variable="GameEnded" comparison_sign=">" value="0"
+if KeyFromTextJustPressed key_to_check="\"r\""
+do Scene name_of_the_new_scene="\"Game\"" stop_any_other_paused_scenes="yes"
 @end group

@@ -42,7 +42,7 @@ object = "BackpackPrompt"
 layer = "backpack-ui"
 at = [32, 28]
 z_order = 110
-size = [220, 28]
+size = [500, 28]
 locked = true
 
 [[instances]]
@@ -105,7 +105,7 @@ object = "QuestTrackerPanel"
 layer = "quest-ui"
 at = [920, 70]
 z_order = 90
-size = [330, 250]
+size = [330, 280]
 opacity = 235
 locked = true
 
@@ -124,7 +124,7 @@ object = "QuestTrackerText"
 layer = "quest-ui"
 at = [950, 155]
 z_order = 91
-size = [270, 130]
+size = [270, 165]
 locked = true
 
 [[instances]]

@@ -51,6 +51,21 @@ type = "number"
 value = 0
 
 [[variables]]
+name = "PlayerHealth"
+type = "number"
+value = 100
+
+[[variables]]
+name = "PlayerMaxHealth"
+type = "number"
+value = 100
+
+[[variables]]
+name = "GameEnded"
+type = "number"
+value = 0
+
+[[variables]]
 name = "QuestNoticeKind"
 type = "number"
 value = 0

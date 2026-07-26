@@ -158,3 +158,47 @@ cn = "+ 所有任务完成——返回埃德里克处"
 [localization."quest.toast.completed"]
 en = "+ QUEST COMPLETE — ROYAL SIGIL EARNED"
 cn = "+ 任务完成——获得皇家徽记"
+
+[localization."hud.health"]
+en = "HP"
+cn = "生命"
+
+[localization."hud.start.status"]
+en = "STATUS: NEW QUEST"
+cn = "状态：新任务"
+
+[localization."hud.start.objective"]
+en = "Talk to Captain Edric"
+cn = "与埃德里克队长交谈"
+
+[localization."hud.controls.move"]
+en = "WASD  Move     Mouse  Look"
+cn = "WASD  移动     鼠标  视角"
+
+[localization."hud.controls.combat"]
+en = "Click  Attack     F  Weapon"
+cn = "点击  攻击     F  武器"
+
+[localization."hud.controls.interact"]
+en = "E  Talk     Q  Bag     L  Language"
+cn = "E  交谈     Q  背包     L  语言"
+
+[localization."game.victory.title"]
+en = "VILLAGE DEFENDER"
+cn = "村庄守护者"
+
+[localization."game.victory.text"]
+en = "The stores are restored, the road is safe, and the Royal Sigil is yours."
+cn = "物资已经补齐，道路恢复安全，皇家徽记也属于你了。"
+
+[localization."game.defeat.title"]
+en = "THE KNIGHT HAS FALLEN"
+cn = "骑士倒下了"
+
+[localization."game.defeat.text"]
+en = "The skeleton overwhelmed you. Return stronger and try the oath again."
+cn = "骷髅击败了你。重整旗鼓，再次挑战黄金誓约。"
+
+[localization."game.restart"]
+en = "[R] PLAY AGAIN"
+cn = "[R] 再玩一次"

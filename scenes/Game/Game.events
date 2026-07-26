@@ -116,6 +116,79 @@ for each "Skeleton_Minion"
 > do Delete object="Skeleton_Minion"
 @end group
 
+@group "Enemy pressure and game flow" source="" creationTime=0 color=[238,96,96] parameters=[]
+@event aiGeneratedEventId="initialize-player-survival-state"
+if SceneJustBegins
+do SetNumberVariable variable="PlayerHealth" modification_sign="=" value="100"
+do SetNumberVariable variable="PlayerMaxHealth" modification_sign="=" value="100"
+do SetNumberVariable variable="GameEnded" modification_sign="=" value="0"
+do ResetTimer timer_name="\"SkeletonAttackCooldown\""
+
+@event aiGeneratedEventId="skeleton-pursues-knight-after-quest-start"
+for each "Skeleton_Minion"
+> @event
+> if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+> if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+> if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="520" use_custom_center="yes"
+> @instruction inverted=true
+> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="90" use_custom_center="yes"
+> do AddForceTowardObject object="Skeleton_Minion" target_object="Knight" speed_in_pixels_per_second="85" force_multiplier="0"
+> do RotateTowardObject object="Skeleton_Minion" target_object="Knight" angular_speed_in_degrees_per_second="240"
+
+@event aiGeneratedEventId="skeleton-damages-knight-at-close-range"
+for each "Skeleton_Minion"
+> @event
+> if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+> if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+> if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+> if NumberVariable variable="PlayerHealth" comparison_sign=">" value="0"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="90" use_custom_center="yes"
+> if CompareTimer timer_name="\"SkeletonAttackCooldown\"" comparison_sign=">" time_in_seconds="0.9"
+> do SetNumberVariable variable="PlayerHealth" modification_sign="-" value="15"
+> do ResetTimer timer_name="\"SkeletonAttackCooldown\""
+> do PlaySound audio_file_or_audio_resource_name="assets/sfx/weapon_impact.wav" repeat_the_sound="no" volume="38" pitch_speed="0.62"
+
+@event aiGeneratedEventId="clamp-player-health-at-zero"
+if NumberVariable variable="PlayerHealth" comparison_sign="<" value="0"
+do SetNumberVariable variable="PlayerHealth" modification_sign="=" value="0"
+
+@event aiGeneratedEventId="show-defeat-when-player-health-is-empty"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+if NumberVariable variable="PlayerHealth" comparison_sign="<=" value="0"
+do SetNumberVariable variable="PlayerHealth" modification_sign="=" value="0"
+do SetNumberVariable variable="GameEnded" modification_sign="=" value="2"
+do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="1"
+do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="0"
+do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
+> @event aiGeneratedEventId="release-mouse-on-defeat"
+> if MousePointerLock::isPointerLocked
+> do MousePointerLock::ExitPointerLock
+> @event aiGeneratedEventId="pause-knight-on-defeat"
+> for each "Knight"
+>> @event
+>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
+
+@event aiGeneratedEventId="show-victory-after-golden-oath-turn-in"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+if NumberVariable variable="QuestState" comparison_sign="=" value="3"
+do SetNumberVariable variable="GameEnded" modification_sign="=" value="1"
+do SetNumberVariable variable="DialogueOpen" modification_sign="=" value="1"
+do SetNumberVariable variable="BackpackOpen" modification_sign="=" value="0"
+do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
+> @event aiGeneratedEventId="release-mouse-on-victory"
+> if MousePointerLock::isPointerLocked
+> do MousePointerLock::ExitPointerLock
+> @event aiGeneratedEventId="pause-knight-on-victory"
+> for each "Knight"
+>> @event
+>> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
+@end group
+
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
