@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 36
+adaptCollisionMaskAutomatically = true
+assetStoreId = ""
+name = "PausePanel"
+persistentUuid = "112bc41e-1658-41c5-88e6-7274b884e4e7"
+type = "Sprite"
+updateIfNotVisible = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Playability UI" ]
+
+[[animations]]
+name = "Panel"
+useMultipleDirections = false
+
+[[animations.directions]]
+looping = false
+timeBetweenFrames = 0.08
+
+[[animations.directions.sprites]]
+hasCustomCollisionMask = false
+image = "KnightBackpackPanel"
+points = [ ]
+originPoint = { name = "origine", x = 0, y = 0 }
+centerPoint = { automatic = true, name = "centre", x = 0, y = 0 }
+customCollisionMask = [ ]

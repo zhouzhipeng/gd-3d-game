@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 34
+assetStoreId = ""
+bold = true
+italic = false
+name = "ObjectiveText"
+persistentUuid = "06e57663-9130-4bb9-ba19-42925c259db3"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "◆ NEXT: CAPTAIN EDRIC"
+font = ""
+textAlignment = "center"
+characterSize = 18
+folder = [ "Playability UI" ]
+
+[color]
+b = 110
+g = 224
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "◆ NEXT: CAPTAIN EDRIC"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 18
+lineHeight = 0
+color = "255;224;110"

@@ -19,11 +19,30 @@ if SceneJustBegins
 
 @event aiGeneratedEventId="initialize-minion-animation"
 if SceneJustBegins
-do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Walking_A\""
+do SetBooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" modification_sign="False"
+do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="0"
+do ResetObjectTimer object="Skeleton_Minion" timer_name="\"AttackCooldown\""
+do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Skeletons_Inactive_Standing_Pose\""
+do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 
 @group "Knight signal commands" source="" creationTime=0 color=[255,165,70] parameters=[]
+@event aiGeneratedEventId="assist-knight-facing-nearest-skeleton"
+if MouseButtonFromTextPressed button_to_check="\"Left\""
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
+if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+> for each "Knight"
+>> @event aiGeneratedEventId="pick-nearest-live-skeleton-for-attack-assist"
+>> if Collision3D::PickNearest object="Skeleton_Minion" x_position="Knight.CenterX()" y_position="Knight.CenterY()" z_position="Knight.Object3D::CenterZ()"
+>> if Distance object="Knight" object_2="Skeleton_Minion" distance="175"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> do RotateTowardObject object="Knight" target_object="Skeleton_Minion" angular_speed_in_degrees_per_second="10000"
+>> do Physics3D::PhysicsCharacter3D::SetForwardAngle object="Knight" behavior="PhysicsCharacter3D" modification_sign="=" angle_in_degrees="Knight.Angle()"
+
 @event aiGeneratedEventId="signal-knight-attack-request"
 if MouseButtonFromTextPressed button_to_check="\"Left\""
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
@@ -33,6 +52,7 @@ if BuiltinCommonInstructions::Once
 
 @event aiGeneratedEventId="signal-knight-weapon-toggle-request"
 if KeyFromTextPressed key_to_check="\"f\""
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
@@ -142,36 +162,115 @@ if SceneJustBegins
 do SetNumberVariable variable="PlayerHealth" modification_sign="=" value="100"
 do SetNumberVariable variable="PlayerMaxHealth" modification_sign="=" value="100"
 do SetNumberVariable variable="GameEnded" modification_sign="=" value="0"
-do ResetTimer timer_name="\"SkeletonAttackCooldown\""
+do SetNumberVariable variable="CombatCueKind" modification_sign="=" value="0"
+do ResetTimer timer_name="\"PlayerInvulnerability\""
+
+@event aiGeneratedEventId="awaken-skeleton-after-quest-acceptance"
+for each "Skeleton_Minion"
+> @event
+> if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" check_if_the_value_is="False"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+> do SetBooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" modification_sign="True"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="3"
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Skeletons_Awaken_Standing\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+
+@event aiGeneratedEventId="finish-skeleton-awakening"
+for each "Skeleton_Minion"
+> @event
+> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="3"
+> if AnimatableCapability::AnimatableBehavior::HasAnimationEnded object="Skeleton_Minion" behavior="Animation"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="0"
+> do ResetObjectTimer object="Skeleton_Minion" timer_name="\"AttackCooldown\""
+> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Walking_A\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
 
 @event aiGeneratedEventId="skeleton-pursues-knight-after-quest-start"
 for each "Skeleton_Minion"
 > @event
 > if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 > if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 > if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" check_if_the_value_is="True"
 > if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if Distance object="Skeleton_Minion" object_2="Knight" distance="520"
+> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="0"
+> if Distance object="Skeleton_Minion" object_2="Knight" distance="700"
 > @instruction inverted=true
-> if Distance object="Skeleton_Minion" object_2="Knight" distance="90"
-> do AddForceTowardObject object="Skeleton_Minion" target_object="Knight" speed_in_pixels_per_second="85" force_multiplier="0"
+> if Distance object="Skeleton_Minion" object_2="Knight" distance="125"
+> do AddForceTowardObject object="Skeleton_Minion" target_object="Knight" speed_in_pixels_per_second="100" force_multiplier="0"
 > do RotateTowardObject object="Skeleton_Minion" target_object="Knight" angular_speed_in_degrees_per_second="240"
 
-@event aiGeneratedEventId="skeleton-damages-knight-at-close-range"
+@event aiGeneratedEventId="separate-skeleton-from-knight-at-contact"
+for each "Skeleton_Minion"
+> for each "Knight"
+>> @event
+>> if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
+>> if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="72" use_custom_center="yes"
+>> do AddForceTowardPosition object="Skeleton_Minion" x_position="Skeleton_Minion.CenterX() + (Skeleton_Minion.CenterX() - Knight.CenterX())" y_position="Skeleton_Minion.CenterY() + (Skeleton_Minion.CenterY() - Knight.CenterY())" speed_in_pixels_per_second="75" force_multiplier="0"
+
+@event aiGeneratedEventId="start-skeleton-attack-windup"
 for each "Skeleton_Minion"
 > @event
 > if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 > if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 > if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 > if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
-> if NumberVariable variable="PlayerHealth" comparison_sign=">" value="0"
+> if BooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" check_if_the_value_is="True"
 > if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="90" use_custom_center="yes"
-> if CompareTimer timer_name="\"SkeletonAttackCooldown\"" comparison_sign=">" time_in_seconds="0.9"
-> do SetNumberVariable variable="PlayerHealth" modification_sign="-" value="15"
-> do ResetTimer timer_name="\"SkeletonAttackCooldown\""
-> do PlaySound audio_file_or_audio_resource_name="assets/sfx/weapon_impact.wav" repeat_the_sound="no" volume="38" pitch_speed="0.62"
+> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="0"
+> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="125" use_custom_center="yes"
+> if CompareObjectTimer object="Skeleton_Minion" timer_name="\"AttackCooldown\"" comparison_sign=">=" time_in_seconds="1.2"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="1"
+> do ResetObjectTimer object="Skeleton_Minion" timer_name="\"AttackWindup\""
+> do SetNumberVariable variable="CombatCueKind" modification_sign="=" value="1"
+> do ResetTimer timer_name="\"CombatCue\""
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1.15"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Melee_Unarmed_Attack_Punch_A\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+
+@event aiGeneratedEventId="apply-telegraphed-skeleton-damage"
+for each "Skeleton_Minion"
+> for each "Knight"
+>> @event
+>> if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+>> if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
+>> if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+>> if NumberVariable variable="PlayerHealth" comparison_sign=">" value="0"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="1"
+>> if CompareObjectTimer object="Skeleton_Minion" timer_name="\"AttackWindup\"" comparison_sign=">=" time_in_seconds="0.45"
+>> if Collision3D::AreWithinDistance object="Skeleton_Minion" other_object="Knight" distance="135" use_custom_center="yes"
+>> if CompareTimer timer_name="\"PlayerInvulnerability\"" comparison_sign=">=" time_in_seconds="0.65"
+>> do SetNumberVariable variable="PlayerHealth" modification_sign="-" value="10"
+>> do ResetTimer timer_name="\"PlayerInvulnerability\""
+>> do SetNumberVariable variable="CombatCueKind" modification_sign="=" value="2"
+>> do ResetTimer timer_name="\"CombatCue\""
+>> do AddForceTowardPosition object="Knight" x_position="Knight.CenterX() + (Knight.CenterX() - Skeleton_Minion.CenterX())" y_position="Knight.CenterY() + (Knight.CenterY() - Skeleton_Minion.CenterY())" speed_in_pixels_per_second="260" force_multiplier="0"
+>> do PlaySound audio_file_or_audio_resource_name="assets/sfx/weapon_impact.wav" repeat_the_sound="no" volume="42" pitch_speed="0.62"
+
+@event aiGeneratedEventId="finish-skeleton-attack-windup"
+for each "Skeleton_Minion"
+> @event
+> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="1"
+> if CompareObjectTimer object="Skeleton_Minion" timer_name="\"AttackWindup\"" comparison_sign=">=" time_in_seconds="0.5"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="2"
+> do ResetObjectTimer object="Skeleton_Minion" timer_name="\"AttackCooldown\""
+> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1"
+> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Walking_A\""
+> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+
+@event aiGeneratedEventId="finish-skeleton-attack-recovery"
+for each "Skeleton_Minion"
+> @event
+> if NumberObjectVariable object="Skeleton_Minion" variable="AttackState" comparison_sign="=" value="2"
+> if CompareObjectTimer object="Skeleton_Minion" timer_name="\"AttackCooldown\"" comparison_sign=">=" time_in_seconds="1.2"
+> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="0"
 
 @event aiGeneratedEventId="clamp-player-health-at-zero"
 if NumberVariable variable="PlayerHealth" comparison_sign="<" value="0"
@@ -209,8 +308,30 @@ do SetNumberVariable variable="QuestNoticeKind" modification_sign="=" value="0"
 >> do ActivateBehavior object="Knight" behavior="Platformer3DKeyboardMapper" activate="no"
 @end group
 
+@group "Movement comfort" source="" creationTime=0 color=[91,192,222] parameters=[]
+@event aiGeneratedEventId="enable-knight-sprint"
+if KeyFromTextPressed key_to_check="\"LShift\""
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
+if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
+if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
+if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
+> for each "Knight"
+>> @event
+>> do Physics3D::PhysicsCharacter3D::SetForwardSpeedMax object="Knight" behavior="PhysicsCharacter3D" modification_sign="=" speed_in_pixels_per_second="600"
+>> do Physics3D::PhysicsCharacter3D::SetSidewaysSpeedMax object="Knight" behavior="PhysicsCharacter3D" modification_sign="=" speed_in_pixels_per_second="520"
+
+@event aiGeneratedEventId="restore-knight-walk-speed"
+@instruction inverted=true
+if KeyFromTextPressed key_to_check="\"LShift\""
+> for each "Knight"
+>> @event
+>> do Physics3D::PhysicsCharacter3D::SetForwardSpeedMax object="Knight" behavior="PhysicsCharacter3D" modification_sign="=" speed_in_pixels_per_second="420"
+>> do Physics3D::PhysicsCharacter3D::SetSidewaysSpeedMax object="Knight" behavior="PhysicsCharacter3D" modification_sign="=" speed_in_pixels_per_second="380"
+@end group
+
 @event aiGeneratedEventId="capture-mouse-for-third-person-camera"
 if HasAnyTouchOrMouseStarted
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 @instruction inverted=true
@@ -225,6 +346,7 @@ do MousePointerLock::ExitPointerLock
 @event aiGeneratedEventId="rotate-third-person-camera-with-mouse"
 if MousePointerLock::isPointerLocked
 if MousePointerLock::IsMoving
-do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementX() * 0.12"
-do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementY() * 0.12"
+if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
+do ThirdPersonCamera::ThirdPersonCamera::SetTargetedRotationAngle object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementX() * Variable(MouseSensitivity)"
+do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="+" value="MousePointerLock::MovementY() * Variable(MouseSensitivity)"
 do ThirdPersonCamera::ThirdPersonCamera::SetElevationAngleOffset object="Knight" behavior="ThirdPersonCamera" modification_sign="=" value="clamp(Knight.ThirdPersonCamera::ElevationAngleOffset(), -10, 55)"

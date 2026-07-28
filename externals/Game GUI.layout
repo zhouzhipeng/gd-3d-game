@@ -40,9 +40,9 @@ locked = true
 id = "961e862c-11db-49d6-99f4-62045f8066a7"
 object = "BackpackPrompt"
 layer = "backpack-ui"
-at = [32, 28]
+at = [32, 62]
 z_order = 110
-size = [500, 28]
+size = [680, 28]
 locked = true
 
 [[instances]]
@@ -103,9 +103,9 @@ locked = true
 id = "cc6fbcfe-2f5b-41b9-812c-2e755db41982"
 object = "QuestTrackerPanel"
 layer = "quest-ui"
-at = [920, 70]
+at = [980, 70]
 z_order = 90
-size = [330, 280]
+size = [270, 170]
 opacity = 235
 locked = true
 
@@ -113,18 +113,18 @@ locked = true
 id = "4399edb8-87a4-4355-a361-ddc8653f7736"
 object = "QuestTrackerTitle"
 layer = "quest-ui"
-at = [940, 100]
+at = [995, 94]
 z_order = 91
-size = [290, 36]
+size = [240, 28]
 locked = true
 
 [[instances]]
 id = "7d70b1f0-7cbe-4eb0-be9a-466d9e3c05fa"
 object = "QuestTrackerText"
 layer = "quest-ui"
-at = [950, 155]
+at = [1000, 135]
 z_order = 91
-size = [270, 165]
+size = [230, 82]
 locked = true
 
 [[instances]]
@@ -134,4 +134,77 @@ layer = "quest-ui"
 at = [390, 610]
 z_order = 120
 size = [500, 32]
+locked = true
+
+[[instances]]
+id = "a5703a44-eccb-4913-b2a6-5cf87f043d27"
+object = "PlayerHealthText"
+layer = "backpack-ui"
+at = [32, 26]
+z_order = 120
+size = [400, 30]
+locked = true
+
+[[instances]]
+id = "61a2293d-2f58-4cb8-a175-2b012414b782"
+object = "EnemyHealthText"
+layer = "quest-ui"
+at = [430, 82]
+z_order = 120
+size = [420, 32]
+locked = true
+
+[[instances]]
+id = "f51aadbb-907f-4c61-8f8f-48db8d791ac7"
+object = "ObjectiveText"
+layer = "quest-ui"
+at = [390, 28]
+z_order = 120
+size = [500, 28]
+locked = true
+
+[[instances]]
+id = "01c97688-3ff1-48dd-a120-1ff6b7066774"
+object = "TutorialText"
+layer = "quest-ui"
+at = [32, 102]
+z_order = 110
+size = [560, 90]
+locked = true
+
+[[instances]]
+id = "e49c1c25-5cfa-4956-875c-a4e15aeb9737"
+object = "PausePanel"
+layer = "quest-ui"
+at = [390, 150]
+z_order = 200
+size = [500, 420]
+opacity = 245
+locked = true
+
+[[instances]]
+id = "aeb8bbdc-1c3a-4b7a-9364-a31216adc835"
+object = "PauseTitle"
+layer = "quest-ui"
+at = [430, 190]
+z_order = 201
+size = [420, 48]
+locked = true
+
+[[instances]]
+id = "9a4b252c-ae30-4627-9952-9c8fcf6959c2"
+object = "PauseText"
+layer = "quest-ui"
+at = [430, 260]
+z_order = 201
+size = [420, 250]
+locked = true
+
+[[instances]]
+id = "b18dec57-5980-4c18-b7f4-9e2c6a2425e8"
+object = "CombatCue"
+layer = "quest-ui"
+at = [430, 120]
+z_order = 150
+size = [420, 42]
 locked = true

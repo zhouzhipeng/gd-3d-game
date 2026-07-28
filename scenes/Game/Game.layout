@@ -594,14 +594,14 @@ z_order = 1
 id = "6e868261-ec5f-457e-bbc6-e2b050430e95"
 object = "Skeleton_Minion"
 layer = "3d-terrain"
-at = [1024, 896, -165.864695381]
+at = [1250, 250, -165.864695381]
 z_order = 2
 
 [[instances]]
 id = "393bd11c-08e4-4555-9a77-bf868d866391"
 object = "SkeletonHurtbox"
 layer = "3d-terrain"
-at = [994, 871, -210.864695381]
+at = [1220, 225, -210.864695381]
 size = [60, 50]
 depth = 90
 opacity = 0
@@ -628,7 +628,7 @@ opacity = 0
 id = "f743e76d-8f7a-4a61-a05a-70fea6a67d32"
 object = "GoldPickup"
 layer = "3d-terrain"
-at = [740, 780, -125]
+at = [640, 1650, -276]
 rotation = 20
 locked = true
 
@@ -636,7 +636,7 @@ locked = true
 id = "4f64f8fd-736d-4139-9724-ab6a6913288a"
 object = "StonePickup"
 layer = "3d-terrain"
-at = [640, 780, -125]
+at = [-500, -600, -20]
 rotation = -15
 locked = true
 
@@ -644,8 +644,16 @@ locked = true
 id = "997974d0-5d9b-448b-9cc8-27cfd2866750"
 object = "WoodPickup"
 layer = "3d-terrain"
-at = [540, 780, -125]
+at = [1650, -700, -240]
 rotation = 30
+locked = true
+
+[[instances]]
+id = "a3ff9a92-3af8-4f3f-9eb8-c43e1b4b62cd"
+object = "HealPickup"
+layer = "3d-terrain"
+at = [1030, 520, -135]
+rotation = -20
 locked = true
 
 [[instances]]

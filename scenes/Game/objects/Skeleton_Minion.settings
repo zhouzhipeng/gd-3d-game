@@ -19,6 +19,16 @@ name = "IsDead"
 type = "boolean"
 value = false
 
+[[variables]]
+name = "IsAwake"
+type = "boolean"
+value = false
+
+[[variables]]
+name = "AttackState"
+type = "number"
+value = 0
+
 [content]
 centerLocation = "CenteredOnZ"
 crossfadeDuration = 0.1000000014901161
@@ -40,6 +50,9 @@ resourceName = "assets/Rig_Medium_MovementBasic.glb"
 
 [[content.sharedAnimationModelResources]]
 resourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.sharedAnimationModelResources]]
+resourceName = "assets/Rig_Medium_CombatMelee.glb"
 
 [[content.animations]]
 loop = false
@@ -196,3 +209,9 @@ loop = false
 name = ""
 source = "T-Pose"
 sourceModelResourceName = "assets/Rig_Medium_Special.glb"
+
+[[content.animations]]
+loop = false
+name = "Melee_Unarmed_Attack_Punch_A"
+source = "Melee_Unarmed_Attack_Punch_A"
+sourceModelResourceName = "assets/Rig_Medium_CombatMelee.glb"

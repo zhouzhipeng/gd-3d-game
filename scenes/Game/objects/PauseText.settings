@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 38
+assetStoreId = ""
+bold = false
+italic = false
+name = "PauseText"
+persistentUuid = "c3f937ea-b283-437b-9738-b146921e86dd"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "ESC Resume\n\nLEFT / RIGHT  Mouse sensitivity\nUP / DOWN  Master volume"
+font = ""
+textAlignment = "center"
+characterSize = 20
+folder = [ "Playability UI" ]
+
+[color]
+b = 245
+g = 241
+r = 245
+
+[content]
+bold = false
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 2
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 160
+smoothed = true
+underlined = false
+text = "ESC Resume\n\nLEFT / RIGHT  Mouse sensitivity\nUP / DOWN  Master volume"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 30
+color = "245;241;235"

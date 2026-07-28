@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 37
+assetStoreId = ""
+bold = true
+italic = false
+name = "PauseTitle"
+persistentUuid = "501dd8a3-e25a-46dd-baf9-db78b5991cf4"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "PAUSED"
+font = ""
+textAlignment = "center"
+characterSize = 32
+folder = [ "Playability UI" ]
+
+[color]
+b = 110
+g = 224
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "25;18;14"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "PAUSED"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 32
+lineHeight = 0
+color = "255;224;110"

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 39
+assetStoreId = ""
+bold = true
+italic = false
+name = "CombatCue"
+persistentUuid = "b7d2c7d2-7dff-47b1-8204-513e57ca1cca"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "⚠ DODGE!"
+font = ""
+textAlignment = "center"
+characterSize = 26
+folder = [ "Playability UI" ]
+
+[color]
+b = 74
+g = 142
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 4
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 190
+smoothed = true
+underlined = false
+text = "⚠ DODGE!"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 26
+lineHeight = 0
+color = "255;142;74"

@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 33
+assetStoreId = ""
+bold = true
+italic = false
+name = "EnemyHealthText"
+persistentUuid = "2beb65b2-7e4c-490c-95ed-2425b1ab724c"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "SKELETON [████████] 100"
+font = ""
+textAlignment = "center"
+characterSize = 20
+folder = [ "Playability UI" ]
+
+[color]
+b = 92
+g = 112
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "SKELETON [████████] 100"
+font = ""
+textAlignment = "center"
+verticalTextAlignment = "top"
+characterSize = 20
+lineHeight = 0
+color = "255;112;92"

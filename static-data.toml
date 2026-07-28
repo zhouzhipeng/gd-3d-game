@@ -8,8 +8,8 @@ en = "KNIGHT'S BACKPACK"
 cn = "骑士背包"
 
 [localization."backpack.prompt"]
-en = "[Q] BAG  [L] 中文"
-cn = "[Q] 背包  [L] EN"
+en = "[Q] BAG  [ESC] PAUSE  [L] 中文"
+cn = "[Q] 背包  [ESC] 暂停  [L] EN"
 
 [localization."backpack.sections.weapons"]
 en = "WEAPONS"
@@ -172,16 +172,76 @@ en = "Talk to Captain Edric"
 cn = "与埃德里克队长交谈"
 
 [localization."hud.controls.move"]
-en = "WASD  Move     Mouse  Look"
-cn = "WASD  移动     鼠标  视角"
+en = "WASD  Move     SHIFT  Sprint     Mouse  Look"
+cn = "WASD  移动     SHIFT  冲刺     鼠标  视角"
 
 [localization."hud.controls.combat"]
 en = "Click  Attack     F  Weapon"
 cn = "点击  攻击     F  武器"
 
 [localization."hud.controls.interact"]
-en = "E  Talk     Q  Bag     L  Language"
-cn = "E  交谈     Q  背包     L  语言"
+en = "E  Talk     Q  Bag     ESC  Pause     L  Language"
+cn = "E  交谈     Q  背包     ESC  暂停     L  语言"
+
+[localization."hud.objective.next"]
+en = "NEXT"
+cn = "下一步"
+
+[localization."hud.objective.captain"]
+en = "Captain Edric"
+cn = "埃德里克队长"
+
+[localization."hud.objective.gold"]
+en = "Gold at the north watchtower"
+cn = "北部瞭望塔的金条"
+
+[localization."hud.objective.stone"]
+en = "Stone near the western castle"
+cn = "西部城堡附近的石砖"
+
+[localization."hud.objective.wood"]
+en = "Wood at the eastern forest"
+cn = "东部森林的木材"
+
+[localization."hud.objective.skeleton"]
+en = "Skeleton on the lower road"
+cn = "下方道路上的骷髅"
+
+[localization."hud.objective.return"]
+en = "Return to Captain Edric"
+cn = "返回埃德里克队长处"
+
+[localization."hud.enemy"]
+en = "SKELETON"
+cn = "骷髅"
+
+[localization."hud.combat.dodge"]
+en = "⚠ DODGE!  SKELETON STRIKE"
+cn = "⚠ 闪避！骷髅即将攻击"
+
+[localization."hud.combat.hit"]
+en = "HIT!  -10 HP"
+cn = "受到攻击！-10 生命"
+
+[localization."hud.heal"]
+en = "+ RECOVERED 35 HP"
+cn = "+ 恢复 35 点生命"
+
+[localization."hud.pause.title"]
+en = "PAUSED"
+cn = "已暂停"
+
+[localization."hud.pause.resume"]
+en = "ESC  Resume"
+cn = "ESC  继续"
+
+[localization."hud.pause.sensitivity"]
+en = "LEFT / RIGHT   Mouse sensitivity"
+cn = "左 / 右   鼠标灵敏度"
+
+[localization."hud.pause.volume"]
+en = "UP / DOWN      Master volume"
+cn = "上 / 下   主音量"
 
 [localization."game.victory.title"]
 en = "VILLAGE DEFENDER"

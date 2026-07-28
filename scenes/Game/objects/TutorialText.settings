@@ -1,0 +1,46 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 35
+assetStoreId = ""
+bold = true
+italic = false
+name = "TutorialText"
+persistentUuid = "2f7579e1-4928-4287-a772-a232cb145ed6"
+smoothed = true
+type = "TextObject::Text"
+underlined = false
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+string = "WASD Move  SHIFT Sprint  Mouse Look\nClick Attack  F Weapon  E Talk\nQ Bag  ESC Pause"
+font = ""
+textAlignment = "left"
+characterSize = 16
+folder = [ "Playability UI" ]
+
+[color]
+b = 255
+g = 255
+r = 255
+
+[content]
+bold = true
+isOutlineEnabled = true
+isShadowEnabled = true
+italic = false
+outlineColor = "0;0;0"
+outlineThickness = 3
+shadowAngle = 90
+shadowBlurRadius = 2
+shadowColor = "0;0;0"
+shadowDistance = 2
+shadowOpacity = 180
+smoothed = true
+underlined = false
+text = "WASD Move  SHIFT Sprint  Mouse Look\nClick Attack  F Weapon  E Talk\nQ Bag  ESC Pause"
+font = ""
+textAlignment = "left"
+verticalTextAlignment = "top"
+characterSize = 16
+lineHeight = 22
+color = "255;255;255"

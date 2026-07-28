@@ -1,0 +1,29 @@
+kind = "object"
+settingsFormatVersion = 1
+order = 40
+assetStoreId = ""
+name = "HealPickup"
+persistentUuid = "7752539d-74be-4919-a127-01e089198472"
+type = "Scene3D::Model3DObject"
+variables = [ ]
+effects = [ ]
+behaviors = [ ]
+folder = [ "Quest", "Playability" ]
+
+[content]
+centerLocation = "ObjectCenter"
+crossfadeDuration = 0.1
+depth = 30
+height = 30
+isCastingShadow = true
+isReceivingShadow = true
+keepAspectRatio = true
+materialType = "KeepOriginal"
+modelResourceName = "assets/props/mug_full.glb"
+originLocation = "ObjectCenter"
+rotationX = 90
+rotationY = 0
+rotationZ = 0
+width = 54
+sharedAnimationModelResources = [ ]
+animations = [ ]

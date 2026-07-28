@@ -70,6 +70,36 @@ name = "QuestNoticeKind"
 type = "number"
 value = 0
 
+[[variables]]
+name = "PauseOpen"
+type = "number"
+value = 0
+
+[[variables]]
+name = "MouseSensitivity"
+type = "number"
+value = 0.12
+
+[[variables]]
+name = "MasterVolume"
+type = "number"
+value = 80
+
+[[variables]]
+name = "TutorialVisible"
+type = "number"
+value = 1
+
+[[variables]]
+name = "CombatCueKind"
+type = "number"
+value = 0
+
+[[variables]]
+name = "HealUsed"
+type = "number"
+value = 0
+
 [[behaviorsSharedData]]
 name = "Physics3D"
 type = "Physics3D::Physics3DBehavior"
@@ -87,6 +117,7 @@ DialogueWindow = [
 "DialogueText",
 "DialogueChoices"
 ]
+PauseWindow = [ "PausePanel", "PauseTitle", "PauseText" ]
 QuestTrackerWindow = [ "QuestTrackerPanel", "QuestTrackerTitle", "QuestTrackerText" ]
 Physics3DWorldBodies = [
 "BuildingCottage",
