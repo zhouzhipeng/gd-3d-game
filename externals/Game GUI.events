@@ -938,38 +938,42 @@ do Scene name_of_the_new_scene="\"Game\"" stop_any_other_paused_scenes="yes"
 @event aiGeneratedEventId="animate-active-gold-pickup"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
-for each "GoldPickup"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="GoldPickup" behavior="Object3D" modification_sign="=" value="-276 + sin(TimeFromStart() * 4) * 8"
-> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="GoldPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
+> for each "GoldPickup"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="GoldPickup" behavior="Object3D" modification_sign="=" value="-276 + sin(TimeFromStart() * 4) * 8"
+>> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="GoldPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
 
 @event aiGeneratedEventId="animate-active-stone-pickup"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
-for each "StonePickup"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="StonePickup" behavior="Object3D" modification_sign="=" value="-20 + sin(TimeFromStart() * 4 + 1) * 8"
-> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="StonePickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
+> for each "StonePickup"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="StonePickup" behavior="Object3D" modification_sign="=" value="-20 + sin(TimeFromStart() * 4 + 1) * 8"
+>> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="StonePickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
 
 @event aiGeneratedEventId="animate-active-wood-pickup"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
-for each "WoodPickup"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="WoodPickup" behavior="Object3D" modification_sign="=" value="-240 + sin(TimeFromStart() * 4 + 2) * 8"
-> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="WoodPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
+> for each "WoodPickup"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="WoodPickup" behavior="Object3D" modification_sign="=" value="-240 + sin(TimeFromStart() * 4 + 2) * 8"
+>> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="WoodPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
 
 @event aiGeneratedEventId="animate-active-heal-pickup"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
-for each "HealPickup"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="HealPickup" behavior="Object3D" modification_sign="=" value="-135 + sin(TimeFromStart() * 4 + 3) * 8"
-> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
+> for each "HealPickup"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Scene3D::Base3DBehavior::SetCenterZ parameter_3d_object="HealPickup" behavior="Object3D" modification_sign="=" value="-135 + sin(TimeFromStart() * 4 + 3) * 8"
+>> do Scene3D::Base3DBehavior::SetRotationY parameter_3d_object="HealPickup" behavior="Object3D" modification_sign="+" angle_in_degrees="60 * TimeDelta()"
 
 @event aiGeneratedEventId="collect-heal-pickup"
 for each "HealPickup"
@@ -1039,78 +1043,84 @@ if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 @event aiGeneratedEventId="show-player-health-hud"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Show object="PlayerHealthText"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Show object="PlayerHealthText"
 
 @event aiGeneratedEventId="write-player-health-tier-full"
 if NumberVariable variable="PlayerHealth" comparison_sign=">" value="80"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do TextObject::ChangeColor object="PlayerHealthText" color="\"88;216;120\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [##########] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [##########] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do TextObject::ChangeColor object="PlayerHealthText" color="\"88;216;120\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [##########] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [##########] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
 
 @event aiGeneratedEventId="write-player-health-tier-high"
 if NumberVariable variable="PlayerHealth" comparison_sign="<=" value="80"
 if NumberVariable variable="PlayerHealth" comparison_sign=">" value="60"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do TextObject::ChangeColor object="PlayerHealthText" color="\"136;216;104\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [########--] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [########--] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do TextObject::ChangeColor object="PlayerHealthText" color="\"136;216;104\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [########--] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [########--] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
 
 @event aiGeneratedEventId="write-player-health-tier-mid"
 if NumberVariable variable="PlayerHealth" comparison_sign="<=" value="60"
 if NumberVariable variable="PlayerHealth" comparison_sign=">" value="40"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do TextObject::ChangeColor object="PlayerHealthText" color="\"245;201;83\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [######----] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [######----] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do TextObject::ChangeColor object="PlayerHealthText" color="\"245;201;83\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [######----] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [######----] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
 
 @event aiGeneratedEventId="write-player-health-tier-low"
 if NumberVariable variable="PlayerHealth" comparison_sign="<=" value="40"
 if NumberVariable variable="PlayerHealth" comparison_sign=">" value="20"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do TextObject::ChangeColor object="PlayerHealthText" color="\"244;146;70\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [####------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [####------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do TextObject::ChangeColor object="PlayerHealthText" color="\"244;146;70\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [####------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [####------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
 
 @event aiGeneratedEventId="write-player-health-tier-critical"
 if NumberVariable variable="PlayerHealth" comparison_sign="<=" value="20"
-for each "PlayerHealthText"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do TextObject::ChangeColor object="PlayerHealthText" color="\"244;80;80\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [##--------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [##--------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+> for each "PlayerHealthText"
+>> @event
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do TextObject::ChangeColor object="PlayerHealthText" color="\"244;80;80\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].en}} [##--------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="PlayerHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.health'].cn}} [##--------] \" + ToString(Variable(PlayerHealth)) + \"/\" + ToString(Variable(PlayerMaxHealth))"
 
 @event aiGeneratedEventId="expire-combat-cue"
 if NumberVariable variable="CombatCueKind" comparison_sign=">" value="0"
@@ -1122,135 +1132,140 @@ if NumberVariable variable="CombatCueKind" comparison_sign=">" value="0"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
 if CompareTimer timer_name="\"CombatCue\"" comparison_sign="<=" time_in_seconds="0.65"
-for each "CombatCue"
 > @event
-> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
-> do Show object="CombatCue"
-> @event
-> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="1"
+> for each "CombatCue"
 >> @event
->> do TextObject::ChangeColor object="CombatCue" color="\"255;205;70\""
+>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>> do Show object="CombatCue"
 >> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.dodge'].en}}\""
+>> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="1"
+>>> @event
+>>> do TextObject::ChangeColor object="CombatCue" color="\"255;205;70\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.dodge'].en}}\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.dodge'].cn}}\""
 >> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.dodge'].cn}}\""
-> @event
-> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="2"
+>> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="2"
+>>> @event
+>>> do TextObject::ChangeColor object="CombatCue" color="\"255;82;82\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.hit'].en}}\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.hit'].cn}}\""
 >> @event
->> do TextObject::ChangeColor object="CombatCue" color="\"255;82;82\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.hit'].en}}\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.combat.hit'].cn}}\""
-> @event
-> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="3"
->> @event
->> do TextObject::ChangeColor object="CombatCue" color="\"88;216;120\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.heal'].en}}\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.heal'].cn}}\""
+>> if NumberVariable variable="CombatCueKind" comparison_sign="=" value="3"
+>>> @event
+>>> do TextObject::ChangeColor object="CombatCue" color="\"88;216;120\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.heal'].en}}\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="CombatCue" behavior="Text" modification_sign="=" text="\"{{localization['hud.heal'].cn}}\""
 
 @event aiGeneratedEventId="write-full-enemy-health"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
-for each "Skeleton_Minion"
 > @event
-> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="75"
-> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
+> for each "Skeleton_Minion"
 >> @event
->> for each "EnemyHealthText"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="75"
+>> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
 >>> @event
->>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->>> do Show object="EnemyHealthText"
->>> do TextObject::ChangeColor object="EnemyHealthText" color="\"244;92;92\""
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [##########] \" + ToString(Skeleton_Minion.Variable(Health))"
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [##########] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>> for each "EnemyHealthText"
+>>>> @event
+>>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>>> do Show object="EnemyHealthText"
+>>>> do TextObject::ChangeColor object="EnemyHealthText" color="\"244;92;92\""
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [##########] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [##########] \" + ToString(Skeleton_Minion.Variable(Health))"
 
 @event aiGeneratedEventId="write-high-enemy-health"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
-for each "Skeleton_Minion"
 > @event
-> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="75"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="50"
-> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
+> for each "Skeleton_Minion"
 >> @event
->> for each "EnemyHealthText"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="75"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="50"
+>> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
 >>> @event
->>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->>> do Show object="EnemyHealthText"
->>> do TextObject::ChangeColor object="EnemyHealthText" color="\"244;112;82\""
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [#######---] \" + ToString(Skeleton_Minion.Variable(Health))"
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [#######---] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>> for each "EnemyHealthText"
+>>>> @event
+>>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>>> do Show object="EnemyHealthText"
+>>>> do TextObject::ChangeColor object="EnemyHealthText" color="\"244;112;82\""
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [#######---] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [#######---] \" + ToString(Skeleton_Minion.Variable(Health))"
 
 @event aiGeneratedEventId="write-mid-enemy-health"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
-for each "Skeleton_Minion"
 > @event
-> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="50"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="25"
-> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
+> for each "Skeleton_Minion"
 >> @event
->> for each "EnemyHealthText"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="50"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="25"
+>> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
 >>> @event
->>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->>> do Show object="EnemyHealthText"
->>> do TextObject::ChangeColor object="EnemyHealthText" color="\"236;124;72\""
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [#####-----] \" + ToString(Skeleton_Minion.Variable(Health))"
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [#####-----] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>> for each "EnemyHealthText"
+>>>> @event
+>>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>>> do Show object="EnemyHealthText"
+>>>> do TextObject::ChangeColor object="EnemyHealthText" color="\"236;124;72\""
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [#####-----] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [#####-----] \" + ToString(Skeleton_Minion.Variable(Health))"
 
 @event aiGeneratedEventId="write-low-enemy-health"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
-for each "Skeleton_Minion"
 > @event
-> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="25"
-> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="0"
-> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
+> for each "Skeleton_Minion"
 >> @event
->> for each "EnemyHealthText"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign="<=" value="25"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="Health" comparison_sign=">" value="0"
+>> if Distance object="Knight" object_2="Skeleton_Minion" distance="800"
 >>> @event
->>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->>> do Show object="EnemyHealthText"
->>> do TextObject::ChangeColor object="EnemyHealthText" color="\"224;72;72\""
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [##--------] \" + ToString(Skeleton_Minion.Variable(Health))"
->>> @event
->>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [##--------] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>> for each "EnemyHealthText"
+>>>> @event
+>>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>>> do Show object="EnemyHealthText"
+>>>> do TextObject::ChangeColor object="EnemyHealthText" color="\"224;72;72\""
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].en}} [##--------] \" + ToString(Skeleton_Minion.Variable(Health))"
+>>>> @event
+>>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>>> do TextContainerCapability::TextContainerBehavior::SetValue object="EnemyHealthText" behavior="Text" modification_sign="=" text="\"{{localization['hud.enemy'].cn}} [##--------] \" + ToString(Skeleton_Minion.Variable(Health))"
 
 @event aiGeneratedEventId="write-captain-objective-before-quest"
 if NumberVariable variable="QuestState" comparison_sign="=" value="0"
@@ -1258,18 +1273,19 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "QuestGiver"
 > @event
-> for each "ObjectiveText"
+> for each "QuestGiver"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.captain'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.captain'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.captain'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.captain'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-gold-objective"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
@@ -1278,18 +1294,19 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "GoldPickup"
 > @event
-> for each "ObjectiveText"
+> for each "GoldPickup"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.gold'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), GoldPickup.CenterX(), GoldPickup.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.gold'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), GoldPickup.CenterX(), GoldPickup.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.gold'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), GoldPickup.CenterX(), GoldPickup.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.gold'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), GoldPickup.CenterX(), GoldPickup.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-stone-objective"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
@@ -1299,18 +1316,19 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "StonePickup"
 > @event
-> for each "ObjectiveText"
+> for each "StonePickup"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.stone'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), StonePickup.CenterX(), StonePickup.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.stone'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), StonePickup.CenterX(), StonePickup.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.stone'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), StonePickup.CenterX(), StonePickup.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.stone'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), StonePickup.CenterX(), StonePickup.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-wood-objective"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
@@ -1321,18 +1339,19 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "WoodPickup"
 > @event
-> for each "ObjectiveText"
+> for each "WoodPickup"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.wood'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), WoodPickup.CenterX(), WoodPickup.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.wood'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), WoodPickup.CenterX(), WoodPickup.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.wood'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), WoodPickup.CenterX(), WoodPickup.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.wood'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), WoodPickup.CenterX(), WoodPickup.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-skeleton-objective"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
@@ -1344,18 +1363,19 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "Skeleton_Minion"
 > @event
-> for each "ObjectiveText"
+> for each "Skeleton_Minion"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.skeleton'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), Skeleton_Minion.CenterX(), Skeleton_Minion.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.skeleton'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), Skeleton_Minion.CenterX(), Skeleton_Minion.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.skeleton'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), Skeleton_Minion.CenterX(), Skeleton_Minion.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.skeleton'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), Skeleton_Minion.CenterX(), Skeleton_Minion.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-return-objective"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
@@ -1363,49 +1383,53 @@ if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
 if NumberVariable variable="DialogueOpen" comparison_sign="=" value="0"
 if NumberVariable variable="BackpackOpen" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "QuestGiver"
 > @event
-> for each "ObjectiveText"
+> for each "QuestGiver"
 >> @event
->> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
->> do Show object="ObjectiveText"
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.return'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
->> @event
->> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
->> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.return'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
+>> for each "ObjectiveText"
+>>> @event
+>>> if BuiltinCommonInstructions::CompareNumbers first_expression="1" comparison_sign="=" second_expression="1"
+>>> do Show object="ObjectiveText"
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].en}}  •  {{localization['hud.objective.return'].en}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
+>>> @event
+>>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>>> do TextContainerCapability::TextContainerBehavior::SetValue object="ObjectiveText" behavior="Text" modification_sign="=" text="\"{{localization['hud.objective.next'].cn}}  •  {{localization['hud.objective.return'].cn}}  •  \" + ToString(round(DistanceBetweenPositions(Knight.CenterX(), Knight.CenterY(), QuestGiver.CenterX(), QuestGiver.CenterY()) / 100)) + \"m\""
 
 @event aiGeneratedEventId="write-compact-new-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="0"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "QuestTrackerText"
 > @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].en}}\" + NewLine() + \"{{localization['hud.start.objective'].en}}\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].cn}}\" + NewLine() + \"{{localization['hud.start.objective'].cn}}\""
+> for each "QuestTrackerText"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].en}}\" + NewLine() + \"{{localization['hud.start.objective'].en}}\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['hud.start.status'].cn}}\" + NewLine() + \"{{localization['hud.start.objective'].cn}}\""
 
 @event aiGeneratedEventId="write-compact-active-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "QuestTrackerText"
 > @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].en}}\" + NewLine() + \"{{localization['backpack.items.gold'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/1  |  {{localization['backpack.items.stone'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/1\" + NewLine() + \"{{localization['backpack.items.wood'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/1  |  {{localization['quest.objective.skeleton'].en}} \" + ToString(Variable(SkeletonsDefeated)) + \"/1\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].cn}}\" + NewLine() + \"{{localization['backpack.items.gold'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/1  |  {{localization['backpack.items.stone'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/1\" + NewLine() + \"{{localization['backpack.items.wood'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/1  |  {{localization['quest.objective.skeleton'].cn}} \" + ToString(Variable(SkeletonsDefeated)) + \"/1\""
+> for each "QuestTrackerText"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].en}}\" + NewLine() + \"{{localization['backpack.items.gold'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/1  |  {{localization['backpack.items.stone'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/1\" + NewLine() + \"{{localization['backpack.items.wood'].en}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/1  |  {{localization['quest.objective.skeleton'].en}} \" + ToString(Variable(SkeletonsDefeated)) + \"/1\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.active'].cn}}\" + NewLine() + \"{{localization['backpack.items.gold'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Gold\")) + \"/1  |  {{localization['backpack.items.stone'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Stone\")) + \"/1\" + NewLine() + \"{{localization['backpack.items.wood'].cn}} \" + ToString(Inventories::ItemCount(\"KnightBackpack\", \"Wood\")) + \"/1  |  {{localization['quest.objective.skeleton'].cn}} \" + ToString(Variable(SkeletonsDefeated)) + \"/1\""
 
 @event aiGeneratedEventId="write-compact-ready-quest-tracker"
 if NumberVariable variable="QuestState" comparison_sign="=" value="2"
 if NumberVariable variable="GameEnded" comparison_sign="=" value="0"
-for each "QuestTrackerText"
 > @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].en}}\" + NewLine() + \"{{localization['quest.objective.return'].en}}\""
-> @event
-> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
-> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].cn}}\" + NewLine() + \"{{localization['quest.objective.return'].cn}}\""
+> for each "QuestTrackerText"
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.defaultLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].en}}\" + NewLine() + \"{{localization['quest.objective.return'].en}}\""
+>> @event
+>> if StringVariable variable="Locale" comparison_sign="=" value="\"{{i18n.alternateLocale}}\""
+>> do TextContainerCapability::TextContainerBehavior::SetValue object="QuestTrackerText" behavior="Text" modification_sign="=" text="\"{{localization['quest.status.ready'].cn}}\" + NewLine() + \"{{localization['quest.objective.return'].cn}}\""
 @end group
