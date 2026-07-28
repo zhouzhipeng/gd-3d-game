@@ -940,9 +940,9 @@ if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 > @event
 > for each "Skeleton_Minion"
 >> @event
->> if BooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" check_if_the_value_is="False"
+>> if NumberObjectVariable object="Skeleton_Minion" variable="IsAwake" comparison_sign="=" value="0"
 >> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
->> do SetBooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" modification_sign="True"
+>> do SetNumberObjectVariable object="Skeleton_Minion" variable="IsAwake" modification_sign="=" value="1"
 >> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="3"
 >> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1"
 >> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Skeletons_Awaken_Standing\""

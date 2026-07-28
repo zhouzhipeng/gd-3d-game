@@ -21,8 +21,8 @@ value = false
 
 [[variables]]
 name = "IsAwake"
-type = "boolean"
-value = false
+type = "number"
+value = 0
 
 [[variables]]
 name = "AttackState"
