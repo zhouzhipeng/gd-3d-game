@@ -935,6 +935,19 @@ do Scene name_of_the_new_scene="\"Game\"" stop_any_other_paused_scenes="yes"
 @end group
 
 @group "Quest world affordances" source="" creationTime=0 color=[255,196,74] parameters=[]
+@event aiGeneratedEventId="activate-skeleton-from-quest-state"
+if NumberVariable variable="QuestState" comparison_sign="=" value="1"
+> @event
+> for each "Skeleton_Minion"
+>> @event
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" check_if_the_value_is="False"
+>> if BooleanObjectVariable object="Skeleton_Minion" variable="IsDead" check_if_the_value_is="False"
+>> do SetBooleanObjectVariable object="Skeleton_Minion" variable="IsAwake" modification_sign="True"
+>> do SetNumberObjectVariable object="Skeleton_Minion" variable="AttackState" modification_sign="=" value="3"
+>> do AnimatableCapability::AnimatableBehavior::SetSpeedScale object="Skeleton_Minion" behavior="Animation" modification_sign="=" speed_scale="1"
+>> do AnimatableCapability::AnimatableBehavior::SetName object="Skeleton_Minion" behavior="Animation" modification_sign="=" animation_name="\"Skeletons_Awaken_Standing\""
+>> do AnimatableCapability::AnimatableBehavior::SetElapsedTime object="Skeleton_Minion" behavior="Animation" modification_sign="=" elapsed_time_in_seconds="0"
+
 @event aiGeneratedEventId="animate-active-gold-pickup"
 if NumberVariable variable="QuestState" comparison_sign="=" value="1"
 if NumberVariable variable="PauseOpen" comparison_sign="=" value="0"
